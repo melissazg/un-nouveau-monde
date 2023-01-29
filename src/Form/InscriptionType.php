@@ -65,14 +65,14 @@ class InscriptionType extends AbstractType
                 'invalid_message' => 'The password fields must match.',
                 'options' => ['attr' => ['class' => 'password-field']],
                 'required' => true,
-                'first_options'  => ['label' => 'Password',
+                'first_options'  => ['label' => 'Mot de passe',
                     'attr'=>[
                         'class'=>'form-control',
                     ], 'label_attr'=>[
                         'class'=> 'form_label'
                     ],],
 
-                'second_options' => ['label' => 'Repeat Password', 'attr'=>[
+                'second_options' => ['label' => 'Reecrire le mot de passe', 'attr'=>[
                     'class'=>'form-control',
                 ], 'label_attr'=>[
                     'class'=> 'form_label'
