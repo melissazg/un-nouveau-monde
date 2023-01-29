@@ -2,7 +2,17 @@
 
 namespace App\Form\FormHandler;
 
-class InscriptionFormHandler
-{
+use App\Entity\Client;
+use Doctrine\ORM\EntityManagerInterface;
 
+final class InscriptionFormHandler
+{
+    public function __construct(
+        public EntityManagerInterface $entityManager
+    ) {}
+    public function handleForm(Client $client): void
+    {
+        $this->entityManager->persist($client);
+        $this->entityManager->flush();
+    }
 }

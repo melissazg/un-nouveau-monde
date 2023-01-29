@@ -1,0 +1,15 @@
+{% extends 'base.html.twig' %}
+{% form_theme form 'bootstrap_5_horizontal_layout.html.twig' %}
+{% block title %}
+    UnNouveauMonde-Inscription
+{% endblock %}
+{% block body %}
+    <div class="container">
+        <h1 class="mt-4">Formulaire d'inscription</h1>
+        {{ form(form) }}
+    </div>
+    {{ form_start(form) }}
+
+
+    {{ form_end(form) }}
+{% endblock %}

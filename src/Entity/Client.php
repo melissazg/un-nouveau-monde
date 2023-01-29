@@ -47,6 +47,9 @@ class Client
     #[ORM\OneToMany(mappedBy: 'client', targetEntity: Note::class, orphanRemoval: true)]
     private Collection $notes;
 
+    #[ORM\Column(length: 255)]
+    private ?string $HighSchool = null;
+
     public function __construct()
     {
         $this->commentaires = new ArrayCollection();
@@ -198,6 +201,18 @@ class Client
                 $note->setClient(null);
             }
         }
+
+        return $this;
+    }
+
+    public function getHighSchool(): ?string
+    {
+        return $this->HighSchool;
+    }
+
+    public function setHighSchool(string $HighSchool): self
+    {
+        $this->HighSchool = $HighSchool;
 
         return $this;
     }
