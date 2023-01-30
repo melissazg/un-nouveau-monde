@@ -73,7 +73,7 @@ class InscriptionType extends AbstractType
                         'class'=> 'form_label'
                     ],],
 
-                'second_options' => ['label' => 'Reecrire le mot de passe', 'attr'=>[
+                'second_options' => ['label' => 'Confirmer le mot de passe', 'attr'=>[
                     'class'=>'form-control',
                 ], 'label_attr'=>[
                     'class'=> 'form_label'
