@@ -1,0 +1,96 @@
+Index: templates/Contact.html.twig
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><!--Section: Contact v.2-->\n<section class=\"mb-4\">\n\n    <div class=\"container py-4\">\n\n        <!--Section heading-->\n        <h2 class=\"h1-responsive font-weight-bold text-center my-4\">Contactez-nous</h2>\n\n        <!--Section description-->\n        <p class=\"text-center w-responsive mx-auto mb-5\">Avez-vous une question ? N'hésitez pas à nous contacter, notre équipe fera tout son possible pour vous répondre dans les plus brefs délais.</p>\n\n        <!-- Bootstrap 5 starter form -->\n        <form id=\"contactForm\" data-sb-form-api-token=\"API_TOKEN\">\n\n            <!-- Name input -->\n            <div class=\"mb-3\">\n                <label class=\"form-label\" for=\"name\">Nom</label>\n                <input class=\"form-control\" id=\"name\" type=\"text\" placeholder=\"Nom\" data-sb-validations=\"required\" />\n                <div class=\"invalid-feedback\" data-sb-feedback=\"name:required\">Un nom est requis.</div>\n            </div>\n\n            <!-- Email address input -->\n            <div class=\"mb-3\">\n                <label class=\"form-label\" for=\"emailAddress\">Adresse mail</label>\n                <input class=\"form-control\" id=\"emailAddress\" type=\"email\" placeholder=\"exemple@mail.fr\" data-sb-validations=\"required, email\" />\n                <div class=\"invalid-feedback\" data-sb-feedback=\"emailAddress:required\">Un adresse mail est requis.</div>\n                <div class=\"invalid-feedback\" data-sb-feedback=\"emailAddress:email\">L'adresse mail n'est pas valide.</div>\n            </div>\n\n            <!-- Message input -->\n            <div class=\"mb-3\">\n                <label class=\"form-label\" for=\"message\">Message</label>\n                <textarea class=\"form-control\" id=\"message\" type=\"text\" placeholder=\"Message\" style=\"height: 10rem;\" data-sb-validations=\"required\"></textarea>\n                <div class=\"invalid-feedback\" data-sb-feedback=\"message:required\">Un message est requis.</div>\n            </div>\n\n            <!-- Form submissions success message -->\n            <div class=\"d-none\" id=\"submitSuccessMessage\">\n                <div class=\"text-center mb-3\">Le message a bien été envoyé !</div>\n            </div>\n\n            <!-- Form submissions error message -->\n            <div class=\"d-none\" id=\"submitErrorMessage\">\n                <div class=\"text-center text-danger mb-3\">Erreur lors de l'envoi du message.</div>\n            </div>\n\n            <!-- Form submit button -->\n            <div class=\"d-grid\">\n                <button class=\"btn btn-primary btn-lg\" id=\"submitButton\" type=\"submit\">Envoyer</button>\n            </div>\n\n        </form>\n\n    </div>\n\n    <!-- SB Forms JS -->\n    <script src=\"https://cdn.startbootstrap.com/sb-forms-latest.js\"></script>\n</section>\n<!--Section: Contact v.2-->
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/templates/Contact.html.twig b/templates/Contact.html.twig
+--- a/templates/Contact.html.twig	(revision 7acf80556681397377b216e5ef3f6f0aac7dac31)
++++ b/templates/Contact.html.twig	(date 1675074050188)
+@@ -4,17 +4,17 @@
+     <div class="container py-4">
+ 
+         <!--Section heading-->
+-        <h2 class="h1-responsive font-weight-bold text-center my-4">Contactez-nous</h2>
++        <h2 class="h1-responsive font-weight-bold text-center my-4"> Contactez-nous </h2>
+ 
+         <!--Section description-->
+-        <p class="text-center w-responsive mx-auto mb-5">Avez-vous une question ? N'hésitez pas à nous contacter, notre équipe fera tout son possible pour vous répondre dans les plus brefs délais.</p>
++        <p class="text-center w-responsive mx-auto mb-5"> Avez-vous une question ? N'hésitez pas à nous contacter, notre équipe fera tout son possible pour vous répondre dans les plus brefs délais. </p>
+ 
+         <!-- Bootstrap 5 starter form -->
+         <form id="contactForm" data-sb-form-api-token="API_TOKEN">
+ 
+             <!-- Name input -->
+             <div class="mb-3">
+-                <label class="form-label" for="name">Nom</label>
++                <label class="form-label" for="name"> Nom </label>
+                 <input class="form-control" id="name" type="text" placeholder="Nom" data-sb-validations="required" />
+                 <div class="invalid-feedback" data-sb-feedback="name:required">Un nom est requis.</div>
+             </div>
+Index: templates/footer.html.twig
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+> <!-- Footer -->\n    <footer style=\"background-color: #212529\">\n        <div class=\"container py-5\">\n            <div class=\"row py-4\">\n                <div class=\"col-lg-3 col-md-6 mb-4 mb-lg-0\"><img src=\"https://i.pinimg.com/originals/33/b8/69/33b869f90619e81763dbf1fccc896d8d.jpg\" alt=\"\" width=\"180\" class=\"mb-3\">\n                    <h3 class=\"text-uppercase font-weight-bold mb-4\"> Rejoignez-nous ! </h3>\n                        <table class=\"text-muted table table-borderless\">\n                            <tr>\n                                <td>\n                                    <a href=\"#\" target=\"_blank\" title=\"twitter\"><i class=\"fa fa-twitter fa-4x\"></i></a>\n                                </td>\n                                <td>\n                                    <a href=\"#\" target=\"_blank\" title=\"facebook\"><i class=\"fa fa-facebook fa-4x\"></i></a>\n                                </td>\n                                <td>\n                                    <a href=\"#\" target=\"_blank\" title=\"instagram\"><i class=\"fa fa-instagram fa-4x\"></i></a>\n                                </td>\n                            </tr>\n                        </table>\n                </div>\n\n                <div class=\"col-lg-3\">\n                    <h6 class=\"text-uppercase font-weight-bold mb-4\">Contact</h6>\n                    <ul class=\"list-unstyled mb-0\">\n                        <li class=\"mb-2\"></li>\n                        <li class=\"mb-2\"><a href=\"#\" class=\"text-muted text-decoration-none\"><i class=\"fa-solid fa-location-dot fa-lg\"></i>&emsp;1, rue de Paris <br>&emsp;&emsp; 75001 Paris </a></li>\n                        <li class=\"mb-2\"><a href=\"#\" class=\"text-muted text-decoration-none\"><i class=\"fa-solid fa-phone fa-lg\"></i>&emsp;06 11 11 11 11 </a></li>\n                        <li class=\"mb-2\"><a href=\"#\" class=\"text-muted text-decoration-none\"><i class=\"fa-solid fa-envelope fa-lg\"></i>&emsp;exemple@mail.fr </a></li>\n                    </ul>\n                    <div class=\"p-1 rounded border\">\n                        <button id=\"button-addon1\" aria-describedby=\"button-addon1\" class=\"form-control text-muted border-0 shadow-0\"><i class=\"fa-solid fa-message fa-lg\">&emsp;</i> Envoyer un message </button>\n                    </div>\n                </div>\n\n                <div class=\"col-lg-2 mr-2\">\n                    <h6 class=\"text-uppercase font-weight-bold mb-4\"> Horaire </h6>\n                    <table class=\"text-muted table table-borderless\">\n                        <tr><td> Lundi </td><td> 9h - 18h </td></tr>\n                        <tr><td> Mardi </td><td> 9h - 18h </td></tr>\n                        <tr><td> Mercredi </td><td> 9h - 18h </td></tr>\n                        <tr><td> Jeudi </td><td> 9h - 18h </td></tr>\n                        <tr><td> Vendredi </td><td> 9h - 18h </td></tr>\n                        <tr><td> Samedi </td><td> Fermé </td></tr>\n                        <tr><td> Dimanche </td><td> Fermé </td></tr>\n                    </table>\n                </div>\n\n                <div class=\"col-lg-4\">\n                    <h6 class=\"text-uppercase font-weight-bold mb-4\"> Newsletter </h6>\n                    <p class=\"text-muted mb-4\"> Inscrivez-vous à la Newsletter afin de suivre toutes nos actualités et recevoir des contenus exclusifs ! </p>\n                    <div class=\"p-1 rounded border\">\n                        <div class=\"input-group\">\n                            <input type=\"email\" placeholder=\"Entrez votre adresse mail\" aria-describedby=\"button-addon1\" class=\"form-control border-0 shadow-0\">\n                            <div class=\"input-group-append\">\n                                <button id=\"button-addon1\" type=\"submit\" class=\"btn btn-link\"><i class=\"fa fa-paper-plane\"></i></button>\n                            </div>\n                        </div>\n                    </div>\n                </div>\n            </div>\n        </div>\n        <div>\n            <p class=\"text-muted mb-0 py-2 text-center\">Copyright © 2023 MIAGE All rights reserved.</p>\n        </div>\n    </footer>\n    <!-- End -->\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/templates/footer.html.twig b/templates/footer.html.twig
+--- a/templates/footer.html.twig	(revision 7acf80556681397377b216e5ef3f6f0aac7dac31)
++++ b/templates/footer.html.twig	(date 1675075026316)
+@@ -2,7 +2,7 @@
+     <footer style="background-color: #212529">
+         <div class="container py-5">
+             <div class="row py-4">
+-                <div class="col-lg-3 col-md-6 mb-4 mb-lg-0"><img src="https://i.pinimg.com/originals/33/b8/69/33b869f90619e81763dbf1fccc896d8d.jpg" alt="" width="180" class="mb-3">
++                <div class="col-lg-3 col-md-6 mb-4 mb-lg-0 text-center"><img src="{{ asset('img/logo.png') }}" alt="logo" width="200">
+                     <h3 class="text-uppercase font-weight-bold mb-4"> Rejoignez-nous ! </h3>
+                         <table class="text-muted table table-borderless">
+                             <tr>
+@@ -19,7 +19,7 @@
+                         </table>
+                 </div>
+ 
+-                <div class="col-lg-3">
++                <div class="col-lg-3 mb-3">
+                     <h6 class="text-uppercase font-weight-bold mb-4">Contact</h6>
+                     <ul class="list-unstyled mb-0">
+                         <li class="mb-2"></li>
+Index: templates/_header.html.Twig
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><nav class=\"navbar navbar-expand-lg navbar-dark bg-dark\">\n    <div class=\"container-fluid\">\n        <a class=\"navbar-brand\" href=\"#\"> <img src=\"{{ asset('../img/logo.png') }}\" alt=\"Logo\"> Un Nouveau Monde </a>\n        <button class=\"navbar-toggler\" type=\"button\" data-bs-toggle=\"collapse\" data-bs-target=\"#navbarColor02\" aria-controls=\"navbarColor02\" aria-expanded=\"false\" aria-label=\"Toggle navigation\">\n            <span class=\"navbar-toggler-icon\"></span>\n        </button>\n        <div class=\"collapse navbar-collapse\" id=\"navbarColor02\">\n            <ul class=\"navbar-nav me-auto\">\n                <li class=\"nav-item\">\n                    <a class=\"nav-link active\" href=\"#\">Accueil\n                        <span class=\"visually-hidden\">(current)</span>\n                    </a>\n                </li>\n                <li class=\"nav-item\">\n                    <a class=\"nav-link\" href=\"#\">Nos films</a>\n                </li>\n                <li class=\"nav-item\">\n                    <a class=\"nav-link\" href=\"#\">Contact</a>\n                </li>\n            </ul>\n            <a href=\"#\" target=\"_blank\" title=\"connexion\"><i class=\"fa-solid fa-right-to-bracket fa-xl\"></i></a>\n            <form class=\"d-flex\" style=\"margin-left:20px\">\n                <input class=\"form-control me-sm-2\" type=\"search\" placeholder=\"Rechercher\">\n                <button class=\"btn btn-primary btn-lg\" type=\"submit\"><i class=\"fa-regular fa-magnifying-glass\"></i></button>\n            </form>\n        </div>\n    </div>\n</nav>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/templates/_header.html.Twig b/templates/_header.html.Twig
+--- a/templates/_header.html.Twig	(revision 7acf80556681397377b216e5ef3f6f0aac7dac31)
++++ b/templates/_header.html.Twig	(date 1675075121281)
+@@ -1,6 +1,6 @@
+ <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+     <div class="container-fluid">
+-        <a class="navbar-brand" href="#"> <img src="{{ asset('../img/logo.png') }}" alt="Logo"> Un Nouveau Monde </a>
++        <img src="{{ asset('img/logo.png') }}" alt="logo" width="100">
+         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor02" aria-controls="navbarColor02" aria-expanded="false" aria-label="Toggle navigation">
+             <span class="navbar-toggler-icon"></span>
+         </button>
+Index: templates/base.html.twig
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><!DOCTYPE html>\n<html>\n    <head>\n        <meta charset=\"UTF-8\">\n        <title>{% block title %}Welcome!{% endblock %}</title>\n        <link rel=\"icon\" href=\"data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 128 128%22><text y=%221.2em%22 font-size=%2296%22>⚫️</text></svg>\">\n        {# Run `composer require symfony/webpack-encore-bundle` to start using Symfony UX #}\n        {% block stylesheets %}\n            {{ encore_entry_link_tags('app') }}\n            <link rel=\"stylesheet\" href=\"https://bootswatch.com/5/quartz/bootstrap.min.css\">\n            <link rel=\"stylesheet\" href=\"https://bootswatch.com/5/quartz/_variables.scss\">\n            <script src=\"https://kit.fontawesome.com/9a2ea947a1.js\" crossorigin=\"anonymous\"></script>\n        {% endblock %}\n\n        {% block javascripts %}\n            {{ encore_entry_script_tags('app') }}\n        {% endblock %}\n    </head>\n    <body>\n        {% block header %}\n            {% include \"_header.html.twig\" %}\n        {% endblock %}\n        {% block body %}{% endblock %}\n        {% block footer %}\n            {% include \"footer.html.twig\" %}\n        {% endblock %}\n    </body>\n</html>\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/templates/base.html.twig b/templates/base.html.twig
+--- a/templates/base.html.twig	(revision 7acf80556681397377b216e5ef3f6f0aac7dac31)
++++ b/templates/base.html.twig	(date 1675074229928)
+@@ -3,7 +3,7 @@
+     <head>
+         <meta charset="UTF-8">
+         <title>{% block title %}Welcome!{% endblock %}</title>
+-        <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 128 128%22><text y=%221.2em%22 font-size=%2296%22>⚫️</text></svg>">
++        <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 128 128%22><text y=%221.2em%22 font-size=%2296%22> ⚫️</text></svg>">
+         {# Run `composer require symfony/webpack-encore-bundle` to start using Symfony UX #}
+         {% block stylesheets %}
+             {{ encore_entry_link_tags('app') }}
