@@ -2,6 +2,7 @@
 namespace App\Controller;
 
 
+use App\Entity\User;
 use App\Form\FormHandler\InscriptionFormHandler;
 use App\Form\InscriptionType;
 use ContainerXfPviWI\getInscriptionTypeService;
@@ -14,11 +15,11 @@ class InscriptionController extends AbstractController{
 
     #[Route('/inscription', 'inscription.index', methods: ['GET', 'POST'])]
     public function create(Request $request, InscriptionFormHandler $inscriptionFormHandler) : Response {
-        $client = new \App\Entity\Client();
-        $form = $this->createForm(InscriptionType::class, $client);
+        $user = new User();
+        $form = $this->createForm(InscriptionType::class, $user);
         $form->handleRequest($request);
         if ($form->isSubmitted() && $form->isValid()) {
-            $inscriptionFormHandler ->handleForm($client);
+            $inscriptionFormHandler ->handleForm($user);
         }
         return $this->render('inscription.html.twig', [
             'form' => $form->createView(),

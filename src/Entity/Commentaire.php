@@ -18,8 +18,14 @@ class Commentaire
     private ?\DateTimeInterface $date = null;
 
     #[ORM\ManyToOne(inversedBy: 'commentaires')]
+    private ?User $user = null;
+
+    #[ORM\ManyToOne(inversedBy: 'commentaires')]
+    private ?Film $film = null;
+
+
     #[ORM\JoinColumn(nullable: false)]
-    private ?Client $clients = null;
+
 
     public function getId(): ?int
     {
@@ -38,15 +44,31 @@ class Commentaire
         return $this;
     }
 
-    public function getClients(): ?Client
+    public function getUser(): ?User
     {
-        return $this->clients;
+        return $this->user;
     }
 
-    public function setClients(?Client $clients): self
+    public function setUser(?User $user): self
     {
-        $this->clients = $clients;
+        $this->user = $user;
 
         return $this;
     }
+
+    public function getFilm(): ?Film
+    {
+        return $this->film;
+    }
+
+    public function setFilm(?Film $film): self
+    {
+        $this->film = $film;
+
+        return $this;
+    }
+
+
+
+
 }

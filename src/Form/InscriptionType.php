@@ -3,6 +3,7 @@
 namespace App\Form;
 
 use App\Entity\Client;
+use App\Entity\User;
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\Extension\Core\Type\EmailType;
 use Symfony\Component\Form\Extension\Core\Type\NumberType;
@@ -20,7 +21,7 @@ class InscriptionType extends AbstractType
     public function buildForm(FormBuilderInterface $builder, array $options): void
     {
         $builder
-            ->add('name', TextType::class, [ 'label' => 'Nom ',
+            ->add('lastName', TextType::class, [ 'label' => 'Nom ',
                 'required' => true,
                 'attr'=>[
                     'class'=>'form-control',
@@ -36,7 +37,7 @@ class InscriptionType extends AbstractType
                     'class'=> 'form_label'
                 ],
                 ])
-            ->add('Mail', EmailType::class,  [ 'label' => 'Adresse Email ',
+            ->add('email', EmailType::class,  [ 'label' => 'Adresse Email ',
                 'required' => true,
                 'attr'=>[
                     'class'=>'form-control',
@@ -44,7 +45,7 @@ class InscriptionType extends AbstractType
                     'class'=> 'form_label'
                 ],
                 ])
-            ->add('adress', TextareaType::class,  [ 'label' => 'Adresse Postale',
+            ->add('address', TextareaType::class,  [ 'label' => 'Adresse Postale',
                 'required' => true,
                 'attr'=>[
                     'class'=>'form-control',
@@ -79,16 +80,9 @@ class InscriptionType extends AbstractType
                 ],],
 
             ])
-            ->add('profilPicture',UrlType::class,  [ 'label' => 'Photo de profil ',
-                'required' => false,
-                'attr'=>[
-                    'class'=>'form-control',
-                ], 'label_attr'=>[
-                    'class'=> 'form_label'
-                ],
-                ])
 
-            ->add('HighSchool', TextType::class,  [ 'label' => 'Lycée',
+
+            ->add('highSchool', TextType::class,  [ 'label' => 'Lycée',
                 'required' => true,
                 'attr'=>[
                     'class'=>'form-control',
@@ -106,7 +100,7 @@ class InscriptionType extends AbstractType
     public function configureOptions(OptionsResolver $resolver): void
     {
         $resolver->setDefaults([
-            'data_class' => Client::class,
+            'data_class' => User::class,
         ]);
     }
 }
