@@ -1,20 +1,22 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Hello CatalogueController!{% endblock %}
+{% block title %}Hello PlayerController!{% endblock %}
 
 {% block body %}
-<style>
-    .example-wrapper { margin: 1em auto; max-width: 800px; width: 95%; font: 18px/1.5 sans-serif; }
-    .example-wrapper code { background: #F5F5F5; padding: 2px 6px; }
-</style>
+    <style>
+        .example-wrapper { margin: 1em auto; max-width: 800px; width: 95%; font: 18px/1.5 sans-serif; }
+        .example-wrapper code { background: #F5F5F5; padding: 2px 6px; }
+    </style>
 
-<div class="example-wrapper">
-    <h1>Hello {{ controller_name }}! ✅</h1>
-
-    This friendly message is coming from:
-    <ul>
-        <li>Your controller at <code><a href="{{ 'C:/laragon/www/un-nouveau-monde/src/Controller/CatalogueController.php'|file_link(0) }}">src/Controller/CatalogueController.php</a></code></li>
-        <li>Your template at <code><a href="{{ 'C:/laragon/www/un-nouveau-monde/templates/catalogue/index.html.twig'|file_link(0) }}">templates/catalogue/index.html.twig</a></code></li>
-    </ul>
-</div>
+    <div class="example-wrapper">
+        <input class="form-control me-sm-2" type="search" placeholder="Search">
+        <button class="btn btn-secondary my-2 my-sm-0" type="submit">Search</button>
+        <h1>Catalogue</h1>
+        <ul>
+            {% for afilm in film %}
+                <li>{{ afilm.name|e }}</li>
+                <li><img src="{{ afilm.imagePath|e }}" alt=""></li>
+            {% endfor %}
+        </ul>
+    </div>
 {% endblock %}
