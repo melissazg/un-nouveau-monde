@@ -32,7 +32,7 @@ class __TwigTemplate_98cc1815d14b146c348a34cae0757bed extends Template
 
     protected function doGetParent(array $context)
     {
-        // line 2
+        // line 1
         return "base.html.twig";
     }
 
@@ -45,7 +45,7 @@ class __TwigTemplate_98cc1815d14b146c348a34cae0757bed extends Template
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f->enter($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "template", "home.html.twig"));
 
-        $this->parent = $this->loadTemplate("base.html.twig", "home.html.twig", 2);
+        $this->parent = $this->loadTemplate("base.html.twig", "home.html.twig", 1);
         $this->parent->display($context, array_merge($this->blocks, $blocks));
         
         $__internal_5a27a8ba21ca79b61932376b2fa922d2->leave($__internal_5a27a8ba21ca79b61932376b2fa922d2_prof);
@@ -55,7 +55,7 @@ class __TwigTemplate_98cc1815d14b146c348a34cae0757bed extends Template
 
     }
 
-    // line 3
+    // line 2
     public function block_title($context, array $blocks = [])
     {
         $macros = $this->macros;
@@ -74,7 +74,7 @@ class __TwigTemplate_98cc1815d14b146c348a34cae0757bed extends Template
 
     }
 
-    // line 4
+    // line 3
     public function block_body($context, array $blocks = [])
     {
         $macros = $this->macros;
@@ -84,7 +84,7 @@ class __TwigTemplate_98cc1815d14b146c348a34cae0757bed extends Template
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f->enter($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "body"));
 
-        // line 5
+        // line 4
         echo "    <div class=\"container py-4\">
         <div class=\"jumbotron\">
             <h1 class=\"display-4\">Bienvenue sur SymRecipes</h1>
@@ -116,13 +116,12 @@ class __TwigTemplate_98cc1815d14b146c348a34cae0757bed extends Template
 
     public function getDebugInfo()
     {
-        return array (  88 => 5,  78 => 4,  59 => 3,  36 => 2,);
+        return array (  88 => 4,  78 => 3,  59 => 2,  36 => 1,);
     }
 
     public function getSourceContext()
     {
-        return new Source("
-{%  extends \"base.html.twig\" %}
+        return new Source("{%  extends \"base.html.twig\" %}
 {% block title %} Un Nouveau Monde {% endblock %}
 {% block body %}
     <div class=\"container py-4\">

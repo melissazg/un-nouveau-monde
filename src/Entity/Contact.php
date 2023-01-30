@@ -13,30 +13,28 @@ class Contact
 {
     #[ORM\Id]
     #[ORM\GeneratedValue]
-    #[ORM\Column]
-    private ?int $id = null;
+    #[ORM\Column(type: 'integer')]
+    private ?int $id;
 
-    #[ORM\Column(length: 50, nullable: true)]
+    #[ORM\Column(type: 'string', length: 50, nullable: true)]
     #[Assert\Length(min: 2, max: 50)]
     private ?string $fullName = null;
 
-    #[ORM\Column(length: 180)]
-    #[Assert\Email()]
+    #[ORM\Column(type: 'string', length: 180)]
     #[Assert\Length(min: 2, max: 180)]
-    #[Assert\Email( message: 'The email {{ value }} is not a valid email.')]
-    private ?string $email = null;
+    private string $email;
 
-    #[ORM\Column(length: 100, nullable: true)]
+    #[ORM\Column(type: 'string', length: 100, nullable: true)]
     #[Assert\Length(min: 2, max: 100)]
     private ?string $subject = null;
 
     #[ORM\Column(type: Types::TEXT)]
     #[Assert\NotBlank()]
-    #[Assert\Length(min: 2, max: 50)]
-    private ?string $message = null;
+    private string $message;
 
-    #[ORM\Column]
-    private ?\DateTimeImmutable $createdAt = null;
+    #[ORM\Column(type: 'datetime_immutable')]
+    #[Assert\NotNull()]
+    private ?\DateTimeImmutable $createdAt;
 
     public function __construct()
     {

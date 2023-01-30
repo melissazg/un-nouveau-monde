@@ -86,71 +86,23 @@ class __TwigTemplate_b5f9dfd83302b01e043dc0db5f4d9192 extends Template
 
         // line 6
         echo "
-    <section class=\"mb-4\">
-
-        <div class=\"container py-4\">
-
-            <!--Section heading-->
-            <h2 class=\"h1-responsive font-weight-bold text-center my-4\"> Contactez-nous </h2>
-
-            <!--Section description-->
-            <p class=\"text-center w-responsive mx-auto mb-5\"> Avez-vous une question ? N'hésitez pas à nous contacter, notre équipe fera tout son possible pour vous répondre dans les plus brefs délais. </p>
-
-            <!-- Bootstrap 5 starter form -->
-            <form id=\"contactForm\" data-sb-form-api-token=\"API_TOKEN\">
-
-                <!-- Name input -->
-                <div class=\"mb-3\">
-                    <label class=\"form-label mt-4\" for=\"name\"> Nom </label>
-                    <input class=\"form-control\" id=\"name\" type=\"text\" placeholder=\"Nom\" data-sb-validations=\"required\" />
-                    <div class=\"invalid-feedback\" data-sb-feedback=\"name:required\"> Un nom est requis. </div>
+    <div class=\"container\">
+        <div class=\"container py-8 h-100 mt-4\">
+            <div class=\"row d-flex justify-content-center align-items-center h-100\">
+                <div class=\"col-14 col-md-10 col-lg-8 col-xl-7\">
+                    <div class=\"card bg-dark text-white\" style=\"border-radius: 1rem;\">
+                        <div class=\"card-body p-8 text-center\">
+                            <h1 class=\"mt-4\"> Contact </h1>
+                            ";
+        // line 14
+        echo         $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderBlock((isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 14, $this->source); })()), 'form');
+        echo "
+                        </div>
+                    </div>
                 </div>
-
-                <!-- Email address input -->
-                <div class=\"mb-3\">
-                    <label class=\"form-label mt-4\" for=\"emailAddress\"> Adresse mail </label>
-                    <input class=\"form-control\" id=\"emailAddress\" type=\"email\" placeholder=\"exemple@mail.fr\" data-sb-validations=\"required, email\" />
-                    <div class=\"invalid-feedback\" data-sb-feedback=\"emailAddress:required\"> Un adresse mail est requis. </div>
-                    <div class=\"invalid-feedback\" data-sb-feedback=\"emailAddress:email\"> L'adresse mail n'est pas valide. </div>
-                </div>
-
-                <!-- Subject input -->
-                <div class=\"mb-3\">
-                    <label class=\"form-label mt-4\" for=\"subject\"> Objet </label>
-                    <input class=\"form-control\" id=\"subject\" type=\"text\" placeholder=\"Objet\" data-sb-validations=\"required\" />
-                    <div class=\"invalid-feedback\" data-sb-feedback=\"subject:required\"> Un objet est requis. </div>
-                </div>
-
-                <!-- Message input -->
-                <div class=\"mb-3\">
-                    <label class=\"form-label mt-4\" for=\"message\"> Message </label>
-                    <textarea class=\"form-control\" id=\"message\" type=\"text\" placeholder=\"Message\" style=\"height: 10rem;\" data-sb-validations=\"required\"></textarea>
-                    <div class=\"invalid-feedback\" data-sb-feedback=\"message:required\"> Un message est requis. </div>
-                </div>
-
-                <!-- Form submissions success message -->
-                <div class=\"d-none\" id=\"submitSuccessMessage\">
-                    <div class=\"text-center mb-3\"> Le message a bien été envoyé ! </div>
-                </div>
-
-                <!-- Form submissions error message -->
-                <div class=\"d-none\" id=\"submitErrorMessage\">
-                    <div class=\"text-center text-danger mb-3\"> Erreur lors de l'envoi du message. </div>
-                </div>
-
-                <!-- Form submit button -->
-                <div class=\"d-grid\">
-                    <button class=\"btn btn-primary btn-lg\" id=\"submitButton\" type=\"submit\"> Envoyer </button>
-                </div>
-
-            </form>
-
+            </div>
         </div>
-
-        <!-- SB Forms JS -->
-        <script src=\"https://cdn.startbootstrap.com/sb-forms-latest.js\"></script>
-    </section>
-    <!--Section: Contact v.2-->
+    </div>
 
 ";
         
@@ -173,7 +125,7 @@ class __TwigTemplate_b5f9dfd83302b01e043dc0db5f4d9192 extends Template
 
     public function getDebugInfo()
     {
-        return array (  88 => 6,  78 => 5,  59 => 3,  36 => 1,);
+        return array (  98 => 14,  88 => 6,  78 => 5,  59 => 3,  36 => 1,);
     }
 
     public function getSourceContext()
@@ -184,71 +136,20 @@ class __TwigTemplate_b5f9dfd83302b01e043dc0db5f4d9192 extends Template
 
 {% block body %}
 
-    <section class=\"mb-4\">
-
-        <div class=\"container py-4\">
-
-            <!--Section heading-->
-            <h2 class=\"h1-responsive font-weight-bold text-center my-4\"> Contactez-nous </h2>
-
-            <!--Section description-->
-            <p class=\"text-center w-responsive mx-auto mb-5\"> Avez-vous une question ? N'hésitez pas à nous contacter, notre équipe fera tout son possible pour vous répondre dans les plus brefs délais. </p>
-
-            <!-- Bootstrap 5 starter form -->
-            <form id=\"contactForm\" data-sb-form-api-token=\"API_TOKEN\">
-
-                <!-- Name input -->
-                <div class=\"mb-3\">
-                    <label class=\"form-label mt-4\" for=\"name\"> Nom </label>
-                    <input class=\"form-control\" id=\"name\" type=\"text\" placeholder=\"Nom\" data-sb-validations=\"required\" />
-                    <div class=\"invalid-feedback\" data-sb-feedback=\"name:required\"> Un nom est requis. </div>
+    <div class=\"container\">
+        <div class=\"container py-8 h-100 mt-4\">
+            <div class=\"row d-flex justify-content-center align-items-center h-100\">
+                <div class=\"col-14 col-md-10 col-lg-8 col-xl-7\">
+                    <div class=\"card bg-dark text-white\" style=\"border-radius: 1rem;\">
+                        <div class=\"card-body p-8 text-center\">
+                            <h1 class=\"mt-4\"> Contact </h1>
+                            {{ form(form) }}
+                        </div>
+                    </div>
                 </div>
-
-                <!-- Email address input -->
-                <div class=\"mb-3\">
-                    <label class=\"form-label mt-4\" for=\"emailAddress\"> Adresse mail </label>
-                    <input class=\"form-control\" id=\"emailAddress\" type=\"email\" placeholder=\"exemple@mail.fr\" data-sb-validations=\"required, email\" />
-                    <div class=\"invalid-feedback\" data-sb-feedback=\"emailAddress:required\"> Un adresse mail est requis. </div>
-                    <div class=\"invalid-feedback\" data-sb-feedback=\"emailAddress:email\"> L'adresse mail n'est pas valide. </div>
-                </div>
-
-                <!-- Subject input -->
-                <div class=\"mb-3\">
-                    <label class=\"form-label mt-4\" for=\"subject\"> Objet </label>
-                    <input class=\"form-control\" id=\"subject\" type=\"text\" placeholder=\"Objet\" data-sb-validations=\"required\" />
-                    <div class=\"invalid-feedback\" data-sb-feedback=\"subject:required\"> Un objet est requis. </div>
-                </div>
-
-                <!-- Message input -->
-                <div class=\"mb-3\">
-                    <label class=\"form-label mt-4\" for=\"message\"> Message </label>
-                    <textarea class=\"form-control\" id=\"message\" type=\"text\" placeholder=\"Message\" style=\"height: 10rem;\" data-sb-validations=\"required\"></textarea>
-                    <div class=\"invalid-feedback\" data-sb-feedback=\"message:required\"> Un message est requis. </div>
-                </div>
-
-                <!-- Form submissions success message -->
-                <div class=\"d-none\" id=\"submitSuccessMessage\">
-                    <div class=\"text-center mb-3\"> Le message a bien été envoyé ! </div>
-                </div>
-
-                <!-- Form submissions error message -->
-                <div class=\"d-none\" id=\"submitErrorMessage\">
-                    <div class=\"text-center text-danger mb-3\"> Erreur lors de l'envoi du message. </div>
-                </div>
-
-                <!-- Form submit button -->
-                <div class=\"d-grid\">
-                    <button class=\"btn btn-primary btn-lg\" id=\"submitButton\" type=\"submit\"> Envoyer </button>
-                </div>
-
-            </form>
-
+            </div>
         </div>
-
-        <!-- SB Forms JS -->
-        <script src=\"https://cdn.startbootstrap.com/sb-forms-latest.js\"></script>
-    </section>
-    <!--Section: Contact v.2-->
+    </div>
 
 {% endblock %}", "contact.html.twig", "/Applications/MAMP/htdocs/un-nouveau-monde/templates/contact.html.twig");
     }
