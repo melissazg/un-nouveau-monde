@@ -43,6 +43,9 @@ class Film
     #[ORM\OneToMany(mappedBy: 'film', targetEntity: Note::class)]
     private Collection $notes;
 
+    #[ORM\Column(length: 255)]
+    private ?string $iframePath = null;
+
     public function __construct()
     {
         $this->commentaires = new ArrayCollection();
@@ -194,6 +197,18 @@ class Film
                 $note->setFilm(null);
             }
         }
+
+        return $this;
+    }
+
+    public function getIframePath(): ?string
+    {
+        return $this->iframePath;
+    }
+
+    public function setIframePath(string $iframePath): self
+    {
+        $this->iframePath = $iframePath;
 
         return $this;
     }
