@@ -41,7 +41,7 @@ class FilmRepository extends ServiceEntityRepository
 
     public function getIframeByName($title){
         return $this->createQueryBuilder('f')
-            ->andWhere('f.name = : title')
+            ->andWhere('f.name =:title')
             ->setParameter('title', $title)
             ->getQuery()
             ->getResult()

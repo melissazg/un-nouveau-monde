@@ -10,8 +10,11 @@
 
 <div class="example-wrapper">
     <h1> {{ title }} </h1>
+    {% for film in film %}
     <ul>
 
+        <iframe width="640" height="480" src={{ film.iframepath}} scrolling="no" frameborder="0" allowfullscreen="true"></iframe>
     </ul>
+    {% endfor %}
 </div>
 {% endblock %}
