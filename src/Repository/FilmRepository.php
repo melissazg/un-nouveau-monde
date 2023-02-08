@@ -43,8 +43,9 @@ class FilmRepository extends ServiceEntityRepository
         return $this->createQueryBuilder('f')
             ->andWhere('f.name =:title')
             ->setParameter('title', $title)
+            ->setMaxResults(1)
             ->getQuery()
-            ->getResult()
+            ->getOneOrNullResult()
             ;
     }
 

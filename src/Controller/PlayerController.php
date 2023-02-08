@@ -13,9 +13,11 @@ class PlayerController extends AbstractController
     public function index(string $title, FilmRepository $filmRepository): Response
     {
 
+        $film = $filmRepository->getIframeByName($title);
         return $this->render('player/index.html.twig', [
             'title' => $title,
-            'film' => $filmRepository -> getIframeByName($title)
+            'film' => $film,
+            'iframePath' => $film->getIframePath()
         ]);
     }
 }
