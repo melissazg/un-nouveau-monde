@@ -1,20 +1,51 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Hello ManagerController!{% endblock %}
 
 {% block body %}
-<style>
-    .example-wrapper { margin: 1em auto; max-width: 800px; width: 95%; font: 18px/1.5 sans-serif; }
-    .example-wrapper code { background: #F5F5F5; padding: 2px 6px; }
-</style>
+    <div class="container mt-4">
+        {% if not films.items is same as([]) %}
+        <h1>Liste de films</h1>
+        <div class="count mt-4">
+            <h4>
+            Il y a {{ films.getTotalItemCount }} films au total actuellement
+            </h4>
+        </div>
 
-<div class="example-wrapper">
-    <h1>Hello {{ controller_name }}! ✅</h1>
-
-    This friendly message is coming from:
-    <ul>
-        <li>Your controller at <code><a href="{{ 'C:/laragon/www/un-nouveau-monde/src/Controller/ManagerController.php'|file_link(0) }}">src/Controller/ManagerController.php</a></code></li>
-        <li>Your template at <code><a href="{{ 'C:/laragon/www/un-nouveau-monde/templates/manager/index.html.twig'|file_link(0) }}">templates/manager/index.html.twig</a></code></li>
-    </ul>
-</div>
+        <table class="table table-hover mt-4">
+            <thead>
+            <tr>
+                <th scope="col">ID</th>
+                <th scope="col">Nom</th>
+                <th scope="col">Réalisateur</th>
+                <th scope="col">Description</th>
+                <th scope="col">Durée</th>
+                <th scope="col">Genre</th>
+                <th scope="col">Date</th>
+                <th scope="col">Acteurs principaux</th>
+                <th scope="col">Mixdrop link</th>
+            </tr>
+            </thead>
+            <tbody>
+            {% for film in films %}
+            <tr class="table-info">
+                <th scope="row">{{ film.id }}</th>
+                <td>{{ film.name }}</td>
+                <td>{{ film.realisateur }}</td>
+                <td>{{ film.description }}</td>
+                <td>{{ film.durée | date('H:i:s') }}</td>
+                <td>{{ film.genre }}</td>
+                <td>{{ film.date | date('d-m-Y') }}</td>
+                <td>{{ film.acteursPrincipaux }}</td>
+                <td>{{ film.iframePath }}</td>
+            </tr>
+            {% endfor %}
+            </tbody>
+        </table>
+        <div class="navigation d-flex justify-content-center mt-4">
+            {{ knp_pagination_render(films) }}
+        </div>
+        {% else %}
+        <h4>Il n'y a pas de films</h4>
+        {% endif %}
+    </div>
 {% endblock %}
