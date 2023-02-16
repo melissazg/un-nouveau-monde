@@ -2,6 +2,7 @@
 
 namespace App\Entity;
 
+
 use App\Repository\UserRepository;
 use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\Common\Collections\Collection;
@@ -12,6 +13,7 @@ use Symfony\Component\Security\Core\User\PasswordAuthenticatedUserInterface;
 use Symfony\Component\Security\Core\User\UserInterface;
 #[UniqueEntity('email')]
 #[ORM\Entity(repositoryClass: UserRepository::class)]
+//#[ORM\EntityListeners(['App\EntityListener\UserListener'])]
 class User implements UserInterface, PasswordAuthenticatedUserInterface
 {
     #[ORM\Id]
@@ -24,8 +26,7 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
 
     #[ORM\Column]
     private array $roles = [];
-    private ?String $plainPassword;
-
+    public ?string $plainPassword = ' ';
     /**
      * @var string The hashed password
      */
@@ -251,9 +252,9 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
     }
 
     /**
-     * @return mixed
+     * @return String|null
      */
-    public function getPlainPassword()
+    public function getPlainPassword(): ?string
     {
         return $this->plainPassword;
     }
@@ -261,7 +262,7 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
     /**
      * @param mixed $plainPassword
      */
-    public function setPlainPassword($plainPassword): void
+    public function setPlainPassword(?string $plainPassword): void
     {
         $this->plainPassword = $plainPassword;
     }

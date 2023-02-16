@@ -20,7 +20,16 @@ class InscriptionController extends AbstractController{
         $form = $this->createForm(InscriptionType::class, $user);
         $form->handleRequest($request);
         if ($form->isSubmitted() && $form->isValid()) {
+            $hashedPassword = $passwordHasher->hashPassword(
+                $user,
+                $user->getPlainPassword()
+            );
+            $user->setPassword($hashedPassword);
+
             $inscriptionFormHandler ->handleForm($user);
+
+
+            return $this->redirectToRoute('home.index');
         }
         return $this->render('inscription.html.twig', [
             'form' => $form->createView(),
