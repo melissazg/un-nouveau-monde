@@ -1,10 +1,18 @@
 {% extends 'base.html.twig' %}
 
+{% block title %} Un nouveau monde - Film manager
+
+{% endblock %}
+
+
 
 {% block body %}
     <div class="container mt-4">
         {% if not films.items is same as([]) %}
         <h1>Liste de films</h1>
+            <a href="{{ path('film.new') }}" class="btn btn-primary">
+                Ajouter un film
+            </a>
         <div class="count mt-4">
             <h4>
             Il y a {{ films.getTotalItemCount }} films au total actuellement

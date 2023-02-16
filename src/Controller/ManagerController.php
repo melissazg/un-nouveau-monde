@@ -5,6 +5,7 @@ namespace App\Controller;
 use App\Entity\Film;
 use App\Form\FilmType;
 use App\Repository\FilmRepository;
+use Doctrine\ORM\EntityManager;
 use Doctrine\ORM\EntityManagerInterface;
 use Knp\Component\Pager\PaginatorInterface;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
@@ -51,5 +52,27 @@ class ManagerController extends AbstractController
     return $this->render('manager/new.html.twig',[
         'form' => $form -> createView()
     ]);
+    }
+
+    #[Route('/manager/edition/{id}', 'film.edit', methods: ['GET', 'POST'])]
+    public function edit(Film $filmg, Request $request, EntityManagerInterface $manager) : Response{
+        $form = $this->createForm(FilmType::class, $film);
+
+        $form -> handleRequest($request);
+        if($form->isSubmitted() && $form->isValid()){
+            $film = $form->getData();
+
+            $manager -> persist($film);
+            $manager -> flush();
+
+            $this->addFlash(
+                'success',
+                'Le film a été modifié !'
+            );
+        }
+
+        return $this->render('manager/edit.html.twig', [
+            'form' => $form->createView()
+        ]);
     }
 }
