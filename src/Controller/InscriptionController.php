@@ -15,12 +15,22 @@ class InscriptionController extends AbstractController{
     #[Route('/inscription', 'inscription.index', methods: ['GET', 'POST'])]
     public function create(Request $request, InscriptionFormHandler $inscriptionFormHandler,UserPasswordHasherInterface $passwordHasher) : Response {
         $user = new User();
-
+        $user->setRoles(['ROLE_USER']);
 
         $form = $this->createForm(InscriptionType::class, $user);
         $form->handleRequest($request);
         if ($form->isSubmitted() && $form->isValid()) {
+
+            $hashedPassword = $passwordHasher->hashPassword(
+                $user,
+                $user->getPlainPassword()
+            );
+            $user->setPassword($hashedPassword);
+
+            $this->addFlash('success', 'Votre compte a bien été créé');
+
             $inscriptionFormHandler ->handleForm($user);
+            return $this->redirectToRoute('home.index');
         }
         return $this->render('inscription.html.twig', [
             'form' => $form->createView(),
