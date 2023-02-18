@@ -26,7 +26,7 @@ class Film
     private ?string $description = null;
 
     #[ORM\Column(type: Types::TIME_MUTABLE)]
-    private ?\DateTimeInterface $durée = null;
+    private ?\DateTimeInterface $duree = null;
 
     #[ORM\Column(length: 255)]
     private ?string $genre = null;
@@ -90,14 +90,14 @@ class Film
         return $this;
     }
 
-    public function getDurée(): ?\DateTimeInterface
+    public function getDuree(): ?\DateTimeInterface
     {
-        return $this->durée;
+        return $this->duree;
     }
 
-    public function setDurée(\DateTimeInterface $durée): self
+    public function setDuree(\DateTimeInterface $duree): self
     {
-        $this->durée = $durée;
+        $this->duree = $duree;
 
         return $this;
     }
