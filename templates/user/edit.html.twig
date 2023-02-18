@@ -11,6 +11,13 @@
                     <div class="card bg-dark text-white" style="border-radius: 1rem;">
                         <div class="card-body p-8 text-center">
                             <h1 class="mt-4">Formulaire de modification</h1>
+
+                            {% for message in app.flashes('warning') %}
+                                <div class="alert alert-warning mt-4">
+                                    {{ message }}
+                                </div>
+                            {% endfor %}
+
                             {{ form(form) }}
                         </div>
                     </div>
