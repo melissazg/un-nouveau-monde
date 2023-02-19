@@ -60,7 +60,10 @@ class __TwigTemplate_e4c6f688cc6cbd32c7ef919fc534402b extends Template
                     <a class=\"nav-link\" href=\"#\">Nos films</a>
                 </li>
                 <li class=\"nav-item\">
-                    <a class=\"nav-link\" href=\"#\">À propos</a>
+                    <a class=\"nav-link\" href=\"";
+        // line 18
+        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_about");
+        echo "\">À propos</a>
                 </li>
                 <li class=\"nav-item\">
                     <a class=\"nav-link\" href=\"";
@@ -97,7 +100,7 @@ class __TwigTemplate_e4c6f688cc6cbd32c7ef919fc534402b extends Template
 
     public function getDebugInfo()
     {
-        return array (  68 => 21,  47 => 3,  43 => 1,);
+        return array (  71 => 21,  65 => 18,  47 => 3,  43 => 1,);
     }
 
     public function getSourceContext()
@@ -119,7 +122,7 @@ class __TwigTemplate_e4c6f688cc6cbd32c7ef919fc534402b extends Template
                     <a class=\"nav-link\" href=\"#\">Nos films</a>
                 </li>
                 <li class=\"nav-item\">
-                    <a class=\"nav-link\" href=\"#\">À propos</a>
+                    <a class=\"nav-link\" href=\"{{ path('app_about') }}\">À propos</a>
                 </li>
                 <li class=\"nav-item\">
                     <a class=\"nav-link\" href=\"{{ path('app_contact') }}\">Contact</a>
