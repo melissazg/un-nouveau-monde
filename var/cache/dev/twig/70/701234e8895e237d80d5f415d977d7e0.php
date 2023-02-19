@@ -104,7 +104,7 @@ class __TwigTemplate_040549c88d10ff3b3c90e9a2b06932ff extends Template
                             <h1 class=\"mt-4\"> Qui sommes-nous ? </h1>
                             <br>
                             <div class=\"card mb-3\" style=\"max-width: 100%;\">
-                                <div class=\"row text-bg-dark g-0\">
+                                <div class=\"row g-0 text-bg-primary\" style=\"border-radius: 8px;\">
                                     <div class=\"col-md-4\">
                                         <br>
                                         <img src=\"";
@@ -124,8 +124,8 @@ class __TwigTemplate_040549c88d10ff3b3c90e9a2b06932ff extends Template
                                 </div>
                             </div>
 
-                            <div class=\"card text-bg-dark mb-3\" style=\"max-width: 100%;\">
-                                <div class=\"row g-0 text-bg-dark\">
+                            <div class=\"card mb-3\" style=\"max-width: 100%;\">
+                                <div class=\"row g-0 text-bg-info\" style=\"border-radius: 8px\">
                                     <div class=\"col-md-4\">
                                         <br>
                                         <img src=\"";
@@ -203,7 +203,7 @@ class __TwigTemplate_040549c88d10ff3b3c90e9a2b06932ff extends Template
                             <h1 class=\"mt-4\"> Qui sommes-nous ? </h1>
                             <br>
                             <div class=\"card mb-3\" style=\"max-width: 100%;\">
-                                <div class=\"row text-bg-dark g-0\">
+                                <div class=\"row g-0 text-bg-primary\" style=\"border-radius: 8px;\">
                                     <div class=\"col-md-4\">
                                         <br>
                                         <img src=\"{{ asset('img/MarieBailleule.jpg') }}\" class=\"img-fluid rounded-start\" alt=\"Marie Bailleule\">
@@ -220,8 +220,8 @@ class __TwigTemplate_040549c88d10ff3b3c90e9a2b06932ff extends Template
                                 </div>
                             </div>
 
-                            <div class=\"card text-bg-dark mb-3\" style=\"max-width: 100%;\">
-                                <div class=\"row g-0 text-bg-dark\">
+                            <div class=\"card mb-3\" style=\"max-width: 100%;\">
+                                <div class=\"row g-0 text-bg-info\" style=\"border-radius: 8px\">
                                     <div class=\"col-md-4\">
                                         <br>
                                         <img src=\"{{ asset('img/NicolasDesole.jpg') }}\" class=\"img-fluid rounded-start\" alt=\"Nicolas Desole\">
