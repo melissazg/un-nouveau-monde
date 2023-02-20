@@ -20,4 +20,5 @@ return [
     'app_contact' => [[], ['_controller' => 'App\\Controller\\ContactController::contact'], [], [['text', '/contact']], [], [], []],
     'home.index' => [[], ['_controller' => 'App\\Controller\\HomeController::index'], [], [['text', '/']], [], [], []],
     'app_partners' => [[], ['_controller' => 'App\\Controller\\PartnersController::index'], [], [['text', '/partners']], [], [], []],
+    'app_producers' => [[], ['_controller' => 'App\\Controller\\ProducersController::index'], [], [['text', '/producers']], [], [], []],
 ];

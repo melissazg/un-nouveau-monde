@@ -52,7 +52,10 @@ class __TwigTemplate_e4c6f688cc6cbd32c7ef919fc534402b extends Template
         <div class=\"collapse navbar-collapse\" id=\"navbarColor02\">
             <ul class=\"navbar-nav me-auto\">
                 <li class=\"nav-item\">
-                    <a class=\"nav-link active\" href=\"#\">Accueil
+                    <a class=\"nav-link active\" href=\"";
+        // line 10
+        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_producers");
+        echo "\">Accueil
                         <span class=\"visually-hidden\">(current)</span>
                     </a>
                 </li>
@@ -106,7 +109,7 @@ class __TwigTemplate_e4c6f688cc6cbd32c7ef919fc534402b extends Template
 
     public function getDebugInfo()
     {
-        return array (  77 => 24,  71 => 21,  65 => 18,  47 => 3,  43 => 1,);
+        return array (  80 => 24,  74 => 21,  68 => 18,  57 => 10,  47 => 3,  43 => 1,);
     }
 
     public function getSourceContext()
@@ -120,7 +123,7 @@ class __TwigTemplate_e4c6f688cc6cbd32c7ef919fc534402b extends Template
         <div class=\"collapse navbar-collapse\" id=\"navbarColor02\">
             <ul class=\"navbar-nav me-auto\">
                 <li class=\"nav-item\">
-                    <a class=\"nav-link active\" href=\"#\">Accueil
+                    <a class=\"nav-link active\" href=\"{{ path('app_producers') }}\">Accueil
                         <span class=\"visually-hidden\">(current)</span>
                     </a>
                 </li>

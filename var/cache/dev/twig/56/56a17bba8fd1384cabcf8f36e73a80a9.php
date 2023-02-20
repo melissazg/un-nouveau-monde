@@ -85,45 +85,50 @@ class __TwigTemplate_d84b25d5cc5b864311073c9e526937e3 extends Template
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f->enter($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "body"));
 
         // line 6
-        echo "
-    <div class=\"container\" style=\"width: 50%\">
-        <h1 class=\"mt-4 text-center\"> Nos réalisateurs </h1>
-        <div class=\"card\" style=\"width: 18rem;\">
-            <img src=\"...\" class=\"card-img-top\" alt=\"...\">
+        echo "    <div class=\"container text-center\">
+        <h1 class=\"mt-4\"> Bienvenue ! </h1>
+        <p> Dans ce nouveau monde, la lumière naît dans le coeur des hommes et des femmes et sert de projecteurs face à l'écran. </p>
+        <p> Venez découvrir les productions de nos talentueux réalisateurs ! </p>
+    </div>
+    <br>
+    <div class=\"container\" style=\"width: 30%\">
+        <div class=\"card\">
+            <img src=\"img/NicolasDesole.jpg\" class=\"card-img-top\" alt=\"Réalisateur 1\">
             <div class=\"card-body\">
-                <h5 class=\"card-title\">Card title</h5>
+                <h5 class=\"card-title\">Réalisateur 1</h5>
                 <p class=\"card-text\">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
                 <a href=\"#\" class=\"btn btn-primary\">Go somewhere</a>
             </div>
         </div>
-
-        <div class=\"card\" style=\"width: 18rem;\">
-            <img src=\"...\" class=\"card-img-top\" alt=\"...\">
+    <br><br>
+        <div class=\"card\">
+            <img src=\"img/MarieBailleule.jpg\" class=\"card-img-top\" alt=\"Réalisateur 2\">
             <div class=\"card-body\">
-                <h5 class=\"card-title\">Card title</h5>
+                <h5 class=\"card-title\">Réalisateur 2</h5>
                 <p class=\"card-text\">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
                 <a href=\"#\" class=\"btn btn-primary\">Go somewhere</a>
             </div>
         </div>
-
-        <div class=\"card\" style=\"width: 18rem;\">
-            <img src=\"...\" class=\"card-img-top\" alt=\"...\">
+    <br><br>
+        <div class=\"card\">
+            <img src=\"img/NicolasDesole.jpg\" class=\"card-img-top\" alt=\"Réalisateur 3\">
             <div class=\"card-body\">
-                <h5 class=\"card-title\">Card title</h5>
+                <h5 class=\"card-title\">Réalisateur 3</h5>
                 <p class=\"card-text\">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
                 <a href=\"#\" class=\"btn btn-primary\">Go somewhere</a>
             </div>
         </div>
-
-        <div class=\"card\" style=\"width: 18rem;\">
-            <img src=\"...\" class=\"card-img-top\" alt=\"...\">
+    <br><br>
+        <div class=\"card\">
+            <img src=\"img/MarieBailleule.jpg\" class=\"card-img-top\" alt=\"Réalisateur 4\">
             <div class=\"card-body\">
-                <h5 class=\"card-title\">Card title</h5>
+                <h5 class=\"card-title\">Réalisateur 4</h5>
                 <p class=\"card-text\">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
                 <a href=\"#\" class=\"btn btn-primary\">Go somewhere</a>
             </div>
         </div>
     </div>
+    <br>
 
 ";
         
@@ -156,45 +161,50 @@ class __TwigTemplate_d84b25d5cc5b864311073c9e526937e3 extends Template
 {% block title %} Un Nouveau Monde {% endblock %}
 
 {% block body %}
-
-    <div class=\"container\" style=\"width: 50%\">
-        <h1 class=\"mt-4 text-center\"> Nos réalisateurs </h1>
-        <div class=\"card\" style=\"width: 18rem;\">
-            <img src=\"...\" class=\"card-img-top\" alt=\"...\">
+    <div class=\"container text-center\">
+        <h1 class=\"mt-4\"> Bienvenue ! </h1>
+        <p> Dans ce nouveau monde, la lumière naît dans le coeur des hommes et des femmes et sert de projecteurs face à l'écran. </p>
+        <p> Venez découvrir les productions de nos talentueux réalisateurs ! </p>
+    </div>
+    <br>
+    <div class=\"container\" style=\"width: 30%\">
+        <div class=\"card\">
+            <img src=\"img/NicolasDesole.jpg\" class=\"card-img-top\" alt=\"Réalisateur 1\">
             <div class=\"card-body\">
-                <h5 class=\"card-title\">Card title</h5>
+                <h5 class=\"card-title\">Réalisateur 1</h5>
                 <p class=\"card-text\">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
                 <a href=\"#\" class=\"btn btn-primary\">Go somewhere</a>
             </div>
         </div>
-
-        <div class=\"card\" style=\"width: 18rem;\">
-            <img src=\"...\" class=\"card-img-top\" alt=\"...\">
+    <br><br>
+        <div class=\"card\">
+            <img src=\"img/MarieBailleule.jpg\" class=\"card-img-top\" alt=\"Réalisateur 2\">
             <div class=\"card-body\">
-                <h5 class=\"card-title\">Card title</h5>
+                <h5 class=\"card-title\">Réalisateur 2</h5>
                 <p class=\"card-text\">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
                 <a href=\"#\" class=\"btn btn-primary\">Go somewhere</a>
             </div>
         </div>
-
-        <div class=\"card\" style=\"width: 18rem;\">
-            <img src=\"...\" class=\"card-img-top\" alt=\"...\">
+    <br><br>
+        <div class=\"card\">
+            <img src=\"img/NicolasDesole.jpg\" class=\"card-img-top\" alt=\"Réalisateur 3\">
             <div class=\"card-body\">
-                <h5 class=\"card-title\">Card title</h5>
+                <h5 class=\"card-title\">Réalisateur 3</h5>
                 <p class=\"card-text\">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
                 <a href=\"#\" class=\"btn btn-primary\">Go somewhere</a>
             </div>
         </div>
-
-        <div class=\"card\" style=\"width: 18rem;\">
-            <img src=\"...\" class=\"card-img-top\" alt=\"...\">
+    <br><br>
+        <div class=\"card\">
+            <img src=\"img/MarieBailleule.jpg\" class=\"card-img-top\" alt=\"Réalisateur 4\">
             <div class=\"card-body\">
-                <h5 class=\"card-title\">Card title</h5>
+                <h5 class=\"card-title\">Réalisateur 4</h5>
                 <p class=\"card-text\">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
                 <a href=\"#\" class=\"btn btn-primary\">Go somewhere</a>
             </div>
         </div>
     </div>
+    <br>
 
 {% endblock %}", "producers.html.twig", "/Applications/MAMP/htdocs/un-nouveau-monde/templates/producers.html.twig");
     }
