@@ -12,7 +12,7 @@ use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Component\HttpFoundation\Response;
 class InscriptionController extends AbstractController{
 
-    #[Route('/inscription', 'inscription.index', methods: ['GET', 'POST'])]
+    #[Route('/inscription', name:'inscription.index', methods: ['GET','POST'])]
     public function create(Request $request, InscriptionFormHandler $inscriptionFormHandler,UserPasswordHasherInterface $passwordHasher) : Response {
         $user = new User();
         $user->setRoles(['ROLE_USER']);
@@ -30,7 +30,7 @@ class InscriptionController extends AbstractController{
             $this->addFlash('success', 'Votre compte a bien été créé');
 
             $inscriptionFormHandler ->handleForm($user);
-            return $this->redirectToRoute('home.index');
+            return $this->redirectToRoute('app_pre_login');
         }
         return $this->render('inscription.html.twig', [
             'form' => $form->createView(),

@@ -52,7 +52,7 @@
                                     </div>
 
                                     <div>
-                                        <p class="mb-0">Vous n'avez pas de compte? <a href="#!" class="text-white-50 fw-bold">Inscription</a>
+                                        <p class="mb-0">Vous n'avez pas de compte? <a href={{path('inscription.index')}} class="text-white-50 fw-bold">Inscription</a>
                                     <input type="hidden" name="_csrf_token"
                                            value="{{ csrf_token('authenticate') }}"
                                     >
