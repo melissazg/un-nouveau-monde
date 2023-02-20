@@ -89,10 +89,6 @@ class __TwigTemplate_040549c88d10ff3b3c90e9a2b06932ff extends Template
         p {
             text-align: justify;
         }
-        img {
-            border-radius: 8px;
-        }
-
     </style>
 
     <div class=\"container\">
@@ -108,9 +104,9 @@ class __TwigTemplate_040549c88d10ff3b3c90e9a2b06932ff extends Template
                                     <div class=\"col-md-4\">
                                         <br>
                                         <img src=\"";
-        // line 28
+        // line 24
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("img/MarieBailleule.jpg"), "html", null, true);
-        echo "\" class=\"img-fluid rounded-start\" alt=\"Marie Bailleule\">
+        echo "\" class=\"img-fluid rounded\" alt=\"Marie Bailleule\">
                                     </div>
                                     <div class=\"col-md-8\">
                                         <div class=\"card-body\">
@@ -129,9 +125,9 @@ class __TwigTemplate_040549c88d10ff3b3c90e9a2b06932ff extends Template
                                     <div class=\"col-md-4\">
                                         <br>
                                         <img src=\"";
-        // line 46
+        // line 42
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("img/NicolasDesole.jpg"), "html", null, true);
-        echo "\" class=\"img-fluid rounded-start\" alt=\"Nicolas Desole\">
+        echo "\" class=\"img-fluid rounded\" alt=\"Nicolas Desole\">
                                     </div>
                                     <div class=\"col-md-8\">
                                         <div class=\"card-body\">
@@ -174,7 +170,7 @@ class __TwigTemplate_040549c88d10ff3b3c90e9a2b06932ff extends Template
 
     public function getDebugInfo()
     {
-        return array (  133 => 46,  112 => 28,  88 => 6,  78 => 5,  59 => 3,  36 => 1,);
+        return array (  129 => 42,  108 => 24,  88 => 6,  78 => 5,  59 => 3,  36 => 1,);
     }
 
     public function getSourceContext()
@@ -188,10 +184,6 @@ class __TwigTemplate_040549c88d10ff3b3c90e9a2b06932ff extends Template
         p {
             text-align: justify;
         }
-        img {
-            border-radius: 8px;
-        }
-
     </style>
 
     <div class=\"container\">
@@ -206,7 +198,7 @@ class __TwigTemplate_040549c88d10ff3b3c90e9a2b06932ff extends Template
                                 <div class=\"row g-0 text-bg-primary\" style=\"border-radius: 8px;\">
                                     <div class=\"col-md-4\">
                                         <br>
-                                        <img src=\"{{ asset('img/MarieBailleule.jpg') }}\" class=\"img-fluid rounded-start\" alt=\"Marie Bailleule\">
+                                        <img src=\"{{ asset('img/MarieBailleule.jpg') }}\" class=\"img-fluid rounded\" alt=\"Marie Bailleule\">
                                     </div>
                                     <div class=\"col-md-8\">
                                         <div class=\"card-body\">
@@ -224,7 +216,7 @@ class __TwigTemplate_040549c88d10ff3b3c90e9a2b06932ff extends Template
                                 <div class=\"row g-0 text-bg-info\" style=\"border-radius: 8px\">
                                     <div class=\"col-md-4\">
                                         <br>
-                                        <img src=\"{{ asset('img/NicolasDesole.jpg') }}\" class=\"img-fluid rounded-start\" alt=\"Nicolas Desole\">
+                                        <img src=\"{{ asset('img/NicolasDesole.jpg') }}\" class=\"img-fluid rounded\" alt=\"Nicolas Desole\">
                                     </div>
                                     <div class=\"col-md-8\">
                                         <div class=\"card-body\">

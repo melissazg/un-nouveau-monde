@@ -85,72 +85,61 @@ class __TwigTemplate_935946b3270917a93a1270803bf3e70a extends Template
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f->enter($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "body"));
 
         // line 6
-        echo "    <style>
-        p {
-            text-align: justify;
-        }
-        img {
-            border-radius: 8px;
-        }
-
-    </style>
-
-    <div class=\"container\">
-        <div class=\"container py-8 h-100 mt-4\">
-            <div class=\"row d-flex justify-content-center align-items-center h-100\">
-                <div class=\"col-14 col-md-10 col-lg-8 col-xl-10\">
-                    <div class=\"card bg-dark text-white\" style=\"border-radius: 1rem;\">
-                        <div class=\"card-body p-8 text-center\">
-                            <h1 class=\"mt-4\"> Qui sommes-nous ? </h1>
-                            <br>
-                            <div class=\"card mb-3\" style=\"max-width: 100%;\">
-                                <div class=\"row g-0 text-bg-primary\" style=\"border-radius: 8px;\">
-                                    <div class=\"col-md-4\">
-                                        <br>
-                                        <img src=\"";
-        // line 28
-        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("img/MarieBailleule.jpg"), "html", null, true);
-        echo "\" class=\"img-fluid rounded-start\" alt=\"Marie Bailleule\">
-                                    </div>
-                                    <div class=\"col-md-8\">
-                                        <div class=\"card-body\">
-                                            <h5 class=\"card-title\">Marie Bailleule</h5>
-                                            <p>Riche d’une vingtaine d’années dans l’exploitation, c’est avec cœur ouvert que Marie Bailleul épaule et accompagne ce projet pour les lycéens cinéphiles.<br><br>
-                                                Son goût et sa passion pour les histoires universelles forment une harmonie d’équipe avec Nicolas. <br><br> L’une se concentrant sur l’histoire qui est racontée sera force de proposition. <br><br>
-                                                L’autre se concentrant sur la forme des œuvres aura facilité d’analyse et de programmation.
-                                            </p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class=\"card mb-3\" style=\"max-width: 100%;\">
-                                <div class=\"row g-0 text-bg-info\" style=\"border-radius: 8px\">
-                                    <div class=\"col-md-4\">
-                                        <br>
-                                        <img src=\"";
-        // line 46
-        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("img/NicolasDesole.jpg"), "html", null, true);
-        echo "\" class=\"img-fluid rounded-start\" alt=\"Nicolas Desole\">
-                                    </div>
-                                    <div class=\"col-md-8\">
-                                        <div class=\"card-body\">
-                                            <h5 class=\"card-title\">Nicolas Desole</h5>
-                                            <p>Nicolas a fréquenté les ciné-club comme les festivals avec assiduité depuis de nombreuses années.<br><br>
-                                                Provenant lui-même de cette école de la vie qu’il poursuit en parallèle de ses études de cinéma, ce projet représente pour lui une quatrième étape. <br><br>
-                                                Il a supervisé, créé, accompagné au développement de soirées ou de réunions les cinéphiles spectateurs ou professionnels. <br><br>
-                                                C’est avec joie et pour amitié pour sa consœur que Nicolas prépare ce projet avec investissement.<br><br>
-                                                Il souhaite faire émerger la partie créative et cinéphiles des programmateurs et se sent proche du secteur même du cinéma. <br><br>
-                                                Avec lui il sera facile pour les lycéens de suivre une voie orientée vers l’échange humain dans leur collège cinéphile.</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+        echo "
+    <div class=\"container\" style=\"width: 50%\">
+        <h1 class=\"mt-4 text-center\"> Nos partenaires </h1>
+        <div class=\"col\">
+            <div class=\"card\">
+                <img src=\"";
+        // line 11
+        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("img/lycee_henriIV.jpg"), "html", null, true);
+        echo "\" class=\"img-fluid rounded\" alt=\"Lycée Henri IV\">
+                <div class=\"card-body\">
+                    <h5 class=\"card-title\">Lycée Henri IV</h5>
+                    <p class=\"card-text\">Une description ?</p>
                 </div>
             </div>
         </div>
+    <br>
+        <div class=\"col\">
+            <div class=\"card\">
+                <img src=\"";
+        // line 21
+        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("img/lycee_simoneveil.png"), "html", null, true);
+        echo "\" class=\"img-fluid rounded\" alt=\"Lycée Simone Veil\">
+                <div class=\"card-body\">
+                    <h5 class=\"card-title\">Lycée Simone Veil</h5>
+                    <p class=\"card-text\">Une description ?</p>
+                </div>
+            </div>
+        </div>
+    <br>
+        <div class=\"col\">
+            <div class=\"card\">
+                <img src=\"";
+        // line 31
+        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("img/lycee_vieljeux.png"), "html", null, true);
+        echo "\" class=\"img-fluid rounded\" alt=\"Lycée Vieiljeux\">
+                <div class=\"card-body\">
+                    <h5 class=\"card-title\">Lycée Vieljeux</h5>
+                    <p class=\"card-text\">Une description ?</p>
+                </div>
+            </div>
+        </div>
+    <br>
+        <div class=\"col\">
+            <div class=\"card\">
+                <img src=\"";
+        // line 41
+        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("img/lycee_des_metiers.png"), "html", null, true);
+        echo "\" class=\"img-fluid rounded\" alt=\"Lycée des métiers\">
+                <div class=\"card-body\">
+                    <h5 class=\"card-title\">Lycée des métiers</h5>
+                    <p class=\"card-text\">Une description ?</p>
+                </div>
+            </div>
+        </div>
+    <br>
     </div>
 
 ";
@@ -174,7 +163,7 @@ class __TwigTemplate_935946b3270917a93a1270803bf3e70a extends Template
 
     public function getDebugInfo()
     {
-        return array (  133 => 46,  112 => 28,  88 => 6,  78 => 5,  59 => 3,  36 => 1,);
+        return array (  134 => 41,  121 => 31,  108 => 21,  95 => 11,  88 => 6,  78 => 5,  59 => 3,  36 => 1,);
     }
 
     public function getSourceContext()
@@ -184,66 +173,49 @@ class __TwigTemplate_935946b3270917a93a1270803bf3e70a extends Template
 {% block title %} Un Nouveau Monde {% endblock %}
 
 {% block body %}
-    <style>
-        p {
-            text-align: justify;
-        }
-        img {
-            border-radius: 8px;
-        }
 
-    </style>
-
-    <div class=\"container\">
-        <div class=\"container py-8 h-100 mt-4\">
-            <div class=\"row d-flex justify-content-center align-items-center h-100\">
-                <div class=\"col-14 col-md-10 col-lg-8 col-xl-10\">
-                    <div class=\"card bg-dark text-white\" style=\"border-radius: 1rem;\">
-                        <div class=\"card-body p-8 text-center\">
-                            <h1 class=\"mt-4\"> Qui sommes-nous ? </h1>
-                            <br>
-                            <div class=\"card mb-3\" style=\"max-width: 100%;\">
-                                <div class=\"row g-0 text-bg-primary\" style=\"border-radius: 8px;\">
-                                    <div class=\"col-md-4\">
-                                        <br>
-                                        <img src=\"{{ asset('img/MarieBailleule.jpg') }}\" class=\"img-fluid rounded-start\" alt=\"Marie Bailleule\">
-                                    </div>
-                                    <div class=\"col-md-8\">
-                                        <div class=\"card-body\">
-                                            <h5 class=\"card-title\">Marie Bailleule</h5>
-                                            <p>Riche d’une vingtaine d’années dans l’exploitation, c’est avec cœur ouvert que Marie Bailleul épaule et accompagne ce projet pour les lycéens cinéphiles.<br><br>
-                                                Son goût et sa passion pour les histoires universelles forment une harmonie d’équipe avec Nicolas. <br><br> L’une se concentrant sur l’histoire qui est racontée sera force de proposition. <br><br>
-                                                L’autre se concentrant sur la forme des œuvres aura facilité d’analyse et de programmation.
-                                            </p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class=\"card mb-3\" style=\"max-width: 100%;\">
-                                <div class=\"row g-0 text-bg-info\" style=\"border-radius: 8px\">
-                                    <div class=\"col-md-4\">
-                                        <br>
-                                        <img src=\"{{ asset('img/NicolasDesole.jpg') }}\" class=\"img-fluid rounded-start\" alt=\"Nicolas Desole\">
-                                    </div>
-                                    <div class=\"col-md-8\">
-                                        <div class=\"card-body\">
-                                            <h5 class=\"card-title\">Nicolas Desole</h5>
-                                            <p>Nicolas a fréquenté les ciné-club comme les festivals avec assiduité depuis de nombreuses années.<br><br>
-                                                Provenant lui-même de cette école de la vie qu’il poursuit en parallèle de ses études de cinéma, ce projet représente pour lui une quatrième étape. <br><br>
-                                                Il a supervisé, créé, accompagné au développement de soirées ou de réunions les cinéphiles spectateurs ou professionnels. <br><br>
-                                                C’est avec joie et pour amitié pour sa consœur que Nicolas prépare ce projet avec investissement.<br><br>
-                                                Il souhaite faire émerger la partie créative et cinéphiles des programmateurs et se sent proche du secteur même du cinéma. <br><br>
-                                                Avec lui il sera facile pour les lycéens de suivre une voie orientée vers l’échange humain dans leur collège cinéphile.</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+    <div class=\"container\" style=\"width: 50%\">
+        <h1 class=\"mt-4 text-center\"> Nos partenaires </h1>
+        <div class=\"col\">
+            <div class=\"card\">
+                <img src=\"{{ asset('img/lycee_henriIV.jpg') }}\" class=\"img-fluid rounded\" alt=\"Lycée Henri IV\">
+                <div class=\"card-body\">
+                    <h5 class=\"card-title\">Lycée Henri IV</h5>
+                    <p class=\"card-text\">Une description ?</p>
                 </div>
             </div>
         </div>
+    <br>
+        <div class=\"col\">
+            <div class=\"card\">
+                <img src=\"{{ asset('img/lycee_simoneveil.png') }}\" class=\"img-fluid rounded\" alt=\"Lycée Simone Veil\">
+                <div class=\"card-body\">
+                    <h5 class=\"card-title\">Lycée Simone Veil</h5>
+                    <p class=\"card-text\">Une description ?</p>
+                </div>
+            </div>
+        </div>
+    <br>
+        <div class=\"col\">
+            <div class=\"card\">
+                <img src=\"{{ asset('img/lycee_vieljeux.png') }}\" class=\"img-fluid rounded\" alt=\"Lycée Vieiljeux\">
+                <div class=\"card-body\">
+                    <h5 class=\"card-title\">Lycée Vieljeux</h5>
+                    <p class=\"card-text\">Une description ?</p>
+                </div>
+            </div>
+        </div>
+    <br>
+        <div class=\"col\">
+            <div class=\"card\">
+                <img src=\"{{ asset('img/lycee_des_metiers.png') }}\" class=\"img-fluid rounded\" alt=\"Lycée des métiers\">
+                <div class=\"card-body\">
+                    <h5 class=\"card-title\">Lycée des métiers</h5>
+                    <p class=\"card-text\">Une description ?</p>
+                </div>
+            </div>
+        </div>
+    <br>
     </div>
 
 {% endblock %}", "partners.html.twig", "/Applications/MAMP/htdocs/un-nouveau-monde/templates/partners.html.twig");
