@@ -31,6 +31,8 @@
                 <th scope="col">Date</th>
                 <th scope="col">Acteurs principaux</th>
                 <th scope="col">Mixdrop link</th>
+                <th scope="col">Edition</th>
+                <th scole="col">Suppression</th>
             </tr>
             </thead>
             <tbody>
@@ -45,6 +47,9 @@
                 <td>{{ film.date | date('d-m-Y') }}</td>
                 <td>{{ film.acteursPrincipaux }}</td>
                 <td>{{ film.iframePath }}</td>
+                <td><a href="{{ path('film.edit', {id: film.id}) }}" class="btn btn-info"> Modifier</a></td>
+                <td><a href="{{ path('film.delete', {id: film.id}) }}" class="btn btn-warning"> Supprimer</a></td>
+
             </tr>
             {% endfor %}
             </tbody>

@@ -55,7 +55,7 @@ class ManagerController extends AbstractController
     }
 
     #[Route('/manager/edition/{id}', 'film.edit', methods: ['GET', 'POST'])]
-    public function edit(Film $filmg, Request $request, EntityManagerInterface $manager) : Response{
+    public function edit(Film $film, Request $request, EntityManagerInterface $manager) : Response{
         $form = $this->createForm(FilmType::class, $film);
 
         $form -> handleRequest($request);
@@ -75,4 +75,26 @@ class ManagerController extends AbstractController
             'form' => $form->createView()
         ]);
     }
+
+    #[Route('/manager/supprimer/{id}', 'film.delete', methods: ['GET'])]
+    public function delete(EntityManagerInterface $manager, Film $film) : Response {
+        if (!$film) {
+            $this->addFlash(
+                'success',
+                'Le film en question est introuvable'
+            );
+            return $this->redirectToRoute('app_manager');
+        }
+
+        $manager->remove($film);
+        $manager->flush();
+
+        $this->addFlash(
+            'success',
+            'Le film a été supprimé !'
+        );
+
+        return $this->redirectToRoute('app_manager');
+    }
+
 }
