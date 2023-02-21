@@ -13,7 +13,7 @@ class CatalogueController extends AbstractController
     public function index(FilmRepository $filmRepository): Response
     {
         return $this->render('catalogue/index.html.twig', [
-            'film' => $filmRepository ->getFilm(),
+            'films' => $filmRepository ->getFilm(),
         ]);
     }
 }
