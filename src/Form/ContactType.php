@@ -80,16 +80,11 @@ class ContactType extends AbstractType
             ->add('submit', SubmitType::class, [
                 'attr' => [
                     'class' => 'btn btn-primary mt-4'
+
                 ],
                 'label' => 'Soumettre ma demande'
-            ])
-
-            ->add('reset', ResetType::class, [
-                'attr' => [
-                    'class' => 'btn mt-2'
-                ],
-                'label' => 'Tout effacer'
             ]);
+
     }
 
     public function configureOptions(OptionsResolver $resolver): void
