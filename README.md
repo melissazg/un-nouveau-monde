@@ -1,15 +1,18 @@
 # Un_Nouveau_Monde
-Site internet d'une association ciné-film pour les clubs de cinéma dans les lycées comportant un catalogue de films d'animation.
+Un Nouveau Monde est une association qui supervise les clubs de cinéma dans les lycées, créée par Nicolas Desole et Marie Bailleule.
+
+Le site internet a pour but de présenter l'association, les créateurs et de pouvoir découvrir et visionner les films d'animation réalisés par les producteurs partenaires.
 
 ## Les fonctionnalités :
-- Page d'accueil avec les actualités de l'association
-- Catalogue des films avec filtre et fonctionnalités (ajout, suppression, modification)
-- Une page de présentation pour chaque film contenant le synopsis, une bande d'annonce, autres infos...
+- Page d'accueil présentant les réalisateurs des films d'animation
+- Catalogue des films avec différentes fonctionnalités : ajout, suppression, modification et filtre
+- Une page de présentation pour chaque film contenant le synopsis, le film en streaming, autres infos...
 - Page de recommandation de films selon les données entrées par l'utilisateur 
-- Présentation de l'association
-- Présentation des collaborateurs
-- Créer un compte, se connecter, page profil
-- Footer : réseaux sociaux et page de contact
+- Présentation de l'association et des collaborateurs (À propos)
+- Créer un compte, se connecter, page profil avec modifications des données 
+- Page de contact
+- Footer : Réseaux sociaux, informations de contact (email, numéro de téléphone), horaires et newsletter
 
-- En tant que collaborateur : modification du catalogue
-- En tant que client : noter et commenter les films
+Deux types d'utilisateurs :
+- Seul l'administrateur peut modifier le catalogue
+- Les élèves peuvent naviguer noter et commenter les films
