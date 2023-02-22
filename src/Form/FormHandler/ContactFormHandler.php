@@ -14,6 +14,5 @@ final class ContactFormHandler
     {
         $this->entityManager->persist($contact);
         $this->entityManager->flush();
-        dd($contact);
     }
 }
