@@ -54,7 +54,7 @@ class __TwigTemplate_e4c6f688cc6cbd32c7ef919fc534402b extends Template
                 <li class=\"nav-item\">
                     <a class=\"nav-link active\" href=\"";
         // line 10
-        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_producers");
+        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("home.index");
         echo "\">Accueil
                         <span class=\"visually-hidden\">(current)</span>
                     </a>
@@ -123,7 +123,7 @@ class __TwigTemplate_e4c6f688cc6cbd32c7ef919fc534402b extends Template
         <div class=\"collapse navbar-collapse\" id=\"navbarColor02\">
             <ul class=\"navbar-nav me-auto\">
                 <li class=\"nav-item\">
-                    <a class=\"nav-link active\" href=\"{{ path('app_producers') }}\">Accueil
+                    <a class=\"nav-link active\" href=\"{{ path('home.index') }}\">Accueil
                         <span class=\"visually-hidden\">(current)</span>
                     </a>
                 </li>

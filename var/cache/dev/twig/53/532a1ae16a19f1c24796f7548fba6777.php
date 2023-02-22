@@ -54,7 +54,7 @@ class __TwigTemplate_470575d1c7205fea7a9d4002753cf857 extends Template
         // line 5
         $this->displayBlock('title', $context, $blocks);
         echo "</title>
-        <link rel=\"icon\" href=\"data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 128 128%22><text y=%221.2em%22 font-size=%2296%22> ⚫️</text></svg>\">
+        <link rel=\"icon\" href=\"https://cours.univ-paris1.fr/pluginfile.php/1/theme_adaptable/favicon/1675329600/favicon.ico\">
         ";
         // line 8
         echo "        ";
@@ -98,7 +98,7 @@ class __TwigTemplate_470575d1c7205fea7a9d4002753cf857 extends Template
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f->enter($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "title"));
 
-        echo "Welcome!";
+        echo "Un Nouveau Monde";
         
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f->leave($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof);
 
@@ -238,8 +238,8 @@ class __TwigTemplate_470575d1c7205fea7a9d4002753cf857 extends Template
 <html>
     <head>
         <meta charset=\"UTF-8\">
-        <title>{% block title %}Welcome!{% endblock %}</title>
-        <link rel=\"icon\" href=\"data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 128 128%22><text y=%221.2em%22 font-size=%2296%22> ⚫️</text></svg>\">
+        <title>{% block title %}Un Nouveau Monde{% endblock %}</title>
+        <link rel=\"icon\" href=\"https://cours.univ-paris1.fr/pluginfile.php/1/theme_adaptable/favicon/1675329600/favicon.ico\">
         {# Run `composer require symfony/webpack-encore-bundle` to start using Symfony UX #}
         {% block stylesheets %}
             {{ encore_entry_link_tags('app') }}

@@ -101,7 +101,7 @@ class __TwigTemplate_040549c88d10ff3b3c90e9a2b06932ff extends Template
                             <br>
                             <div class=\"card mb-3\" style=\"max-width: 100%;\">
                                 <div class=\"row g-0 text-bg-primary\" style=\"border-radius: 8px;\">
-                                    <div class=\"col-md-4\">
+                                    <div class=\"col-md-4 px-2\">
                                         <br>
                                         <img src=\"";
         // line 24
@@ -122,7 +122,7 @@ class __TwigTemplate_040549c88d10ff3b3c90e9a2b06932ff extends Template
 
                             <div class=\"card mb-3\" style=\"max-width: 100%;\">
                                 <div class=\"row g-0 text-bg-info\" style=\"border-radius: 8px\">
-                                    <div class=\"col-md-4\">
+                                    <div class=\"col-md-4 px-2\">
                                         <br>
                                         <img src=\"";
         // line 42
@@ -196,7 +196,7 @@ class __TwigTemplate_040549c88d10ff3b3c90e9a2b06932ff extends Template
                             <br>
                             <div class=\"card mb-3\" style=\"max-width: 100%;\">
                                 <div class=\"row g-0 text-bg-primary\" style=\"border-radius: 8px;\">
-                                    <div class=\"col-md-4\">
+                                    <div class=\"col-md-4 px-2\">
                                         <br>
                                         <img src=\"{{ asset('img/MarieBailleule.jpg') }}\" class=\"img-fluid rounded\" alt=\"Marie Bailleule\">
                                     </div>
@@ -214,7 +214,7 @@ class __TwigTemplate_040549c88d10ff3b3c90e9a2b06932ff extends Template
 
                             <div class=\"card mb-3\" style=\"max-width: 100%;\">
                                 <div class=\"row g-0 text-bg-info\" style=\"border-radius: 8px\">
-                                    <div class=\"col-md-4\">
+                                    <div class=\"col-md-4 px-2\">
                                         <br>
                                         <img src=\"{{ asset('img/NicolasDesole.jpg') }}\" class=\"img-fluid rounded\" alt=\"Nicolas Desole\">
                                     </div>
