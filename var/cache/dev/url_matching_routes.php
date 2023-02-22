@@ -18,7 +18,6 @@ return [
         '/contact' => [[['_route' => 'app_contact', '_controller' => 'App\\Controller\\ContactController::contact'], null, ['GET' => 0, 'POST' => 1], null, false, false, null]],
         '/' => [[['_route' => 'home.index', '_controller' => 'App\\Controller\\HomeController::index'], null, ['GET' => 0], null, false, false, null]],
         '/partners' => [[['_route' => 'app_partners', '_controller' => 'App\\Controller\\PartnersController::index'], null, ['GET' => 0], null, false, false, null]],
-        '/producers' => [[['_route' => 'app_producers', '_controller' => 'App\\Controller\\ProducersController::index'], null, ['GET' => 0], null, false, false, null]],
     ],
     [ // $regexpList
         0 => '{^(?'
