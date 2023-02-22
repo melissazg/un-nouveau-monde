@@ -43,6 +43,9 @@ class Film
     #[ORM\OneToMany(mappedBy: 'film', targetEntity: Note::class)]
     private Collection $notes;
 
+    #[ORM\Column(type: Types::TEXT, nullable: true)]
+    private ?string $imagePath = null;
+
     public function __construct()
     {
         $this->commentaires = new ArrayCollection();
@@ -194,6 +197,18 @@ class Film
                 $note->setFilm(null);
             }
         }
+
+        return $this;
+    }
+
+    public function getImagePath(): ?string
+    {
+        return $this->imagePath;
+    }
+
+    public function setImagePath(?string $imagePath): self
+    {
+        $this->imagePath = $imagePath;
 
         return $this;
     }

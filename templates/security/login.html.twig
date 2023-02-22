@@ -27,25 +27,29 @@
 
                                     <div class="form-outline form-white mb-3">
                                         <label class="form-label" for="username">Email</label>
-                                        <input type="email" value="{{ last_username }}" id="username" class="form-control form-control-lg"
-                                               name="_username"
+                                        <input type="email" value="{{ last_username }}" id="inputEmail" class="form-control form-control-lg"
+                                               name="email"
                                                placeholder="exemple@exemple.fr"
+                                               autocomplete="email" required autofocus
                                         />
 
                                     </div>
 
                                     <div class="form-outline form-white mb-3">
                                         <label class="form-label" for="password">Mot de passe</label>
-                                        <input type="password" id="password" class="form-control form-control-lg"
-                                               name="_password"
+                                        <input type="password" id="inputPassword" class="form-control form-control-lg"
+                                               name="password"
                                                placeholder="********"
+                                               autocomplete="current-password" required
                                         />
 
                                     </div>
 
                                     <p class="small mb-3 pb-lg-2"><a class="text-white-50" href="#!">Mot de passe oublié?</a></p>
 
-                                    <button class="btn btn-outline-light btn-lg px-7" type="submit">Se Connecter</button>
+                                    <button class="btn btn-lg btn-primary mt-3" type="submit">
+                                        Me connecter
+                                    </button>
 
 
 

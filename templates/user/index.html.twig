@@ -1,0 +1,27 @@
+{% extends 'base.html.twig' %}
+
+{% block title %} UnNouveauMonde-Profil de {{ app.user.firstName }} {{ app.user.lastName }} {% endblock %}
+
+{% block body %}
+    <div class="container">
+        <h1 class="mt-4"></h1>
+        <div class="container py-8 h-100">
+            <div class="row d-flex justify-content-center align-items-center h-100">
+                <div class="col-18 col-md-15 col-lg-10 col-xl-10">
+                    <div class="card bg-dark text-white" style="border-radius: 1rem;">
+                        <div class="card-body p-8 text-center">
+                            <h1>Profil de {{ app.user.firstName }} {{ app.user.lastName }}</h1>
+                        </div>
+
+                        <div class="col-xs3">Nom : {{ app.user.lastName }}</div>
+                        <div class="col-xs3">Prénom : {{ app.user.firstName}}</div>
+                        <div class="col-xs3">Email : {{ app.user.email }}</div>
+                        <a href="{{ path('app_user_edit',{ 'id': app.user.id }) }}" {{ app.user.id }} class="btn blue">Modifier le profil</a>
+                        <a href="{{ path('app_user_edit_password',{ 'id': app.user.id })}}" {{ app.user.id }} class="btn blue">Modifier le mot de passe</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

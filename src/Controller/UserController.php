@@ -13,7 +13,13 @@ use Symfony\Component\PasswordHasher\Hasher\UserPasswordHasherInterface;
 use Symfony\Component\Routing\Annotation\Route;
 
 class UserController extends AbstractController
+
+
 {
+    #[Route('/utilisateur/profil', name: 'app_user_profil',methods: ['GET','POST'])]
+    public function  index (){
+        return $this->render('user/index.html.twig');
+    }
     #[Route('/utilisateur/edition/{id}', name: 'app_user_edit',methods: ['GET','POST'])]
     public function edit(User $user, Request $request, EntityManagerInterface $entityManager, UserPasswordHasherInterface $hasher): Response
     {
