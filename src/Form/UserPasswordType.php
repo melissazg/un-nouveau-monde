@@ -27,7 +27,7 @@ class UserPasswordType extends AbstractType
                 'second_options' => ['label' => 'Confirmer le mot de passe', 'attr'=>[
                     'class'=>'form-control',
                 ], 'label_attr'=>[
-                    'class'=> 'form_label'
+                    'class'=> 'form_label mt-3'
                 ],],
 
             ])
@@ -35,17 +35,12 @@ class UserPasswordType extends AbstractType
             ->add('newPassword',PasswordType::class, [
                 'attr'=>['class'=>'form-control'],
                 'label' => 'Nouveau mot de passe',
-                'label_attr' => ['class'=>'form-label mt-4'],
+                'label_attr' => ['class'=>'form-label mt-3'],
                 'constraints'=> [new Assert\NotBlank()]
             ])
 
-            ->add('submit', SubmitType::class,
+            ->add('Modifier', SubmitType::class,
                 ['attr'=> ['class'=>'btn btn-primary mt-4'] ]
-
-            )
-        ;
-
-
-
+            );
     }
 }

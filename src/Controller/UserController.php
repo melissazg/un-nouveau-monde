@@ -16,7 +16,7 @@ class UserController extends AbstractController
 
 
 {
-    #[Route('/utilisateur/profil', name: 'app_user_profil',methods: ['GET','POST'])]
+    #[Route('/utilisateur/profil', name: 'app_user_profile',methods: ['GET','POST'])]
     public function  index (){
         return $this->render('user/index.html.twig');
     }

@@ -10,14 +10,39 @@
                 <div class="col-18 col-md-15 col-lg-10 col-xl-10">
                     <div class="card bg-dark text-white" style="border-radius: 1rem;">
                         <div class="card-body p-8 text-center">
+                            <br><br>
                             <h1>Profil de {{ app.user.firstName }} {{ app.user.lastName }}</h1>
                         </div>
-
-                        <div class="col-xs3">Nom : {{ app.user.lastName }}</div>
-                        <div class="col-xs3">Prénom : {{ app.user.firstName}}</div>
-                        <div class="col-xs3">Email : {{ app.user.email }}</div>
+                        <table class="table-borderless mt-3" align="center">
+                            <tr>
+                                <td class="p-2">Nom</td>
+                                <td class="p-2">{{ app.user.lastName }}</td>
+                            </tr>
+                            <tr>
+                                <td class="p-2">Prénom</td>
+                                <td class="p-2">{{ app.user.firstName}}</td>
+                            </tr>
+                            <tr>
+                                <td class="p-2">Email</td>
+                                <td class="p-2">{{ app.user.email }}</td>
+                            </tr>
+                            <tr>
+                                <td class="p-2">Adresse</td>
+                                <td class="p-2">{{ app.user.address }}</td>
+                            </tr>
+                            <tr>
+                                <td class="p-2">Numéro de téléphone</td>
+                                <td class="p-2">{{ app.user.telephoneNumber }}</td>
+                            </tr>
+                            <tr>
+                                <td class="p-2">Lycée</td>
+                                <td class="p-2">{{ app.user.highSchool }}</td>
+                            </tr>
+                        </table>
+                        <br>
                         <a href="{{ path('app_user_edit',{ 'id': app.user.id }) }}" {{ app.user.id }} class="btn blue">Modifier le profil</a>
                         <a href="{{ path('app_user_edit_password',{ 'id': app.user.id })}}" {{ app.user.id }} class="btn blue">Modifier le mot de passe</a>
+                        <br>
                         </div>
                     </div>
                 </div>
