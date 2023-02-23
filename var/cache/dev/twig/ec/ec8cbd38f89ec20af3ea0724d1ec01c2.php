@@ -81,7 +81,8 @@ class __TwigTemplate_e4c6f688cc6cbd32c7ef919fc534402b extends Template
         echo "\">Contact</a>
                 </li>
             </ul>
-            <a href=\"#\" target=\"_blank\" title=\"connexion\"><i class=\"fa-solid fa-right-to-bracket fa-xl\"></i></a>
+            <!-- path('app_user_profile') -->
+            <a href=\"#\" target=\"_blank\" title=\"Profil\"><i class=\"fa-solid fa-user fa-xl\"></i></a>
             <form class=\"d-flex\" style=\"margin-left:20px\">
                 <input class=\"form-control me-sm-2\" type=\"search\" placeholder=\"Rechercher\">
                 <button class=\"btn btn-primary btn-lg\" type=\"submit\"><i class=\"fa-regular fa-magnifying-glass\"></i></button>
@@ -140,7 +141,8 @@ class __TwigTemplate_e4c6f688cc6cbd32c7ef919fc534402b extends Template
                     <a class=\"nav-link\" href=\"{{ path('app_contact') }}\">Contact</a>
                 </li>
             </ul>
-            <a href=\"#\" target=\"_blank\" title=\"connexion\"><i class=\"fa-solid fa-right-to-bracket fa-xl\"></i></a>
+            <!-- path('app_user_profile') -->
+            <a href=\"#\" target=\"_blank\" title=\"Profil\"><i class=\"fa-solid fa-user fa-xl\"></i></a>
             <form class=\"d-flex\" style=\"margin-left:20px\">
                 <input class=\"form-control me-sm-2\" type=\"search\" placeholder=\"Rechercher\">
                 <button class=\"btn btn-primary btn-lg\" type=\"submit\"><i class=\"fa-regular fa-magnifying-glass\"></i></button>

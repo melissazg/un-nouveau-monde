@@ -6,16 +6,27 @@ namespace App\Controller;
 use App\Entity\Contact;
 use App\Form\ContactType;
 use App\Form\FormHandler\ContactFormHandler;
+use Symfony\Bridge\Twig\Mime\TemplatedEmail;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request;
+use Symfony\Component\Mailer\Exception\TransportExceptionInterface;
 use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Component\HttpFoundation\Response;
+use Symfony\Component\Mailer\MailerInterface;
 
 class ContactController extends AbstractController {
+    /**
+     * @throws TransportExceptionInterface
+     */
     #[Route('/contact', 'app_contact', methods: ['GET', 'POST'])]
-    public function contact(Request $request, ContactFormHandler $contactFormHandler) : Response
+    public function contact(Request $request, ContactFormHandler $contactFormHandler, MailerInterface $mailer) : Response
     {
         $contact = new Contact();
+
+        if ($this->getUser()) {
+            $contact->setFullName($this->getUser()->getFullName())
+                ->setEmail($this->getUser()-getEmail());
+        }
 
         $form = $this->createForm(ContactType::class, $contact);
 
@@ -23,9 +34,22 @@ class ContactController extends AbstractController {
 
         if ($form->isSubmitted() && $form->isValid()) {
             $contactFormHandler->handleForm($contact);
+
+            $email = (new TemplatedEmail())
+                ->from($contact->getEmail())
+                ->to('blabla@blabla.com')
+                ->subject($contact->getSubject())
+                ->htmlTemplate('email.html.twig')
+                ->context([
+                    'contact' => $contact
+                ]);
+
+            $mailer->send($email);
+
+            $this->addFlash('success', 'Votre demande a été envoyée avec succès.');
+
             return $this->redirectToRoute('app_contact');
         }
-        $this->addFlash('success', "Votre message a bien été envoyé.");
 
         return $this->render('contact.html.twig', [
             'form' => $form->createView(),

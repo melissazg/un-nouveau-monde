@@ -32,7 +32,7 @@ class __TwigTemplate_9bc0602e9614587d74d39a195bfb892e extends Template
 
     protected function doGetParent(array $context)
     {
-        // line 2
+        // line 1
         return "base.html.twig";
     }
 
@@ -45,7 +45,7 @@ class __TwigTemplate_9bc0602e9614587d74d39a195bfb892e extends Template
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f->enter($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "template", "home.html.twig"));
 
-        $this->parent = $this->loadTemplate("base.html.twig", "home.html.twig", 2);
+        $this->parent = $this->loadTemplate("base.html.twig", "home.html.twig", 1);
         $this->parent->display($context, array_merge($this->blocks, $blocks));
         
         $__internal_5a27a8ba21ca79b61932376b2fa922d2->leave($__internal_5a27a8ba21ca79b61932376b2fa922d2_prof);
@@ -74,7 +74,7 @@ class __TwigTemplate_9bc0602e9614587d74d39a195bfb892e extends Template
 
     }
 
-    // line 4
+    // line 5
     public function block_body($context, array $blocks = [])
     {
         $macros = $this->macros;
@@ -84,16 +84,39 @@ class __TwigTemplate_9bc0602e9614587d74d39a195bfb892e extends Template
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f->enter($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "body"));
 
-        // line 5
-        echo "    <div class=\"container py-4\">
-        <div class=\"jumbotron\">
-            <h1 class=\"display-4\">Bienvenue sur SymRecipes</h1>
-            <p class=\"lead\">Ceci est un site de recette comme exemple pour apprendre à utiliser Symfony</p>
-            <hr class=\"my-4\">
-            <p>Pour commencer rendez-vous sur la page de connexion ou inscription.</p>
-            <a class=\"btn btn-primary btn-lg\" href=\"#\" role=\"button\">S'inscrire</a>
+        // line 6
+        echo "    <div class=\"container text-center\">
+        <h1 class=\"mt-4\"> Bienvenue ! </h1>
+        <p> Dans ce nouveau monde, la lumière naît dans le coeur des hommes et des femmes et sert de projecteurs face à l'écran. </p>
+        <p> Venez découvrir les productions de nos talentueux réalisateurs ! </p>
+    </div>
+    <br>
+    <div class=\"container\" style=\"width: 30%\">
+        <div class=\"card\">
+            <img src=\"";
+        // line 14
+        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("img/NicolasDesole.jpg"), "html", null, true);
+        echo "\" class=\"card-img-top\" alt=\"Réalisateur 1\">
+            <div class=\"card-body\">
+                <h5 class=\"card-title\">Réalisateur 1</h5>
+                <p class=\"card-text\">Courte description</p>
+                <a href=\"#\" class=\"btn btn-primary\">Voir plus</a>
+            </div>
+        </div>
+        <br><br>
+        <div class=\"card\">
+            <img src=\"";
+        // line 23
+        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("img/MarieBailleule.jpg"), "html", null, true);
+        echo "\" class=\"card-img-top\" alt=\"Réalisateur 2\">
+            <div class=\"card-body\">
+                <h5 class=\"card-title\">Réalisateur 2</h5>
+                <p class=\"card-text\">Courte description</p>
+                <a href=\"#\" class=\"btn btn-primary\">Voir plus</a>
+            </div>
         </div>
     </div>
+    <br>
 
 ";
         
@@ -116,26 +139,43 @@ class __TwigTemplate_9bc0602e9614587d74d39a195bfb892e extends Template
 
     public function getDebugInfo()
     {
-        return array (  88 => 5,  78 => 4,  59 => 3,  36 => 2,);
+        return array (  110 => 23,  98 => 14,  88 => 6,  78 => 5,  59 => 3,  36 => 1,);
     }
 
     public function getSourceContext()
     {
-        return new Source("
-{%  extends \"base.html.twig\" %}
+        return new Source("{%  extends \"base.html.twig\" %}
+
 {% block title %} Un Nouveau Monde {% endblock %}
+
 {% block body %}
-    <div class=\"container py-4\">
-        <div class=\"jumbotron\">
-            <h1 class=\"display-4\">Bienvenue sur SymRecipes</h1>
-            <p class=\"lead\">Ceci est un site de recette comme exemple pour apprendre à utiliser Symfony</p>
-            <hr class=\"my-4\">
-            <p>Pour commencer rendez-vous sur la page de connexion ou inscription.</p>
-            <a class=\"btn btn-primary btn-lg\" href=\"#\" role=\"button\">S'inscrire</a>
+    <div class=\"container text-center\">
+        <h1 class=\"mt-4\"> Bienvenue ! </h1>
+        <p> Dans ce nouveau monde, la lumière naît dans le coeur des hommes et des femmes et sert de projecteurs face à l'écran. </p>
+        <p> Venez découvrir les productions de nos talentueux réalisateurs ! </p>
+    </div>
+    <br>
+    <div class=\"container\" style=\"width: 30%\">
+        <div class=\"card\">
+            <img src=\"{{ asset('img/NicolasDesole.jpg') }}\" class=\"card-img-top\" alt=\"Réalisateur 1\">
+            <div class=\"card-body\">
+                <h5 class=\"card-title\">Réalisateur 1</h5>
+                <p class=\"card-text\">Courte description</p>
+                <a href=\"#\" class=\"btn btn-primary\">Voir plus</a>
+            </div>
+        </div>
+        <br><br>
+        <div class=\"card\">
+            <img src=\"{{ asset('img/MarieBailleule.jpg') }}\" class=\"card-img-top\" alt=\"Réalisateur 2\">
+            <div class=\"card-body\">
+                <h5 class=\"card-title\">Réalisateur 2</h5>
+                <p class=\"card-text\">Courte description</p>
+                <a href=\"#\" class=\"btn btn-primary\">Voir plus</a>
+            </div>
         </div>
     </div>
+    <br>
 
-{% endblock %}
-", "home.html.twig", "/Applications/MAMP/htdocs/un-nouveau-monde/templates/home.html.twig");
+{% endblock %}", "home.html.twig", "/Applications/MAMP/htdocs/un-nouveau-monde/templates/home.html.twig");
     }
 }
