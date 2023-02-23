@@ -1,0 +1,22 @@
+
+{% block body %}
+
+    {% block stylesheets %}
+        {{ encore_entry_link_tags('app') }}
+        <link rel="stylesheet" href="https://bootswatch.com/5/quartz/bootstrap.min.css">
+        <link rel="stylesheet" href="https://bootswatch.com/5/quartz/_variables.scss">
+    {% endblock %}
+
+    <div class = "container mt-4" >
+        <div class="jumbotron">
+            <h1 class="display-4">Un Nouveau Monde</h1>
+            <p class="lead">Dans ce nouveau monde la lumière nait dans le coeur des hommes et des femmes et sert de projecteurs face à l'écran</p>
+            <hr class="my-4">
+            <p>Pour commencer rendez-vous sur la page de connexion ou inscription </p>
+            <a class="btn btn-primary btn-lg" href={{path('inscription.index')}} role="button">S'inscrire</a>
+            <a class="btn btn-primary btn-lg" href={{ path('app_login') }} role="button">Se connecter </a>
+
+        </div>
+    </div>
+
+{% endblock %}

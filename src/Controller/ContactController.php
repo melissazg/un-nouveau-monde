@@ -39,7 +39,7 @@ class ContactController extends AbstractController {
                 ->from($contact->getEmail())
                 ->to('blabla@blabla.com')
                 ->subject($contact->getSubject())
-                ->htmlTemplate('email.html.twig')
+                ->htmlTemplate('contact.html.twig')
                 ->context([
                     'contact' => $contact
                 ]);

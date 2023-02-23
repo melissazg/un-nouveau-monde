@@ -7,7 +7,9 @@
         <div class="collapse navbar-collapse" id="navbarColor02">
             <ul class="navbar-nav me-auto">
                 <li class="nav-item">
+
                     <a class="nav-link active" href="{{ path('home.index') }}">Accueil
+
                         <span class="visually-hidden">(current)</span>
                     </a>
                 </li>
@@ -15,6 +17,7 @@
                     <a class="nav-link" href="#">Nos films</a>
                 </li>
                 <li class="nav-item">
+
                     <a class="nav-link" href="{{ path('app_about') }}">À propos</a>
                 </li>
                 <li class="nav-item">
@@ -23,9 +26,17 @@
                 <li class="nav-item">
                     <a class="nav-link" href="{{ path('app_contact') }}">Contact</a>
                 </li>
+
+                <li class="nav-item">
+                    <a href="{{ path('app_user_profile') }}" target="_blank" title="Profil"><i class="fa-solid fa-user fa-xl"></i></a>
+                </li>
+
+                <li class="nav-item">
+                    <a href="{{ path('app_logout') }}" target="_blank" title="deconnexion"><i class="fa-solid fa-right-to-bracket fa-xl"></i></a>
+                </li>
+
             </ul>
-            <!-- path('app_user_profile') -->
-            <a href="#" target="_blank" title="Profil"><i class="fa-solid fa-user fa-xl"></i></a>
+
             <form class="d-flex" style="margin-left:20px">
                 <input class="form-control me-sm-2" type="search" placeholder="Rechercher">
                 <button class="btn btn-primary btn-lg" type="submit"><i class="fa-regular fa-magnifying-glass"></i></button>

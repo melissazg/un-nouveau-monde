@@ -308,7 +308,7 @@ class MakeResetPassword extends AbstractMaker
         );
 
         $generator->generateTemplate(
-            'reset_password/email.html.twig',
+            'reset_password/contact.html.twig',
             'resetPassword/twig_email.tpl.php'
         );
 
