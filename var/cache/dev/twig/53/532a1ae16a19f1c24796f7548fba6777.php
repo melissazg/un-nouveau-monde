@@ -54,29 +54,28 @@ class __TwigTemplate_470575d1c7205fea7a9d4002753cf857 extends Template
         // line 5
         $this->displayBlock('title', $context, $blocks);
         echo "</title>
-        <link rel=\"icon\" href=\"https://cours.univ-paris1.fr/pluginfile.php/1/theme_adaptable/favicon/1675329600/favicon.ico\">
         ";
-        // line 8
+        // line 7
         echo "        ";
         $this->displayBlock('stylesheets', $context, $blocks);
-        // line 14
+        // line 13
         echo "
         ";
-        // line 15
+        // line 14
         $this->displayBlock('javascripts', $context, $blocks);
-        // line 18
+        // line 17
         echo "    </head>
     <body>
         ";
-        // line 20
+        // line 19
         $this->displayBlock('header', $context, $blocks);
-        // line 23
+        // line 22
         echo "        ";
         $this->displayBlock('body', $context, $blocks);
-        // line 25
+        // line 24
         echo "        ";
         $this->displayBlock('footer', $context, $blocks);
-        // line 28
+        // line 27
         echo "    </body>
 </html>
 ";
@@ -107,7 +106,7 @@ class __TwigTemplate_470575d1c7205fea7a9d4002753cf857 extends Template
 
     }
 
-    // line 8
+    // line 7
     public function block_stylesheets($context, array $blocks = [])
     {
         $macros = $this->macros;
@@ -117,7 +116,7 @@ class __TwigTemplate_470575d1c7205fea7a9d4002753cf857 extends Template
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f->enter($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "stylesheets"));
 
-        // line 9
+        // line 8
         echo "            ";
         echo twig_escape_filter($this->env, $this->env->getFunction('encore_entry_link_tags')->getCallable()("app"), "html", null, true);
         echo "
@@ -133,7 +132,7 @@ class __TwigTemplate_470575d1c7205fea7a9d4002753cf857 extends Template
 
     }
 
-    // line 15
+    // line 14
     public function block_javascripts($context, array $blocks = [])
     {
         $macros = $this->macros;
@@ -143,7 +142,7 @@ class __TwigTemplate_470575d1c7205fea7a9d4002753cf857 extends Template
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f->enter($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "javascripts"));
 
-        // line 16
+        // line 15
         echo "            ";
         echo twig_escape_filter($this->env, $this->env->getFunction('encore_entry_script_tags')->getCallable()("app"), "html", null, true);
         echo "
@@ -156,7 +155,7 @@ class __TwigTemplate_470575d1c7205fea7a9d4002753cf857 extends Template
 
     }
 
-    // line 20
+    // line 19
     public function block_header($context, array $blocks = [])
     {
         $macros = $this->macros;
@@ -166,10 +165,10 @@ class __TwigTemplate_470575d1c7205fea7a9d4002753cf857 extends Template
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f->enter($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "header"));
 
-        // line 21
+        // line 20
         echo "            ";
-        $this->loadTemplate("_header.html.twig", "base.html.twig", 21)->display($context);
-        // line 22
+        $this->loadTemplate("_header.html.twig", "base.html.twig", 20)->display($context);
+        // line 21
         echo "        ";
         
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f->leave($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof);
@@ -179,7 +178,7 @@ class __TwigTemplate_470575d1c7205fea7a9d4002753cf857 extends Template
 
     }
 
-    // line 23
+    // line 22
     public function block_body($context, array $blocks = [])
     {
         $macros = $this->macros;
@@ -189,7 +188,7 @@ class __TwigTemplate_470575d1c7205fea7a9d4002753cf857 extends Template
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f->enter($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "body"));
 
-        // line 24
+        // line 23
         echo "        ";
         
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f->leave($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof);
@@ -199,7 +198,7 @@ class __TwigTemplate_470575d1c7205fea7a9d4002753cf857 extends Template
 
     }
 
-    // line 25
+    // line 24
     public function block_footer($context, array $blocks = [])
     {
         $macros = $this->macros;
@@ -209,10 +208,10 @@ class __TwigTemplate_470575d1c7205fea7a9d4002753cf857 extends Template
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f->enter($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "footer"));
 
-        // line 26
+        // line 25
         echo "            ";
-        $this->loadTemplate("footer.html.twig", "base.html.twig", 26)->display($context);
-        // line 27
+        $this->loadTemplate("footer.html.twig", "base.html.twig", 25)->display($context);
+        // line 26
         echo "        ";
         
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f->leave($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof);
@@ -229,7 +228,7 @@ class __TwigTemplate_470575d1c7205fea7a9d4002753cf857 extends Template
 
     public function getDebugInfo()
     {
-        return array (  216 => 27,  213 => 26,  203 => 25,  193 => 24,  183 => 23,  173 => 22,  170 => 21,  160 => 20,  147 => 16,  137 => 15,  121 => 9,  111 => 8,  92 => 5,  80 => 28,  77 => 25,  74 => 23,  72 => 20,  68 => 18,  66 => 15,  63 => 14,  60 => 8,  55 => 5,  49 => 1,);
+        return array (  215 => 26,  212 => 25,  202 => 24,  192 => 23,  182 => 22,  172 => 21,  169 => 20,  159 => 19,  146 => 15,  136 => 14,  120 => 8,  110 => 7,  91 => 5,  79 => 27,  76 => 24,  73 => 22,  71 => 19,  67 => 17,  65 => 14,  62 => 13,  59 => 7,  55 => 5,  49 => 1,);
     }
 
     public function getSourceContext()
@@ -239,7 +238,6 @@ class __TwigTemplate_470575d1c7205fea7a9d4002753cf857 extends Template
     <head>
         <meta charset=\"UTF-8\">
         <title>{% block title %}Un Nouveau Monde{% endblock %}</title>
-        <link rel=\"icon\" href=\"https://cours.univ-paris1.fr/pluginfile.php/1/theme_adaptable/favicon/1675329600/favicon.ico\">
         {# Run `composer require symfony/webpack-encore-bundle` to start using Symfony UX #}
         {% block stylesheets %}
             {{ encore_entry_link_tags('app') }}

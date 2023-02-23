@@ -54,23 +54,22 @@ class __TwigTemplate_e5780f61db56c8bfdfd48f01a2aa5524 extends Template
         // line 5
         $this->displayBlock('title', $context, $blocks);
         echo "</title>
-        <link rel=\"icon\" href=\"data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 128 128%22><text y=%221.2em%22 font-size=%2296%22>⚫️</text></svg>\">
         ";
-        // line 8
+        // line 7
         echo "        ";
         $this->displayBlock('stylesheets', $context, $blocks);
-        // line 14
+        // line 13
         echo "
         ";
-        // line 15
+        // line 14
         $this->displayBlock('javascripts', $context, $blocks);
-        // line 18
+        // line 17
         echo "    </head>
     <body>
         ";
-        // line 20
+        // line 19
         $this->displayBlock('header', $context, $blocks);
-        // line 23
+        // line 22
         echo "        ";
         $this->displayBlock('body', $context, $blocks);
         // line 24
@@ -98,7 +97,7 @@ class __TwigTemplate_e5780f61db56c8bfdfd48f01a2aa5524 extends Template
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f->enter($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "title"));
 
-        echo "Welcome!";
+        echo "Un Nouveau Monde";
         
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f->leave($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof);
 
@@ -107,7 +106,7 @@ class __TwigTemplate_e5780f61db56c8bfdfd48f01a2aa5524 extends Template
 
     }
 
-    // line 8
+    // line 7
     public function block_stylesheets($context, array $blocks = [])
     {
         $macros = $this->macros;
@@ -117,7 +116,7 @@ class __TwigTemplate_e5780f61db56c8bfdfd48f01a2aa5524 extends Template
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f->enter($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "stylesheets"));
 
-        // line 9
+        // line 8
         echo "            ";
         echo twig_escape_filter($this->env, $this->env->getFunction('encore_entry_link_tags')->getCallable()("app"), "html", null, true);
         echo "
@@ -133,7 +132,7 @@ class __TwigTemplate_e5780f61db56c8bfdfd48f01a2aa5524 extends Template
 
     }
 
-    // line 15
+    // line 14
     public function block_javascripts($context, array $blocks = [])
     {
         $macros = $this->macros;
@@ -143,7 +142,7 @@ class __TwigTemplate_e5780f61db56c8bfdfd48f01a2aa5524 extends Template
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f->enter($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "javascripts"));
 
-        // line 16
+        // line 15
         echo "            ";
         echo twig_escape_filter($this->env, $this->env->getFunction('encore_entry_script_tags')->getCallable()("app"), "html", null, true);
         echo "
@@ -156,7 +155,7 @@ class __TwigTemplate_e5780f61db56c8bfdfd48f01a2aa5524 extends Template
 
     }
 
-    // line 20
+    // line 19
     public function block_header($context, array $blocks = [])
     {
         $macros = $this->macros;
@@ -166,10 +165,10 @@ class __TwigTemplate_e5780f61db56c8bfdfd48f01a2aa5524 extends Template
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f->enter($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "header"));
 
-        // line 21
+        // line 20
         echo "            ";
-        $this->loadTemplate("_header.html.twig", "base.html.twig", 21)->display($context);
-        // line 22
+        $this->loadTemplate("_header.html.twig", "base.html.twig", 20)->display($context);
+        // line 21
         echo "        ";
         
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f->leave($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof);
@@ -179,7 +178,7 @@ class __TwigTemplate_e5780f61db56c8bfdfd48f01a2aa5524 extends Template
 
     }
 
-    // line 23
+    // line 22
     public function block_body($context, array $blocks = [])
     {
         $macros = $this->macros;
@@ -189,6 +188,8 @@ class __TwigTemplate_e5780f61db56c8bfdfd48f01a2aa5524 extends Template
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f->enter($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "body"));
 
+        // line 23
+        echo "        ";
         
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f->leave($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof);
 
@@ -227,7 +228,7 @@ class __TwigTemplate_e5780f61db56c8bfdfd48f01a2aa5524 extends Template
 
     public function getDebugInfo()
     {
-        return array (  214 => 26,  211 => 25,  201 => 24,  183 => 23,  173 => 22,  170 => 21,  160 => 20,  147 => 16,  137 => 15,  121 => 9,  111 => 8,  92 => 5,  80 => 27,  77 => 24,  74 => 23,  72 => 20,  68 => 18,  66 => 15,  63 => 14,  60 => 8,  55 => 5,  49 => 1,);
+        return array (  215 => 26,  212 => 25,  202 => 24,  192 => 23,  182 => 22,  172 => 21,  169 => 20,  159 => 19,  146 => 15,  136 => 14,  120 => 8,  110 => 7,  91 => 5,  79 => 27,  76 => 24,  73 => 22,  71 => 19,  67 => 17,  65 => 14,  62 => 13,  59 => 7,  55 => 5,  49 => 1,);
     }
 
     public function getSourceContext()
@@ -236,8 +237,7 @@ class __TwigTemplate_e5780f61db56c8bfdfd48f01a2aa5524 extends Template
 <html>
     <head>
         <meta charset=\"UTF-8\">
-        <title>{% block title %}Welcome!{% endblock %}</title>
-        <link rel=\"icon\" href=\"data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 128 128%22><text y=%221.2em%22 font-size=%2296%22>⚫️</text></svg>\">
+        <title>{% block title %}Un Nouveau Monde{% endblock %}</title>
         {# Run `composer require symfony/webpack-encore-bundle` to start using Symfony UX #}
         {% block stylesheets %}
             {{ encore_entry_link_tags('app') }}
@@ -254,7 +254,8 @@ class __TwigTemplate_e5780f61db56c8bfdfd48f01a2aa5524 extends Template
         {% block header %}
             {% include \"_header.html.twig\" %}
         {% endblock %}
-        {% block body %}{% endblock %}
+        {% block body %}
+        {% endblock %}
         {% block footer %}
             {% include \"footer.html.twig\" %}
         {% endblock %}

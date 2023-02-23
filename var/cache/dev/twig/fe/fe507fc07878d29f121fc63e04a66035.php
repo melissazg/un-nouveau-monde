@@ -89,13 +89,30 @@ class __TwigTemplate_b5f9dfd83302b01e043dc0db5f4d9192 extends Template
     <div class=\"container\">
         <div class=\"container py-8 h-100 mt-4\">
             <div class=\"row d-flex justify-content-center align-items-center h-100\">
-                <div class=\"col-14 col-md-10 col-lg-8 col-xl-7\">
+                <div class=\"col-14 col-md-10 col-lg-8 col-xl-8\">
                     <div class=\"card bg-dark text-white\" style=\"border-radius: 1rem;\">
                         <div class=\"card-body p-8 text-center\">
                             <h1 class=\"mt-4\"> Contact </h1>
                             ";
         // line 14
-        echo         $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderBlock((isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 14, $this->source); })()), 'form');
+        $context['_parent'] = $context;
+        $context['_seq'] = twig_ensure_traversable(twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 14, $this->source); })()), "flashes", [0 => "success"], "method", false, false, false, 14));
+        foreach ($context['_seq'] as $context["_key"] => $context["message"]) {
+            // line 15
+            echo "                                <div class=\"alert alert-success mt-4\">
+                                    ";
+            // line 16
+            echo twig_escape_filter($this->env, $context["message"], "html", null, true);
+            echo "
+                                </div>
+                            ";
+        }
+        $_parent = $context['_parent'];
+        unset($context['_seq'], $context['_iterated'], $context['_key'], $context['message'], $context['_parent'], $context['loop']);
+        $context = array_intersect_key($context, $_parent) + $_parent;
+        // line 19
+        echo "                            ";
+        echo         $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderBlock((isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 19, $this->source); })()), 'form');
         echo "
                         </div>
                     </div>
@@ -125,7 +142,7 @@ class __TwigTemplate_b5f9dfd83302b01e043dc0db5f4d9192 extends Template
 
     public function getDebugInfo()
     {
-        return array (  98 => 14,  88 => 6,  78 => 5,  59 => 3,  36 => 1,);
+        return array (  114 => 19,  105 => 16,  102 => 15,  98 => 14,  88 => 6,  78 => 5,  59 => 3,  36 => 1,);
     }
 
     public function getSourceContext()
@@ -139,10 +156,15 @@ class __TwigTemplate_b5f9dfd83302b01e043dc0db5f4d9192 extends Template
     <div class=\"container\">
         <div class=\"container py-8 h-100 mt-4\">
             <div class=\"row d-flex justify-content-center align-items-center h-100\">
-                <div class=\"col-14 col-md-10 col-lg-8 col-xl-7\">
+                <div class=\"col-14 col-md-10 col-lg-8 col-xl-8\">
                     <div class=\"card bg-dark text-white\" style=\"border-radius: 1rem;\">
                         <div class=\"card-body p-8 text-center\">
                             <h1 class=\"mt-4\"> Contact </h1>
+                            {% for message in app.flashes('success') %}
+                                <div class=\"alert alert-success mt-4\">
+                                    {{ message }}
+                                </div>
+                            {% endfor %}
                             {{ form(form) }}
                         </div>
                     </div>

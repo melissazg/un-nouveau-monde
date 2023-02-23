@@ -93,38 +93,26 @@ class __TwigTemplate_98cc1815d14b146c348a34cae0757bed extends Template
     <br>
     <div class=\"container\" style=\"width: 30%\">
         <div class=\"card\">
-            <img src=\"img/NicolasDesole.jpg\" class=\"card-img-top\" alt=\"Réalisateur 1\">
+            <img src=\"";
+        // line 14
+        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("img/NicolasDesole.jpg"), "html", null, true);
+        echo "\" class=\"card-img-top\" alt=\"Réalisateur 1\">
             <div class=\"card-body\">
                 <h5 class=\"card-title\">Réalisateur 1</h5>
-                <p class=\"card-text\">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                <a href=\"#\" class=\"btn btn-primary\">Go somewhere</a>
+                <p class=\"card-text\">Courte description</p>
+                <a href=\"#\" class=\"btn btn-primary\">Voir plus</a>
             </div>
         </div>
         <br><br>
         <div class=\"card\">
-            <img src=\"img/MarieBailleule.jpg\" class=\"card-img-top\" alt=\"Réalisateur 2\">
+            <img src=\"";
+        // line 23
+        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("img/MarieBailleule.jpg"), "html", null, true);
+        echo "\" class=\"card-img-top\" alt=\"Réalisateur 2\">
             <div class=\"card-body\">
                 <h5 class=\"card-title\">Réalisateur 2</h5>
-                <p class=\"card-text\">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                <a href=\"#\" class=\"btn btn-primary\">Go somewhere</a>
-            </div>
-        </div>
-        <br><br>
-        <div class=\"card\">
-            <img src=\"img/NicolasDesole.jpg\" class=\"card-img-top\" alt=\"Réalisateur 3\">
-            <div class=\"card-body\">
-                <h5 class=\"card-title\">Réalisateur 3</h5>
-                <p class=\"card-text\">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                <a href=\"#\" class=\"btn btn-primary\">Go somewhere</a>
-            </div>
-        </div>
-        <br><br>
-        <div class=\"card\">
-            <img src=\"img/MarieBailleule.jpg\" class=\"card-img-top\" alt=\"Réalisateur 4\">
-            <div class=\"card-body\">
-                <h5 class=\"card-title\">Réalisateur 4</h5>
-                <p class=\"card-text\">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                <a href=\"#\" class=\"btn btn-primary\">Go somewhere</a>
+                <p class=\"card-text\">Courte description</p>
+                <a href=\"#\" class=\"btn btn-primary\">Voir plus</a>
             </div>
         </div>
     </div>
@@ -151,7 +139,7 @@ class __TwigTemplate_98cc1815d14b146c348a34cae0757bed extends Template
 
     public function getDebugInfo()
     {
-        return array (  88 => 6,  78 => 5,  59 => 3,  36 => 1,);
+        return array (  110 => 23,  98 => 14,  88 => 6,  78 => 5,  59 => 3,  36 => 1,);
     }
 
     public function getSourceContext()
@@ -169,38 +157,20 @@ class __TwigTemplate_98cc1815d14b146c348a34cae0757bed extends Template
     <br>
     <div class=\"container\" style=\"width: 30%\">
         <div class=\"card\">
-            <img src=\"img/NicolasDesole.jpg\" class=\"card-img-top\" alt=\"Réalisateur 1\">
+            <img src=\"{{ asset('img/NicolasDesole.jpg') }}\" class=\"card-img-top\" alt=\"Réalisateur 1\">
             <div class=\"card-body\">
                 <h5 class=\"card-title\">Réalisateur 1</h5>
-                <p class=\"card-text\">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                <a href=\"#\" class=\"btn btn-primary\">Go somewhere</a>
+                <p class=\"card-text\">Courte description</p>
+                <a href=\"#\" class=\"btn btn-primary\">Voir plus</a>
             </div>
         </div>
         <br><br>
         <div class=\"card\">
-            <img src=\"img/MarieBailleule.jpg\" class=\"card-img-top\" alt=\"Réalisateur 2\">
+            <img src=\"{{ asset('img/MarieBailleule.jpg') }}\" class=\"card-img-top\" alt=\"Réalisateur 2\">
             <div class=\"card-body\">
                 <h5 class=\"card-title\">Réalisateur 2</h5>
-                <p class=\"card-text\">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                <a href=\"#\" class=\"btn btn-primary\">Go somewhere</a>
-            </div>
-        </div>
-        <br><br>
-        <div class=\"card\">
-            <img src=\"img/NicolasDesole.jpg\" class=\"card-img-top\" alt=\"Réalisateur 3\">
-            <div class=\"card-body\">
-                <h5 class=\"card-title\">Réalisateur 3</h5>
-                <p class=\"card-text\">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                <a href=\"#\" class=\"btn btn-primary\">Go somewhere</a>
-            </div>
-        </div>
-        <br><br>
-        <div class=\"card\">
-            <img src=\"img/MarieBailleule.jpg\" class=\"card-img-top\" alt=\"Réalisateur 4\">
-            <div class=\"card-body\">
-                <h5 class=\"card-title\">Réalisateur 4</h5>
-                <p class=\"card-text\">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                <a href=\"#\" class=\"btn btn-primary\">Go somewhere</a>
+                <p class=\"card-text\">Courte description</p>
+                <a href=\"#\" class=\"btn btn-primary\">Voir plus</a>
             </div>
         </div>
     </div>

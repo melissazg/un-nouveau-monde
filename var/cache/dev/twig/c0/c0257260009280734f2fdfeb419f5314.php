@@ -44,7 +44,10 @@ class __TwigTemplate_41008b826737102b86b20534033ac218 extends Template
     <footer style=\"background-color: #212529\">
         <div class=\"container py-5\">
             <div class=\"row py-4\">
-                <div class=\"col-lg-3 col-md-6 mb-4 mb-lg-0\"><img src=\"https://i.pinimg.com/originals/33/b8/69/33b869f90619e81763dbf1fccc896d8d.jpg\" alt=\"\" width=\"180\" class=\"mb-3\">
+                <div class=\"col-lg-3 col-md-6 mb-4 mb-lg-0 text-center\"><img src=\"";
+        // line 5
+        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("img/logo.png"), "html", null, true);
+        echo "\" alt=\"logo\" width=\"200\">
                     <h3 class=\"text-uppercase font-weight-bold mb-4\"> Rejoignez-nous ! </h3>
                         <table class=\"text-muted table table-borderless\">
                             <tr>
@@ -61,8 +64,8 @@ class __TwigTemplate_41008b826737102b86b20534033ac218 extends Template
                         </table>
                 </div>
 
-                <div class=\"col-lg-3\">
-                    <h6 class=\"text-uppercase font-weight-bold mb-4\">Contact</h6>
+                <div class=\"col-lg-2 mb-3\">
+                    <h6 class=\"text-uppercase font-weight-bold mb-3\">Contact</h6>
                     <ul class=\"list-unstyled mb-0\">
                         <li class=\"mb-2\"></li>
                         <li class=\"mb-2\"><a href=\"#\" class=\"text-muted text-decoration-none\"><i class=\"fa-solid fa-location-dot fa-lg\"></i>&emsp;1, rue de Paris <br>&emsp;&emsp; 75001 Paris </a></li>
@@ -70,20 +73,23 @@ class __TwigTemplate_41008b826737102b86b20534033ac218 extends Template
                         <li class=\"mb-2\"><a href=\"#\" class=\"text-muted text-decoration-none\"><i class=\"fa-solid fa-envelope fa-lg\"></i>&emsp;exemple@mail.fr </a></li>
                     </ul>
                     <div class=\"p-1 rounded border\">
-                        <button id=\"button-addon1\" aria-describedby=\"button-addon1\" class=\"form-control text-muted border-0 shadow-0\"><i class=\"fa-solid fa-message fa-lg\">&emsp;</i> Envoyer un message </button>
+                        <button onclick=\"location.href='";
+        // line 31
+        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_contact");
+        echo "'\" id=\"button-addon1\" aria-describedby=\"button-addon1\" class=\"form-control text-muted border-0 shadow-0\"><i class=\"fa-solid fa-message fa-lg\">&emsp;</i> Envoyer un message </button>
                     </div>
                 </div>
 
-                <div class=\"col-lg-2 mr-2\">
+                <div class=\"col-lg-3 mr-2\">
                     <h6 class=\"text-uppercase font-weight-bold mb-4\"> Horaire </h6>
                     <table class=\"text-muted table table-borderless\">
-                        <tr><td> Lundi </td><td> 9h - 18h </td></tr>
-                        <tr><td> Mardi </td><td> 9h - 18h </td></tr>
-                        <tr><td> Mercredi </td><td> 9h - 18h </td></tr>
-                        <tr><td> Jeudi </td><td> 9h - 18h </td></tr>
-                        <tr><td> Vendredi </td><td> 9h - 18h </td></tr>
-                        <tr><td> Samedi </td><td> Fermé </td></tr>
-                        <tr><td> Dimanche </td><td> Fermé </td></tr>
+                        <tr><td> Lundi </td><td> 18h - 22h </td></tr>
+                        <tr><td> Mardi </td><td> Non disponible </td></tr>
+                        <tr><td> Mercredi </td><td> Non disponible </td></tr>
+                        <tr><td> Jeudi </td><td> 16h - 20h </td></tr>
+                        <tr><td> Vendredi </td><td> Non disponible </td></tr>
+                        <tr><td> Samedi </td><td> 10h - 12h <br> 13h - 16h </td></tr>
+                        <tr><td> Dimanche </td><td> Non disponible </td></tr>
                     </table>
                 </div>
 
@@ -120,9 +126,14 @@ class __TwigTemplate_41008b826737102b86b20534033ac218 extends Template
         return "footer.html.twig";
     }
 
+    public function isTraitable()
+    {
+        return false;
+    }
+
     public function getDebugInfo()
     {
-        return array (  43 => 1,);
+        return array (  78 => 31,  49 => 5,  43 => 1,);
     }
 
     public function getSourceContext()
@@ -131,7 +142,7 @@ class __TwigTemplate_41008b826737102b86b20534033ac218 extends Template
     <footer style=\"background-color: #212529\">
         <div class=\"container py-5\">
             <div class=\"row py-4\">
-                <div class=\"col-lg-3 col-md-6 mb-4 mb-lg-0\"><img src=\"https://i.pinimg.com/originals/33/b8/69/33b869f90619e81763dbf1fccc896d8d.jpg\" alt=\"\" width=\"180\" class=\"mb-3\">
+                <div class=\"col-lg-3 col-md-6 mb-4 mb-lg-0 text-center\"><img src=\"{{ asset('img/logo.png') }}\" alt=\"logo\" width=\"200\">
                     <h3 class=\"text-uppercase font-weight-bold mb-4\"> Rejoignez-nous ! </h3>
                         <table class=\"text-muted table table-borderless\">
                             <tr>
@@ -148,8 +159,8 @@ class __TwigTemplate_41008b826737102b86b20534033ac218 extends Template
                         </table>
                 </div>
 
-                <div class=\"col-lg-3\">
-                    <h6 class=\"text-uppercase font-weight-bold mb-4\">Contact</h6>
+                <div class=\"col-lg-2 mb-3\">
+                    <h6 class=\"text-uppercase font-weight-bold mb-3\">Contact</h6>
                     <ul class=\"list-unstyled mb-0\">
                         <li class=\"mb-2\"></li>
                         <li class=\"mb-2\"><a href=\"#\" class=\"text-muted text-decoration-none\"><i class=\"fa-solid fa-location-dot fa-lg\"></i>&emsp;1, rue de Paris <br>&emsp;&emsp; 75001 Paris </a></li>
@@ -157,20 +168,20 @@ class __TwigTemplate_41008b826737102b86b20534033ac218 extends Template
                         <li class=\"mb-2\"><a href=\"#\" class=\"text-muted text-decoration-none\"><i class=\"fa-solid fa-envelope fa-lg\"></i>&emsp;exemple@mail.fr </a></li>
                     </ul>
                     <div class=\"p-1 rounded border\">
-                        <button id=\"button-addon1\" aria-describedby=\"button-addon1\" class=\"form-control text-muted border-0 shadow-0\"><i class=\"fa-solid fa-message fa-lg\">&emsp;</i> Envoyer un message </button>
+                        <button onclick=\"location.href='{{ path('app_contact') }}'\" id=\"button-addon1\" aria-describedby=\"button-addon1\" class=\"form-control text-muted border-0 shadow-0\"><i class=\"fa-solid fa-message fa-lg\">&emsp;</i> Envoyer un message </button>
                     </div>
                 </div>
 
-                <div class=\"col-lg-2 mr-2\">
+                <div class=\"col-lg-3 mr-2\">
                     <h6 class=\"text-uppercase font-weight-bold mb-4\"> Horaire </h6>
                     <table class=\"text-muted table table-borderless\">
-                        <tr><td> Lundi </td><td> 9h - 18h </td></tr>
-                        <tr><td> Mardi </td><td> 9h - 18h </td></tr>
-                        <tr><td> Mercredi </td><td> 9h - 18h </td></tr>
-                        <tr><td> Jeudi </td><td> 9h - 18h </td></tr>
-                        <tr><td> Vendredi </td><td> 9h - 18h </td></tr>
-                        <tr><td> Samedi </td><td> Fermé </td></tr>
-                        <tr><td> Dimanche </td><td> Fermé </td></tr>
+                        <tr><td> Lundi </td><td> 18h - 22h </td></tr>
+                        <tr><td> Mardi </td><td> Non disponible </td></tr>
+                        <tr><td> Mercredi </td><td> Non disponible </td></tr>
+                        <tr><td> Jeudi </td><td> 16h - 20h </td></tr>
+                        <tr><td> Vendredi </td><td> Non disponible </td></tr>
+                        <tr><td> Samedi </td><td> 10h - 12h <br> 13h - 16h </td></tr>
+                        <tr><td> Dimanche </td><td> Non disponible </td></tr>
                     </table>
                 </div>
 

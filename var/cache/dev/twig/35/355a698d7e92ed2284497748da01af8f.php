@@ -73,7 +73,10 @@ class __TwigTemplate_a9b602c1cf88f2c5907dcd9f92cd1824 extends Template
                         <li class=\"mb-2\"><a href=\"#\" class=\"text-muted text-decoration-none\"><i class=\"fa-solid fa-envelope fa-lg\"></i>&emsp;exemple@mail.fr </a></li>
                     </ul>
                     <div class=\"p-1 rounded border\">
-                        <button id=\"button-addon1\" aria-describedby=\"button-addon1\" class=\"form-control text-muted border-0 shadow-0\"><i class=\"fa-solid fa-message fa-lg\">&emsp;</i> Envoyer un message </button>
+                        <button onclick=\"location.href='";
+        // line 31
+        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_contact");
+        echo "'\" id=\"button-addon1\" aria-describedby=\"button-addon1\" class=\"form-control text-muted border-0 shadow-0\"><i class=\"fa-solid fa-message fa-lg\">&emsp;</i> Envoyer un message </button>
                     </div>
                 </div>
 
@@ -130,7 +133,7 @@ class __TwigTemplate_a9b602c1cf88f2c5907dcd9f92cd1824 extends Template
 
     public function getDebugInfo()
     {
-        return array (  49 => 5,  43 => 1,);
+        return array (  78 => 31,  49 => 5,  43 => 1,);
     }
 
     public function getSourceContext()
@@ -165,7 +168,7 @@ class __TwigTemplate_a9b602c1cf88f2c5907dcd9f92cd1824 extends Template
                         <li class=\"mb-2\"><a href=\"#\" class=\"text-muted text-decoration-none\"><i class=\"fa-solid fa-envelope fa-lg\"></i>&emsp;exemple@mail.fr </a></li>
                     </ul>
                     <div class=\"p-1 rounded border\">
-                        <button id=\"button-addon1\" aria-describedby=\"button-addon1\" class=\"form-control text-muted border-0 shadow-0\"><i class=\"fa-solid fa-message fa-lg\">&emsp;</i> Envoyer un message </button>
+                        <button onclick=\"location.href='{{ path('app_contact') }}'\" id=\"button-addon1\" aria-describedby=\"button-addon1\" class=\"form-control text-muted border-0 shadow-0\"><i class=\"fa-solid fa-message fa-lg\">&emsp;</i> Envoyer un message </button>
                     </div>
                 </div>
 

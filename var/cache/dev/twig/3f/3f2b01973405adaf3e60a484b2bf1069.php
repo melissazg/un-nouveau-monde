@@ -42,14 +42,20 @@ class __TwigTemplate_95ebb2be64193a38093092a6284cb195 extends Template
         // line 1
         echo "<nav class=\"navbar navbar-expand-lg navbar-dark bg-dark\">
     <div class=\"container-fluid\">
-        <a class=\"navbar-brand\" href=\"#\"> Un Nouveau Monde </a>
+        <img src=\"";
+        // line 3
+        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("img/logo.png"), "html", null, true);
+        echo "\" alt=\"logo\" width=\"100\">
         <button class=\"navbar-toggler\" type=\"button\" data-bs-toggle=\"collapse\" data-bs-target=\"#navbarColor02\" aria-controls=\"navbarColor02\" aria-expanded=\"false\" aria-label=\"Toggle navigation\">
             <span class=\"navbar-toggler-icon\"></span>
         </button>
         <div class=\"collapse navbar-collapse\" id=\"navbarColor02\">
             <ul class=\"navbar-nav me-auto\">
                 <li class=\"nav-item\">
-                    <a class=\"nav-link active\" href=\"#\">Accueil
+                    <a class=\"nav-link active\" href=\"";
+        // line 10
+        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("home.index");
+        echo "\">Accueil
                         <span class=\"visually-hidden\">(current)</span>
                     </a>
                 </li>
@@ -57,10 +63,26 @@ class __TwigTemplate_95ebb2be64193a38093092a6284cb195 extends Template
                     <a class=\"nav-link\" href=\"#\">Nos films</a>
                 </li>
                 <li class=\"nav-item\">
-                    <a class=\"nav-link\" href=\"#\">Contact</a>
+                    <a class=\"nav-link\" href=\"";
+        // line 18
+        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_about");
+        echo "\">À propos</a>
+                </li>
+                <li class=\"nav-item\">
+                    <a class=\"nav-link\" href=\"";
+        // line 21
+        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_partners");
+        echo "\">Nos partenaires</a>
+                </li>
+                <li class=\"nav-item\">
+                    <a class=\"nav-link\" href=\"";
+        // line 24
+        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_contact");
+        echo "\">Contact</a>
                 </li>
             </ul>
-            <a href=\"#\" target=\"_blank\" title=\"connexion\"><i class=\"fa-solid fa-right-to-bracket fa-xl\"></i></a>
+            <!-- path('app_user_profile') -->
+            <a href=\"#\" target=\"_blank\" title=\"Profil\"><i class=\"fa-solid fa-user fa-xl\"></i></a>
             <form class=\"d-flex\" style=\"margin-left:20px\">
                 <input class=\"form-control me-sm-2\" type=\"search\" placeholder=\"Rechercher\">
                 <button class=\"btn btn-primary btn-lg\" type=\"submit\"><i class=\"fa-regular fa-magnifying-glass\"></i></button>
@@ -81,23 +103,28 @@ class __TwigTemplate_95ebb2be64193a38093092a6284cb195 extends Template
         return "_header.html.Twig";
     }
 
+    public function isTraitable()
+    {
+        return false;
+    }
+
     public function getDebugInfo()
     {
-        return array (  43 => 1,);
+        return array (  80 => 24,  74 => 21,  68 => 18,  57 => 10,  47 => 3,  43 => 1,);
     }
 
     public function getSourceContext()
     {
         return new Source("<nav class=\"navbar navbar-expand-lg navbar-dark bg-dark\">
     <div class=\"container-fluid\">
-        <a class=\"navbar-brand\" href=\"#\"> Un Nouveau Monde </a>
+        <img src=\"{{ asset('img/logo.png') }}\" alt=\"logo\" width=\"100\">
         <button class=\"navbar-toggler\" type=\"button\" data-bs-toggle=\"collapse\" data-bs-target=\"#navbarColor02\" aria-controls=\"navbarColor02\" aria-expanded=\"false\" aria-label=\"Toggle navigation\">
             <span class=\"navbar-toggler-icon\"></span>
         </button>
         <div class=\"collapse navbar-collapse\" id=\"navbarColor02\">
             <ul class=\"navbar-nav me-auto\">
                 <li class=\"nav-item\">
-                    <a class=\"nav-link active\" href=\"#\">Accueil
+                    <a class=\"nav-link active\" href=\"{{ path('home.index') }}\">Accueil
                         <span class=\"visually-hidden\">(current)</span>
                     </a>
                 </li>
@@ -105,10 +132,17 @@ class __TwigTemplate_95ebb2be64193a38093092a6284cb195 extends Template
                     <a class=\"nav-link\" href=\"#\">Nos films</a>
                 </li>
                 <li class=\"nav-item\">
-                    <a class=\"nav-link\" href=\"#\">Contact</a>
+                    <a class=\"nav-link\" href=\"{{ path('app_about') }}\">À propos</a>
+                </li>
+                <li class=\"nav-item\">
+                    <a class=\"nav-link\" href=\"{{ path('app_partners') }}\">Nos partenaires</a>
+                </li>
+                <li class=\"nav-item\">
+                    <a class=\"nav-link\" href=\"{{ path('app_contact') }}\">Contact</a>
                 </li>
             </ul>
-            <a href=\"#\" target=\"_blank\" title=\"connexion\"><i class=\"fa-solid fa-right-to-bracket fa-xl\"></i></a>
+            <!-- path('app_user_profile') -->
+            <a href=\"#\" target=\"_blank\" title=\"Profil\"><i class=\"fa-solid fa-user fa-xl\"></i></a>
             <form class=\"d-flex\" style=\"margin-left:20px\">
                 <input class=\"form-control me-sm-2\" type=\"search\" placeholder=\"Rechercher\">
                 <button class=\"btn btn-primary btn-lg\" type=\"submit\"><i class=\"fa-regular fa-magnifying-glass\"></i></button>
