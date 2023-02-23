@@ -1,0 +1,26 @@
+Index: src/Controller/ProducersController.php
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?php\r\n\r\nnamespace App\\Controller;\r\n\r\n\r\nuse Symfony\\Bundle\\FrameworkBundle\\Controller\\AbstractController;\r\nuse Symfony\\Component\\Routing\\Annotation\\Route;\r\nuse Symfony\\Component\\HttpFoundation\\Response;\r\n\r\nclass ProducersController extends AbstractController {\r\n    #[Route('/producers', 'app_producers', methods: ['GET'])]\r\n    public function index() : Response {\r\n        return $this->render('producers.html.twig');\r\n    }\r\n\r\n}
+===================================================================
+diff --git a/src/Controller/ProducersController.php b/src/Controller/ProducersController.php
+--- a/src/Controller/ProducersController.php	
++++ b/src/Controller/ProducersController.php	
+@@ -1,16 +1,0 @@
+-<?php
+-
+-namespace App\Controller;
+-
+-
+-use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
+-use Symfony\Component\Routing\Annotation\Route;
+-use Symfony\Component\HttpFoundation\Response;
+-
+-class ProducersController extends AbstractController {
+-    #[Route('/producers', 'app_producers', methods: ['GET'])]
+-    public function index() : Response {
+-        return $this->render('producers.html.twig');
+-    }
+-
+-}
+\ No newline at end of file

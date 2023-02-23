@@ -18,6 +18,8 @@ class Commentaire
     private ?\DateTimeInterface $date = null;
 
     #[ORM\ManyToOne(inversedBy: 'commentaires')]
+
+    #[ORM\JoinColumn(nullable: false)]
     private ?User $user = null;
 
     #[ORM\ManyToOne(inversedBy: 'commentaires')]
@@ -25,6 +27,7 @@ class Commentaire
 
 
     #[ORM\JoinColumn(nullable: false)]
+
 
 
     public function getId(): ?int
@@ -43,6 +46,7 @@ class Commentaire
 
         return $this;
     }
+
 
     public function getUser(): ?User
     {
@@ -67,8 +71,5 @@ class Commentaire
 
         return $this;
     }
-
-
-
 
 }

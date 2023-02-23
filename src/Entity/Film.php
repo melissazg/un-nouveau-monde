@@ -48,6 +48,10 @@ class Film
     #[ORM\Column(length: 255)]
     private ?string $iframePath = null;
 
+    #[ORM\Column(type: Types::TEXT, nullable: true)]
+    private ?string $imagePath = null;
+
+
     public function __construct()
     {
         $this->commentaires = new ArrayCollection();
@@ -203,6 +207,7 @@ class Film
         return $this;
     }
 
+
     public function getIframePath(): ?string
     {
         return $this->iframePath;
@@ -211,6 +216,19 @@ class Film
     public function setIframePath(string $iframePath): self
     {
         $this->iframePath = $iframePath;
+    }
+
+    public
+    function getImagePath(): ?string
+    {
+        return $this->imagePath;
+    }
+
+    public
+    function setImagePath(?string $imagePath): self
+    {
+        $this->imagePath = $imagePath;
+
 
         return $this;
     }

@@ -3,14 +3,17 @@
 namespace App\Entity;
 
 use App\Repository\UserRepository;
-use Doctrine\Common\Collections\ArrayCollection;
-use Doctrine\Common\Collections\Collection;
 use Doctrine\DBAL\Types\Types;
 use Doctrine\ORM\Mapping as ORM;
 use Symfony\Bridge\Doctrine\Validator\Constraints\UniqueEntity;
 use Symfony\Component\Security\Core\User\PasswordAuthenticatedUserInterface;
 use Symfony\Component\Security\Core\User\UserInterface;
+
+use Doctrine\Common\Collections\ArrayCollection;
+use Doctrine\Common\Collections\Collection;
+
 #[UniqueEntity('email')]
+
 #[ORM\Entity(repositoryClass: UserRepository::class)]
 class User implements UserInterface, PasswordAuthenticatedUserInterface
 {
@@ -24,7 +27,9 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
 
     #[ORM\Column]
     private array $roles = [];
-    private ?String $plainPassword;
+
+
+    private ?string $plainPassword = '';
 
     /**
      * @var string The hashed password
@@ -47,6 +52,15 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
     #[ORM\Column(length: 255)]
     private ?string $highschool = null;
 
+
+    #[ORM\Column(nullable: true)]
+    private ?bool $is_verified = false;
+
+    public function getId(): ?int
+    {
+        return $this->id;
+    }
+
     #[ORM\OneToMany(mappedBy: 'user', targetEntity: Commentaire::class)]
     private Collection $commentaires;
 
@@ -57,11 +71,6 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
     {
         $this->commentaires = new ArrayCollection();
         $this->Notes = new ArrayCollection();
-    }
-
-    public function getId(): ?int
-    {
-        return $this ->id;
     }
 
     public function getEmail(): ?string
@@ -83,7 +92,7 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
      */
     public function getUserIdentifier(): string
     {
-        return (string) $this->email;
+        return (string)$this->email;
     }
 
     /**
@@ -94,7 +103,6 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
         $roles = $this->roles;
         // guarantee every user at least has ROLE_USER
         $roles[] = 'ROLE_USER';
-
 
         return array_unique($roles);
     }
@@ -190,6 +198,19 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
         return $this;
     }
 
+    public function getIsVerified(): ?bool
+    {
+        return $this->is_verified;
+    }
+
+
+    public function setIsVerified(?bool $is_verified): self
+    {
+        $this->is_verified = $is_verified;
+
+        return $this;
+    }
+
     /**
      * @return Collection<int, Commentaire>
      */
@@ -266,3 +287,4 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
         $this->plainPassword = $plainPassword;
     }
 }
+

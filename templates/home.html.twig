@@ -1,15 +1,31 @@
-
 {%  extends "base.html.twig" %}
-{% block title %} SymRecipies- Acceuil {% endblock %}
+
+{% block title %} Un Nouveau Monde {% endblock %}
+
 {% block body %}
-    <div class = "container mt-4" >
-        <div class="jumbotron">
-            <h1 class="display-4">Bienvenue sur SymRecipes</h1>
-            <p class="lead">Ceci est un site de recette comme exemple pour apprendre à utiliser Symfony</p>
-            <hr class="my-4">
-            <p>Pour commencer rendez-vous sur la page de connexion ou inscription.</p>
-            <a class="btn btn-primary btn-lg" href="#" role="button">inscription</a>
+    <div class="container text-center">
+        <h1 class="mt-4"> Bienvenue ! </h1>
+        <p> Dans ce nouveau monde, la lumière naît dans le coeur des hommes et des femmes et sert de projecteurs face à l'écran. </p>
+        <p> Venez découvrir les productions de nos talentueux réalisateurs ! </p>
+    </div>
+    <br>
+    <div class="container" style="width: 30%">
+        <div class="card">
+            <img src="{{ asset('img/Coline.jpeg') }}" class="card-img-top" alt="Réalisateur 1">
+            <div class="card-body">
+                <h5 class="card-title">Coline DURTSCH</h5>
+                <a href="#" class="btn btn-primary">Voir plus</a>
+            </div>
+        </div>
+        <br><br>
+        <div class="card">
+            <img src="src="{{ asset('img/GuillaumeRieu.jpg') }}" class="card-img-top" alt="Réalisateur 2">
+            <div class="card-body">
+                <h5 class="card-title">Guillaume RIEU</h5>
+                <a href="#" class="btn btn-primary">Voir plus</a>
+            </div>
         </div>
     </div>
+    <br>
 
 {% endblock %}

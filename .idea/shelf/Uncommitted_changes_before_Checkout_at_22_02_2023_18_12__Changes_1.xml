@@ -1,0 +1,14 @@
+<changelist name="Uncommitted_changes_before_Checkout_at_22_02_2023_18_12_[Changes]1" date="1677085997917" recycled="true" deleted="true">
+  <option name="PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_22_02_2023_18_12_[Changes]1/shelved.patch" />
+  <option name="DESCRIPTION" value="Uncommitted changes before Checkout at 22/02/2023 18:12 [Changes]" />
+  <binary>
+    <option name="BEFORE_PATH" value="var/cache/dev/App_KernelDevDebugContainer.php.meta" />
+    <option name="AFTER_PATH" value="var/cache/dev/App_KernelDevDebugContainer.php.meta" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_22_02_2023_18_12_[Changes]1/App_KernelDevDebugContainer.php.meta" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="var/cache/dev/App_KernelDevDebugContainer.xml.meta" />
+    <option name="AFTER_PATH" value="var/cache/dev/App_KernelDevDebugContainer.xml.meta" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_22_02_2023_18_12_[Changes]1/App_KernelDevDebugContainer.xml.meta" />
+  </binary>
+</changelist>

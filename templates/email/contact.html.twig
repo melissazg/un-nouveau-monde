@@ -1,0 +1,13 @@
+{% block body %}
+
+    <h1>Demande de {{ contact.fullName }}</h1>
+
+    <p>Email : {{ contact.email }}</p>
+
+    <p>Sujet : {{ contact.subject }}</p>
+
+    <div>
+        Message : {{ contact.message|raw }}</p>
+    </div>
+
+{% endblock %}

@@ -1,0 +1,64 @@
+{%  extends "base.html.twig" %}
+
+{% block title %} Un Nouveau Monde {% endblock %}
+
+{% block body %}
+    <style>
+        p {
+            text-align: justify;
+        }
+    </style>
+
+    <div class="container">
+        <div class="container py-8 h-100 mt-4">
+            <div class="row d-flex justify-content-center align-items-center h-100">
+                <div class="col-14 col-md-10 col-lg-8 col-xl-10">
+                    <div class="card bg-dark text-white" style="border-radius: 1rem;">
+                        <div class="card-body p-8 text-center">
+                            <h1 class="mt-4"> Qui sommes-nous ? </h1>
+                            <br>
+                            <div class="card mb-3" style="max-width: 100%;">
+                                <div class="row g-0 text-bg-primary" style="border-radius: 8px;">
+                                    <div class="col-md-4 px-2">
+                                        <br>
+                                        <img src="{{ asset('img/MarieBailleule.jpg') }}" class="img-fluid rounded" alt="Marie Bailleule">
+                                    </div>
+                                    <div class="col-md-8">
+                                        <div class="card-body">
+                                            <h5 class="card-title">Marie Bailleule</h5>
+                                            <p>Riche d’une vingtaine d’années dans l’exploitation, c’est avec cœur ouvert que Marie Bailleul épaule et accompagne ce projet pour les lycéens cinéphiles.<br><br>
+                                                Son goût et sa passion pour les histoires universelles forment une harmonie d’équipe avec Nicolas. <br><br> L’une se concentrant sur l’histoire qui est racontée sera force de proposition. <br><br>
+                                                L’autre se concentrant sur la forme des œuvres aura facilité d’analyse et de programmation.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="card mb-3" style="max-width: 100%;">
+                                <div class="row g-0 text-bg-info" style="border-radius: 8px">
+                                    <div class="col-md-4 px-2">
+                                        <br>
+                                        <img src="{{ asset('img/NicolasDesole.jpg') }}" class="img-fluid rounded" alt="Nicolas Desole">
+                                    </div>
+                                    <div class="col-md-8">
+                                        <div class="card-body">
+                                            <h5 class="card-title">Nicolas Desole</h5>
+                                            <p>Nicolas a fréquenté les ciné-club comme les festivals avec assiduité depuis de nombreuses années.<br><br>
+                                                Provenant lui-même de cette école de la vie qu’il poursuit en parallèle de ses études de cinéma, ce projet représente pour lui une quatrième étape. <br><br>
+                                                Il a supervisé, créé, accompagné au développement de soirées ou de réunions les cinéphiles spectateurs ou professionnels. <br><br>
+                                                C’est avec joie et pour amitié pour sa consœur que Nicolas prépare ce projet avec investissement.<br><br>
+                                                Il souhaite faire émerger la partie créative et cinéphiles des programmateurs et se sent proche du secteur même du cinéma. <br><br>
+                                                Avec lui il sera facile pour les lycéens de suivre une voie orientée vers l’échange humain dans leur collège cinéphile.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+{% endblock %}

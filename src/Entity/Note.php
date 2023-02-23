@@ -17,11 +17,14 @@ class Note
     #[ORM\Column(type: Types::DATETIME_MUTABLE)]
     private ?\DateTimeInterface $date = null;
 
+
+
     #[ORM\ManyToOne(inversedBy: 'Notes')]
     private ?User $user = null;
 
     #[ORM\ManyToOne(inversedBy: 'notes')]
     private ?Film $film = null;
+
 
 
 
@@ -41,6 +44,7 @@ class Note
 
         return $this;
     }
+
 
     public function getUser(): ?User
     {
