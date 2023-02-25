@@ -7,10 +7,6 @@
     <list default="true" id="a34e3314-ff01-4596-a588-b930bf935e02" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Form/InscriptionType.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Form/InscriptionType.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/about.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/about.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/home.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/home.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/partners.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/partners.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/security/login.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/security/login.html.twig" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
