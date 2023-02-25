@@ -95,7 +95,7 @@ class __TwigTemplate_de7e187f98947a6b44924c9d9d9e3985 extends Template
         <div class=\"card\">
             <img src=\"";
         // line 14
-        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("img/Coline.jpeg"), "html", null, true);
+        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("img/realisateurs/Coline.jpeg"), "html", null, true);
         echo "\" class=\"card-img-top\" alt=\"Réalisateur 1\">
             <div class=\"card-body\">
                 <h5 class=\"card-title\">Coline DURTSCH</h5>
@@ -104,9 +104,9 @@ class __TwigTemplate_de7e187f98947a6b44924c9d9d9e3985 extends Template
         </div>
         <br><br>
         <div class=\"card\">
-            <img src=\"src=\"";
+            <img src=\"";
         // line 22
-        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("img/GuillaumeRieu.jpg"), "html", null, true);
+        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("img/realisateurs/GuillaumeRieu.jpg"), "html", null, true);
         echo "\" class=\"card-img-top\" alt=\"Réalisateur 2\">
             <div class=\"card-body\">
                 <h5 class=\"card-title\">Guillaume RIEU</h5>
@@ -155,7 +155,7 @@ class __TwigTemplate_de7e187f98947a6b44924c9d9d9e3985 extends Template
     <br>
     <div class=\"container\" style=\"width: 30%\">
         <div class=\"card\">
-            <img src=\"{{ asset('img/Coline.jpeg') }}\" class=\"card-img-top\" alt=\"Réalisateur 1\">
+            <img src=\"{{ asset('img/realisateurs/Coline.jpeg') }}\" class=\"card-img-top\" alt=\"Réalisateur 1\">
             <div class=\"card-body\">
                 <h5 class=\"card-title\">Coline DURTSCH</h5>
                 <a href=\"#\" class=\"btn btn-primary\">Voir plus</a>
@@ -163,7 +163,7 @@ class __TwigTemplate_de7e187f98947a6b44924c9d9d9e3985 extends Template
         </div>
         <br><br>
         <div class=\"card\">
-            <img src=\"src=\"{{ asset('img/GuillaumeRieu.jpg') }}\" class=\"card-img-top\" alt=\"Réalisateur 2\">
+            <img src=\"{{ asset('img/realisateurs/GuillaumeRieu.jpg') }}\" class=\"card-img-top\" alt=\"Réalisateur 2\">
             <div class=\"card-body\">
                 <h5 class=\"card-title\">Guillaume RIEU</h5>
                 <a href=\"#\" class=\"btn btn-primary\">Voir plus</a>

@@ -3,70 +3,61 @@
 {% block title %} Un Nouveau Monde {% endblock %}
 
 {% block body %}
-<section class="vh-100 gradient-custom">
-    <div class="container py-5 h-100">
+    <div class="container pt-5 h-100">
         <div class="row d-flex justify-content-center align-items-center h-100">
             <div class="col-12 col-md-8 col-lg-6 col-xl-5">
                 <div class="card bg-dark text-white" style="border-radius: 1rem;">
                     <div class="card-body p-5 text-center">
+                        <h2 class="fw-bold mb-2 text-uppercase">Connexion</h2>
+                        <p class="text-white-50 mb-5">Entrer votre identifiant et votre mot de passe !</p>
+                            <form method="post">
+                                {% if error %}
+                                    <div class="alert alert-danger">{{ error.messageKey|trans(error.messageData, 'security') }}</div>
+                                {% endif %}
 
-                        <div class="mb-md-5 mt-md-2 pb-5">
-
-                            <h2 class="fw-bold mb-2 text-uppercase">Connexion</h2>
-                            <p class="text-white-50 mb-5">Entrer votre identifiant et votre mot de passe !</p>
-                                <form method="post">
-                                    {% if error %}
-                                        <div class="alert alert-danger">{{ error.messageKey|trans(error.messageData, 'security') }}</div>
-                                    {% endif %}
-
-                                    {% if app.user %}
-                                        <div class="mb-3">
-                                            You are logged in as {{ app.user.userIdentifier }}, <a href="{{ path('app_logout') }}">Logout</a>
-                                        </div>
-                                    {% endif %}
-
-                                    <div class="form-outline form-white mb-3">
-                                        <label class="form-label" for="username">Email</label>
-                                        <input type="email" value="{{ last_username }}" id="inputEmail" class="form-control form-control-lg"
-                                               name="email"
-                                               placeholder="exemple@exemple.fr"
-                                               autocomplete="email" required autofocus
-                                        />
-
+                                {% if app.user %}
+                                    <div class="mb-3">
+                                        You are logged in as {{ app.user.userIdentifier }}, <a href="{{ path('app_logout') }}">Logout</a>
                                     </div>
+                                {% endif %}
 
-                                    <div class="form-outline form-white mb-3">
-                                        <label class="form-label" for="password">Mot de passe</label>
-                                        <input type="password" id="inputPassword" class="form-control form-control-lg"
-                                               name="password"
-                                               placeholder="********"
-                                               autocomplete="current-password" required
-                                        />
+                                <div class="form-outline form-white mb-3">
+                                    <label class="form-label" for="username">Email</label>
+                                    <input type="email" value="{{ last_username }}" id="inputEmail" class="form-control form-control-lg"
+                                           name="email"
+                                           placeholder="exemple@exemple.fr"
+                                           autocomplete="email" required autofocus
+                                    />
+                                </div>
 
-                                    </div>
+                                <div class="form-outline form-white mb-3">
+                                    <label class="form-label" for="password">Mot de passe</label>
+                                    <input type="password" id="inputPassword" class="form-control form-control-lg"
+                                           name="password"
+                                           placeholder="********"
+                                           autocomplete="current-password" required
+                                    />
+                                </div>
 
-                                    <p class="small mb-3 pb-lg-2"><a class="text-white-50" href="#!">Mot de passe oublié?</a></p>
+                                <p class="small mb-3 pb-lg-2"><a class="text-white-50" href="#!">Mot de passe oublié?</a></p>
 
+                                <div>
                                     <button class="btn btn-lg btn-primary mt-3" type="submit">
                                         Me connecter
                                     </button>
+                                </div>
 
-
-
-                                    </div>
-
-                                    <div>
-                                        <p class="mb-0">Vous n'avez pas de compte? <a href={{path('inscription.index')}} class="text-white-50 fw-bold">Inscription</a>
-                                    <input type="hidden" name="_csrf_token"
-                                           value="{{ csrf_token('authenticate') }}"
-                                    >
-                                </form>
-                            </p>
-                        </div>
+                                <div class="mt-3">
+                                    <p class="mb-0">Vous n'avez pas de compte ? <a href={{path('inscription.index')}} class="text-white-50">Inscription</a></p>
+                                <input type="hidden" name="_csrf_token"
+                                       value="{{ csrf_token('authenticate') }}"
+                                >
+                                </div>
+                            </form>
+                        </p>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-</section>
 {% endblock %}

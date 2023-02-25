@@ -105,7 +105,7 @@ class __TwigTemplate_2c4fc2e210ef7085220de86eeee3a379 extends Template
                                         <br>
                                         <img src=\"";
         // line 24
-        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("img/MarieBailleule.jpg"), "html", null, true);
+        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("img/about/MarieBailleule.jpg"), "html", null, true);
         echo "\" class=\"img-fluid rounded\" alt=\"Marie Bailleule\">
                                     </div>
                                     <div class=\"col-md-8\">
@@ -126,7 +126,7 @@ class __TwigTemplate_2c4fc2e210ef7085220de86eeee3a379 extends Template
                                         <br>
                                         <img src=\"";
         // line 42
-        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("img/NicolasDesole.jpg"), "html", null, true);
+        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("img/about/NicolasDesole.jpg"), "html", null, true);
         echo "\" class=\"img-fluid rounded\" alt=\"Nicolas Desole\">
                                     </div>
                                     <div class=\"col-md-8\">
@@ -198,7 +198,7 @@ class __TwigTemplate_2c4fc2e210ef7085220de86eeee3a379 extends Template
                                 <div class=\"row g-0 text-bg-primary\" style=\"border-radius: 8px;\">
                                     <div class=\"col-md-4 px-2\">
                                         <br>
-                                        <img src=\"{{ asset('img/MarieBailleule.jpg') }}\" class=\"img-fluid rounded\" alt=\"Marie Bailleule\">
+                                        <img src=\"{{ asset('img/about/MarieBailleule.jpg') }}\" class=\"img-fluid rounded\" alt=\"Marie Bailleule\">
                                     </div>
                                     <div class=\"col-md-8\">
                                         <div class=\"card-body\">
@@ -216,7 +216,7 @@ class __TwigTemplate_2c4fc2e210ef7085220de86eeee3a379 extends Template
                                 <div class=\"row g-0 text-bg-info\" style=\"border-radius: 8px\">
                                     <div class=\"col-md-4 px-2\">
                                         <br>
-                                        <img src=\"{{ asset('img/NicolasDesole.jpg') }}\" class=\"img-fluid rounded\" alt=\"Nicolas Desole\">
+                                        <img src=\"{{ asset('img/about/NicolasDesole.jpg') }}\" class=\"img-fluid rounded\" alt=\"Nicolas Desole\">
                                     </div>
                                     <div class=\"col-md-8\">
                                         <div class=\"card-body\">

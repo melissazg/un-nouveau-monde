@@ -45,8 +45,8 @@ class __TwigTemplate_c3bc171228aefc60509616627d275ab7 extends Template
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f->enter($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "template", "inscription.html.twig"));
 
-        // line 2
-        $this->env->getRuntime("Symfony\\Component\\Form\\FormRenderer")->setTheme((isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 2, $this->source); })()), [0 => "bootstrap_5_horizontal_layout.html.twig"], true);
+        // line 3
+        $this->env->getRuntime("Symfony\\Component\\Form\\FormRenderer")->setTheme((isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 3, $this->source); })()), [0 => "bootstrap_5_horizontal_layout.html.twig"], true);
         // line 1
         $this->parent = $this->loadTemplate("base.html.twig", "inscription.html.twig", 1);
         $this->parent->display($context, array_merge($this->blocks, $blocks));
@@ -58,7 +58,7 @@ class __TwigTemplate_c3bc171228aefc60509616627d275ab7 extends Template
 
     }
 
-    // line 3
+    // line 5
     public function block_title($context, array $blocks = [])
     {
         $macros = $this->macros;
@@ -68,9 +68,7 @@ class __TwigTemplate_c3bc171228aefc60509616627d275ab7 extends Template
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f->enter($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "title"));
 
-        // line 4
-        echo "    UnNouveauMonde-Inscription
-";
+        echo " Un Nouveau Monde ";
         
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f->leave($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof);
 
@@ -79,7 +77,7 @@ class __TwigTemplate_c3bc171228aefc60509616627d275ab7 extends Template
 
     }
 
-    // line 6
+    // line 7
     public function block_body($context, array $blocks = [])
     {
         $macros = $this->macros;
@@ -89,18 +87,18 @@ class __TwigTemplate_c3bc171228aefc60509616627d275ab7 extends Template
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f->enter($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "body"));
 
-        // line 7
+        // line 8
         echo "    <div class=\"container\">
         <h1 class=\"mt-4\"></h1>
-    <div class=\"container py-8 h-100\">
-        <div class=\"row d-flex justify-content-center align-items-center h-100\">
-            <div class=\"col-18 col-md-15 col-lg-10 col-xl-10\">
-                <div class=\"card bg-dark text-white\" style=\"border-radius: 1rem;\">
-                    <div class=\"card-body p-8 text-center\">
+        <div class=\"container py-8 h-100\">
+            <div class=\"row d-flex justify-content-center align-items-center h-100\">
+                <div class=\"col-18 col-md-15 col-lg-10 col-xl-10\">
+                    <div class=\"card bg-dark text-white\" style=\"border-radius: 1rem;\">
+                        <div class=\"card-body p-8 text-center\">
                         <h1 class=\"mt-4\">Formulaire d'inscription</h1>
                         ";
-        // line 15
-        echo         $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderBlock((isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 15, $this->source); })()), 'form');
+        // line 16
+        echo         $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderBlock((isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 16, $this->source); })()), 'form');
         echo "
                         </div>
                     </div>
@@ -109,14 +107,14 @@ class __TwigTemplate_c3bc171228aefc60509616627d275ab7 extends Template
         </div>
     </div>
     ";
-        // line 22
-        echo         $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderBlock((isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 22, $this->source); })()), 'form_start');
+        // line 23
+        echo         $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderBlock((isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 23, $this->source); })()), 'form_start');
         echo "
 
 
     ";
-        // line 25
-        echo         $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderBlock((isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 25, $this->source); })()), 'form_end');
+        // line 26
+        echo         $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderBlock((isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 26, $this->source); })()), 'form_end');
         echo "
 ";
         
@@ -139,24 +137,25 @@ class __TwigTemplate_c3bc171228aefc60509616627d275ab7 extends Template
 
     public function getDebugInfo()
     {
-        return array (  119 => 25,  113 => 22,  103 => 15,  93 => 7,  83 => 6,  72 => 4,  62 => 3,  51 => 1,  49 => 2,  36 => 1,);
+        return array (  117 => 26,  111 => 23,  101 => 16,  91 => 8,  81 => 7,  62 => 5,  51 => 1,  49 => 3,  36 => 1,);
     }
 
     public function getSourceContext()
     {
         return new Source("{% extends 'base.html.twig' %}
+
 {% form_theme form 'bootstrap_5_horizontal_layout.html.twig' %}
-{% block title %}
-    UnNouveauMonde-Inscription
-{% endblock %}
+
+{% block title %} Un Nouveau Monde {% endblock %}
+
 {% block body %}
     <div class=\"container\">
         <h1 class=\"mt-4\"></h1>
-    <div class=\"container py-8 h-100\">
-        <div class=\"row d-flex justify-content-center align-items-center h-100\">
-            <div class=\"col-18 col-md-15 col-lg-10 col-xl-10\">
-                <div class=\"card bg-dark text-white\" style=\"border-radius: 1rem;\">
-                    <div class=\"card-body p-8 text-center\">
+        <div class=\"container py-8 h-100\">
+            <div class=\"row d-flex justify-content-center align-items-center h-100\">
+                <div class=\"col-18 col-md-15 col-lg-10 col-xl-10\">
+                    <div class=\"card bg-dark text-white\" style=\"border-radius: 1rem;\">
+                        <div class=\"card-body p-8 text-center\">
                         <h1 class=\"mt-4\">Formulaire d'inscription</h1>
                         {{ form(form) }}
                         </div>

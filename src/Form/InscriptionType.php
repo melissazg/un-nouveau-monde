@@ -21,80 +21,105 @@ class InscriptionType extends AbstractType
     public function buildForm(FormBuilderInterface $builder, array $options): void
     {
         $builder
-            ->add('lastName', TextType::class, [ 'label' => 'Nom ',
+            ->add('lastName', TextType::class, [
+                'label' => 'Nom',
                 'required' => true,
                 'attr'=>[
                     'class'=>'form-control',
-                ], 'label_attr'=>[
+                ],
+                'label_attr'=>[
                     'class'=> 'form_label'
                 ],
-                ] )
-            ->add('firstName', TextType::class,  [ 'label' => 'Prenom ',
+            ])
+
+            ->add('firstName', TextType::class, [
+                'label' => 'Prénom',
                 'required' => true,
                 'attr'=>[
                     'class'=>'form-control',
-                ], 'label_attr'=>[
+                ],
+                'label_attr'=>[
                     'class'=> 'form_label'
                 ],
-                ])
-            ->add('email', EmailType::class,  [ 'label' => 'Adresse Email ',
+            ])
+
+            ->add('email', EmailType::class, [
+                'label' => 'Adresse email',
                 'required' => true,
                 'attr'=>[
                     'class'=>'form-control',
-                ], 'label_attr'=>[
+                ],
+                'label_attr'=>[
                     'class'=> 'form_label'
                 ],
-                ])
-            ->add('address', TextareaType::class,  [ 'label' => 'Adresse Postale',
+            ])
+
+            ->add('address', TextareaType::class, [
+                'label' => 'Adresse postale',
                 'required' => true,
                 'attr'=>[
                     'class'=>'form-control',
-                ], 'label_attr'=>[
+                ],
+                'label_attr'=>[
                     'class'=> 'form_label'
                 ],
-                ])
-            ->add('telephoneNumber', NumberType::class,  [ 'label' => 'Numéro de téléphone',
+            ])
+
+            ->add('telephoneNumber', NumberType::class, [
+                'label' => 'Numéro de téléphone',
                 'required' => true,
                 'attr'=>[
                     'class'=>'form-control',
-                ], 'label_attr'=>[
+                ],
+                'label_attr'=>[
                     'class'=> 'form_label'
                 ],
-                ])
+            ])
+
             ->add('plainPassword', RepeatedType::class, [
                 'type' => PasswordType::class,
                 'invalid_message' => 'The password fields must match.',
-                'options' => ['attr' => ['class' => 'password-field']],
+                'options' => [
+                    'attr' => [
+                        'class' => 'password-field'
+                    ]
+                ],
                 'required' => true,
                 'first_options'  => ['label' => 'Mot de passe',
                     'attr'=>[
                         'class'=>'form-control',
-                    ], 'label_attr'=>[
+                    ],
+                    'label_attr'=>[
                         'class'=> 'form_label'
-                    ],],
-
-                'second_options' => ['label' => 'Confirmer le mot de passe', 'attr'=>[
+                    ],
+                ],
+                'second_options' => ['label' => 'Confirmer le mot de passe',
+                    'attr'=> [
                     'class'=>'form-control',
-                ], 'label_attr'=>[
+                    ],
+                    'label_attr'=>[
                     'class'=> 'form_label'
-                ],],
-
+                    ],
+                ],
             ])
 
-
-            ->add('highSchool', TextType::class,  [ 'label' => 'Lycée',
+            ->add('highSchool', TextType::class, [
+                'label' => 'Lycée',
                 'required' => true,
                 'attr'=>[
                     'class'=>'form-control',
-                ], 'label_attr'=>[
+                ],
+                'label_attr'=>[
                     'class'=> 'form_label'
                 ],
-                ])
-            ->add('submit', SubmitType::class,
-                ['attr'=> ['class'=>'btn btn-primary mt-4'] ]
+            ])
 
-            )
-        ;
+            ->add('submit', SubmitType::class, [
+                'label' => 'Envoyer',
+                'attr'=> [
+                    'class'=>'btn btn-primary mt-4']
+                ]
+            );
     }
 
     public function configureOptions(OptionsResolver $resolver): void

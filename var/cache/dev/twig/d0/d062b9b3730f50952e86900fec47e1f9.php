@@ -92,7 +92,7 @@ class __TwigTemplate_0d9341250970028a7295c65678440114 extends Template
             <div class=\"card\">
                 <img src=\"";
         // line 11
-        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("img/lycee_henriIV.jpg"), "html", null, true);
+        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("img/lycees_partenaires/lycee_henriIV.jpg"), "html", null, true);
         echo "\" class=\"img-fluid rounded\" alt=\"Lycée Henri IV\">
                 <div class=\"card-body\">
                     <h5 class=\"card-title\">Lycée Henri IV</h5>
@@ -105,7 +105,7 @@ class __TwigTemplate_0d9341250970028a7295c65678440114 extends Template
             <div class=\"card\">
                 <img src=\"";
         // line 21
-        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("img/lycee_simoneveil.png"), "html", null, true);
+        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("img/lycees_partenaires/lycee_simoneveil.png"), "html", null, true);
         echo "\" class=\"img-fluid rounded\" alt=\"Lycée Simone Veil\">
                 <div class=\"card-body\">
                     <h5 class=\"card-title\">Lycée Simone Veil</h5>
@@ -118,7 +118,7 @@ class __TwigTemplate_0d9341250970028a7295c65678440114 extends Template
             <div class=\"card\">
                 <img src=\"";
         // line 31
-        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("img/lycee_vieljeux.png"), "html", null, true);
+        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("img/lycees_partenaires/lycee_vieljeux.png"), "html", null, true);
         echo "\" class=\"img-fluid rounded\" alt=\"Lycée Vieiljeux\">
                 <div class=\"card-body\">
                     <h5 class=\"card-title\">Lycée Vieljeux</h5>
@@ -131,7 +131,7 @@ class __TwigTemplate_0d9341250970028a7295c65678440114 extends Template
             <div class=\"card\">
                 <img src=\"";
         // line 41
-        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("img/lycee_des_metiers.png"), "html", null, true);
+        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("img/lycees_partenaires/lycee_des_metiers.png"), "html", null, true);
         echo "\" class=\"img-fluid rounded\" alt=\"Lycée des métiers\">
                 <div class=\"card-body\">
                     <h5 class=\"card-title\">Lycée des métiers</h5>
@@ -178,7 +178,7 @@ class __TwigTemplate_0d9341250970028a7295c65678440114 extends Template
         <h1 class=\"mt-4 text-center\"> Nos partenaires </h1>
         <div class=\"col\">
             <div class=\"card\">
-                <img src=\"{{ asset('img/lycee_henriIV.jpg') }}\" class=\"img-fluid rounded\" alt=\"Lycée Henri IV\">
+                <img src=\"{{ asset('img/lycees_partenaires/lycee_henriIV.jpg') }}\" class=\"img-fluid rounded\" alt=\"Lycée Henri IV\">
                 <div class=\"card-body\">
                     <h5 class=\"card-title\">Lycée Henri IV</h5>
                     <p class=\"card-text\">Une description ?</p>
@@ -188,7 +188,7 @@ class __TwigTemplate_0d9341250970028a7295c65678440114 extends Template
     <br>
         <div class=\"col\">
             <div class=\"card\">
-                <img src=\"{{ asset('img/lycee_simoneveil.png') }}\" class=\"img-fluid rounded\" alt=\"Lycée Simone Veil\">
+                <img src=\"{{ asset('img/lycees_partenaires/lycee_simoneveil.png') }}\" class=\"img-fluid rounded\" alt=\"Lycée Simone Veil\">
                 <div class=\"card-body\">
                     <h5 class=\"card-title\">Lycée Simone Veil</h5>
                     <p class=\"card-text\">Une description ?</p>
@@ -198,7 +198,7 @@ class __TwigTemplate_0d9341250970028a7295c65678440114 extends Template
     <br>
         <div class=\"col\">
             <div class=\"card\">
-                <img src=\"{{ asset('img/lycee_vieljeux.png') }}\" class=\"img-fluid rounded\" alt=\"Lycée Vieiljeux\">
+                <img src=\"{{ asset('img/lycees_partenaires/lycee_vieljeux.png') }}\" class=\"img-fluid rounded\" alt=\"Lycée Vieiljeux\">
                 <div class=\"card-body\">
                     <h5 class=\"card-title\">Lycée Vieljeux</h5>
                     <p class=\"card-text\">Une description ?</p>
@@ -208,7 +208,7 @@ class __TwigTemplate_0d9341250970028a7295c65678440114 extends Template
     <br>
         <div class=\"col\">
             <div class=\"card\">
-                <img src=\"{{ asset('img/lycee_des_metiers.png') }}\" class=\"img-fluid rounded\" alt=\"Lycée des métiers\">
+                <img src=\"{{ asset('img/lycees_partenaires/lycee_des_metiers.png') }}\" class=\"img-fluid rounded\" alt=\"Lycée des métiers\">
                 <div class=\"card-body\">
                     <h5 class=\"card-title\">Lycée des métiers</h5>
                     <p class=\"card-text\">Une description ?</p>
