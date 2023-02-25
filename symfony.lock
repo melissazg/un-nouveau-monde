@@ -50,6 +50,7 @@
 
     "knplabs/knp-paginator-bundle": {
         "version": "v6.1.1"
+    },
 
     "google/recaptcha": {
         "version": "1.3",

@@ -1,80 +1,85 @@
 <?xml version="1.0" encoding="utf-8"?>
 <container xmlns="http://symfony.com/schema/dic/services" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://symfony.com/schema/dic/services https://symfony.com/schema/dic/services/services-1.0.xsd">
   <parameters>
-    <parameter key="kernel.project_dir">C:\Users\ULTRABOOK DELL\OneDrive - UPEC\Bureau\Snowaddict-symfony\Un_Nouveau_Monde</parameter>
+    <parameter key="kernel.project_dir">/Applications/MAMP/htdocs/un-nouveau-monde</parameter>
     <parameter key="kernel.environment">dev</parameter>
     <parameter key="kernel.runtime_environment">%env(default:kernel.environment:APP_RUNTIME_ENV)%</parameter>
     <parameter key="kernel.debug">true</parameter>
-    <parameter key="kernel.build_dir">C:\Users\ULTRABOOK DELL\OneDrive - UPEC\Bureau\Snowaddict-symfony\Un_Nouveau_Monde\var\cache\dev</parameter>
-    <parameter key="kernel.cache_dir">C:\Users\ULTRABOOK DELL\OneDrive - UPEC\Bureau\Snowaddict-symfony\Un_Nouveau_Monde\var\cache\dev</parameter>
-    <parameter key="kernel.logs_dir">C:\Users\ULTRABOOK DELL\OneDrive - UPEC\Bureau\Snowaddict-symfony\Un_Nouveau_Monde\var\log</parameter>
+    <parameter key="kernel.build_dir">/Applications/MAMP/htdocs/un-nouveau-monde/var/cache/dev</parameter>
+    <parameter key="kernel.cache_dir">/Applications/MAMP/htdocs/un-nouveau-monde/var/cache/dev</parameter>
+    <parameter key="kernel.logs_dir">/Applications/MAMP/htdocs/un-nouveau-monde/var/log</parameter>
     <parameter key="kernel.bundles" type="collection">
       <parameter key="FrameworkBundle">Symfony\Bundle\FrameworkBundle\FrameworkBundle</parameter>
       <parameter key="DoctrineBundle">Doctrine\Bundle\DoctrineBundle\DoctrineBundle</parameter>
       <parameter key="DoctrineMigrationsBundle">Doctrine\Bundle\MigrationsBundle\DoctrineMigrationsBundle</parameter>
-      <parameter key="DebugBundle">Symfony\Bundle\DebugBundle\DebugBundle</parameter>
       <parameter key="TwigBundle">Symfony\Bundle\TwigBundle\TwigBundle</parameter>
+      <parameter key="DebugBundle">Symfony\Bundle\DebugBundle\DebugBundle</parameter>
       <parameter key="WebProfilerBundle">Symfony\Bundle\WebProfilerBundle\WebProfilerBundle</parameter>
       <parameter key="TwigExtraBundle">Twig\Extra\TwigExtraBundle\TwigExtraBundle</parameter>
       <parameter key="SecurityBundle">Symfony\Bundle\SecurityBundle\SecurityBundle</parameter>
       <parameter key="MonologBundle">Symfony\Bundle\MonologBundle\MonologBundle</parameter>
       <parameter key="MakerBundle">Symfony\Bundle\MakerBundle\MakerBundle</parameter>
       <parameter key="SensioFrameworkExtraBundle">Sensio\Bundle\FrameworkExtraBundle\SensioFrameworkExtraBundle</parameter>
-      <parameter key="KarserRecaptcha3Bundle">Karser\Recaptcha3Bundle\KarserRecaptcha3Bundle</parameter>
       <parameter key="DoctrineFixturesBundle">Doctrine\Bundle\FixturesBundle\DoctrineFixturesBundle</parameter>
+      <parameter key="KnpPaginatorBundle">Knp\Bundle\PaginatorBundle\KnpPaginatorBundle</parameter>
+      <parameter key="KarserRecaptcha3Bundle">Karser\Recaptcha3Bundle\KarserRecaptcha3Bundle</parameter>
     </parameter>
     <parameter key="kernel.bundles_metadata" type="collection">
       <parameter key="FrameworkBundle" type="collection">
-        <parameter key="path">C:\Users\ULTRABOOK DELL\OneDrive - UPEC\Bureau\Snowaddict-symfony\Un_Nouveau_Monde\vendor\symfony\framework-bundle</parameter>
+        <parameter key="path">/Applications/MAMP/htdocs/un-nouveau-monde/vendor/symfony/framework-bundle</parameter>
         <parameter key="namespace">Symfony\Bundle\FrameworkBundle</parameter>
       </parameter>
       <parameter key="DoctrineBundle" type="collection">
-        <parameter key="path">C:\Users\ULTRABOOK DELL\OneDrive - UPEC\Bureau\Snowaddict-symfony\Un_Nouveau_Monde\vendor\doctrine\doctrine-bundle</parameter>
+        <parameter key="path">/Applications/MAMP/htdocs/un-nouveau-monde/vendor/doctrine/doctrine-bundle</parameter>
         <parameter key="namespace">Doctrine\Bundle\DoctrineBundle</parameter>
       </parameter>
       <parameter key="DoctrineMigrationsBundle" type="collection">
-        <parameter key="path">C:\Users\ULTRABOOK DELL\OneDrive - UPEC\Bureau\Snowaddict-symfony\Un_Nouveau_Monde\vendor\doctrine\doctrine-migrations-bundle</parameter>
+        <parameter key="path">/Applications/MAMP/htdocs/un-nouveau-monde/vendor/doctrine/doctrine-migrations-bundle</parameter>
         <parameter key="namespace">Doctrine\Bundle\MigrationsBundle</parameter>
       </parameter>
-      <parameter key="DebugBundle" type="collection">
-        <parameter key="path">C:\Users\ULTRABOOK DELL\OneDrive - UPEC\Bureau\Snowaddict-symfony\Un_Nouveau_Monde\vendor\symfony\debug-bundle</parameter>
-        <parameter key="namespace">Symfony\Bundle\DebugBundle</parameter>
-      </parameter>
       <parameter key="TwigBundle" type="collection">
-        <parameter key="path">C:\Users\ULTRABOOK DELL\OneDrive - UPEC\Bureau\Snowaddict-symfony\Un_Nouveau_Monde\vendor\symfony\twig-bundle</parameter>
+        <parameter key="path">/Applications/MAMP/htdocs/un-nouveau-monde/vendor/symfony/twig-bundle</parameter>
         <parameter key="namespace">Symfony\Bundle\TwigBundle</parameter>
       </parameter>
+      <parameter key="DebugBundle" type="collection">
+        <parameter key="path">/Applications/MAMP/htdocs/un-nouveau-monde/vendor/symfony/debug-bundle</parameter>
+        <parameter key="namespace">Symfony\Bundle\DebugBundle</parameter>
+      </parameter>
       <parameter key="WebProfilerBundle" type="collection">
-        <parameter key="path">C:\Users\ULTRABOOK DELL\OneDrive - UPEC\Bureau\Snowaddict-symfony\Un_Nouveau_Monde\vendor\symfony\web-profiler-bundle</parameter>
+        <parameter key="path">/Applications/MAMP/htdocs/un-nouveau-monde/vendor/symfony/web-profiler-bundle</parameter>
         <parameter key="namespace">Symfony\Bundle\WebProfilerBundle</parameter>
       </parameter>
       <parameter key="TwigExtraBundle" type="collection">
-        <parameter key="path">C:\Users\ULTRABOOK DELL\OneDrive - UPEC\Bureau\Snowaddict-symfony\Un_Nouveau_Monde\vendor\twig\extra-bundle</parameter>
+        <parameter key="path">/Applications/MAMP/htdocs/un-nouveau-monde/vendor/twig/extra-bundle</parameter>
         <parameter key="namespace">Twig\Extra\TwigExtraBundle</parameter>
       </parameter>
       <parameter key="SecurityBundle" type="collection">
-        <parameter key="path">C:\Users\ULTRABOOK DELL\OneDrive - UPEC\Bureau\Snowaddict-symfony\Un_Nouveau_Monde\vendor\symfony\security-bundle</parameter>
+        <parameter key="path">/Applications/MAMP/htdocs/un-nouveau-monde/vendor/symfony/security-bundle</parameter>
         <parameter key="namespace">Symfony\Bundle\SecurityBundle</parameter>
       </parameter>
       <parameter key="MonologBundle" type="collection">
-        <parameter key="path">C:\Users\ULTRABOOK DELL\OneDrive - UPEC\Bureau\Snowaddict-symfony\Un_Nouveau_Monde\vendor\symfony\monolog-bundle</parameter>
+        <parameter key="path">/Applications/MAMP/htdocs/un-nouveau-monde/vendor/symfony/monolog-bundle</parameter>
         <parameter key="namespace">Symfony\Bundle\MonologBundle</parameter>
       </parameter>
       <parameter key="MakerBundle" type="collection">
-        <parameter key="path">C:\Users\ULTRABOOK DELL\OneDrive - UPEC\Bureau\Snowaddict-symfony\Un_Nouveau_Monde\vendor\symfony\maker-bundle\src</parameter>
+        <parameter key="path">/Applications/MAMP/htdocs/un-nouveau-monde/vendor/symfony/maker-bundle/src</parameter>
         <parameter key="namespace">Symfony\Bundle\MakerBundle</parameter>
       </parameter>
       <parameter key="SensioFrameworkExtraBundle" type="collection">
-        <parameter key="path">C:\Users\ULTRABOOK DELL\OneDrive - UPEC\Bureau\Snowaddict-symfony\Un_Nouveau_Monde\vendor\sensio\framework-extra-bundle\src</parameter>
+        <parameter key="path">/Applications/MAMP/htdocs/un-nouveau-monde/vendor/sensio/framework-extra-bundle/src</parameter>
         <parameter key="namespace">Sensio\Bundle\FrameworkExtraBundle</parameter>
       </parameter>
-      <parameter key="KarserRecaptcha3Bundle" type="collection">
-        <parameter key="path">C:\Users\ULTRABOOK DELL\OneDrive - UPEC\Bureau\Snowaddict-symfony\Un_Nouveau_Monde\vendor\karser\karser-recaptcha3-bundle</parameter>
-        <parameter key="namespace">Karser\Recaptcha3Bundle</parameter>
-      </parameter>
       <parameter key="DoctrineFixturesBundle" type="collection">
-        <parameter key="path">C:\Users\ULTRABOOK DELL\OneDrive - UPEC\Bureau\Snowaddict-symfony\Un_Nouveau_Monde\vendor\doctrine\doctrine-fixtures-bundle</parameter>
+        <parameter key="path">/Applications/MAMP/htdocs/un-nouveau-monde/vendor/doctrine/doctrine-fixtures-bundle</parameter>
         <parameter key="namespace">Doctrine\Bundle\FixturesBundle</parameter>
+      </parameter>
+      <parameter key="KnpPaginatorBundle" type="collection">
+        <parameter key="path">/Applications/MAMP/htdocs/un-nouveau-monde/vendor/knplabs/knp-paginator-bundle</parameter>
+        <parameter key="namespace">Knp\Bundle\PaginatorBundle</parameter>
+      </parameter>
+      <parameter key="KarserRecaptcha3Bundle" type="collection">
+        <parameter key="path">/Applications/MAMP/htdocs/un-nouveau-monde/vendor/karser/karser-recaptcha3-bundle</parameter>
+        <parameter key="namespace">Karser\Recaptcha3Bundle</parameter>
       </parameter>
     </parameter>
     <parameter key="kernel.charset">UTF-8</parameter>
@@ -115,18 +120,18 @@
     <parameter key="asset.request_context.base_path">null</parameter>
     <parameter key="asset.request_context.secure">null</parameter>
     <parameter key="translator.logging">false</parameter>
-    <parameter key="translator.default_path">C:\Users\ULTRABOOK DELL\OneDrive - UPEC\Bureau\Snowaddict-symfony\Un_Nouveau_Monde/translations</parameter>
+    <parameter key="translator.default_path">/Applications/MAMP/htdocs/un-nouveau-monde/translations</parameter>
     <parameter key="debug.error_handler.throw_at">-1</parameter>
-    <parameter key="debug.container.dump">C:\Users\ULTRABOOK DELL\OneDrive - UPEC\Bureau\Snowaddict-symfony\Un_Nouveau_Monde\var\cache\dev/App_KernelDevDebugContainer.xml</parameter>
+    <parameter key="debug.container.dump">/Applications/MAMP/htdocs/un-nouveau-monde/var/cache/dev/App_KernelDevDebugContainer.xml</parameter>
     <parameter key="router.request_context.host">localhost</parameter>
     <parameter key="router.request_context.scheme">http</parameter>
     <parameter key="router.request_context.base_url"></parameter>
     <parameter key="router.resource">kernel::loadRoutes</parameter>
-    <parameter key="router.cache_dir">C:\Users\ULTRABOOK DELL\OneDrive - UPEC\Bureau\Snowaddict-symfony\Un_Nouveau_Monde\var\cache\dev</parameter>
+    <parameter key="router.cache_dir">/Applications/MAMP/htdocs/un-nouveau-monde/var/cache/dev</parameter>
     <parameter key="request_listener.http_port">80</parameter>
     <parameter key="request_listener.https_port">443</parameter>
-    <parameter key="serializer.mapping.cache.file">C:\Users\ULTRABOOK DELL\OneDrive - UPEC\Bureau\Snowaddict-symfony\Un_Nouveau_Monde\var\cache\dev/serialization.php</parameter>
-    <parameter key="cache.prefix.seed">_C:\Users\ULTRABOOK DELL\OneDrive - UPEC\Bureau\Snowaddict-symfony\Un_Nouveau_Monde.App_KernelDevDebugContainer</parameter>
+    <parameter key="serializer.mapping.cache.file">/Applications/MAMP/htdocs/un-nouveau-monde/var/cache/dev/serialization.php</parameter>
+    <parameter key="cache.prefix.seed">_/Applications/MAMP/htdocs/un-nouveau-monde.App_KernelDevDebugContainer</parameter>
     <parameter key="session.metadata.storage_key">_sf2_meta</parameter>
     <parameter key="session.storage.options" type="collection">
       <parameter key="cache_limiter" type="string">0</parameter>
@@ -135,15 +140,15 @@
       <parameter key="cookie_samesite">lax</parameter>
       <parameter key="gc_probability">1</parameter>
     </parameter>
-    <parameter key="session.save_path">C:\Users\ULTRABOOK DELL\OneDrive - UPEC\Bureau\Snowaddict-symfony\Un_Nouveau_Monde\var\cache\dev/sessions</parameter>
+    <parameter key="session.save_path">/Applications/MAMP/htdocs/un-nouveau-monde/var/cache/dev/sessions</parameter>
     <parameter key="session.metadata.update_threshold">0</parameter>
     <parameter key="form.type_extension.csrf.enabled">true</parameter>
     <parameter key="form.type_extension.csrf.field_name">_token</parameter>
-    <parameter key="validator.mapping.cache.file">C:\Users\ULTRABOOK DELL\OneDrive - UPEC\Bureau\Snowaddict-symfony\Un_Nouveau_Monde\var\cache\dev/validation.php</parameter>
+    <parameter key="validator.mapping.cache.file">/Applications/MAMP/htdocs/un-nouveau-monde/var/cache/dev/validation.php</parameter>
     <parameter key="validator.translation_domain">validators</parameter>
     <parameter key="profiler_listener.only_exceptions">false</parameter>
     <parameter key="profiler_listener.only_main_requests">false</parameter>
-    <parameter key="profiler.storage.dsn">file:C:\Users\ULTRABOOK DELL\OneDrive - UPEC\Bureau\Snowaddict-symfony\Un_Nouveau_Monde\var\cache\dev/profiler</parameter>
+    <parameter key="profiler.storage.dsn">file:/Applications/MAMP/htdocs/un-nouveau-monde/var/cache/dev/profiler</parameter>
     <parameter key="doctrine.dbal.configuration.class">Doctrine\DBAL\Configuration</parameter>
     <parameter key="doctrine.data_collector.class">Doctrine\Bundle\DoctrineBundle\DataCollector\DoctrineDataCollector</parameter>
     <parameter key="doctrine.dbal.connection.event_manager.class">Symfony\Bridge\Doctrine\ContainerAwareEventManager</parameter>
@@ -208,16 +213,16 @@
     <parameter key="doctrine.orm.second_level_cache.regions_configuration.class">Doctrine\ORM\Cache\RegionsConfiguration</parameter>
     <parameter key="doctrine.orm.auto_generate_proxy_classes">true</parameter>
     <parameter key="doctrine.orm.enable_lazy_ghost_objects">true</parameter>
-    <parameter key="doctrine.orm.proxy_dir">C:\Users\ULTRABOOK DELL\OneDrive - UPEC\Bureau\Snowaddict-symfony\Un_Nouveau_Monde\var\cache\dev/doctrine/orm/Proxies</parameter>
+    <parameter key="doctrine.orm.proxy_dir">/Applications/MAMP/htdocs/un-nouveau-monde/var/cache/dev/doctrine/orm/Proxies</parameter>
     <parameter key="doctrine.orm.proxy_namespace">Proxies</parameter>
     <parameter key="doctrine.migrations.preferred_em">null</parameter>
     <parameter key="doctrine.migrations.preferred_connection">null</parameter>
-    <parameter key="env(VAR_DUMPER_SERVER)">127.0.0.1:9912</parameter>
     <parameter key="twig.form.resources" type="collection">
       <parameter>form_div_layout.html.twig</parameter>
       <parameter>@KarserRecaptcha3/Form/karser_recaptcha3_widget.html.twig</parameter>
     </parameter>
-    <parameter key="twig.default_path">C:\Users\ULTRABOOK DELL\OneDrive - UPEC\Bureau\Snowaddict-symfony\Un_Nouveau_Monde/templates</parameter>
+    <parameter key="twig.default_path">/Applications/MAMP/htdocs/un-nouveau-monde/templates</parameter>
+    <parameter key="env(VAR_DUMPER_SERVER)">127.0.0.1:9912</parameter>
     <parameter key="web_profiler.debug_toolbar.intercept_redirects">false</parameter>
     <parameter key="web_profiler.debug_toolbar.mode">2</parameter>
     <parameter key="security.role_hierarchy.roles" type="collection"/>
@@ -247,6 +252,11 @@
         </parameter>
       </parameter>
     </parameter>
+    <parameter key="knp_paginator.template.pagination">@KnpPaginator/Pagination/bootstrap_v5_pagination.html.twig</parameter>
+    <parameter key="knp_paginator.template.filtration">@KnpPaginator/Pagination/filtration.html.twig</parameter>
+    <parameter key="knp_paginator.template.sortable">@KnpPaginator/Pagination/sortable_link.html.twig</parameter>
+    <parameter key="knp_paginator.page_range">5</parameter>
+    <parameter key="knp_paginator.page_limit">null</parameter>
     <parameter key="karser_recaptcha3.site_key">%env(RECAPTCHA3_KEY)%</parameter>
     <parameter key="karser_recaptcha3.secret_key">%env(RECAPTCHA3_SECRET)%</parameter>
     <parameter key="karser_recaptcha3.score_threshold">0.5</parameter>
@@ -381,11 +391,25 @@
         <argument type="service" id=".service_locator.CshazM0.App\Controller\InscriptionController"/>
       </call>
     </service>
+    <service id="App\Controller\ManagerController" class="App\Controller\ManagerController" public="true" autowire="true" autoconfigure="true">
+      <tag name="controller.service_arguments"/>
+      <tag name="container.service_subscriber"/>
+      <call method="setContainer">
+        <argument type="service" id=".service_locator.CshazM0.App\Controller\ManagerController"/>
+      </call>
+    </service>
     <service id="App\Controller\PartnersController" class="App\Controller\PartnersController" public="true" autowire="true" autoconfigure="true">
       <tag name="controller.service_arguments"/>
       <tag name="container.service_subscriber"/>
       <call method="setContainer">
         <argument type="service" id=".service_locator.CshazM0.App\Controller\PartnersController"/>
+      </call>
+    </service>
+    <service id="App\Controller\PlayerController" class="App\Controller\PlayerController" public="true" autowire="true" autoconfigure="true">
+      <tag name="controller.service_arguments"/>
+      <tag name="container.service_subscriber"/>
+      <call method="setContainer">
+        <argument type="service" id=".service_locator.CshazM0.App\Controller\PlayerController"/>
       </call>
     </service>
     <service id="App\Controller\PreLoginController" class="App\Controller\PreLoginController" public="true" autowire="true" autoconfigure="true">
@@ -409,8 +433,16 @@
         <argument type="service" id=".service_locator.CshazM0.App\Controller\UserController"/>
       </call>
     </service>
-    <service id="App\DataFixtures\UsersFixtures" class="App\DataFixtures\UsersFixtures" autowire="true" autoconfigure="true"/>
+    <service id="App\DataFixtures\AppFixtures" class="App\DataFixtures\AppFixtures" autowire="true" autoconfigure="true">
+      <tag name="doctrine.fixture.orm"/>
+    </service>
+    <service id="App\DataFixtures\UsersFixtures" class="App\DataFixtures\UsersFixtures" autowire="true" autoconfigure="true">
+      <argument type="service" id="security.user_password_hasher"/>
+    </service>
     <service id="App\Form\ContactType" class="App\Form\ContactType" autowire="true" autoconfigure="true">
+      <tag name="form.type"/>
+    </service>
+    <service id="App\Form\FilmType" class="App\Form\FilmType" autowire="true" autoconfigure="true">
       <tag name="form.type"/>
     </service>
     <service id="App\Form\FormHandler\ContactFormHandler" class="App\Form\FormHandler\ContactFormHandler" autowire="true" autoconfigure="true">
@@ -530,7 +562,7 @@
       </argument>
     </service>
     <service id="http_cache.store" class="Symfony\Component\HttpKernel\HttpCache\Store">
-      <argument>C:\Users\ULTRABOOK DELL\OneDrive - UPEC\Bureau\Snowaddict-symfony\Un_Nouveau_Monde\var\cache\dev/http_cache</argument>
+      <argument>/Applications/MAMP/htdocs/un-nouveau-monde/var/cache/dev/http_cache</argument>
     </service>
     <service id="url_helper" class="Symfony\Component\HttpFoundation\UrlHelper">
       <argument type="service" id="request_stack"/>
@@ -540,7 +572,7 @@
       <tag name="container.no_preload"/>
       <argument type="tagged_iterator" tag="kernel.cache_warmer"/>
       <argument>true</argument>
-      <argument>C:\Users\ULTRABOOK DELL\OneDrive - UPEC\Bureau\Snowaddict-symfony\Un_Nouveau_Monde\var\cache\dev/App_KernelDevDebugContainerDeprecations.log</argument>
+      <argument>/Applications/MAMP/htdocs/un-nouveau-monde/var/cache/dev/App_KernelDevDebugContainerDeprecations.log</argument>
     </service>
     <service id="cache_clearer" class="Symfony\Component\HttpKernel\CacheClearer\ChainCacheClearer">
       <argument type="tagged_iterator" tag="kernel.cache_clearer"/>
@@ -766,7 +798,7 @@
       </argument>
       <argument>UTF-8</argument>
       <argument type="service" id="debug.file_link_formatter" on-invalid="null"/>
-      <argument>C:\Users\ULTRABOOK DELL\OneDrive - UPEC\Bureau\Snowaddict-symfony\Un_Nouveau_Monde</argument>
+      <argument>/Applications/MAMP/htdocs/un-nouveau-monde</argument>
       <argument type="service">
         <service>
           <argument type="service" id="request_stack"/>
@@ -799,7 +831,7 @@
       <tag name="console.command"/>
       <tag name="container.no_preload"/>
       <argument type="service" id="filesystem"/>
-      <argument>C:\Users\ULTRABOOK DELL\OneDrive - UPEC\Bureau\Snowaddict-symfony\Un_Nouveau_Monde</argument>
+      <argument>/Applications/MAMP/htdocs/un-nouveau-monde</argument>
       <call method="setName">
         <argument>assets:install</argument>
       </call>
@@ -982,7 +1014,7 @@
       <tag name="console.command"/>
       <tag name="container.no_preload"/>
       <argument>dev</argument>
-      <argument>C:\Users\ULTRABOOK DELL\OneDrive - UPEC\Bureau\Snowaddict-symfony\Un_Nouveau_Monde</argument>
+      <argument>/Applications/MAMP/htdocs/un-nouveau-monde</argument>
       <call method="setName">
         <argument>debug:dotenv</argument>
       </call>
@@ -1176,16 +1208,16 @@
       <argument type="service" id="translator.data_collector"/>
       <argument type="service" id="translation.reader"/>
       <argument type="service" id="translation.extractor"/>
-      <argument>C:\Users\ULTRABOOK DELL\OneDrive - UPEC\Bureau\Snowaddict-symfony\Un_Nouveau_Monde/translations</argument>
-      <argument>C:\Users\ULTRABOOK DELL\OneDrive - UPEC\Bureau\Snowaddict-symfony\Un_Nouveau_Monde/templates</argument>
+      <argument>/Applications/MAMP/htdocs/un-nouveau-monde/translations</argument>
+      <argument>/Applications/MAMP/htdocs/un-nouveau-monde/templates</argument>
       <argument type="collection">
-        <argument>C:\Users\ULTRABOOK DELL\OneDrive - UPEC\Bureau\Snowaddict-symfony\Un_Nouveau_Monde\vendor\symfony\validator/Resources/translations</argument>
-        <argument>C:\Users\ULTRABOOK DELL\OneDrive - UPEC\Bureau\Snowaddict-symfony\Un_Nouveau_Monde\vendor\symfony\form/Resources/translations</argument>
-        <argument>C:\Users\ULTRABOOK DELL\OneDrive - UPEC\Bureau\Snowaddict-symfony\Un_Nouveau_Monde\vendor\symfony\security-core/Resources/translations</argument>
+        <argument>/Applications/MAMP/htdocs/un-nouveau-monde/vendor/symfony/validator/Resources/translations</argument>
+        <argument>/Applications/MAMP/htdocs/un-nouveau-monde/vendor/symfony/form/Resources/translations</argument>
+        <argument>/Applications/MAMP/htdocs/un-nouveau-monde/vendor/symfony/security-core/Resources/translations</argument>
       </argument>
       <argument type="collection">
-        <argument>C:\Users\ULTRABOOK DELL\OneDrive - UPEC\Bureau\Snowaddict-symfony\Un_Nouveau_Monde\vendor\symfony\twig-bridge/Resources/views/Email</argument>
-        <argument>C:\Users\ULTRABOOK DELL\OneDrive - UPEC\Bureau\Snowaddict-symfony\Un_Nouveau_Monde\vendor\symfony\twig-bridge/Resources/views/Form</argument>
+        <argument>/Applications/MAMP/htdocs/un-nouveau-monde/vendor/symfony/twig-bridge/Resources/views/Email</argument>
+        <argument>/Applications/MAMP/htdocs/un-nouveau-monde/vendor/symfony/twig-bridge/Resources/views/Form</argument>
       </argument>
       <argument type="collection"/>
       <call method="setName">
@@ -1202,16 +1234,16 @@
       <argument type="service" id="translation.reader"/>
       <argument type="service" id="translation.extractor"/>
       <argument>en</argument>
-      <argument>C:\Users\ULTRABOOK DELL\OneDrive - UPEC\Bureau\Snowaddict-symfony\Un_Nouveau_Monde/translations</argument>
-      <argument>C:\Users\ULTRABOOK DELL\OneDrive - UPEC\Bureau\Snowaddict-symfony\Un_Nouveau_Monde/templates</argument>
+      <argument>/Applications/MAMP/htdocs/un-nouveau-monde/translations</argument>
+      <argument>/Applications/MAMP/htdocs/un-nouveau-monde/templates</argument>
       <argument type="collection">
-        <argument>C:\Users\ULTRABOOK DELL\OneDrive - UPEC\Bureau\Snowaddict-symfony\Un_Nouveau_Monde\vendor\symfony\validator/Resources/translations</argument>
-        <argument>C:\Users\ULTRABOOK DELL\OneDrive - UPEC\Bureau\Snowaddict-symfony\Un_Nouveau_Monde\vendor\symfony\form/Resources/translations</argument>
-        <argument>C:\Users\ULTRABOOK DELL\OneDrive - UPEC\Bureau\Snowaddict-symfony\Un_Nouveau_Monde\vendor\symfony\security-core/Resources/translations</argument>
+        <argument>/Applications/MAMP/htdocs/un-nouveau-monde/vendor/symfony/validator/Resources/translations</argument>
+        <argument>/Applications/MAMP/htdocs/un-nouveau-monde/vendor/symfony/form/Resources/translations</argument>
+        <argument>/Applications/MAMP/htdocs/un-nouveau-monde/vendor/symfony/security-core/Resources/translations</argument>
       </argument>
       <argument type="collection">
-        <argument>C:\Users\ULTRABOOK DELL\OneDrive - UPEC\Bureau\Snowaddict-symfony\Un_Nouveau_Monde\vendor\symfony\twig-bridge/Resources/views/Email</argument>
-        <argument>C:\Users\ULTRABOOK DELL\OneDrive - UPEC\Bureau\Snowaddict-symfony\Un_Nouveau_Monde\vendor\symfony\twig-bridge/Resources/views/Form</argument>
+        <argument>/Applications/MAMP/htdocs/un-nouveau-monde/vendor/symfony/twig-bridge/Resources/views/Email</argument>
+        <argument>/Applications/MAMP/htdocs/un-nouveau-monde/vendor/symfony/twig-bridge/Resources/views/Form</argument>
       </argument>
       <argument type="collection"/>
       <call method="setName">
@@ -1294,6 +1326,7 @@
       </argument>
       <argument type="collection">
         <argument>App\Form\ContactType</argument>
+        <argument>App\Form\FilmType</argument>
         <argument>App\Form\InscriptionType</argument>
         <argument>App\Form\UserPasswordType</argument>
         <argument>App\Form\UserType</argument>
@@ -1445,7 +1478,7 @@
       <argument></argument>
       <argument>0</argument>
       <argument>%container.build_id%</argument>
-      <argument>C:\Users\ULTRABOOK DELL\OneDrive - UPEC\Bureau\Snowaddict-symfony\Un_Nouveau_Monde\var\cache\dev/pools/system</argument>
+      <argument>/Applications/MAMP/htdocs/un-nouveau-monde/var/cache/dev/pools/system</argument>
       <argument type="service" id="monolog.logger.cache" on-invalid="ignore"/>
       <factory class="Symfony\Component\Cache\Adapter\AbstractAdapter" method="createSystemCache"/>
     </service>
@@ -1464,7 +1497,7 @@
       <tag name="monolog.logger" channel="cache"/>
       <argument></argument>
       <argument>0</argument>
-      <argument>C:\Users\ULTRABOOK DELL\OneDrive - UPEC\Bureau\Snowaddict-symfony\Un_Nouveau_Monde\var\cache\dev/pools/app</argument>
+      <argument>/Applications/MAMP/htdocs/un-nouveau-monde/var/cache/dev/pools/app</argument>
       <argument type="service" id="cache.default_marshaller" on-invalid="ignore"/>
       <call method="setLogger">
         <argument type="service" id="monolog.logger.cache" on-invalid="ignore"/>
@@ -1754,325 +1787,360 @@
         </argument>
       </argument>
       <argument type="collection">
-        <argument key="cache_dir">C:\Users\ULTRABOOK DELL\OneDrive - UPEC\Bureau\Snowaddict-symfony\Un_Nouveau_Monde\var\cache\dev/translations</argument>
+        <argument key="cache_dir">/Applications/MAMP/htdocs/un-nouveau-monde/var/cache/dev/translations</argument>
         <argument key="debug">true</argument>
         <argument key="resource_files" type="collection">
           <argument key="af" type="collection">
-            <argument>C:\Users\ULTRABOOK DELL\OneDrive - UPEC\Bureau\Snowaddict-symfony\Un_Nouveau_Monde\vendor\symfony\validator/Resources/translations\validators.af.xlf</argument>
-            <argument>C:\Users\ULTRABOOK DELL\OneDrive - UPEC\Bureau\Snowaddict-symfony\Un_Nouveau_Monde\vendor\symfony\form/Resources/translations\validators.af.xlf</argument>
-            <argument>C:\Users\ULTRABOOK DELL\OneDrive - UPEC\Bureau\Snowaddict-symfony\Un_Nouveau_Monde\vendor\symfony\security-core/Resources/translations\security.af.xlf</argument>
+            <argument>/Applications/MAMP/htdocs/un-nouveau-monde/vendor/symfony/validator/Resources/translations/validators.af.xlf</argument>
+            <argument>/Applications/MAMP/htdocs/un-nouveau-monde/vendor/symfony/form/Resources/translations/validators.af.xlf</argument>
+            <argument>/Applications/MAMP/htdocs/un-nouveau-monde/vendor/symfony/security-core/Resources/translations/security.af.xlf</argument>
           </argument>
           <argument key="ar" type="collection">
-            <argument>C:\Users\ULTRABOOK DELL\OneDrive - UPEC\Bureau\Snowaddict-symfony\Un_Nouveau_Monde\vendor\symfony\validator/Resources/translations\validators.ar.xlf</argument>
-            <argument>C:\Users\ULTRABOOK DELL\OneDrive - UPEC\Bureau\Snowaddict-symfony\Un_Nouveau_Monde\vendor\symfony\form/Resources/translations\validators.ar.xlf</argument>
-            <argument>C:\Users\ULTRABOOK DELL\OneDrive - UPEC\Bureau\Snowaddict-symfony\Un_Nouveau_Monde\vendor\symfony\security-core/Resources/translations\security.ar.xlf</argument>
+            <argument>/Applications/MAMP/htdocs/un-nouveau-monde/vendor/symfony/validator/Resources/translations/validators.ar.xlf</argument>
+            <argument>/Applications/MAMP/htdocs/un-nouveau-monde/vendor/symfony/form/Resources/translations/validators.ar.xlf</argument>
+            <argument>/Applications/MAMP/htdocs/un-nouveau-monde/vendor/symfony/security-core/Resources/translations/security.ar.xlf</argument>
+            <argument>/Applications/MAMP/htdocs/un-nouveau-monde/vendor/knplabs/knp-paginator-bundle/translations/KnpPaginatorBundle.ar.xliff</argument>
           </argument>
           <argument key="az" type="collection">
-            <argument>C:\Users\ULTRABOOK DELL\OneDrive - UPEC\Bureau\Snowaddict-symfony\Un_Nouveau_Monde\vendor\symfony\validator/Resources/translations\validators.az.xlf</argument>
-            <argument>C:\Users\ULTRABOOK DELL\OneDrive - UPEC\Bureau\Snowaddict-symfony\Un_Nouveau_Monde\vendor\symfony\form/Resources/translations\validators.az.xlf</argument>
-            <argument>C:\Users\ULTRABOOK DELL\OneDrive - UPEC\Bureau\Snowaddict-symfony\Un_Nouveau_Monde\vendor\symfony\security-core/Resources/translations\security.az.xlf</argument>
+            <argument>/Applications/MAMP/htdocs/un-nouveau-monde/vendor/symfony/validator/Resources/translations/validators.az.xlf</argument>
+            <argument>/Applications/MAMP/htdocs/un-nouveau-monde/vendor/symfony/form/Resources/translations/validators.az.xlf</argument>
+            <argument>/Applications/MAMP/htdocs/un-nouveau-monde/vendor/symfony/security-core/Resources/translations/security.az.xlf</argument>
           </argument>
           <argument key="be" type="collection">
-            <argument>C:\Users\ULTRABOOK DELL\OneDrive - UPEC\Bureau\Snowaddict-symfony\Un_Nouveau_Monde\vendor\symfony\validator/Resources/translations\validators.be.xlf</argument>
-            <argument>C:\Users\ULTRABOOK DELL\OneDrive - UPEC\Bureau\Snowaddict-symfony\Un_Nouveau_Monde\vendor\symfony\form/Resources/translations\validators.be.xlf</argument>
-            <argument>C:\Users\ULTRABOOK DELL\OneDrive - UPEC\Bureau\Snowaddict-symfony\Un_Nouveau_Monde\vendor\symfony\security-core/Resources/translations\security.be.xlf</argument>
+            <argument>/Applications/MAMP/htdocs/un-nouveau-monde/vendor/symfony/validator/Resources/translations/validators.be.xlf</argument>
+            <argument>/Applications/MAMP/htdocs/un-nouveau-monde/vendor/symfony/form/Resources/translations/validators.be.xlf</argument>
+            <argument>/Applications/MAMP/htdocs/un-nouveau-monde/vendor/symfony/security-core/Resources/translations/security.be.xlf</argument>
           </argument>
           <argument key="bg" type="collection">
-            <argument>C:\Users\ULTRABOOK DELL\OneDrive - UPEC\Bureau\Snowaddict-symfony\Un_Nouveau_Monde\vendor\symfony\validator/Resources/translations\validators.bg.xlf</argument>
-            <argument>C:\Users\ULTRABOOK DELL\OneDrive - UPEC\Bureau\Snowaddict-symfony\Un_Nouveau_Monde\vendor\symfony\form/Resources/translations\validators.bg.xlf</argument>
-            <argument>C:\Users\ULTRABOOK DELL\OneDrive - UPEC\Bureau\Snowaddict-symfony\Un_Nouveau_Monde\vendor\symfony\security-core/Resources/translations\security.bg.xlf</argument>
+            <argument>/Applications/MAMP/htdocs/un-nouveau-monde/vendor/symfony/validator/Resources/translations/validators.bg.xlf</argument>
+            <argument>/Applications/MAMP/htdocs/un-nouveau-monde/vendor/symfony/form/Resources/translations/validators.bg.xlf</argument>
+            <argument>/Applications/MAMP/htdocs/un-nouveau-monde/vendor/symfony/security-core/Resources/translations/security.bg.xlf</argument>
+            <argument>/Applications/MAMP/htdocs/un-nouveau-monde/vendor/knplabs/knp-paginator-bundle/translations/KnpPaginatorBundle.bg.xliff</argument>
           </argument>
           <argument key="bs" type="collection">
-            <argument>C:\Users\ULTRABOOK DELL\OneDrive - UPEC\Bureau\Snowaddict-symfony\Un_Nouveau_Monde\vendor\symfony\validator/Resources/translations\validators.bs.xlf</argument>
-            <argument>C:\Users\ULTRABOOK DELL\OneDrive - UPEC\Bureau\Snowaddict-symfony\Un_Nouveau_Monde\vendor\symfony\form/Resources/translations\validators.bs.xlf</argument>
-            <argument>C:\Users\ULTRABOOK DELL\OneDrive - UPEC\Bureau\Snowaddict-symfony\Un_Nouveau_Monde\vendor\symfony\security-core/Resources/translations\security.bs.xlf</argument>
+            <argument>/Applications/MAMP/htdocs/un-nouveau-monde/vendor/symfony/validator/Resources/translations/validators.bs.xlf</argument>
+            <argument>/Applications/MAMP/htdocs/un-nouveau-monde/vendor/symfony/form/Resources/translations/validators.bs.xlf</argument>
+            <argument>/Applications/MAMP/htdocs/un-nouveau-monde/vendor/symfony/security-core/Resources/translations/security.bs.xlf</argument>
           </argument>
           <argument key="ca" type="collection">
-            <argument>C:\Users\ULTRABOOK DELL\OneDrive - UPEC\Bureau\Snowaddict-symfony\Un_Nouveau_Monde\vendor\symfony\validator/Resources/translations\validators.ca.xlf</argument>
-            <argument>C:\Users\ULTRABOOK DELL\OneDrive - UPEC\Bureau\Snowaddict-symfony\Un_Nouveau_Monde\vendor\symfony\form/Resources/translations\validators.ca.xlf</argument>
-            <argument>C:\Users\ULTRABOOK DELL\OneDrive - UPEC\Bureau\Snowaddict-symfony\Un_Nouveau_Monde\vendor\symfony\security-core/Resources/translations\security.ca.xlf</argument>
+            <argument>/Applications/MAMP/htdocs/un-nouveau-monde/vendor/symfony/validator/Resources/translations/validators.ca.xlf</argument>
+            <argument>/Applications/MAMP/htdocs/un-nouveau-monde/vendor/symfony/form/Resources/translations/validators.ca.xlf</argument>
+            <argument>/Applications/MAMP/htdocs/un-nouveau-monde/vendor/symfony/security-core/Resources/translations/security.ca.xlf</argument>
+            <argument>/Applications/MAMP/htdocs/un-nouveau-monde/vendor/knplabs/knp-paginator-bundle/translations/KnpPaginatorBundle.ca.xliff</argument>
           </argument>
           <argument key="cs" type="collection">
-            <argument>C:\Users\ULTRABOOK DELL\OneDrive - UPEC\Bureau\Snowaddict-symfony\Un_Nouveau_Monde\vendor\symfony\validator/Resources/translations\validators.cs.xlf</argument>
-            <argument>C:\Users\ULTRABOOK DELL\OneDrive - UPEC\Bureau\Snowaddict-symfony\Un_Nouveau_Monde\vendor\symfony\form/Resources/translations\validators.cs.xlf</argument>
-            <argument>C:\Users\ULTRABOOK DELL\OneDrive - UPEC\Bureau\Snowaddict-symfony\Un_Nouveau_Monde\vendor\symfony\security-core/Resources/translations\security.cs.xlf</argument>
+            <argument>/Applications/MAMP/htdocs/un-nouveau-monde/vendor/symfony/validator/Resources/translations/validators.cs.xlf</argument>
+            <argument>/Applications/MAMP/htdocs/un-nouveau-monde/vendor/symfony/form/Resources/translations/validators.cs.xlf</argument>
+            <argument>/Applications/MAMP/htdocs/un-nouveau-monde/vendor/symfony/security-core/Resources/translations/security.cs.xlf</argument>
+            <argument>/Applications/MAMP/htdocs/un-nouveau-monde/vendor/knplabs/knp-paginator-bundle/translations/KnpPaginatorBundle.cs.xliff</argument>
           </argument>
           <argument key="cy" type="collection">
-            <argument>C:\Users\ULTRABOOK DELL\OneDrive - UPEC\Bureau\Snowaddict-symfony\Un_Nouveau_Monde\vendor\symfony\validator/Resources/translations\validators.cy.xlf</argument>
+            <argument>/Applications/MAMP/htdocs/un-nouveau-monde/vendor/symfony/validator/Resources/translations/validators.cy.xlf</argument>
           </argument>
           <argument key="da" type="collection">
-            <argument>C:\Users\ULTRABOOK DELL\OneDrive - UPEC\Bureau\Snowaddict-symfony\Un_Nouveau_Monde\vendor\symfony\validator/Resources/translations\validators.da.xlf</argument>
-            <argument>C:\Users\ULTRABOOK DELL\OneDrive - UPEC\Bureau\Snowaddict-symfony\Un_Nouveau_Monde\vendor\symfony\form/Resources/translations\validators.da.xlf</argument>
-            <argument>C:\Users\ULTRABOOK DELL\OneDrive - UPEC\Bureau\Snowaddict-symfony\Un_Nouveau_Monde\vendor\symfony\security-core/Resources/translations\security.da.xlf</argument>
+            <argument>/Applications/MAMP/htdocs/un-nouveau-monde/vendor/symfony/validator/Resources/translations/validators.da.xlf</argument>
+            <argument>/Applications/MAMP/htdocs/un-nouveau-monde/vendor/symfony/form/Resources/translations/validators.da.xlf</argument>
+            <argument>/Applications/MAMP/htdocs/un-nouveau-monde/vendor/symfony/security-core/Resources/translations/security.da.xlf</argument>
+            <argument>/Applications/MAMP/htdocs/un-nouveau-monde/vendor/knplabs/knp-paginator-bundle/translations/KnpPaginatorBundle.da.xliff</argument>
           </argument>
           <argument key="de" type="collection">
-            <argument>C:\Users\ULTRABOOK DELL\OneDrive - UPEC\Bureau\Snowaddict-symfony\Un_Nouveau_Monde\vendor\symfony\validator/Resources/translations\validators.de.xlf</argument>
-            <argument>C:\Users\ULTRABOOK DELL\OneDrive - UPEC\Bureau\Snowaddict-symfony\Un_Nouveau_Monde\vendor\symfony\form/Resources/translations\validators.de.xlf</argument>
-            <argument>C:\Users\ULTRABOOK DELL\OneDrive - UPEC\Bureau\Snowaddict-symfony\Un_Nouveau_Monde\vendor\symfony\security-core/Resources/translations\security.de.xlf</argument>
+            <argument>/Applications/MAMP/htdocs/un-nouveau-monde/vendor/symfony/validator/Resources/translations/validators.de.xlf</argument>
+            <argument>/Applications/MAMP/htdocs/un-nouveau-monde/vendor/symfony/form/Resources/translations/validators.de.xlf</argument>
+            <argument>/Applications/MAMP/htdocs/un-nouveau-monde/vendor/symfony/security-core/Resources/translations/security.de.xlf</argument>
+            <argument>/Applications/MAMP/htdocs/un-nouveau-monde/vendor/knplabs/knp-paginator-bundle/translations/KnpPaginatorBundle.de.xliff</argument>
           </argument>
           <argument key="el" type="collection">
-            <argument>C:\Users\ULTRABOOK DELL\OneDrive - UPEC\Bureau\Snowaddict-symfony\Un_Nouveau_Monde\vendor\symfony\validator/Resources/translations\validators.el.xlf</argument>
-            <argument>C:\Users\ULTRABOOK DELL\OneDrive - UPEC\Bureau\Snowaddict-symfony\Un_Nouveau_Monde\vendor\symfony\form/Resources/translations\validators.el.xlf</argument>
-            <argument>C:\Users\ULTRABOOK DELL\OneDrive - UPEC\Bureau\Snowaddict-symfony\Un_Nouveau_Monde\vendor\symfony\security-core/Resources/translations\security.el.xlf</argument>
+            <argument>/Applications/MAMP/htdocs/un-nouveau-monde/vendor/symfony/validator/Resources/translations/validators.el.xlf</argument>
+            <argument>/Applications/MAMP/htdocs/un-nouveau-monde/vendor/symfony/form/Resources/translations/validators.el.xlf</argument>
+            <argument>/Applications/MAMP/htdocs/un-nouveau-monde/vendor/symfony/security-core/Resources/translations/security.el.xlf</argument>
           </argument>
           <argument key="en" type="collection">
-            <argument>C:\Users\ULTRABOOK DELL\OneDrive - UPEC\Bureau\Snowaddict-symfony\Un_Nouveau_Monde\vendor\symfony\validator/Resources/translations\validators.en.xlf</argument>
-            <argument>C:\Users\ULTRABOOK DELL\OneDrive - UPEC\Bureau\Snowaddict-symfony\Un_Nouveau_Monde\vendor\symfony\form/Resources/translations\validators.en.xlf</argument>
-            <argument>C:\Users\ULTRABOOK DELL\OneDrive - UPEC\Bureau\Snowaddict-symfony\Un_Nouveau_Monde\vendor\symfony\security-core/Resources/translations\security.en.xlf</argument>
+            <argument>/Applications/MAMP/htdocs/un-nouveau-monde/vendor/symfony/validator/Resources/translations/validators.en.xlf</argument>
+            <argument>/Applications/MAMP/htdocs/un-nouveau-monde/vendor/symfony/form/Resources/translations/validators.en.xlf</argument>
+            <argument>/Applications/MAMP/htdocs/un-nouveau-monde/vendor/symfony/security-core/Resources/translations/security.en.xlf</argument>
+            <argument>/Applications/MAMP/htdocs/un-nouveau-monde/vendor/knplabs/knp-paginator-bundle/translations/KnpPaginatorBundle.en.xliff</argument>
           </argument>
           <argument key="es" type="collection">
-            <argument>C:\Users\ULTRABOOK DELL\OneDrive - UPEC\Bureau\Snowaddict-symfony\Un_Nouveau_Monde\vendor\symfony\validator/Resources/translations\validators.es.xlf</argument>
-            <argument>C:\Users\ULTRABOOK DELL\OneDrive - UPEC\Bureau\Snowaddict-symfony\Un_Nouveau_Monde\vendor\symfony\form/Resources/translations\validators.es.xlf</argument>
-            <argument>C:\Users\ULTRABOOK DELL\OneDrive - UPEC\Bureau\Snowaddict-symfony\Un_Nouveau_Monde\vendor\symfony\security-core/Resources/translations\security.es.xlf</argument>
+            <argument>/Applications/MAMP/htdocs/un-nouveau-monde/vendor/symfony/validator/Resources/translations/validators.es.xlf</argument>
+            <argument>/Applications/MAMP/htdocs/un-nouveau-monde/vendor/symfony/form/Resources/translations/validators.es.xlf</argument>
+            <argument>/Applications/MAMP/htdocs/un-nouveau-monde/vendor/symfony/security-core/Resources/translations/security.es.xlf</argument>
+            <argument>/Applications/MAMP/htdocs/un-nouveau-monde/vendor/knplabs/knp-paginator-bundle/translations/KnpPaginatorBundle.es.xliff</argument>
           </argument>
           <argument key="et" type="collection">
-            <argument>C:\Users\ULTRABOOK DELL\OneDrive - UPEC\Bureau\Snowaddict-symfony\Un_Nouveau_Monde\vendor\symfony\validator/Resources/translations\validators.et.xlf</argument>
-            <argument>C:\Users\ULTRABOOK DELL\OneDrive - UPEC\Bureau\Snowaddict-symfony\Un_Nouveau_Monde\vendor\symfony\form/Resources/translations\validators.et.xlf</argument>
-            <argument>C:\Users\ULTRABOOK DELL\OneDrive - UPEC\Bureau\Snowaddict-symfony\Un_Nouveau_Monde\vendor\symfony\security-core/Resources/translations\security.et.xlf</argument>
+            <argument>/Applications/MAMP/htdocs/un-nouveau-monde/vendor/symfony/validator/Resources/translations/validators.et.xlf</argument>
+            <argument>/Applications/MAMP/htdocs/un-nouveau-monde/vendor/symfony/form/Resources/translations/validators.et.xlf</argument>
+            <argument>/Applications/MAMP/htdocs/un-nouveau-monde/vendor/symfony/security-core/Resources/translations/security.et.xlf</argument>
           </argument>
           <argument key="eu" type="collection">
-            <argument>C:\Users\ULTRABOOK DELL\OneDrive - UPEC\Bureau\Snowaddict-symfony\Un_Nouveau_Monde\vendor\symfony\validator/Resources/translations\validators.eu.xlf</argument>
-            <argument>C:\Users\ULTRABOOK DELL\OneDrive - UPEC\Bureau\Snowaddict-symfony\Un_Nouveau_Monde\vendor\symfony\form/Resources/translations\validators.eu.xlf</argument>
-            <argument>C:\Users\ULTRABOOK DELL\OneDrive - UPEC\Bureau\Snowaddict-symfony\Un_Nouveau_Monde\vendor\symfony\security-core/Resources/translations\security.eu.xlf</argument>
+            <argument>/Applications/MAMP/htdocs/un-nouveau-monde/vendor/symfony/validator/Resources/translations/validators.eu.xlf</argument>
+            <argument>/Applications/MAMP/htdocs/un-nouveau-monde/vendor/symfony/form/Resources/translations/validators.eu.xlf</argument>
+            <argument>/Applications/MAMP/htdocs/un-nouveau-monde/vendor/symfony/security-core/Resources/translations/security.eu.xlf</argument>
+            <argument>/Applications/MAMP/htdocs/un-nouveau-monde/vendor/knplabs/knp-paginator-bundle/translations/KnpPaginatorBundle.eu.xliff</argument>
           </argument>
           <argument key="fa" type="collection">
-            <argument>C:\Users\ULTRABOOK DELL\OneDrive - UPEC\Bureau\Snowaddict-symfony\Un_Nouveau_Monde\vendor\symfony\validator/Resources/translations\validators.fa.xlf</argument>
-            <argument>C:\Users\ULTRABOOK DELL\OneDrive - UPEC\Bureau\Snowaddict-symfony\Un_Nouveau_Monde\vendor\symfony\form/Resources/translations\validators.fa.xlf</argument>
-            <argument>C:\Users\ULTRABOOK DELL\OneDrive - UPEC\Bureau\Snowaddict-symfony\Un_Nouveau_Monde\vendor\symfony\security-core/Resources/translations\security.fa.xlf</argument>
+            <argument>/Applications/MAMP/htdocs/un-nouveau-monde/vendor/symfony/validator/Resources/translations/validators.fa.xlf</argument>
+            <argument>/Applications/MAMP/htdocs/un-nouveau-monde/vendor/symfony/form/Resources/translations/validators.fa.xlf</argument>
+            <argument>/Applications/MAMP/htdocs/un-nouveau-monde/vendor/symfony/security-core/Resources/translations/security.fa.xlf</argument>
+            <argument>/Applications/MAMP/htdocs/un-nouveau-monde/vendor/knplabs/knp-paginator-bundle/translations/KnpPaginatorBundle.fa.xliff</argument>
           </argument>
           <argument key="fi" type="collection">
-            <argument>C:\Users\ULTRABOOK DELL\OneDrive - UPEC\Bureau\Snowaddict-symfony\Un_Nouveau_Monde\vendor\symfony\validator/Resources/translations\validators.fi.xlf</argument>
-            <argument>C:\Users\ULTRABOOK DELL\OneDrive - UPEC\Bureau\Snowaddict-symfony\Un_Nouveau_Monde\vendor\symfony\form/Resources/translations\validators.fi.xlf</argument>
-            <argument>C:\Users\ULTRABOOK DELL\OneDrive - UPEC\Bureau\Snowaddict-symfony\Un_Nouveau_Monde\vendor\symfony\security-core/Resources/translations\security.fi.xlf</argument>
+            <argument>/Applications/MAMP/htdocs/un-nouveau-monde/vendor/symfony/validator/Resources/translations/validators.fi.xlf</argument>
+            <argument>/Applications/MAMP/htdocs/un-nouveau-monde/vendor/symfony/form/Resources/translations/validators.fi.xlf</argument>
+            <argument>/Applications/MAMP/htdocs/un-nouveau-monde/vendor/symfony/security-core/Resources/translations/security.fi.xlf</argument>
+            <argument>/Applications/MAMP/htdocs/un-nouveau-monde/vendor/knplabs/knp-paginator-bundle/translations/KnpPaginatorBundle.fi.xliff</argument>
           </argument>
           <argument key="fr" type="collection">
-            <argument>C:\Users\ULTRABOOK DELL\OneDrive - UPEC\Bureau\Snowaddict-symfony\Un_Nouveau_Monde\vendor\symfony\validator/Resources/translations\validators.fr.xlf</argument>
-            <argument>C:\Users\ULTRABOOK DELL\OneDrive - UPEC\Bureau\Snowaddict-symfony\Un_Nouveau_Monde\vendor\symfony\form/Resources/translations\validators.fr.xlf</argument>
-            <argument>C:\Users\ULTRABOOK DELL\OneDrive - UPEC\Bureau\Snowaddict-symfony\Un_Nouveau_Monde\vendor\symfony\security-core/Resources/translations\security.fr.xlf</argument>
+            <argument>/Applications/MAMP/htdocs/un-nouveau-monde/vendor/symfony/validator/Resources/translations/validators.fr.xlf</argument>
+            <argument>/Applications/MAMP/htdocs/un-nouveau-monde/vendor/symfony/form/Resources/translations/validators.fr.xlf</argument>
+            <argument>/Applications/MAMP/htdocs/un-nouveau-monde/vendor/symfony/security-core/Resources/translations/security.fr.xlf</argument>
+            <argument>/Applications/MAMP/htdocs/un-nouveau-monde/vendor/knplabs/knp-paginator-bundle/translations/KnpPaginatorBundle.fr.xliff</argument>
           </argument>
           <argument key="gl" type="collection">
-            <argument>C:\Users\ULTRABOOK DELL\OneDrive - UPEC\Bureau\Snowaddict-symfony\Un_Nouveau_Monde\vendor\symfony\validator/Resources/translations\validators.gl.xlf</argument>
-            <argument>C:\Users\ULTRABOOK DELL\OneDrive - UPEC\Bureau\Snowaddict-symfony\Un_Nouveau_Monde\vendor\symfony\form/Resources/translations\validators.gl.xlf</argument>
-            <argument>C:\Users\ULTRABOOK DELL\OneDrive - UPEC\Bureau\Snowaddict-symfony\Un_Nouveau_Monde\vendor\symfony\security-core/Resources/translations\security.gl.xlf</argument>
+            <argument>/Applications/MAMP/htdocs/un-nouveau-monde/vendor/symfony/validator/Resources/translations/validators.gl.xlf</argument>
+            <argument>/Applications/MAMP/htdocs/un-nouveau-monde/vendor/symfony/form/Resources/translations/validators.gl.xlf</argument>
+            <argument>/Applications/MAMP/htdocs/un-nouveau-monde/vendor/symfony/security-core/Resources/translations/security.gl.xlf</argument>
           </argument>
           <argument key="he" type="collection">
-            <argument>C:\Users\ULTRABOOK DELL\OneDrive - UPEC\Bureau\Snowaddict-symfony\Un_Nouveau_Monde\vendor\symfony\validator/Resources/translations\validators.he.xlf</argument>
-            <argument>C:\Users\ULTRABOOK DELL\OneDrive - UPEC\Bureau\Snowaddict-symfony\Un_Nouveau_Monde\vendor\symfony\form/Resources/translations\validators.he.xlf</argument>
-            <argument>C:\Users\ULTRABOOK DELL\OneDrive - UPEC\Bureau\Snowaddict-symfony\Un_Nouveau_Monde\vendor\symfony\security-core/Resources/translations\security.he.xlf</argument>
+            <argument>/Applications/MAMP/htdocs/un-nouveau-monde/vendor/symfony/validator/Resources/translations/validators.he.xlf</argument>
+            <argument>/Applications/MAMP/htdocs/un-nouveau-monde/vendor/symfony/form/Resources/translations/validators.he.xlf</argument>
+            <argument>/Applications/MAMP/htdocs/un-nouveau-monde/vendor/symfony/security-core/Resources/translations/security.he.xlf</argument>
           </argument>
           <argument key="hr" type="collection">
-            <argument>C:\Users\ULTRABOOK DELL\OneDrive - UPEC\Bureau\Snowaddict-symfony\Un_Nouveau_Monde\vendor\symfony\validator/Resources/translations\validators.hr.xlf</argument>
-            <argument>C:\Users\ULTRABOOK DELL\OneDrive - UPEC\Bureau\Snowaddict-symfony\Un_Nouveau_Monde\vendor\symfony\form/Resources/translations\validators.hr.xlf</argument>
-            <argument>C:\Users\ULTRABOOK DELL\OneDrive - UPEC\Bureau\Snowaddict-symfony\Un_Nouveau_Monde\vendor\symfony\security-core/Resources/translations\security.hr.xlf</argument>
+            <argument>/Applications/MAMP/htdocs/un-nouveau-monde/vendor/symfony/validator/Resources/translations/validators.hr.xlf</argument>
+            <argument>/Applications/MAMP/htdocs/un-nouveau-monde/vendor/symfony/form/Resources/translations/validators.hr.xlf</argument>
+            <argument>/Applications/MAMP/htdocs/un-nouveau-monde/vendor/symfony/security-core/Resources/translations/security.hr.xlf</argument>
+            <argument>/Applications/MAMP/htdocs/un-nouveau-monde/vendor/knplabs/knp-paginator-bundle/translations/KnpPaginatorBundle.hr.xliff</argument>
           </argument>
           <argument key="hu" type="collection">
-            <argument>C:\Users\ULTRABOOK DELL\OneDrive - UPEC\Bureau\Snowaddict-symfony\Un_Nouveau_Monde\vendor\symfony\validator/Resources/translations\validators.hu.xlf</argument>
-            <argument>C:\Users\ULTRABOOK DELL\OneDrive - UPEC\Bureau\Snowaddict-symfony\Un_Nouveau_Monde\vendor\symfony\form/Resources/translations\validators.hu.xlf</argument>
-            <argument>C:\Users\ULTRABOOK DELL\OneDrive - UPEC\Bureau\Snowaddict-symfony\Un_Nouveau_Monde\vendor\symfony\security-core/Resources/translations\security.hu.xlf</argument>
+            <argument>/Applications/MAMP/htdocs/un-nouveau-monde/vendor/symfony/validator/Resources/translations/validators.hu.xlf</argument>
+            <argument>/Applications/MAMP/htdocs/un-nouveau-monde/vendor/symfony/form/Resources/translations/validators.hu.xlf</argument>
+            <argument>/Applications/MAMP/htdocs/un-nouveau-monde/vendor/symfony/security-core/Resources/translations/security.hu.xlf</argument>
+            <argument>/Applications/MAMP/htdocs/un-nouveau-monde/vendor/knplabs/knp-paginator-bundle/translations/KnpPaginatorBundle.hu.xliff</argument>
           </argument>
           <argument key="hy" type="collection">
-            <argument>C:\Users\ULTRABOOK DELL\OneDrive - UPEC\Bureau\Snowaddict-symfony\Un_Nouveau_Monde\vendor\symfony\validator/Resources/translations\validators.hy.xlf</argument>
-            <argument>C:\Users\ULTRABOOK DELL\OneDrive - UPEC\Bureau\Snowaddict-symfony\Un_Nouveau_Monde\vendor\symfony\form/Resources/translations\validators.hy.xlf</argument>
-            <argument>C:\Users\ULTRABOOK DELL\OneDrive - UPEC\Bureau\Snowaddict-symfony\Un_Nouveau_Monde\vendor\symfony\security-core/Resources/translations\security.hy.xlf</argument>
+            <argument>/Applications/MAMP/htdocs/un-nouveau-monde/vendor/symfony/validator/Resources/translations/validators.hy.xlf</argument>
+            <argument>/Applications/MAMP/htdocs/un-nouveau-monde/vendor/symfony/form/Resources/translations/validators.hy.xlf</argument>
+            <argument>/Applications/MAMP/htdocs/un-nouveau-monde/vendor/symfony/security-core/Resources/translations/security.hy.xlf</argument>
           </argument>
           <argument key="id" type="collection">
-            <argument>C:\Users\ULTRABOOK DELL\OneDrive - UPEC\Bureau\Snowaddict-symfony\Un_Nouveau_Monde\vendor\symfony\validator/Resources/translations\validators.id.xlf</argument>
-            <argument>C:\Users\ULTRABOOK DELL\OneDrive - UPEC\Bureau\Snowaddict-symfony\Un_Nouveau_Monde\vendor\symfony\form/Resources/translations\validators.id.xlf</argument>
-            <argument>C:\Users\ULTRABOOK DELL\OneDrive - UPEC\Bureau\Snowaddict-symfony\Un_Nouveau_Monde\vendor\symfony\security-core/Resources/translations\security.id.xlf</argument>
+            <argument>/Applications/MAMP/htdocs/un-nouveau-monde/vendor/symfony/validator/Resources/translations/validators.id.xlf</argument>
+            <argument>/Applications/MAMP/htdocs/un-nouveau-monde/vendor/symfony/form/Resources/translations/validators.id.xlf</argument>
+            <argument>/Applications/MAMP/htdocs/un-nouveau-monde/vendor/symfony/security-core/Resources/translations/security.id.xlf</argument>
+            <argument>/Applications/MAMP/htdocs/un-nouveau-monde/vendor/knplabs/knp-paginator-bundle/translations/KnpPaginatorBundle.id.xliff</argument>
           </argument>
           <argument key="it" type="collection">
-            <argument>C:\Users\ULTRABOOK DELL\OneDrive - UPEC\Bureau\Snowaddict-symfony\Un_Nouveau_Monde\vendor\symfony\validator/Resources/translations\validators.it.xlf</argument>
-            <argument>C:\Users\ULTRABOOK DELL\OneDrive - UPEC\Bureau\Snowaddict-symfony\Un_Nouveau_Monde\vendor\symfony\form/Resources/translations\validators.it.xlf</argument>
-            <argument>C:\Users\ULTRABOOK DELL\OneDrive - UPEC\Bureau\Snowaddict-symfony\Un_Nouveau_Monde\vendor\symfony\security-core/Resources/translations\security.it.xlf</argument>
+            <argument>/Applications/MAMP/htdocs/un-nouveau-monde/vendor/symfony/validator/Resources/translations/validators.it.xlf</argument>
+            <argument>/Applications/MAMP/htdocs/un-nouveau-monde/vendor/symfony/form/Resources/translations/validators.it.xlf</argument>
+            <argument>/Applications/MAMP/htdocs/un-nouveau-monde/vendor/symfony/security-core/Resources/translations/security.it.xlf</argument>
+            <argument>/Applications/MAMP/htdocs/un-nouveau-monde/vendor/knplabs/knp-paginator-bundle/translations/KnpPaginatorBundle.it.xliff</argument>
           </argument>
           <argument key="ja" type="collection">
-            <argument>C:\Users\ULTRABOOK DELL\OneDrive - UPEC\Bureau\Snowaddict-symfony\Un_Nouveau_Monde\vendor\symfony\validator/Resources/translations\validators.ja.xlf</argument>
-            <argument>C:\Users\ULTRABOOK DELL\OneDrive - UPEC\Bureau\Snowaddict-symfony\Un_Nouveau_Monde\vendor\symfony\form/Resources/translations\validators.ja.xlf</argument>
-            <argument>C:\Users\ULTRABOOK DELL\OneDrive - UPEC\Bureau\Snowaddict-symfony\Un_Nouveau_Monde\vendor\symfony\security-core/Resources/translations\security.ja.xlf</argument>
+            <argument>/Applications/MAMP/htdocs/un-nouveau-monde/vendor/symfony/validator/Resources/translations/validators.ja.xlf</argument>
+            <argument>/Applications/MAMP/htdocs/un-nouveau-monde/vendor/symfony/form/Resources/translations/validators.ja.xlf</argument>
+            <argument>/Applications/MAMP/htdocs/un-nouveau-monde/vendor/symfony/security-core/Resources/translations/security.ja.xlf</argument>
+            <argument>/Applications/MAMP/htdocs/un-nouveau-monde/vendor/knplabs/knp-paginator-bundle/translations/KnpPaginatorBundle.ja.xliff</argument>
           </argument>
           <argument key="lb" type="collection">
-            <argument>C:\Users\ULTRABOOK DELL\OneDrive - UPEC\Bureau\Snowaddict-symfony\Un_Nouveau_Monde\vendor\symfony\validator/Resources/translations\validators.lb.xlf</argument>
-            <argument>C:\Users\ULTRABOOK DELL\OneDrive - UPEC\Bureau\Snowaddict-symfony\Un_Nouveau_Monde\vendor\symfony\form/Resources/translations\validators.lb.xlf</argument>
-            <argument>C:\Users\ULTRABOOK DELL\OneDrive - UPEC\Bureau\Snowaddict-symfony\Un_Nouveau_Monde\vendor\symfony\security-core/Resources/translations\security.lb.xlf</argument>
+            <argument>/Applications/MAMP/htdocs/un-nouveau-monde/vendor/symfony/validator/Resources/translations/validators.lb.xlf</argument>
+            <argument>/Applications/MAMP/htdocs/un-nouveau-monde/vendor/symfony/form/Resources/translations/validators.lb.xlf</argument>
+            <argument>/Applications/MAMP/htdocs/un-nouveau-monde/vendor/symfony/security-core/Resources/translations/security.lb.xlf</argument>
           </argument>
           <argument key="lt" type="collection">
-            <argument>C:\Users\ULTRABOOK DELL\OneDrive - UPEC\Bureau\Snowaddict-symfony\Un_Nouveau_Monde\vendor\symfony\validator/Resources/translations\validators.lt.xlf</argument>
-            <argument>C:\Users\ULTRABOOK DELL\OneDrive - UPEC\Bureau\Snowaddict-symfony\Un_Nouveau_Monde\vendor\symfony\form/Resources/translations\validators.lt.xlf</argument>
-            <argument>C:\Users\ULTRABOOK DELL\OneDrive - UPEC\Bureau\Snowaddict-symfony\Un_Nouveau_Monde\vendor\symfony\security-core/Resources/translations\security.lt.xlf</argument>
+            <argument>/Applications/MAMP/htdocs/un-nouveau-monde/vendor/symfony/validator/Resources/translations/validators.lt.xlf</argument>
+            <argument>/Applications/MAMP/htdocs/un-nouveau-monde/vendor/symfony/form/Resources/translations/validators.lt.xlf</argument>
+            <argument>/Applications/MAMP/htdocs/un-nouveau-monde/vendor/symfony/security-core/Resources/translations/security.lt.xlf</argument>
+            <argument>/Applications/MAMP/htdocs/un-nouveau-monde/vendor/knplabs/knp-paginator-bundle/translations/KnpPaginatorBundle.lt.xliff</argument>
           </argument>
           <argument key="lv" type="collection">
-            <argument>C:\Users\ULTRABOOK DELL\OneDrive - UPEC\Bureau\Snowaddict-symfony\Un_Nouveau_Monde\vendor\symfony\validator/Resources/translations\validators.lv.xlf</argument>
-            <argument>C:\Users\ULTRABOOK DELL\OneDrive - UPEC\Bureau\Snowaddict-symfony\Un_Nouveau_Monde\vendor\symfony\form/Resources/translations\validators.lv.xlf</argument>
-            <argument>C:\Users\ULTRABOOK DELL\OneDrive - UPEC\Bureau\Snowaddict-symfony\Un_Nouveau_Monde\vendor\symfony\security-core/Resources/translations\security.lv.xlf</argument>
+            <argument>/Applications/MAMP/htdocs/un-nouveau-monde/vendor/symfony/validator/Resources/translations/validators.lv.xlf</argument>
+            <argument>/Applications/MAMP/htdocs/un-nouveau-monde/vendor/symfony/form/Resources/translations/validators.lv.xlf</argument>
+            <argument>/Applications/MAMP/htdocs/un-nouveau-monde/vendor/symfony/security-core/Resources/translations/security.lv.xlf</argument>
           </argument>
           <argument key="mn" type="collection">
-            <argument>C:\Users\ULTRABOOK DELL\OneDrive - UPEC\Bureau\Snowaddict-symfony\Un_Nouveau_Monde\vendor\symfony\validator/Resources/translations\validators.mn.xlf</argument>
-            <argument>C:\Users\ULTRABOOK DELL\OneDrive - UPEC\Bureau\Snowaddict-symfony\Un_Nouveau_Monde\vendor\symfony\form/Resources/translations\validators.mn.xlf</argument>
-            <argument>C:\Users\ULTRABOOK DELL\OneDrive - UPEC\Bureau\Snowaddict-symfony\Un_Nouveau_Monde\vendor\symfony\security-core/Resources/translations\security.mn.xlf</argument>
+            <argument>/Applications/MAMP/htdocs/un-nouveau-monde/vendor/symfony/validator/Resources/translations/validators.mn.xlf</argument>
+            <argument>/Applications/MAMP/htdocs/un-nouveau-monde/vendor/symfony/form/Resources/translations/validators.mn.xlf</argument>
+            <argument>/Applications/MAMP/htdocs/un-nouveau-monde/vendor/symfony/security-core/Resources/translations/security.mn.xlf</argument>
           </argument>
           <argument key="my" type="collection">
-            <argument>C:\Users\ULTRABOOK DELL\OneDrive - UPEC\Bureau\Snowaddict-symfony\Un_Nouveau_Monde\vendor\symfony\validator/Resources/translations\validators.my.xlf</argument>
-            <argument>C:\Users\ULTRABOOK DELL\OneDrive - UPEC\Bureau\Snowaddict-symfony\Un_Nouveau_Monde\vendor\symfony\form/Resources/translations\validators.my.xlf</argument>
-            <argument>C:\Users\ULTRABOOK DELL\OneDrive - UPEC\Bureau\Snowaddict-symfony\Un_Nouveau_Monde\vendor\symfony\security-core/Resources/translations\security.my.xlf</argument>
+            <argument>/Applications/MAMP/htdocs/un-nouveau-monde/vendor/symfony/validator/Resources/translations/validators.my.xlf</argument>
+            <argument>/Applications/MAMP/htdocs/un-nouveau-monde/vendor/symfony/form/Resources/translations/validators.my.xlf</argument>
+            <argument>/Applications/MAMP/htdocs/un-nouveau-monde/vendor/symfony/security-core/Resources/translations/security.my.xlf</argument>
           </argument>
           <argument key="nb" type="collection">
-            <argument>C:\Users\ULTRABOOK DELL\OneDrive - UPEC\Bureau\Snowaddict-symfony\Un_Nouveau_Monde\vendor\symfony\validator/Resources/translations\validators.nb.xlf</argument>
-            <argument>C:\Users\ULTRABOOK DELL\OneDrive - UPEC\Bureau\Snowaddict-symfony\Un_Nouveau_Monde\vendor\symfony\form/Resources/translations\validators.nb.xlf</argument>
-            <argument>C:\Users\ULTRABOOK DELL\OneDrive - UPEC\Bureau\Snowaddict-symfony\Un_Nouveau_Monde\vendor\symfony\security-core/Resources/translations\security.nb.xlf</argument>
+            <argument>/Applications/MAMP/htdocs/un-nouveau-monde/vendor/symfony/validator/Resources/translations/validators.nb.xlf</argument>
+            <argument>/Applications/MAMP/htdocs/un-nouveau-monde/vendor/symfony/form/Resources/translations/validators.nb.xlf</argument>
+            <argument>/Applications/MAMP/htdocs/un-nouveau-monde/vendor/symfony/security-core/Resources/translations/security.nb.xlf</argument>
           </argument>
           <argument key="nl" type="collection">
-            <argument>C:\Users\ULTRABOOK DELL\OneDrive - UPEC\Bureau\Snowaddict-symfony\Un_Nouveau_Monde\vendor\symfony\validator/Resources/translations\validators.nl.xlf</argument>
-            <argument>C:\Users\ULTRABOOK DELL\OneDrive - UPEC\Bureau\Snowaddict-symfony\Un_Nouveau_Monde\vendor\symfony\form/Resources/translations\validators.nl.xlf</argument>
-            <argument>C:\Users\ULTRABOOK DELL\OneDrive - UPEC\Bureau\Snowaddict-symfony\Un_Nouveau_Monde\vendor\symfony\security-core/Resources/translations\security.nl.xlf</argument>
+            <argument>/Applications/MAMP/htdocs/un-nouveau-monde/vendor/symfony/validator/Resources/translations/validators.nl.xlf</argument>
+            <argument>/Applications/MAMP/htdocs/un-nouveau-monde/vendor/symfony/form/Resources/translations/validators.nl.xlf</argument>
+            <argument>/Applications/MAMP/htdocs/un-nouveau-monde/vendor/symfony/security-core/Resources/translations/security.nl.xlf</argument>
+            <argument>/Applications/MAMP/htdocs/un-nouveau-monde/vendor/knplabs/knp-paginator-bundle/translations/KnpPaginatorBundle.nl.xliff</argument>
           </argument>
           <argument key="nn" type="collection">
-            <argument>C:\Users\ULTRABOOK DELL\OneDrive - UPEC\Bureau\Snowaddict-symfony\Un_Nouveau_Monde\vendor\symfony\validator/Resources/translations\validators.nn.xlf</argument>
-            <argument>C:\Users\ULTRABOOK DELL\OneDrive - UPEC\Bureau\Snowaddict-symfony\Un_Nouveau_Monde\vendor\symfony\form/Resources/translations\validators.nn.xlf</argument>
-            <argument>C:\Users\ULTRABOOK DELL\OneDrive - UPEC\Bureau\Snowaddict-symfony\Un_Nouveau_Monde\vendor\symfony\security-core/Resources/translations\security.nn.xlf</argument>
+            <argument>/Applications/MAMP/htdocs/un-nouveau-monde/vendor/symfony/validator/Resources/translations/validators.nn.xlf</argument>
+            <argument>/Applications/MAMP/htdocs/un-nouveau-monde/vendor/symfony/form/Resources/translations/validators.nn.xlf</argument>
+            <argument>/Applications/MAMP/htdocs/un-nouveau-monde/vendor/symfony/security-core/Resources/translations/security.nn.xlf</argument>
           </argument>
           <argument key="no" type="collection">
-            <argument>C:\Users\ULTRABOOK DELL\OneDrive - UPEC\Bureau\Snowaddict-symfony\Un_Nouveau_Monde\vendor\symfony\validator/Resources/translations\validators.no.xlf</argument>
-            <argument>C:\Users\ULTRABOOK DELL\OneDrive - UPEC\Bureau\Snowaddict-symfony\Un_Nouveau_Monde\vendor\symfony\form/Resources/translations\validators.no.xlf</argument>
-            <argument>C:\Users\ULTRABOOK DELL\OneDrive - UPEC\Bureau\Snowaddict-symfony\Un_Nouveau_Monde\vendor\symfony\security-core/Resources/translations\security.no.xlf</argument>
+            <argument>/Applications/MAMP/htdocs/un-nouveau-monde/vendor/symfony/validator/Resources/translations/validators.no.xlf</argument>
+            <argument>/Applications/MAMP/htdocs/un-nouveau-monde/vendor/symfony/form/Resources/translations/validators.no.xlf</argument>
+            <argument>/Applications/MAMP/htdocs/un-nouveau-monde/vendor/symfony/security-core/Resources/translations/security.no.xlf</argument>
+            <argument>/Applications/MAMP/htdocs/un-nouveau-monde/vendor/knplabs/knp-paginator-bundle/translations/KnpPaginatorBundle.no.xliff</argument>
           </argument>
           <argument key="pl" type="collection">
-            <argument>C:\Users\ULTRABOOK DELL\OneDrive - UPEC\Bureau\Snowaddict-symfony\Un_Nouveau_Monde\vendor\symfony\validator/Resources/translations\validators.pl.xlf</argument>
-            <argument>C:\Users\ULTRABOOK DELL\OneDrive - UPEC\Bureau\Snowaddict-symfony\Un_Nouveau_Monde\vendor\symfony\form/Resources/translations\validators.pl.xlf</argument>
-            <argument>C:\Users\ULTRABOOK DELL\OneDrive - UPEC\Bureau\Snowaddict-symfony\Un_Nouveau_Monde\vendor\symfony\security-core/Resources/translations\security.pl.xlf</argument>
+            <argument>/Applications/MAMP/htdocs/un-nouveau-monde/vendor/symfony/validator/Resources/translations/validators.pl.xlf</argument>
+            <argument>/Applications/MAMP/htdocs/un-nouveau-monde/vendor/symfony/form/Resources/translations/validators.pl.xlf</argument>
+            <argument>/Applications/MAMP/htdocs/un-nouveau-monde/vendor/symfony/security-core/Resources/translations/security.pl.xlf</argument>
+            <argument>/Applications/MAMP/htdocs/un-nouveau-monde/vendor/knplabs/knp-paginator-bundle/translations/KnpPaginatorBundle.pl.xliff</argument>
           </argument>
           <argument key="pt" type="collection">
-            <argument>C:\Users\ULTRABOOK DELL\OneDrive - UPEC\Bureau\Snowaddict-symfony\Un_Nouveau_Monde\vendor\symfony\validator/Resources/translations\validators.pt.xlf</argument>
-            <argument>C:\Users\ULTRABOOK DELL\OneDrive - UPEC\Bureau\Snowaddict-symfony\Un_Nouveau_Monde\vendor\symfony\form/Resources/translations\validators.pt.xlf</argument>
-            <argument>C:\Users\ULTRABOOK DELL\OneDrive - UPEC\Bureau\Snowaddict-symfony\Un_Nouveau_Monde\vendor\symfony\security-core/Resources/translations\security.pt.xlf</argument>
+            <argument>/Applications/MAMP/htdocs/un-nouveau-monde/vendor/symfony/validator/Resources/translations/validators.pt.xlf</argument>
+            <argument>/Applications/MAMP/htdocs/un-nouveau-monde/vendor/symfony/form/Resources/translations/validators.pt.xlf</argument>
+            <argument>/Applications/MAMP/htdocs/un-nouveau-monde/vendor/symfony/security-core/Resources/translations/security.pt.xlf</argument>
           </argument>
           <argument key="pt_BR" type="collection">
-            <argument>C:\Users\ULTRABOOK DELL\OneDrive - UPEC\Bureau\Snowaddict-symfony\Un_Nouveau_Monde\vendor\symfony\validator/Resources/translations\validators.pt_BR.xlf</argument>
-            <argument>C:\Users\ULTRABOOK DELL\OneDrive - UPEC\Bureau\Snowaddict-symfony\Un_Nouveau_Monde\vendor\symfony\form/Resources/translations\validators.pt_BR.xlf</argument>
-            <argument>C:\Users\ULTRABOOK DELL\OneDrive - UPEC\Bureau\Snowaddict-symfony\Un_Nouveau_Monde\vendor\symfony\security-core/Resources/translations\security.pt_BR.xlf</argument>
+            <argument>/Applications/MAMP/htdocs/un-nouveau-monde/vendor/symfony/validator/Resources/translations/validators.pt_BR.xlf</argument>
+            <argument>/Applications/MAMP/htdocs/un-nouveau-monde/vendor/symfony/form/Resources/translations/validators.pt_BR.xlf</argument>
+            <argument>/Applications/MAMP/htdocs/un-nouveau-monde/vendor/symfony/security-core/Resources/translations/security.pt_BR.xlf</argument>
+            <argument>/Applications/MAMP/htdocs/un-nouveau-monde/vendor/knplabs/knp-paginator-bundle/translations/KnpPaginatorBundle.pt_BR.xliff</argument>
           </argument>
           <argument key="ro" type="collection">
-            <argument>C:\Users\ULTRABOOK DELL\OneDrive - UPEC\Bureau\Snowaddict-symfony\Un_Nouveau_Monde\vendor\symfony\validator/Resources/translations\validators.ro.xlf</argument>
-            <argument>C:\Users\ULTRABOOK DELL\OneDrive - UPEC\Bureau\Snowaddict-symfony\Un_Nouveau_Monde\vendor\symfony\form/Resources/translations\validators.ro.xlf</argument>
-            <argument>C:\Users\ULTRABOOK DELL\OneDrive - UPEC\Bureau\Snowaddict-symfony\Un_Nouveau_Monde\vendor\symfony\security-core/Resources/translations\security.ro.xlf</argument>
+            <argument>/Applications/MAMP/htdocs/un-nouveau-monde/vendor/symfony/validator/Resources/translations/validators.ro.xlf</argument>
+            <argument>/Applications/MAMP/htdocs/un-nouveau-monde/vendor/symfony/form/Resources/translations/validators.ro.xlf</argument>
+            <argument>/Applications/MAMP/htdocs/un-nouveau-monde/vendor/symfony/security-core/Resources/translations/security.ro.xlf</argument>
+            <argument>/Applications/MAMP/htdocs/un-nouveau-monde/vendor/knplabs/knp-paginator-bundle/translations/KnpPaginatorBundle.ro.xliff</argument>
           </argument>
           <argument key="ru" type="collection">
-            <argument>C:\Users\ULTRABOOK DELL\OneDrive - UPEC\Bureau\Snowaddict-symfony\Un_Nouveau_Monde\vendor\symfony\validator/Resources/translations\validators.ru.xlf</argument>
-            <argument>C:\Users\ULTRABOOK DELL\OneDrive - UPEC\Bureau\Snowaddict-symfony\Un_Nouveau_Monde\vendor\symfony\form/Resources/translations\validators.ru.xlf</argument>
-            <argument>C:\Users\ULTRABOOK DELL\OneDrive - UPEC\Bureau\Snowaddict-symfony\Un_Nouveau_Monde\vendor\symfony\security-core/Resources/translations\security.ru.xlf</argument>
+            <argument>/Applications/MAMP/htdocs/un-nouveau-monde/vendor/symfony/validator/Resources/translations/validators.ru.xlf</argument>
+            <argument>/Applications/MAMP/htdocs/un-nouveau-monde/vendor/symfony/form/Resources/translations/validators.ru.xlf</argument>
+            <argument>/Applications/MAMP/htdocs/un-nouveau-monde/vendor/symfony/security-core/Resources/translations/security.ru.xlf</argument>
+            <argument>/Applications/MAMP/htdocs/un-nouveau-monde/vendor/knplabs/knp-paginator-bundle/translations/KnpPaginatorBundle.ru.xliff</argument>
           </argument>
           <argument key="sk" type="collection">
-            <argument>C:\Users\ULTRABOOK DELL\OneDrive - UPEC\Bureau\Snowaddict-symfony\Un_Nouveau_Monde\vendor\symfony\validator/Resources/translations\validators.sk.xlf</argument>
-            <argument>C:\Users\ULTRABOOK DELL\OneDrive - UPEC\Bureau\Snowaddict-symfony\Un_Nouveau_Monde\vendor\symfony\form/Resources/translations\validators.sk.xlf</argument>
-            <argument>C:\Users\ULTRABOOK DELL\OneDrive - UPEC\Bureau\Snowaddict-symfony\Un_Nouveau_Monde\vendor\symfony\security-core/Resources/translations\security.sk.xlf</argument>
+            <argument>/Applications/MAMP/htdocs/un-nouveau-monde/vendor/symfony/validator/Resources/translations/validators.sk.xlf</argument>
+            <argument>/Applications/MAMP/htdocs/un-nouveau-monde/vendor/symfony/form/Resources/translations/validators.sk.xlf</argument>
+            <argument>/Applications/MAMP/htdocs/un-nouveau-monde/vendor/symfony/security-core/Resources/translations/security.sk.xlf</argument>
           </argument>
           <argument key="sl" type="collection">
-            <argument>C:\Users\ULTRABOOK DELL\OneDrive - UPEC\Bureau\Snowaddict-symfony\Un_Nouveau_Monde\vendor\symfony\validator/Resources/translations\validators.sl.xlf</argument>
-            <argument>C:\Users\ULTRABOOK DELL\OneDrive - UPEC\Bureau\Snowaddict-symfony\Un_Nouveau_Monde\vendor\symfony\form/Resources/translations\validators.sl.xlf</argument>
-            <argument>C:\Users\ULTRABOOK DELL\OneDrive - UPEC\Bureau\Snowaddict-symfony\Un_Nouveau_Monde\vendor\symfony\security-core/Resources/translations\security.sl.xlf</argument>
+            <argument>/Applications/MAMP/htdocs/un-nouveau-monde/vendor/symfony/validator/Resources/translations/validators.sl.xlf</argument>
+            <argument>/Applications/MAMP/htdocs/un-nouveau-monde/vendor/symfony/form/Resources/translations/validators.sl.xlf</argument>
+            <argument>/Applications/MAMP/htdocs/un-nouveau-monde/vendor/symfony/security-core/Resources/translations/security.sl.xlf</argument>
           </argument>
           <argument key="sq" type="collection">
-            <argument>C:\Users\ULTRABOOK DELL\OneDrive - UPEC\Bureau\Snowaddict-symfony\Un_Nouveau_Monde\vendor\symfony\validator/Resources/translations\validators.sq.xlf</argument>
-            <argument>C:\Users\ULTRABOOK DELL\OneDrive - UPEC\Bureau\Snowaddict-symfony\Un_Nouveau_Monde\vendor\symfony\form/Resources/translations\validators.sq.xlf</argument>
-            <argument>C:\Users\ULTRABOOK DELL\OneDrive - UPEC\Bureau\Snowaddict-symfony\Un_Nouveau_Monde\vendor\symfony\security-core/Resources/translations\security.sq.xlf</argument>
+            <argument>/Applications/MAMP/htdocs/un-nouveau-monde/vendor/symfony/validator/Resources/translations/validators.sq.xlf</argument>
+            <argument>/Applications/MAMP/htdocs/un-nouveau-monde/vendor/symfony/form/Resources/translations/validators.sq.xlf</argument>
+            <argument>/Applications/MAMP/htdocs/un-nouveau-monde/vendor/symfony/security-core/Resources/translations/security.sq.xlf</argument>
           </argument>
           <argument key="sr_Cyrl" type="collection">
-            <argument>C:\Users\ULTRABOOK DELL\OneDrive - UPEC\Bureau\Snowaddict-symfony\Un_Nouveau_Monde\vendor\symfony\validator/Resources/translations\validators.sr_Cyrl.xlf</argument>
-            <argument>C:\Users\ULTRABOOK DELL\OneDrive - UPEC\Bureau\Snowaddict-symfony\Un_Nouveau_Monde\vendor\symfony\form/Resources/translations\validators.sr_Cyrl.xlf</argument>
-            <argument>C:\Users\ULTRABOOK DELL\OneDrive - UPEC\Bureau\Snowaddict-symfony\Un_Nouveau_Monde\vendor\symfony\security-core/Resources/translations\security.sr_Cyrl.xlf</argument>
+            <argument>/Applications/MAMP/htdocs/un-nouveau-monde/vendor/symfony/validator/Resources/translations/validators.sr_Cyrl.xlf</argument>
+            <argument>/Applications/MAMP/htdocs/un-nouveau-monde/vendor/symfony/form/Resources/translations/validators.sr_Cyrl.xlf</argument>
+            <argument>/Applications/MAMP/htdocs/un-nouveau-monde/vendor/symfony/security-core/Resources/translations/security.sr_Cyrl.xlf</argument>
           </argument>
           <argument key="sr_Latn" type="collection">
-            <argument>C:\Users\ULTRABOOK DELL\OneDrive - UPEC\Bureau\Snowaddict-symfony\Un_Nouveau_Monde\vendor\symfony\validator/Resources/translations\validators.sr_Latn.xlf</argument>
-            <argument>C:\Users\ULTRABOOK DELL\OneDrive - UPEC\Bureau\Snowaddict-symfony\Un_Nouveau_Monde\vendor\symfony\form/Resources/translations\validators.sr_Latn.xlf</argument>
-            <argument>C:\Users\ULTRABOOK DELL\OneDrive - UPEC\Bureau\Snowaddict-symfony\Un_Nouveau_Monde\vendor\symfony\security-core/Resources/translations\security.sr_Latn.xlf</argument>
+            <argument>/Applications/MAMP/htdocs/un-nouveau-monde/vendor/symfony/validator/Resources/translations/validators.sr_Latn.xlf</argument>
+            <argument>/Applications/MAMP/htdocs/un-nouveau-monde/vendor/symfony/form/Resources/translations/validators.sr_Latn.xlf</argument>
+            <argument>/Applications/MAMP/htdocs/un-nouveau-monde/vendor/symfony/security-core/Resources/translations/security.sr_Latn.xlf</argument>
           </argument>
           <argument key="sv" type="collection">
-            <argument>C:\Users\ULTRABOOK DELL\OneDrive - UPEC\Bureau\Snowaddict-symfony\Un_Nouveau_Monde\vendor\symfony\validator/Resources/translations\validators.sv.xlf</argument>
-            <argument>C:\Users\ULTRABOOK DELL\OneDrive - UPEC\Bureau\Snowaddict-symfony\Un_Nouveau_Monde\vendor\symfony\form/Resources/translations\validators.sv.xlf</argument>
-            <argument>C:\Users\ULTRABOOK DELL\OneDrive - UPEC\Bureau\Snowaddict-symfony\Un_Nouveau_Monde\vendor\symfony\security-core/Resources/translations\security.sv.xlf</argument>
+            <argument>/Applications/MAMP/htdocs/un-nouveau-monde/vendor/symfony/validator/Resources/translations/validators.sv.xlf</argument>
+            <argument>/Applications/MAMP/htdocs/un-nouveau-monde/vendor/symfony/form/Resources/translations/validators.sv.xlf</argument>
+            <argument>/Applications/MAMP/htdocs/un-nouveau-monde/vendor/symfony/security-core/Resources/translations/security.sv.xlf</argument>
+            <argument>/Applications/MAMP/htdocs/un-nouveau-monde/vendor/knplabs/knp-paginator-bundle/translations/KnpPaginatorBundle.sv.xliff</argument>
           </argument>
           <argument key="th" type="collection">
-            <argument>C:\Users\ULTRABOOK DELL\OneDrive - UPEC\Bureau\Snowaddict-symfony\Un_Nouveau_Monde\vendor\symfony\validator/Resources/translations\validators.th.xlf</argument>
-            <argument>C:\Users\ULTRABOOK DELL\OneDrive - UPEC\Bureau\Snowaddict-symfony\Un_Nouveau_Monde\vendor\symfony\form/Resources/translations\validators.th.xlf</argument>
-            <argument>C:\Users\ULTRABOOK DELL\OneDrive - UPEC\Bureau\Snowaddict-symfony\Un_Nouveau_Monde\vendor\symfony\security-core/Resources/translations\security.th.xlf</argument>
+            <argument>/Applications/MAMP/htdocs/un-nouveau-monde/vendor/symfony/validator/Resources/translations/validators.th.xlf</argument>
+            <argument>/Applications/MAMP/htdocs/un-nouveau-monde/vendor/symfony/form/Resources/translations/validators.th.xlf</argument>
+            <argument>/Applications/MAMP/htdocs/un-nouveau-monde/vendor/symfony/security-core/Resources/translations/security.th.xlf</argument>
           </argument>
           <argument key="tl" type="collection">
-            <argument>C:\Users\ULTRABOOK DELL\OneDrive - UPEC\Bureau\Snowaddict-symfony\Un_Nouveau_Monde\vendor\symfony\validator/Resources/translations\validators.tl.xlf</argument>
-            <argument>C:\Users\ULTRABOOK DELL\OneDrive - UPEC\Bureau\Snowaddict-symfony\Un_Nouveau_Monde\vendor\symfony\form/Resources/translations\validators.tl.xlf</argument>
-            <argument>C:\Users\ULTRABOOK DELL\OneDrive - UPEC\Bureau\Snowaddict-symfony\Un_Nouveau_Monde\vendor\symfony\security-core/Resources/translations\security.tl.xlf</argument>
+            <argument>/Applications/MAMP/htdocs/un-nouveau-monde/vendor/symfony/validator/Resources/translations/validators.tl.xlf</argument>
+            <argument>/Applications/MAMP/htdocs/un-nouveau-monde/vendor/symfony/form/Resources/translations/validators.tl.xlf</argument>
+            <argument>/Applications/MAMP/htdocs/un-nouveau-monde/vendor/symfony/security-core/Resources/translations/security.tl.xlf</argument>
           </argument>
           <argument key="tr" type="collection">
-            <argument>C:\Users\ULTRABOOK DELL\OneDrive - UPEC\Bureau\Snowaddict-symfony\Un_Nouveau_Monde\vendor\symfony\validator/Resources/translations\validators.tr.xlf</argument>
-            <argument>C:\Users\ULTRABOOK DELL\OneDrive - UPEC\Bureau\Snowaddict-symfony\Un_Nouveau_Monde\vendor\symfony\form/Resources/translations\validators.tr.xlf</argument>
-            <argument>C:\Users\ULTRABOOK DELL\OneDrive - UPEC\Bureau\Snowaddict-symfony\Un_Nouveau_Monde\vendor\symfony\security-core/Resources/translations\security.tr.xlf</argument>
+            <argument>/Applications/MAMP/htdocs/un-nouveau-monde/vendor/symfony/validator/Resources/translations/validators.tr.xlf</argument>
+            <argument>/Applications/MAMP/htdocs/un-nouveau-monde/vendor/symfony/form/Resources/translations/validators.tr.xlf</argument>
+            <argument>/Applications/MAMP/htdocs/un-nouveau-monde/vendor/symfony/security-core/Resources/translations/security.tr.xlf</argument>
+            <argument>/Applications/MAMP/htdocs/un-nouveau-monde/vendor/knplabs/knp-paginator-bundle/translations/KnpPaginatorBundle.tr.xliff</argument>
           </argument>
           <argument key="uk" type="collection">
-            <argument>C:\Users\ULTRABOOK DELL\OneDrive - UPEC\Bureau\Snowaddict-symfony\Un_Nouveau_Monde\vendor\symfony\validator/Resources/translations\validators.uk.xlf</argument>
-            <argument>C:\Users\ULTRABOOK DELL\OneDrive - UPEC\Bureau\Snowaddict-symfony\Un_Nouveau_Monde\vendor\symfony\form/Resources/translations\validators.uk.xlf</argument>
-            <argument>C:\Users\ULTRABOOK DELL\OneDrive - UPEC\Bureau\Snowaddict-symfony\Un_Nouveau_Monde\vendor\symfony\security-core/Resources/translations\security.uk.xlf</argument>
+            <argument>/Applications/MAMP/htdocs/un-nouveau-monde/vendor/symfony/validator/Resources/translations/validators.uk.xlf</argument>
+            <argument>/Applications/MAMP/htdocs/un-nouveau-monde/vendor/symfony/form/Resources/translations/validators.uk.xlf</argument>
+            <argument>/Applications/MAMP/htdocs/un-nouveau-monde/vendor/symfony/security-core/Resources/translations/security.uk.xlf</argument>
+            <argument>/Applications/MAMP/htdocs/un-nouveau-monde/vendor/knplabs/knp-paginator-bundle/translations/KnpPaginatorBundle.uk.xliff</argument>
           </argument>
           <argument key="ur" type="collection">
-            <argument>C:\Users\ULTRABOOK DELL\OneDrive - UPEC\Bureau\Snowaddict-symfony\Un_Nouveau_Monde\vendor\symfony\validator/Resources/translations\validators.ur.xlf</argument>
-            <argument>C:\Users\ULTRABOOK DELL\OneDrive - UPEC\Bureau\Snowaddict-symfony\Un_Nouveau_Monde\vendor\symfony\form/Resources/translations\validators.ur.xlf</argument>
-            <argument>C:\Users\ULTRABOOK DELL\OneDrive - UPEC\Bureau\Snowaddict-symfony\Un_Nouveau_Monde\vendor\symfony\security-core/Resources/translations\security.ur.xlf</argument>
+            <argument>/Applications/MAMP/htdocs/un-nouveau-monde/vendor/symfony/validator/Resources/translations/validators.ur.xlf</argument>
+            <argument>/Applications/MAMP/htdocs/un-nouveau-monde/vendor/symfony/form/Resources/translations/validators.ur.xlf</argument>
+            <argument>/Applications/MAMP/htdocs/un-nouveau-monde/vendor/symfony/security-core/Resources/translations/security.ur.xlf</argument>
           </argument>
           <argument key="uz" type="collection">
-            <argument>C:\Users\ULTRABOOK DELL\OneDrive - UPEC\Bureau\Snowaddict-symfony\Un_Nouveau_Monde\vendor\symfony\validator/Resources/translations\validators.uz.xlf</argument>
-            <argument>C:\Users\ULTRABOOK DELL\OneDrive - UPEC\Bureau\Snowaddict-symfony\Un_Nouveau_Monde\vendor\symfony\form/Resources/translations\validators.uz.xlf</argument>
-            <argument>C:\Users\ULTRABOOK DELL\OneDrive - UPEC\Bureau\Snowaddict-symfony\Un_Nouveau_Monde\vendor\symfony\security-core/Resources/translations\security.uz.xlf</argument>
+            <argument>/Applications/MAMP/htdocs/un-nouveau-monde/vendor/symfony/validator/Resources/translations/validators.uz.xlf</argument>
+            <argument>/Applications/MAMP/htdocs/un-nouveau-monde/vendor/symfony/form/Resources/translations/validators.uz.xlf</argument>
+            <argument>/Applications/MAMP/htdocs/un-nouveau-monde/vendor/symfony/security-core/Resources/translations/security.uz.xlf</argument>
           </argument>
           <argument key="vi" type="collection">
-            <argument>C:\Users\ULTRABOOK DELL\OneDrive - UPEC\Bureau\Snowaddict-symfony\Un_Nouveau_Monde\vendor\symfony\validator/Resources/translations\validators.vi.xlf</argument>
-            <argument>C:\Users\ULTRABOOK DELL\OneDrive - UPEC\Bureau\Snowaddict-symfony\Un_Nouveau_Monde\vendor\symfony\form/Resources/translations\validators.vi.xlf</argument>
-            <argument>C:\Users\ULTRABOOK DELL\OneDrive - UPEC\Bureau\Snowaddict-symfony\Un_Nouveau_Monde\vendor\symfony\security-core/Resources/translations\security.vi.xlf</argument>
+            <argument>/Applications/MAMP/htdocs/un-nouveau-monde/vendor/symfony/validator/Resources/translations/validators.vi.xlf</argument>
+            <argument>/Applications/MAMP/htdocs/un-nouveau-monde/vendor/symfony/form/Resources/translations/validators.vi.xlf</argument>
+            <argument>/Applications/MAMP/htdocs/un-nouveau-monde/vendor/symfony/security-core/Resources/translations/security.vi.xlf</argument>
           </argument>
           <argument key="zh_CN" type="collection">
-            <argument>C:\Users\ULTRABOOK DELL\OneDrive - UPEC\Bureau\Snowaddict-symfony\Un_Nouveau_Monde\vendor\symfony\validator/Resources/translations\validators.zh_CN.xlf</argument>
-            <argument>C:\Users\ULTRABOOK DELL\OneDrive - UPEC\Bureau\Snowaddict-symfony\Un_Nouveau_Monde\vendor\symfony\form/Resources/translations\validators.zh_CN.xlf</argument>
-            <argument>C:\Users\ULTRABOOK DELL\OneDrive - UPEC\Bureau\Snowaddict-symfony\Un_Nouveau_Monde\vendor\symfony\security-core/Resources/translations\security.zh_CN.xlf</argument>
+            <argument>/Applications/MAMP/htdocs/un-nouveau-monde/vendor/symfony/validator/Resources/translations/validators.zh_CN.xlf</argument>
+            <argument>/Applications/MAMP/htdocs/un-nouveau-monde/vendor/symfony/form/Resources/translations/validators.zh_CN.xlf</argument>
+            <argument>/Applications/MAMP/htdocs/un-nouveau-monde/vendor/symfony/security-core/Resources/translations/security.zh_CN.xlf</argument>
           </argument>
           <argument key="zh_TW" type="collection">
-            <argument>C:\Users\ULTRABOOK DELL\OneDrive - UPEC\Bureau\Snowaddict-symfony\Un_Nouveau_Monde\vendor\symfony\validator/Resources/translations\validators.zh_TW.xlf</argument>
-            <argument>C:\Users\ULTRABOOK DELL\OneDrive - UPEC\Bureau\Snowaddict-symfony\Un_Nouveau_Monde\vendor\symfony\form/Resources/translations\validators.zh_TW.xlf</argument>
-            <argument>C:\Users\ULTRABOOK DELL\OneDrive - UPEC\Bureau\Snowaddict-symfony\Un_Nouveau_Monde\vendor\symfony\security-core/Resources/translations\security.zh_TW.xlf</argument>
+            <argument>/Applications/MAMP/htdocs/un-nouveau-monde/vendor/symfony/validator/Resources/translations/validators.zh_TW.xlf</argument>
+            <argument>/Applications/MAMP/htdocs/un-nouveau-monde/vendor/symfony/form/Resources/translations/validators.zh_TW.xlf</argument>
+            <argument>/Applications/MAMP/htdocs/un-nouveau-monde/vendor/symfony/security-core/Resources/translations/security.zh_TW.xlf</argument>
+          </argument>
+          <argument key="ky" type="collection">
+            <argument>/Applications/MAMP/htdocs/un-nouveau-monde/vendor/knplabs/knp-paginator-bundle/translations/KnpPaginatorBundle.ky.xliff</argument>
+          </argument>
+          <argument key="sw" type="collection">
+            <argument>/Applications/MAMP/htdocs/un-nouveau-monde/vendor/knplabs/knp-paginator-bundle/translations/KnpPaginatorBundle.sw.xliff</argument>
           </argument>
         </argument>
         <argument key="scanned_directories" type="collection">
-          <argument>C:\Users\ULTRABOOK DELL\OneDrive - UPEC\Bureau\Snowaddict-symfony\Un_Nouveau_Monde\vendor\symfony\validator/Resources/translations</argument>
-          <argument>C:\Users\ULTRABOOK DELL\OneDrive - UPEC\Bureau\Snowaddict-symfony\Un_Nouveau_Monde\vendor\symfony\form/Resources/translations</argument>
-          <argument>C:\Users\ULTRABOOK DELL\OneDrive - UPEC\Bureau\Snowaddict-symfony\Un_Nouveau_Monde\vendor\symfony\security-core/Resources/translations</argument>
-          <argument>C:\Users\ULTRABOOK DELL\OneDrive - UPEC\Bureau\Snowaddict-symfony\Un_Nouveau_Monde\vendor\symfony\framework-bundle/translations</argument>
-          <argument>C:\Users\ULTRABOOK DELL\OneDrive - UPEC\Bureau\Snowaddict-symfony\Un_Nouveau_Monde\vendor\doctrine\doctrine-bundle/translations</argument>
-          <argument>C:\Users\ULTRABOOK DELL\OneDrive - UPEC\Bureau\Snowaddict-symfony\Un_Nouveau_Monde\vendor\doctrine\doctrine-migrations-bundle/translations</argument>
-          <argument>C:\Users\ULTRABOOK DELL\OneDrive - UPEC\Bureau\Snowaddict-symfony\Un_Nouveau_Monde\vendor\symfony\debug-bundle/translations</argument>
-          <argument>C:\Users\ULTRABOOK DELL\OneDrive - UPEC\Bureau\Snowaddict-symfony\Un_Nouveau_Monde\vendor\symfony\twig-bundle/translations</argument>
-          <argument>C:\Users\ULTRABOOK DELL\OneDrive - UPEC\Bureau\Snowaddict-symfony\Un_Nouveau_Monde\vendor\symfony\web-profiler-bundle/translations</argument>
-          <argument>C:\Users\ULTRABOOK DELL\OneDrive - UPEC\Bureau\Snowaddict-symfony\Un_Nouveau_Monde\vendor\twig\extra-bundle/translations</argument>
-          <argument>C:\Users\ULTRABOOK DELL\OneDrive - UPEC\Bureau\Snowaddict-symfony\Un_Nouveau_Monde\vendor\symfony\security-bundle/translations</argument>
-          <argument>C:\Users\ULTRABOOK DELL\OneDrive - UPEC\Bureau\Snowaddict-symfony\Un_Nouveau_Monde\vendor\symfony\monolog-bundle/translations</argument>
-          <argument>C:\Users\ULTRABOOK DELL\OneDrive - UPEC\Bureau\Snowaddict-symfony\Un_Nouveau_Monde\vendor\symfony\maker-bundle\src/translations</argument>
-          <argument>C:\Users\ULTRABOOK DELL\OneDrive - UPEC\Bureau\Snowaddict-symfony\Un_Nouveau_Monde\vendor\sensio\framework-extra-bundle\src/translations</argument>
-          <argument>C:\Users\ULTRABOOK DELL\OneDrive - UPEC\Bureau\Snowaddict-symfony\Un_Nouveau_Monde\vendor\karser\karser-recaptcha3-bundle/translations</argument>
-          <argument>C:\Users\ULTRABOOK DELL\OneDrive - UPEC\Bureau\Snowaddict-symfony\Un_Nouveau_Monde\vendor\doctrine\doctrine-fixtures-bundle/translations</argument>
-          <argument>C:\Users\ULTRABOOK DELL\OneDrive - UPEC\Bureau\Snowaddict-symfony\Un_Nouveau_Monde/translations</argument>
+          <argument>/Applications/MAMP/htdocs/un-nouveau-monde/vendor/symfony/validator/Resources/translations</argument>
+          <argument>/Applications/MAMP/htdocs/un-nouveau-monde/vendor/symfony/form/Resources/translations</argument>
+          <argument>/Applications/MAMP/htdocs/un-nouveau-monde/vendor/symfony/security-core/Resources/translations</argument>
+          <argument>/Applications/MAMP/htdocs/un-nouveau-monde/vendor/knplabs/knp-paginator-bundle/translations</argument>
+          <argument>/Applications/MAMP/htdocs/un-nouveau-monde/vendor/symfony/framework-bundle/translations</argument>
+          <argument>/Applications/MAMP/htdocs/un-nouveau-monde/vendor/doctrine/doctrine-bundle/translations</argument>
+          <argument>/Applications/MAMP/htdocs/un-nouveau-monde/vendor/doctrine/doctrine-migrations-bundle/translations</argument>
+          <argument>/Applications/MAMP/htdocs/un-nouveau-monde/vendor/symfony/twig-bundle/translations</argument>
+          <argument>/Applications/MAMP/htdocs/un-nouveau-monde/vendor/symfony/debug-bundle/translations</argument>
+          <argument>/Applications/MAMP/htdocs/un-nouveau-monde/vendor/symfony/web-profiler-bundle/translations</argument>
+          <argument>/Applications/MAMP/htdocs/un-nouveau-monde/vendor/twig/extra-bundle/translations</argument>
+          <argument>/Applications/MAMP/htdocs/un-nouveau-monde/vendor/symfony/security-bundle/translations</argument>
+          <argument>/Applications/MAMP/htdocs/un-nouveau-monde/vendor/symfony/monolog-bundle/translations</argument>
+          <argument>/Applications/MAMP/htdocs/un-nouveau-monde/vendor/symfony/maker-bundle/src/translations</argument>
+          <argument>/Applications/MAMP/htdocs/un-nouveau-monde/vendor/sensio/framework-extra-bundle/src/translations</argument>
+          <argument>/Applications/MAMP/htdocs/un-nouveau-monde/vendor/doctrine/doctrine-fixtures-bundle/translations</argument>
+          <argument>/Applications/MAMP/htdocs/un-nouveau-monde/vendor/karser/karser-recaptcha3-bundle/translations</argument>
+          <argument>/Applications/MAMP/htdocs/un-nouveau-monde/translations</argument>
         </argument>
         <argument key="cache_vary" type="collection">
           <argument key="scanned_directories" type="collection">
-            <argument>C:\Users\ULTRABOOK DELL\OneDrive - UPEC\Bureau\Snowaddict-symfony\Un_Nouveau_Monde\vendor\symfony\validator/Resources/translations</argument>
-            <argument>C:\Users\ULTRABOOK DELL\OneDrive - UPEC\Bureau\Snowaddict-symfony\Un_Nouveau_Monde\vendor\symfony\form/Resources/translations</argument>
-            <argument>C:\Users\ULTRABOOK DELL\OneDrive - UPEC\Bureau\Snowaddict-symfony\Un_Nouveau_Monde\vendor\symfony\security-core/Resources/translations</argument>
-            <argument>C:\Users\ULTRABOOK DELL\OneDrive - UPEC\Bureau\Snowaddict-symfony\Un_Nouveau_Monde\vendor\symfony\framework-bundle/translations</argument>
-            <argument>C:\Users\ULTRABOOK DELL\OneDrive - UPEC\Bureau\Snowaddict-symfony\Un_Nouveau_Monde\vendor\doctrine\doctrine-bundle/translations</argument>
-            <argument>C:\Users\ULTRABOOK DELL\OneDrive - UPEC\Bureau\Snowaddict-symfony\Un_Nouveau_Monde\vendor\doctrine\doctrine-migrations-bundle/translations</argument>
-            <argument>C:\Users\ULTRABOOK DELL\OneDrive - UPEC\Bureau\Snowaddict-symfony\Un_Nouveau_Monde\vendor\symfony\debug-bundle/translations</argument>
-            <argument>C:\Users\ULTRABOOK DELL\OneDrive - UPEC\Bureau\Snowaddict-symfony\Un_Nouveau_Monde\vendor\symfony\twig-bundle/translations</argument>
-            <argument>C:\Users\ULTRABOOK DELL\OneDrive - UPEC\Bureau\Snowaddict-symfony\Un_Nouveau_Monde\vendor\symfony\web-profiler-bundle/translations</argument>
-            <argument>C:\Users\ULTRABOOK DELL\OneDrive - UPEC\Bureau\Snowaddict-symfony\Un_Nouveau_Monde\vendor\twig\extra-bundle/translations</argument>
-            <argument>C:\Users\ULTRABOOK DELL\OneDrive - UPEC\Bureau\Snowaddict-symfony\Un_Nouveau_Monde\vendor\symfony\security-bundle/translations</argument>
-            <argument>C:\Users\ULTRABOOK DELL\OneDrive - UPEC\Bureau\Snowaddict-symfony\Un_Nouveau_Monde\vendor\symfony\monolog-bundle/translations</argument>
-            <argument>C:\Users\ULTRABOOK DELL\OneDrive - UPEC\Bureau\Snowaddict-symfony\Un_Nouveau_Monde\vendor\symfony\maker-bundle\src/translations</argument>
-            <argument>C:\Users\ULTRABOOK DELL\OneDrive - UPEC\Bureau\Snowaddict-symfony\Un_Nouveau_Monde\vendor\sensio\framework-extra-bundle\src/translations</argument>
-            <argument>C:\Users\ULTRABOOK DELL\OneDrive - UPEC\Bureau\Snowaddict-symfony\Un_Nouveau_Monde\vendor\karser\karser-recaptcha3-bundle/translations</argument>
-            <argument>C:\Users\ULTRABOOK DELL\OneDrive - UPEC\Bureau\Snowaddict-symfony\Un_Nouveau_Monde\vendor\doctrine\doctrine-fixtures-bundle/translations</argument>
+            <argument>vendor/symfony/validator/Resources/translations</argument>
+            <argument>vendor/symfony/form/Resources/translations</argument>
+            <argument>vendor/symfony/security-core/Resources/translations</argument>
+            <argument>vendor/knplabs/knp-paginator-bundle/translations</argument>
+            <argument>vendor/symfony/framework-bundle/translations</argument>
+            <argument>vendor/doctrine/doctrine-bundle/translations</argument>
+            <argument>vendor/doctrine/doctrine-migrations-bundle/translations</argument>
+            <argument>vendor/symfony/twig-bundle/translations</argument>
+            <argument>vendor/symfony/debug-bundle/translations</argument>
+            <argument>vendor/symfony/web-profiler-bundle/translations</argument>
+            <argument>vendor/twig/extra-bundle/translations</argument>
+            <argument>vendor/symfony/security-bundle/translations</argument>
+            <argument>vendor/symfony/monolog-bundle/translations</argument>
+            <argument>vendor/symfony/maker-bundle/src/translations</argument>
+            <argument>vendor/sensio/framework-extra-bundle/src/translations</argument>
+            <argument>vendor/doctrine/doctrine-fixtures-bundle/translations</argument>
+            <argument>vendor/karser/karser-recaptcha3-bundle/translations</argument>
             <argument>translations</argument>
           </argument>
         </argument>
@@ -2340,7 +2408,7 @@
     <service id="debug.file_link_formatter" class="Symfony\Component\HttpKernel\Debug\FileLinkFormatter">
       <argument>%env(default::SYMFONY_IDE)%</argument>
       <argument type="service" id="request_stack" on-invalid="ignore"/>
-      <argument>C:\Users\ULTRABOOK DELL\OneDrive - UPEC\Bureau\Snowaddict-symfony\Un_Nouveau_Monde</argument>
+      <argument>/Applications/MAMP/htdocs/un-nouveau-monde</argument>
       <argument type="service_closure" id="debug.file_link_formatter.url_format"/>
     </service>
     <service id="debug.stopwatch" class="Symfony\Component\Stopwatch\Stopwatch">
@@ -2377,6 +2445,14 @@
         <argument type="collection">
           <argument type="service_closure" id="security.context_listener.0"/>
           <argument>onKernelResponse</argument>
+        </argument>
+        <argument>0</argument>
+      </call>
+      <call method="addListener">
+        <argument>kernel.request</argument>
+        <argument type="collection">
+          <argument type="service_closure" id="knp_paginator.subscriber.sliding_pagination"/>
+          <argument>onKernelRequest</argument>
         </argument>
         <argument>0</argument>
       </call>
@@ -2629,6 +2705,14 @@
         <argument>-100</argument>
       </call>
       <call method="addListener">
+        <argument>Symfony\Component\Messenger\Event\WorkerRunningEvent</argument>
+        <argument type="collection">
+          <argument type="service_closure" id="messenger.listener.dispatch_pcntl_signal_listener"/>
+          <argument>onWorkerRunning</argument>
+        </argument>
+        <argument>100</argument>
+      </call>
+      <call method="addListener">
         <argument>Symfony\Component\Messenger\Event\WorkerStartedEvent</argument>
         <argument type="collection">
           <argument type="service_closure" id="messenger.listener.stop_worker_on_restart_signal_listener"/>
@@ -2643,6 +2727,14 @@
           <argument>onWorkerRunning</argument>
         </argument>
         <argument>0</argument>
+      </call>
+      <call method="addListener">
+        <argument>Symfony\Component\Messenger\Event\WorkerStartedEvent</argument>
+        <argument type="collection">
+          <argument type="service_closure" id="messenger.listener.stop_worker_on_sigterm_signal_listener"/>
+          <argument>onWorkerStarted</argument>
+        </argument>
+        <argument>100</argument>
       </call>
       <call method="addListener">
         <argument>Symfony\Component\Messenger\Event\WorkerMessageFailedEvent</argument>
@@ -2725,14 +2817,6 @@
         <argument>0</argument>
       </call>
       <call method="addListener">
-        <argument>console.command</argument>
-        <argument type="collection">
-          <argument type="service_closure" id="debug.dump_listener"/>
-          <argument>configure</argument>
-        </argument>
-        <argument>1024</argument>
-      </call>
-      <call method="addListener">
         <argument>kernel.view</argument>
         <argument type="collection">
           <argument type="service_closure" id="controller.template_attribute_listener"/>
@@ -2747,6 +2831,14 @@
           <argument>onMessage</argument>
         </argument>
         <argument>0</argument>
+      </call>
+      <call method="addListener">
+        <argument>console.command</argument>
+        <argument type="collection">
+          <argument type="service_closure" id="debug.dump_listener"/>
+          <argument>configure</argument>
+        </argument>
+        <argument>1024</argument>
       </call>
       <call method="addListener">
         <argument>kernel.response</argument>
@@ -2909,6 +3001,46 @@
         <argument>0</argument>
       </call>
       <call method="addListener">
+        <argument>knp_pager.before</argument>
+        <argument type="collection">
+          <argument type="service_closure" id="knp_paginator.subscriber.paginate"/>
+          <argument>before</argument>
+        </argument>
+        <argument>0</argument>
+      </call>
+      <call method="addListener">
+        <argument>knp_pager.pagination</argument>
+        <argument type="collection">
+          <argument type="service_closure" id="knp_paginator.subscriber.paginate"/>
+          <argument>pagination</argument>
+        </argument>
+        <argument>0</argument>
+      </call>
+      <call method="addListener">
+        <argument>knp_pager.before</argument>
+        <argument type="collection">
+          <argument type="service_closure" id="knp_paginator.subscriber.sortable"/>
+          <argument>before</argument>
+        </argument>
+        <argument>1</argument>
+      </call>
+      <call method="addListener">
+        <argument>knp_pager.before</argument>
+        <argument type="collection">
+          <argument type="service_closure" id="knp_paginator.subscriber.filtration"/>
+          <argument>before</argument>
+        </argument>
+        <argument>1</argument>
+      </call>
+      <call method="addListener">
+        <argument>knp_pager.pagination</argument>
+        <argument type="collection">
+          <argument type="service_closure" id="knp_paginator.subscriber.sliding_pagination"/>
+          <argument>pagination</argument>
+        </argument>
+        <argument>1</argument>
+      </call>
+      <call method="addListener">
         <argument>Symfony\Component\Security\Http\Event\CheckPassportEvent</argument>
         <argument type="collection">
           <argument type="service_closure" id="security.listener.csrf_protection"/>
@@ -3031,7 +3163,7 @@
       <argument type="service" id=".service_locator.ybClHma.router.default"/>
       <argument>kernel::loadRoutes</argument>
       <argument type="collection">
-        <argument key="cache_dir">C:\Users\ULTRABOOK DELL\OneDrive - UPEC\Bureau\Snowaddict-symfony\Un_Nouveau_Monde\var\cache\dev</argument>
+        <argument key="cache_dir">/Applications/MAMP/htdocs/un-nouveau-monde/var/cache/dev</argument>
         <argument key="debug">true</argument>
         <argument key="generator_class">Symfony\Component\Routing\Generator\CompiledUrlGenerator</argument>
         <argument key="generator_dumper_class">Symfony\Component\Routing\Generator\Dumper\CompiledUrlGeneratorDumper</argument>
@@ -3081,7 +3213,7 @@
       <argument type="service" id="request_stack"/>
       <argument type="service" id="router.request_context" on-invalid="ignore"/>
       <argument type="service" id="monolog.logger.request" on-invalid="ignore"/>
-      <argument>C:\Users\ULTRABOOK DELL\OneDrive - UPEC\Bureau\Snowaddict-symfony\Un_Nouveau_Monde</argument>
+      <argument>/Applications/MAMP/htdocs/un-nouveau-monde</argument>
       <argument>true</argument>
     </service>
     <service id="Symfony\Bundle\FrameworkBundle\Controller\RedirectController" class="Symfony\Bundle\FrameworkBundle\Controller\RedirectController" public="true">
@@ -3129,13 +3261,13 @@
     <service id="annotations.cache_warmer" class="Symfony\Bundle\FrameworkBundle\CacheWarmer\AnnotationsCacheWarmer">
       <tag name="kernel.cache_warmer"/>
       <argument type="service" id="annotations.reader"/>
-      <argument>C:\Users\ULTRABOOK DELL\OneDrive - UPEC\Bureau\Snowaddict-symfony\Un_Nouveau_Monde\var\cache\dev/annotations.php</argument>
+      <argument>/Applications/MAMP/htdocs/un-nouveau-monde/var/cache/dev/annotations.php</argument>
       <argument>#^Symfony\\(?:Component\\HttpKernel\\|Bundle\\FrameworkBundle\\Controller\\(?!.*Controller$))#</argument>
       <argument>true</argument>
     </service>
     <service id="annotations.cache_adapter" class="Symfony\Component\Cache\Adapter\PhpArrayAdapter">
       <tag name="container.hot_path"/>
-      <argument>C:\Users\ULTRABOOK DELL\OneDrive - UPEC\Bureau\Snowaddict-symfony\Un_Nouveau_Monde\var\cache\dev/annotations.php</argument>
+      <argument>/Applications/MAMP/htdocs/un-nouveau-monde/var/cache/dev/annotations.php</argument>
       <argument type="service" id="cache.annotations"/>
       <factory class="Symfony\Component\Cache\Adapter\PhpArrayAdapter" method="create"/>
     </service>
@@ -3148,7 +3280,7 @@
     </service>
     <service id="secrets.vault" class="Symfony\Bundle\FrameworkBundle\Secrets\SodiumVault">
       <tag name="container.env_var_loader"/>
-      <argument>C:\Users\ULTRABOOK DELL\OneDrive - UPEC\Bureau\Snowaddict-symfony\Un_Nouveau_Monde/config/secrets/%env(default:kernel.environment:APP_RUNTIME_ENV)%</argument>
+      <argument>/Applications/MAMP/htdocs/un-nouveau-monde/config/secrets/%env(default:kernel.environment:APP_RUNTIME_ENV)%</argument>
       <argument type="service" id="secrets.decryption_key" on-invalid="ignore"/>
     </service>
     <service id="secrets.decryption_key" class="Symfony\Component\String\LazyString">
@@ -3157,7 +3289,7 @@
       <factory class="Symfony\Component\String\LazyString" method="fromCallable"/>
     </service>
     <service id="secrets.local_vault" class="Symfony\Bundle\FrameworkBundle\Secrets\DotenvVault">
-      <argument>C:\Users\ULTRABOOK DELL\OneDrive - UPEC\Bureau\Snowaddict-symfony\Un_Nouveau_Monde/.env.dev.local</argument>
+      <argument>/Applications/MAMP/htdocs/un-nouveau-monde/.env.dev.local</argument>
     </service>
     <service id="serializer.mapping.class_discriminator_resolver" class="Symfony\Component\Serializer\Mapping\ClassDiscriminatorFromClassMetadata">
       <argument type="service" id="serializer.mapping.class_metadata_factory"/>
@@ -3190,10 +3322,10 @@
           </service>
         </argument>
       </argument>
-      <argument>C:\Users\ULTRABOOK DELL\OneDrive - UPEC\Bureau\Snowaddict-symfony\Un_Nouveau_Monde\var\cache\dev/serialization.php</argument>
+      <argument>/Applications/MAMP/htdocs/un-nouveau-monde/var/cache/dev/serialization.php</argument>
     </service>
     <service id="serializer.mapping.cache.symfony" class="Psr\Cache\CacheItemPoolInterface">
-      <argument>C:\Users\ULTRABOOK DELL\OneDrive - UPEC\Bureau\Snowaddict-symfony\Un_Nouveau_Monde\var\cache\dev/serialization.php</argument>
+      <argument>/Applications/MAMP/htdocs/un-nouveau-monde/var/cache/dev/serialization.php</argument>
       <argument type="service" id="cache.serializer"/>
       <factory class="Symfony\Component\Cache\Adapter\PhpArrayAdapter" method="create"/>
     </service>
@@ -3310,7 +3442,7 @@
       <argument>true</argument>
     </service>
     <service id="session.storage.factory.mock_file" class="Symfony\Component\HttpFoundation\Session\Storage\MockFileSessionStorageFactory">
-      <argument>C:\Users\ULTRABOOK DELL\OneDrive - UPEC\Bureau\Snowaddict-symfony\Un_Nouveau_Monde\var\cache\dev/sessions</argument>
+      <argument>/Applications/MAMP/htdocs/un-nouveau-monde/var/cache/dev/sessions</argument>
       <argument>MOCKSESSID</argument>
       <argument type="service">
         <service class="Symfony\Component\HttpFoundation\Session\Storage\MetadataBag">
@@ -3322,7 +3454,7 @@
     <service id="session.handler.native_file" class="Symfony\Component\HttpFoundation\Session\Storage\Handler\StrictSessionHandler">
       <argument type="service">
         <service class="Symfony\Component\HttpFoundation\Session\Storage\Handler\NativeFileSessionHandler">
-          <argument>C:\Users\ULTRABOOK DELL\OneDrive - UPEC\Bureau\Snowaddict-symfony\Un_Nouveau_Monde\var\cache\dev/sessions</argument>
+          <argument>/Applications/MAMP/htdocs/un-nouveau-monde/var/cache/dev/sessions</argument>
         </service>
       </argument>
     </service>
@@ -3373,7 +3505,7 @@
       <argument type="service" id="form.registry"/>
     </service>
     <service id="form.extension" class="Symfony\Component\Form\Extension\DependencyInjection\DependencyInjectionExtension">
-      <argument type="service" id=".service_locator.U5DqqdM"/>
+      <argument type="service" id=".service_locator.CiihFkQ"/>
       <argument type="collection">
         <argument key="Symfony\Component\Form\Extension\Core\Type\FormType" type="iterator">
           <argument type="service" id="form.type_extension.form.transformation_failure_handling"/>
@@ -3482,7 +3614,7 @@
       </call>
       <call method="addXmlMappings">
         <argument type="collection">
-          <argument>C:\Users\ULTRABOOK DELL\OneDrive - UPEC\Bureau\Snowaddict-symfony\Un_Nouveau_Monde\vendor\symfony\form/Resources/config/validation.xml</argument>
+          <argument>/Applications/MAMP/htdocs/un-nouveau-monde/vendor/symfony/form/Resources/config/validation.xml</argument>
         </argument>
       </call>
       <call method="enableAnnotationMapping">
@@ -3510,10 +3642,10 @@
     <service id="validator.mapping.cache_warmer" class="Symfony\Bundle\FrameworkBundle\CacheWarmer\ValidatorCacheWarmer">
       <tag name="kernel.cache_warmer"/>
       <argument type="service" id="validator.builder"/>
-      <argument>C:\Users\ULTRABOOK DELL\OneDrive - UPEC\Bureau\Snowaddict-symfony\Un_Nouveau_Monde\var\cache\dev/validation.php</argument>
+      <argument>/Applications/MAMP/htdocs/un-nouveau-monde/var/cache/dev/validation.php</argument>
     </service>
     <service id="validator.mapping.cache.adapter" class="Symfony\Component\Cache\Adapter\PhpArrayAdapter">
-      <argument>C:\Users\ULTRABOOK DELL\OneDrive - UPEC\Bureau\Snowaddict-symfony\Un_Nouveau_Monde\var\cache\dev/validation.php</argument>
+      <argument>/Applications/MAMP/htdocs/un-nouveau-monde/var/cache/dev/validation.php</argument>
       <argument type="service" id="cache.validator"/>
       <factory class="Symfony\Component\Cache\Adapter\PhpArrayAdapter" method="create"/>
     </service>
@@ -3902,7 +4034,7 @@
       </call>
     </service>
     <service id="profiler.storage" class="Symfony\Component\HttpKernel\Profiler\FileProfilerStorage">
-      <argument>file:C:\Users\ULTRABOOK DELL\OneDrive - UPEC\Bureau\Snowaddict-symfony\Un_Nouveau_Monde\var\cache\dev/profiler</argument>
+      <argument>file:/Applications/MAMP/htdocs/un-nouveau-monde/var/cache/dev/profiler</argument>
     </service>
     <service id="profiler_listener" class="Symfony\Component\HttpKernel\EventListener\ProfilerListener">
       <tag name="kernel.event_subscriber"/>
@@ -3949,7 +4081,7 @@
       <tag name="monolog.logger" channel="profiler"/>
       <tag name="data_collector" template="@WebProfiler/Collector/logger.html.twig" id="logger" priority="300"/>
       <argument type="service" id="monolog.logger.profiler" on-invalid="ignore"/>
-      <argument>C:\Users\ULTRABOOK DELL\OneDrive - UPEC\Bureau\Snowaddict-symfony\Un_Nouveau_Monde\var\cache\dev/App_KernelDevDebugContainer</argument>
+      <argument>/Applications/MAMP/htdocs/un-nouveau-monde/var/cache/dev/App_KernelDevDebugContainer</argument>
       <argument type="service" id="request_stack" on-invalid="ignore"/>
     </service>
     <service id="data_collector.time" class="Symfony\Component\HttpKernel\DataCollector\TimeDataCollector">
@@ -4252,7 +4384,7 @@
       <tag name="doctrine.event_subscriber"/>
       <argument type="tagged_iterator" tag="messenger.receiver"/>
     </service>
-    <service id=".1_ServiceLocator~aIA5C.9" class="Symfony\Component\DependencyInjection\ServiceLocator">
+    <service id=".1_ServiceLocator~4Gupg.x" class="Symfony\Component\DependencyInjection\ServiceLocator">
       <argument type="collection"/>
     </service>
     <service id="doctrine.orm.proxy_cache_warmer" class="Symfony\Bridge\Doctrine\CacheWarmer\ProxyCacheWarmer">
@@ -4458,7 +4590,7 @@
         <argument type="service" id=".doctrine.orm.default_metadata_driver"/>
       </call>
       <call method="setProxyDir">
-        <argument>C:\Users\ULTRABOOK DELL\OneDrive - UPEC\Bureau\Snowaddict-symfony\Un_Nouveau_Monde\var\cache\dev/doctrine/orm/Proxies</argument>
+        <argument>/Applications/MAMP/htdocs/un-nouveau-monde/var/cache/dev/doctrine/orm/Proxies</argument>
       </call>
       <call method="setProxyNamespace">
         <argument>Proxies</argument>
@@ -4493,7 +4625,7 @@
     </service>
     <service id="doctrine.orm.default_attribute_metadata_driver" class="Doctrine\ORM\Mapping\Driver\AttributeDriver">
       <argument type="collection">
-        <argument>C:\Users\ULTRABOOK DELL\OneDrive - UPEC\Bureau\Snowaddict-symfony\Un_Nouveau_Monde\src\Entity</argument>
+        <argument>/Applications/MAMP/htdocs/un-nouveau-monde/src/Entity</argument>
       </argument>
     </service>
     <service id="cache.doctrine.orm.default.metadata" class="Symfony\Component\Cache\Adapter\ArrayAdapter"/>
@@ -4558,7 +4690,7 @@
     <service id="doctrine.migrations.configuration" class="Doctrine\Migrations\Configuration\Configuration">
       <call method="addMigrationsDirectory">
         <argument>DoctrineMigrations</argument>
-        <argument>C:\Users\ULTRABOOK DELL\OneDrive - UPEC\Bureau\Snowaddict-symfony\Un_Nouveau_Monde/migrations</argument>
+        <argument>/Applications/MAMP/htdocs/un-nouveau-monde/migrations</argument>
       </call>
       <call method="setAllOrNothing">
         <argument>false</argument>
@@ -4695,122 +4827,6 @@
       </call>
     </service>
     <service id="doctrine.migrations.storage.table_storage" class="Doctrine\Migrations\Metadata\Storage\TableMetadataStorageConfiguration"/>
-    <service id="twig.extension.dump" class="Symfony\Bridge\Twig\Extension\DumpExtension">
-      <tag name="twig.extension"/>
-      <argument type="service" id="var_dumper.cloner"/>
-      <argument type="service" id="var_dumper.html_dumper"/>
-    </service>
-    <service id="data_collector.dump" class="Symfony\Component\HttpKernel\DataCollector\DumpDataCollector" public="true">
-      <tag name="data_collector" id="dump" template="@Debug/Profiler/dump.html.twig" priority="240"/>
-      <argument type="service" id="debug.stopwatch" on-invalid="ignore"/>
-      <argument type="service" id="debug.file_link_formatter" on-invalid="ignore"/>
-      <argument>UTF-8</argument>
-      <argument type="service" id="request_stack"/>
-      <argument type="service" id="var_dumper.server_connection"/>
-    </service>
-    <service id="debug.dump_listener" class="Symfony\Component\HttpKernel\EventListener\DumpListener">
-      <tag name="kernel.event_subscriber"/>
-      <tag name="container.no_preload"/>
-      <argument type="service" id="var_dumper.cloner"/>
-      <argument type="service" id="var_dumper.contextualized_cli_dumper"/>
-      <argument type="service" id="var_dumper.server_connection"/>
-    </service>
-    <service id="var_dumper.cloner" class="Symfony\Component\VarDumper\Cloner\VarCloner" public="true">
-      <call method="setMaxItems">
-        <argument>2500</argument>
-      </call>
-      <call method="setMinDepth">
-        <argument>1</argument>
-      </call>
-      <call method="setMaxString">
-        <argument>-1</argument>
-      </call>
-      <call method="addCasters">
-        <argument type="collection">
-          <argument key="Closure">Symfony\Component\VarDumper\Caster\ReflectionCaster::unsetClosureFileInfo</argument>
-        </argument>
-      </call>
-    </service>
-    <service id="var_dumper.contextualized_cli_dumper" class="Symfony\Component\VarDumper\Dumper\ContextualizedDumper">
-      <argument type="service" id="var_dumper.contextualized_cli_dumper.inner"/>
-      <argument type="collection">
-        <argument key="source" type="service">
-          <service class="Symfony\Component\VarDumper\Dumper\ContextProvider\SourceContextProvider">
-            <argument>UTF-8</argument>
-            <argument>C:\Users\ULTRABOOK DELL\OneDrive - UPEC\Bureau\Snowaddict-symfony\Un_Nouveau_Monde</argument>
-            <argument type="service" id="debug.file_link_formatter" on-invalid="null"/>
-          </service>
-        </argument>
-      </argument>
-    </service>
-    <service id="var_dumper.html_dumper" class="Symfony\Component\VarDumper\Dumper\HtmlDumper">
-      <argument>null</argument>
-      <argument>UTF-8</argument>
-      <argument>0</argument>
-      <call method="setDisplayOptions">
-        <argument type="collection">
-          <argument key="fileLinkFormat" type="service" id="debug.file_link_formatter" on-invalid="ignore"/>
-        </argument>
-      </call>
-    </service>
-    <service id="var_dumper.server_connection" class="Symfony\Component\VarDumper\Server\Connection">
-      <argument>tcp://%env(VAR_DUMPER_SERVER)%</argument>
-      <argument type="collection">
-        <argument key="source" type="service">
-          <service class="Symfony\Component\VarDumper\Dumper\ContextProvider\SourceContextProvider">
-            <argument>UTF-8</argument>
-            <argument>C:\Users\ULTRABOOK DELL\OneDrive - UPEC\Bureau\Snowaddict-symfony\Un_Nouveau_Monde</argument>
-            <argument type="service" id="debug.file_link_formatter" on-invalid="null"/>
-          </service>
-        </argument>
-        <argument key="request" type="service">
-          <service class="Symfony\Component\VarDumper\Dumper\ContextProvider\RequestContextProvider">
-            <argument type="service" id="request_stack"/>
-          </service>
-        </argument>
-        <argument key="cli" type="service">
-          <service class="Symfony\Component\VarDumper\Dumper\ContextProvider\CliContextProvider"/>
-        </argument>
-      </argument>
-    </service>
-    <service id="var_dumper.dump_server" class="Symfony\Component\VarDumper\Server\DumpServer">
-      <tag name="monolog.logger" channel="debug"/>
-      <argument>tcp://%env(VAR_DUMPER_SERVER)%</argument>
-      <argument type="service" id="monolog.logger.debug" on-invalid="null"/>
-    </service>
-    <service id="var_dumper.command.server_dump" class="Symfony\Component\VarDumper\Command\ServerDumpCommand">
-      <tag name="console.command"/>
-      <tag name="container.no_preload"/>
-      <argument type="service" id="var_dumper.dump_server"/>
-      <argument type="collection">
-        <argument key="cli" type="service">
-          <service class="Symfony\Component\VarDumper\Command\Descriptor\CliDescriptor">
-            <argument type="service" id="var_dumper.contextualized_cli_dumper.inner"/>
-          </service>
-        </argument>
-        <argument key="html" type="service">
-          <service class="Symfony\Component\VarDumper\Command\Descriptor\HtmlDescriptor">
-            <argument type="service" id="var_dumper.html_dumper"/>
-          </service>
-        </argument>
-      </argument>
-      <call method="setName">
-        <argument>server:dump</argument>
-      </call>
-      <call method="setDescription">
-        <argument>Start a dump server that collects and displays dumps in a single place</argument>
-      </call>
-    </service>
-    <service id="monolog.command.server_log" class="Symfony\Bridge\Monolog\Command\ServerLogCommand">
-      <tag name="console.command"/>
-      <tag name="container.no_preload"/>
-      <call method="setName">
-        <argument>server:log</argument>
-      </call>
-      <call method="setDescription">
-        <argument>Start a log server that displays logs in real time</argument>
-      </call>
-    </service>
     <service id="twig" class="Twig\Environment">
       <tag name="container.preload" class="Twig\Cache\FilesystemCache"/>
       <tag name="container.preload" class="Twig\Extension\CoreExtension"/>
@@ -4823,16 +4839,13 @@
       <argument type="service" id="twig.loader.native_filesystem"/>
       <argument type="collection">
         <argument key="autoescape">name</argument>
-        <argument key="cache">C:\Users\ULTRABOOK DELL\OneDrive - UPEC\Bureau\Snowaddict-symfony\Un_Nouveau_Monde\var\cache\dev/twig</argument>
+        <argument key="cache">/Applications/MAMP/htdocs/un-nouveau-monde/var/cache/dev/twig</argument>
         <argument key="charset">UTF-8</argument>
         <argument key="debug">true</argument>
         <argument key="strict_variables">true</argument>
       </argument>
       <call method="addExtension">
         <argument type="service" id="twig.extension.security_csrf"/>
-      </call>
-      <call method="addExtension">
-        <argument type="service" id="twig.extension.dump"/>
       </call>
       <call method="addExtension">
         <argument type="service" id="twig.extension.profiler"/>
@@ -4874,6 +4887,9 @@
         <argument type="service" id="twig.extension.form"/>
       </call>
       <call method="addExtension">
+        <argument type="service" id="twig.extension.dump"/>
+      </call>
+      <call method="addExtension">
         <argument type="service" id="twig.extension.logout_url"/>
       </call>
       <call method="addExtension">
@@ -4884,6 +4900,9 @@
       </call>
       <call method="addExtension">
         <argument type="service" id="twig.extension.webprofiler"/>
+      </call>
+      <call method="addExtension">
+        <argument type="service" id="knp_paginator.twig.extension.pagination"/>
       </call>
       <call method="addGlobal">
         <argument>app</argument>
@@ -4929,10 +4948,10 @@
     <service id="twig.template_iterator" class="Symfony\Bundle\TwigBundle\TemplateIterator">
       <argument type="service" id="kernel"/>
       <argument type="collection">
-        <argument key="C:\Users\ULTRABOOK DELL\OneDrive - UPEC\Bureau\Snowaddict-symfony\Un_Nouveau_Monde\vendor\symfony\twig-bridge/Resources/views/Email">email</argument>
-        <argument key="C:\Users\ULTRABOOK DELL\OneDrive - UPEC\Bureau\Snowaddict-symfony\Un_Nouveau_Monde\vendor\symfony\twig-bridge/Resources/views/Form">null</argument>
+        <argument key="/Applications/MAMP/htdocs/un-nouveau-monde/vendor/symfony/twig-bridge/Resources/views/Email">email</argument>
+        <argument key="/Applications/MAMP/htdocs/un-nouveau-monde/vendor/symfony/twig-bridge/Resources/views/Form">null</argument>
       </argument>
-      <argument>C:\Users\ULTRABOOK DELL\OneDrive - UPEC\Bureau\Snowaddict-symfony\Un_Nouveau_Monde/templates</argument>
+      <argument>/Applications/MAMP/htdocs/un-nouveau-monde/templates</argument>
       <argument type="collection"/>
     </service>
     <service id="twig.template_cache_warmer" class="Symfony\Bundle\TwigBundle\CacheWarmer\TemplateCacheWarmer">
@@ -4944,68 +4963,76 @@
     <service id="twig.loader.native_filesystem" class="Twig\Loader\FilesystemLoader">
       <tag name="twig.loader"/>
       <argument type="collection"/>
-      <argument>C:\Users\ULTRABOOK DELL\OneDrive - UPEC\Bureau\Snowaddict-symfony\Un_Nouveau_Monde</argument>
+      <argument>/Applications/MAMP/htdocs/un-nouveau-monde</argument>
       <call method="addPath">
-        <argument>C:\Users\ULTRABOOK DELL\OneDrive - UPEC\Bureau\Snowaddict-symfony\Un_Nouveau_Monde\vendor\doctrine\doctrine-bundle/Resources/views</argument>
+        <argument>/Applications/MAMP/htdocs/un-nouveau-monde/vendor/doctrine/doctrine-bundle/Resources/views</argument>
         <argument>Doctrine</argument>
       </call>
       <call method="addPath">
-        <argument>C:\Users\ULTRABOOK DELL\OneDrive - UPEC\Bureau\Snowaddict-symfony\Un_Nouveau_Monde\vendor\doctrine\doctrine-bundle/Resources/views</argument>
+        <argument>/Applications/MAMP/htdocs/un-nouveau-monde/vendor/doctrine/doctrine-bundle/Resources/views</argument>
         <argument>!Doctrine</argument>
       </call>
       <call method="addPath">
-        <argument>C:\Users\ULTRABOOK DELL\OneDrive - UPEC\Bureau\Snowaddict-symfony\Un_Nouveau_Monde\vendor\doctrine\doctrine-migrations-bundle/Resources/views</argument>
+        <argument>/Applications/MAMP/htdocs/un-nouveau-monde/vendor/doctrine/doctrine-migrations-bundle/Resources/views</argument>
         <argument>DoctrineMigrations</argument>
       </call>
       <call method="addPath">
-        <argument>C:\Users\ULTRABOOK DELL\OneDrive - UPEC\Bureau\Snowaddict-symfony\Un_Nouveau_Monde\vendor\doctrine\doctrine-migrations-bundle/Resources/views</argument>
+        <argument>/Applications/MAMP/htdocs/un-nouveau-monde/vendor/doctrine/doctrine-migrations-bundle/Resources/views</argument>
         <argument>!DoctrineMigrations</argument>
       </call>
       <call method="addPath">
-        <argument>C:\Users\ULTRABOOK DELL\OneDrive - UPEC\Bureau\Snowaddict-symfony\Un_Nouveau_Monde\vendor\symfony\debug-bundle/Resources/views</argument>
+        <argument>/Applications/MAMP/htdocs/un-nouveau-monde/vendor/symfony/debug-bundle/Resources/views</argument>
         <argument>Debug</argument>
       </call>
       <call method="addPath">
-        <argument>C:\Users\ULTRABOOK DELL\OneDrive - UPEC\Bureau\Snowaddict-symfony\Un_Nouveau_Monde\vendor\symfony\debug-bundle/Resources/views</argument>
+        <argument>/Applications/MAMP/htdocs/un-nouveau-monde/vendor/symfony/debug-bundle/Resources/views</argument>
         <argument>!Debug</argument>
       </call>
       <call method="addPath">
-        <argument>C:\Users\ULTRABOOK DELL\OneDrive - UPEC\Bureau\Snowaddict-symfony\Un_Nouveau_Monde\vendor\symfony\web-profiler-bundle/Resources/views</argument>
+        <argument>/Applications/MAMP/htdocs/un-nouveau-monde/vendor/symfony/web-profiler-bundle/Resources/views</argument>
         <argument>WebProfiler</argument>
       </call>
       <call method="addPath">
-        <argument>C:\Users\ULTRABOOK DELL\OneDrive - UPEC\Bureau\Snowaddict-symfony\Un_Nouveau_Monde\vendor\symfony\web-profiler-bundle/Resources/views</argument>
+        <argument>/Applications/MAMP/htdocs/un-nouveau-monde/vendor/symfony/web-profiler-bundle/Resources/views</argument>
         <argument>!WebProfiler</argument>
       </call>
       <call method="addPath">
-        <argument>C:\Users\ULTRABOOK DELL\OneDrive - UPEC\Bureau\Snowaddict-symfony\Un_Nouveau_Monde\vendor\symfony\security-bundle/Resources/views</argument>
+        <argument>/Applications/MAMP/htdocs/un-nouveau-monde/vendor/symfony/security-bundle/Resources/views</argument>
         <argument>Security</argument>
       </call>
       <call method="addPath">
-        <argument>C:\Users\ULTRABOOK DELL\OneDrive - UPEC\Bureau\Snowaddict-symfony\Un_Nouveau_Monde\vendor\symfony\security-bundle/Resources/views</argument>
+        <argument>/Applications/MAMP/htdocs/un-nouveau-monde/vendor/symfony/security-bundle/Resources/views</argument>
         <argument>!Security</argument>
       </call>
       <call method="addPath">
-        <argument>C:\Users\ULTRABOOK DELL\OneDrive - UPEC\Bureau\Snowaddict-symfony\Un_Nouveau_Monde\vendor\karser\karser-recaptcha3-bundle/Resources/views</argument>
+        <argument>/Applications/MAMP/htdocs/un-nouveau-monde/vendor/knplabs/knp-paginator-bundle/templates</argument>
+        <argument>KnpPaginator</argument>
+      </call>
+      <call method="addPath">
+        <argument>/Applications/MAMP/htdocs/un-nouveau-monde/vendor/knplabs/knp-paginator-bundle/templates</argument>
+        <argument>!KnpPaginator</argument>
+      </call>
+      <call method="addPath">
+        <argument>/Applications/MAMP/htdocs/un-nouveau-monde/vendor/karser/karser-recaptcha3-bundle/Resources/views</argument>
         <argument>KarserRecaptcha3</argument>
       </call>
       <call method="addPath">
-        <argument>C:\Users\ULTRABOOK DELL\OneDrive - UPEC\Bureau\Snowaddict-symfony\Un_Nouveau_Monde\vendor\karser\karser-recaptcha3-bundle/Resources/views</argument>
+        <argument>/Applications/MAMP/htdocs/un-nouveau-monde/vendor/karser/karser-recaptcha3-bundle/Resources/views</argument>
         <argument>!KarserRecaptcha3</argument>
       </call>
       <call method="addPath">
-        <argument>C:\Users\ULTRABOOK DELL\OneDrive - UPEC\Bureau\Snowaddict-symfony\Un_Nouveau_Monde/templates</argument>
+        <argument>/Applications/MAMP/htdocs/un-nouveau-monde/templates</argument>
       </call>
       <call method="addPath">
-        <argument>C:\Users\ULTRABOOK DELL\OneDrive - UPEC\Bureau\Snowaddict-symfony\Un_Nouveau_Monde\vendor\symfony\twig-bridge/Resources/views/Email</argument>
+        <argument>/Applications/MAMP/htdocs/un-nouveau-monde/vendor/symfony/twig-bridge/Resources/views/Email</argument>
         <argument>email</argument>
       </call>
       <call method="addPath">
-        <argument>C:\Users\ULTRABOOK DELL\OneDrive - UPEC\Bureau\Snowaddict-symfony\Un_Nouveau_Monde\vendor\symfony\twig-bridge/Resources/views/Email</argument>
+        <argument>/Applications/MAMP/htdocs/un-nouveau-monde/vendor/symfony/twig-bridge/Resources/views/Email</argument>
         <argument>!email</argument>
       </call>
       <call method="addPath">
-        <argument>C:\Users\ULTRABOOK DELL\OneDrive - UPEC\Bureau\Snowaddict-symfony\Un_Nouveau_Monde\vendor\symfony\twig-bridge/Resources/views/Form</argument>
+        <argument>/Applications/MAMP/htdocs/un-nouveau-monde/vendor/symfony/twig-bridge/Resources/views/Form</argument>
       </call>
     </service>
     <service id="twig.loader.chain" class="Twig\Loader\ChainLoader"/>
@@ -5031,7 +5058,7 @@
     <service id="twig.extension.code" class="Symfony\Bridge\Twig\Extension\CodeExtension">
       <tag name="twig.extension"/>
       <argument type="service" id="debug.file_link_formatter" on-invalid="ignore"/>
-      <argument>C:\Users\ULTRABOOK DELL\OneDrive - UPEC\Bureau\Snowaddict-symfony\Un_Nouveau_Monde</argument>
+      <argument>/Applications/MAMP/htdocs/un-nouveau-monde</argument>
       <argument>UTF-8</argument>
     </service>
     <service id="twig.extension.routing" class="Symfony\Bridge\Twig\Extension\RoutingExtension">
@@ -5124,9 +5151,9 @@
       <tag name="console.command"/>
       <tag name="container.no_preload"/>
       <argument type="service" id="twig"/>
-      <argument>C:\Users\ULTRABOOK DELL\OneDrive - UPEC\Bureau\Snowaddict-symfony\Un_Nouveau_Monde</argument>
+      <argument>/Applications/MAMP/htdocs/un-nouveau-monde</argument>
       <argument>%kernel.bundles_metadata%</argument>
-      <argument>C:\Users\ULTRABOOK DELL\OneDrive - UPEC\Bureau\Snowaddict-symfony\Un_Nouveau_Monde/templates</argument>
+      <argument>/Applications/MAMP/htdocs/un-nouveau-monde/templates</argument>
       <argument type="service" id="debug.file_link_formatter" on-invalid="null"/>
       <call method="setName">
         <argument>debug:twig</argument>
@@ -5157,13 +5184,129 @@
     <service id="twig.mime_body_renderer" class="Symfony\Bridge\Twig\Mime\BodyRenderer">
       <argument type="service" id="twig"/>
     </service>
+    <service id="twig.extension.dump" class="Symfony\Bridge\Twig\Extension\DumpExtension">
+      <tag name="twig.extension"/>
+      <argument type="service" id="var_dumper.cloner"/>
+      <argument type="service" id="var_dumper.html_dumper"/>
+    </service>
+    <service id="data_collector.dump" class="Symfony\Component\HttpKernel\DataCollector\DumpDataCollector" public="true">
+      <tag name="data_collector" id="dump" template="@Debug/Profiler/dump.html.twig" priority="240"/>
+      <argument type="service" id="debug.stopwatch" on-invalid="ignore"/>
+      <argument type="service" id="debug.file_link_formatter" on-invalid="ignore"/>
+      <argument>UTF-8</argument>
+      <argument type="service" id="request_stack"/>
+      <argument type="service" id="var_dumper.server_connection"/>
+    </service>
+    <service id="debug.dump_listener" class="Symfony\Component\HttpKernel\EventListener\DumpListener">
+      <tag name="kernel.event_subscriber"/>
+      <tag name="container.no_preload"/>
+      <argument type="service" id="var_dumper.cloner"/>
+      <argument type="service" id="var_dumper.contextualized_cli_dumper"/>
+      <argument type="service" id="var_dumper.server_connection"/>
+    </service>
+    <service id="var_dumper.cloner" class="Symfony\Component\VarDumper\Cloner\VarCloner" public="true">
+      <call method="setMaxItems">
+        <argument>2500</argument>
+      </call>
+      <call method="setMinDepth">
+        <argument>1</argument>
+      </call>
+      <call method="setMaxString">
+        <argument>-1</argument>
+      </call>
+      <call method="addCasters">
+        <argument type="collection">
+          <argument key="Closure">Symfony\Component\VarDumper\Caster\ReflectionCaster::unsetClosureFileInfo</argument>
+        </argument>
+      </call>
+    </service>
+    <service id="var_dumper.contextualized_cli_dumper" class="Symfony\Component\VarDumper\Dumper\ContextualizedDumper">
+      <argument type="service" id="var_dumper.contextualized_cli_dumper.inner"/>
+      <argument type="collection">
+        <argument key="source" type="service">
+          <service class="Symfony\Component\VarDumper\Dumper\ContextProvider\SourceContextProvider">
+            <argument>UTF-8</argument>
+            <argument>/Applications/MAMP/htdocs/un-nouveau-monde</argument>
+            <argument type="service" id="debug.file_link_formatter" on-invalid="null"/>
+          </service>
+        </argument>
+      </argument>
+    </service>
+    <service id="var_dumper.html_dumper" class="Symfony\Component\VarDumper\Dumper\HtmlDumper">
+      <argument>null</argument>
+      <argument>UTF-8</argument>
+      <argument>0</argument>
+      <call method="setDisplayOptions">
+        <argument type="collection">
+          <argument key="fileLinkFormat" type="service" id="debug.file_link_formatter" on-invalid="ignore"/>
+        </argument>
+      </call>
+    </service>
+    <service id="var_dumper.server_connection" class="Symfony\Component\VarDumper\Server\Connection">
+      <argument>tcp://%env(VAR_DUMPER_SERVER)%</argument>
+      <argument type="collection">
+        <argument key="source" type="service">
+          <service class="Symfony\Component\VarDumper\Dumper\ContextProvider\SourceContextProvider">
+            <argument>UTF-8</argument>
+            <argument>/Applications/MAMP/htdocs/un-nouveau-monde</argument>
+            <argument type="service" id="debug.file_link_formatter" on-invalid="null"/>
+          </service>
+        </argument>
+        <argument key="request" type="service">
+          <service class="Symfony\Component\VarDumper\Dumper\ContextProvider\RequestContextProvider">
+            <argument type="service" id="request_stack"/>
+          </service>
+        </argument>
+        <argument key="cli" type="service">
+          <service class="Symfony\Component\VarDumper\Dumper\ContextProvider\CliContextProvider"/>
+        </argument>
+      </argument>
+    </service>
+    <service id="var_dumper.dump_server" class="Symfony\Component\VarDumper\Server\DumpServer">
+      <tag name="monolog.logger" channel="debug"/>
+      <argument>tcp://%env(VAR_DUMPER_SERVER)%</argument>
+      <argument type="service" id="monolog.logger.debug" on-invalid="null"/>
+    </service>
+    <service id="var_dumper.command.server_dump" class="Symfony\Component\VarDumper\Command\ServerDumpCommand">
+      <tag name="console.command"/>
+      <tag name="container.no_preload"/>
+      <argument type="service" id="var_dumper.dump_server"/>
+      <argument type="collection">
+        <argument key="cli" type="service">
+          <service class="Symfony\Component\VarDumper\Command\Descriptor\CliDescriptor">
+            <argument type="service" id="var_dumper.contextualized_cli_dumper.inner"/>
+          </service>
+        </argument>
+        <argument key="html" type="service">
+          <service class="Symfony\Component\VarDumper\Command\Descriptor\HtmlDescriptor">
+            <argument type="service" id="var_dumper.html_dumper"/>
+          </service>
+        </argument>
+      </argument>
+      <call method="setName">
+        <argument>server:dump</argument>
+      </call>
+      <call method="setDescription">
+        <argument>Start a dump server that collects and displays dumps in a single place</argument>
+      </call>
+    </service>
+    <service id="monolog.command.server_log" class="Symfony\Bridge\Monolog\Command\ServerLogCommand">
+      <tag name="console.command"/>
+      <tag name="container.no_preload"/>
+      <call method="setName">
+        <argument>server:log</argument>
+      </call>
+      <call method="setDescription">
+        <argument>Start a log server that displays logs in real time</argument>
+      </call>
+    </service>
     <service id="web_profiler.controller.profiler" class="Symfony\Bundle\WebProfilerBundle\Controller\ProfilerController" public="true">
       <argument type="service" id="router.default" on-invalid="null"/>
       <argument type="service" id="profiler" on-invalid="null"/>
       <argument type="service" id="twig"/>
       <argument>%data_collector.templates%</argument>
       <argument type="service" id="web_profiler.csp.handler"/>
-      <argument>C:\Users\ULTRABOOK DELL\OneDrive - UPEC\Bureau\Snowaddict-symfony\Un_Nouveau_Monde</argument>
+      <argument>/Applications/MAMP/htdocs/un-nouveau-monde</argument>
     </service>
     <service id="web_profiler.controller.router" class="Symfony\Bundle\WebProfilerBundle\Controller\RouterController" public="true">
       <argument type="service" id="profiler" on-invalid="null"/>
@@ -5238,6 +5381,7 @@
     <service id="security.authentication.trust_resolver" class="Symfony\Component\Security\Core\Authentication\AuthenticationTrustResolver"/>
     <service id="security.authentication.session_strategy" class="Symfony\Component\Security\Http\Session\SessionAuthenticationStrategy">
       <argument>migrate</argument>
+      <argument type="service" id="security.csrf.token_storage" on-invalid="ignore"/>
     </service>
     <service id="security.authentication.session_strategy_noop" class="Symfony\Component\Security\Http\Session\SessionAuthenticationStrategy">
       <argument>none</argument>
@@ -5425,14 +5569,14 @@
     </service>
     <service id="security.access_map" class="Symfony\Component\Security\Http\AccessMap">
       <call method="add">
-        <argument type="service" id=".security.request_matcher.28NqKnb"/>
+        <argument type="service" id=".security.request_matcher.dEIz0xJ"/>
         <argument type="collection">
           <argument>ROLE_ADMIN</argument>
         </argument>
         <argument>null</argument>
       </call>
       <call method="add">
-        <argument type="service" id=".security.request_matcher.FsQ6U.P"/>
+        <argument type="service" id=".security.request_matcher.Hi3J2Hy"/>
         <argument type="collection">
           <argument>ROLE_USER</argument>
         </argument>
@@ -6005,20 +6149,20 @@
         <argument key="security.firewall.map.context.main" type="service_closure" id="security.firewall.map.context.main"/>
       </argument>
     </service>
-    <service id=".security.request_matcher.obhk0jm" class="Symfony\Component\HttpFoundation\RequestMatcher\PathRequestMatcher">
-      <argument>^/admin</argument>
+    <service id=".security.request_matcher.PmHrPeo" class="Symfony\Component\HttpFoundation\RequestMatcher\PathRequestMatcher">
+      <argument>^/manager</argument>
     </service>
-    <service id=".security.request_matcher.28NqKnb" class="Symfony\Component\HttpFoundation\ChainRequestMatcher">
+    <service id=".security.request_matcher.dEIz0xJ" class="Symfony\Component\HttpFoundation\ChainRequestMatcher">
       <argument type="collection">
-        <argument type="service" id=".security.request_matcher.obhk0jm"/>
+        <argument type="service" id=".security.request_matcher.PmHrPeo"/>
       </argument>
     </service>
-    <service id=".security.request_matcher.92MUXM4" class="Symfony\Component\HttpFoundation\RequestMatcher\PathRequestMatcher">
-      <argument>^/profile</argument>
+    <service id=".security.request_matcher.RnoMcd0" class="Symfony\Component\HttpFoundation\RequestMatcher\PathRequestMatcher">
+      <argument>^/utilisateur</argument>
     </service>
-    <service id=".security.request_matcher.FsQ6U.P" class="Symfony\Component\HttpFoundation\ChainRequestMatcher">
+    <service id=".security.request_matcher.Hi3J2Hy" class="Symfony\Component\HttpFoundation\ChainRequestMatcher">
       <argument type="collection">
-        <argument type="service" id=".security.request_matcher.92MUXM4"/>
+        <argument type="service" id=".security.request_matcher.RnoMcd0"/>
       </argument>
     </service>
     <service id="security.command.user_password_hash" class="Symfony\Component\PasswordHasher\Command\UserPasswordHashCommand">
@@ -6079,7 +6223,7 @@
     <service id="monolog.processor.psr_log_message" class="Monolog\Processor\PsrLogMessageProcessor"/>
     <service id="monolog.handler.main" class="Monolog\Handler\StreamHandler">
       <tag name="kernel.reset" method="reset"/>
-      <argument>C:\Users\ULTRABOOK DELL\OneDrive - UPEC\Bureau\Snowaddict-symfony\Un_Nouveau_Monde\var\log/dev.log</argument>
+      <argument>/Applications/MAMP/htdocs/un-nouveau-monde/var/log/dev.log</argument>
       <argument>100</argument>
       <argument>true</argument>
       <argument>null</argument>
@@ -6101,8 +6245,8 @@
       <argument type="service" id="filesystem"/>
       <argument type="service" id="maker.autoloader_util"/>
       <argument type="service" id="maker.file_link_formatter"/>
-      <argument>C:\Users\ULTRABOOK DELL\OneDrive - UPEC\Bureau\Snowaddict-symfony\Un_Nouveau_Monde</argument>
-      <argument>C:\Users\ULTRABOOK DELL\OneDrive - UPEC\Bureau\Snowaddict-symfony\Un_Nouveau_Monde/templates</argument>
+      <argument>/Applications/MAMP/htdocs/un-nouveau-monde</argument>
+      <argument>/Applications/MAMP/htdocs/un-nouveau-monde/templates</argument>
     </service>
     <service id="maker.autoloader_finder" class="Symfony\Bundle\MakerBundle\Util\ComposerAutoloaderFinder">
       <argument>App</argument>
@@ -6262,7 +6406,7 @@
     </service>
     <service id="maker.maker.make_migration" class="Symfony\Bundle\MakerBundle\Maker\MakeMigration">
       <tag name="maker.command"/>
-      <argument>C:\Users\ULTRABOOK DELL\OneDrive - UPEC\Bureau\Snowaddict-symfony\Un_Nouveau_Monde</argument>
+      <argument>/Applications/MAMP/htdocs/un-nouveau-monde</argument>
     </service>
     <service id="maker.maker.make_stimulus_controller" class="Symfony\Bundle\MakerBundle\Maker\MakeStimulusController">
       <tag name="maker.command"/>
@@ -6337,6 +6481,81 @@
     <service id="framework_extra_bundle.argument_name_convertor" class="Sensio\Bundle\FrameworkExtraBundle\Request\ArgumentNameConverter">
       <argument type="service" id="argument_metadata_factory"/>
     </service>
+    <service id="doctrine.fixtures_load_command" class="Doctrine\Bundle\FixturesBundle\Command\LoadDataFixturesDoctrineCommand">
+      <tag name="console.command" command="doctrine:fixtures:load"/>
+      <tag name="container.no_preload"/>
+      <argument type="service" id="doctrine.fixtures.loader"/>
+      <argument type="service" id="doctrine"/>
+      <argument type="collection">
+        <argument key="default" type="service" id="doctrine.fixtures.purger.orm_purger_factory"/>
+      </argument>
+      <call method="setName">
+        <argument>doctrine:fixtures:load</argument>
+      </call>
+    </service>
+    <service id="doctrine.fixtures.loader" class="Doctrine\Bundle\FixturesBundle\Loader\SymfonyFixturesLoader">
+      <argument type="service" id="service_container"/>
+      <call method="addFixtures">
+        <argument type="collection">
+          <argument type="collection">
+            <argument key="fixture" type="service" id="App\DataFixtures\AppFixtures"/>
+            <argument key="groups" type="collection"/>
+          </argument>
+        </argument>
+      </call>
+    </service>
+    <service id="doctrine.fixtures.purger.orm_purger_factory" class="Doctrine\Bundle\FixturesBundle\Purger\ORMPurgerFactory">
+      <tag name="doctrine.fixtures.purger_factory" alias="default"/>
+    </service>
+    <service id="knp_paginator" class="Knp\Component\Pager\Paginator" public="true" lazy="true">
+      <tag name="proxy" interface="Knp\Component\Pager\PaginatorInterface"/>
+      <argument type="service" id="debug.event_dispatcher"/>
+      <argument type="service" id="Knp\Component\Pager\ArgumentAccess\RequestArgumentAccess"/>
+      <call method="setDefaultPaginatorOptions">
+        <argument type="collection">
+          <argument key="pageParameterName">page</argument>
+          <argument key="sortFieldParameterName">sort</argument>
+          <argument key="sortDirectionParameterName">direction</argument>
+          <argument key="filterFieldParameterName">filterField</argument>
+          <argument key="filterValueParameterName">filterValue</argument>
+          <argument key="distinct">true</argument>
+          <argument key="pageOutOfRange">ignore</argument>
+          <argument key="defaultLimit">10</argument>
+        </argument>
+      </call>
+    </service>
+    <service id="Knp\Component\Pager\ArgumentAccess\RequestArgumentAccess" class="Knp\Component\Pager\ArgumentAccess\RequestArgumentAccess">
+      <argument type="service" id="request_stack"/>
+    </service>
+    <service id="knp_paginator.subscriber.paginate" class="Knp\Component\Pager\Event\Subscriber\Paginate\PaginationSubscriber">
+      <tag name="kernel.event_subscriber"/>
+    </service>
+    <service id="knp_paginator.subscriber.sortable" class="Knp\Component\Pager\Event\Subscriber\Sortable\SortableSubscriber">
+      <tag name="kernel.event_subscriber"/>
+    </service>
+    <service id="knp_paginator.subscriber.filtration" class="Knp\Component\Pager\Event\Subscriber\Filtration\FiltrationSubscriber">
+      <tag name="kernel.event_subscriber"/>
+    </service>
+    <service id="knp_paginator.subscriber.sliding_pagination" class="Knp\Bundle\PaginatorBundle\Subscriber\SlidingPaginationSubscriber">
+      <tag name="kernel.event_subscriber"/>
+      <tag name="kernel.event_listener" event="kernel.request" method="onKernelRequest"/>
+      <tag name="container.hot_path"/>
+      <argument type="collection">
+        <argument key="defaultPaginationTemplate">@KnpPaginator/Pagination/bootstrap_v5_pagination.html.twig</argument>
+        <argument key="defaultSortableTemplate">@KnpPaginator/Pagination/sortable_link.html.twig</argument>
+        <argument key="defaultFiltrationTemplate">@KnpPaginator/Pagination/filtration.html.twig</argument>
+        <argument key="defaultPageRange">5</argument>
+        <argument key="defaultPageLimit">null</argument>
+      </argument>
+    </service>
+    <service id="knp_paginator.helper.processor" class="Knp\Bundle\PaginatorBundle\Helper\Processor">
+      <argument type="service" id="router.default"/>
+      <argument type="service" id="translator.data_collector"/>
+    </service>
+    <service id="knp_paginator.twig.extension.pagination" class="Knp\Bundle\PaginatorBundle\Twig\Extension\PaginationExtension">
+      <tag name="twig.extension"/>
+      <argument type="service" id="knp_paginator.helper.processor"/>
+    </service>
     <service id="karser_recaptcha3.host_provider" class="Karser\Recaptcha3Bundle\Services\HostProvider">
       <argument>www.google.com</argument>
     </service>
@@ -6367,27 +6586,6 @@
       <argument type="expression">service('karser_recaptcha3.host_provider').getVerifyUrl()</argument>
     </service>
     <service id="karser_recaptcha3.google.request_method.curl" class="ReCaptcha\RequestMethod\Curl"/>
-    <service id="doctrine.fixtures_load_command" class="Doctrine\Bundle\FixturesBundle\Command\LoadDataFixturesDoctrineCommand">
-      <tag name="console.command" command="doctrine:fixtures:load"/>
-      <tag name="container.no_preload"/>
-      <argument type="service" id="doctrine.fixtures.loader"/>
-      <argument type="service" id="doctrine"/>
-      <argument type="collection">
-        <argument key="default" type="service" id="doctrine.fixtures.purger.orm_purger_factory"/>
-      </argument>
-      <call method="setName">
-        <argument>doctrine:fixtures:load</argument>
-      </call>
-    </service>
-    <service id="doctrine.fixtures.loader" class="Doctrine\Bundle\FixturesBundle\Loader\SymfonyFixturesLoader">
-      <argument type="service" id="service_container"/>
-      <call method="addFixtures">
-        <argument type="collection"/>
-      </call>
-    </service>
-    <service id="doctrine.fixtures.purger.orm_purger_factory" class="Doctrine\Bundle\FixturesBundle\Purger\ORMPurgerFactory">
-      <tag name="doctrine.fixtures.purger_factory" alias="default"/>
-    </service>
     <service id=".instanceof.Symfony\Contracts\Service\ServiceSubscriberInterface.0.App\Controller\AboutController" class="App\Controller\AboutController" autowire="true" abstract="true"/>
     <service id=".instanceof.Symfony\Bundle\FrameworkBundle\Controller\AbstractController.0.App\Controller\AboutController" class="App\Controller\AboutController" autowire="true" abstract="true"/>
     <service id=".abstract.instanceof.App\Controller\AboutController" class="App\Controller\AboutController" autowire="true" autoconfigure="true" abstract="true"/>
@@ -6400,9 +6598,15 @@
     <service id=".instanceof.Symfony\Contracts\Service\ServiceSubscriberInterface.0.App\Controller\InscriptionController" class="App\Controller\InscriptionController" autowire="true" abstract="true"/>
     <service id=".instanceof.Symfony\Bundle\FrameworkBundle\Controller\AbstractController.0.App\Controller\InscriptionController" class="App\Controller\InscriptionController" autowire="true" abstract="true"/>
     <service id=".abstract.instanceof.App\Controller\InscriptionController" class="App\Controller\InscriptionController" autowire="true" autoconfigure="true" abstract="true"/>
+    <service id=".instanceof.Symfony\Contracts\Service\ServiceSubscriberInterface.0.App\Controller\ManagerController" class="App\Controller\ManagerController" autowire="true" abstract="true"/>
+    <service id=".instanceof.Symfony\Bundle\FrameworkBundle\Controller\AbstractController.0.App\Controller\ManagerController" class="App\Controller\ManagerController" autowire="true" abstract="true"/>
+    <service id=".abstract.instanceof.App\Controller\ManagerController" class="App\Controller\ManagerController" autowire="true" autoconfigure="true" abstract="true"/>
     <service id=".instanceof.Symfony\Contracts\Service\ServiceSubscriberInterface.0.App\Controller\PartnersController" class="App\Controller\PartnersController" autowire="true" abstract="true"/>
     <service id=".instanceof.Symfony\Bundle\FrameworkBundle\Controller\AbstractController.0.App\Controller\PartnersController" class="App\Controller\PartnersController" autowire="true" abstract="true"/>
     <service id=".abstract.instanceof.App\Controller\PartnersController" class="App\Controller\PartnersController" autowire="true" autoconfigure="true" abstract="true"/>
+    <service id=".instanceof.Symfony\Contracts\Service\ServiceSubscriberInterface.0.App\Controller\PlayerController" class="App\Controller\PlayerController" autowire="true" abstract="true"/>
+    <service id=".instanceof.Symfony\Bundle\FrameworkBundle\Controller\AbstractController.0.App\Controller\PlayerController" class="App\Controller\PlayerController" autowire="true" abstract="true"/>
+    <service id=".abstract.instanceof.App\Controller\PlayerController" class="App\Controller\PlayerController" autowire="true" autoconfigure="true" abstract="true"/>
     <service id=".instanceof.Symfony\Contracts\Service\ServiceSubscriberInterface.0.App\Controller\PreLoginController" class="App\Controller\PreLoginController" autowire="true" abstract="true"/>
     <service id=".instanceof.Symfony\Bundle\FrameworkBundle\Controller\AbstractController.0.App\Controller\PreLoginController" class="App\Controller\PreLoginController" autowire="true" abstract="true"/>
     <service id=".abstract.instanceof.App\Controller\PreLoginController" class="App\Controller\PreLoginController" autowire="true" autoconfigure="true" abstract="true"/>
@@ -6412,8 +6616,12 @@
     <service id=".instanceof.Symfony\Contracts\Service\ServiceSubscriberInterface.0.App\Controller\UserController" class="App\Controller\UserController" autowire="true" abstract="true"/>
     <service id=".instanceof.Symfony\Bundle\FrameworkBundle\Controller\AbstractController.0.App\Controller\UserController" class="App\Controller\UserController" autowire="true" abstract="true"/>
     <service id=".abstract.instanceof.App\Controller\UserController" class="App\Controller\UserController" autowire="true" autoconfigure="true" abstract="true"/>
+    <service id=".instanceof.Doctrine\Bundle\FixturesBundle\ORMFixtureInterface.0.App\DataFixtures\AppFixtures" class="App\DataFixtures\AppFixtures" autowire="true" abstract="true"/>
+    <service id=".abstract.instanceof.App\DataFixtures\AppFixtures" class="App\DataFixtures\AppFixtures" autowire="true" autoconfigure="true" abstract="true"/>
     <service id=".instanceof.Symfony\Component\Form\FormTypeInterface.0.App\Form\ContactType" class="App\Form\ContactType" autowire="true" abstract="true"/>
     <service id=".abstract.instanceof.App\Form\ContactType" class="App\Form\ContactType" autowire="true" autoconfigure="true" abstract="true"/>
+    <service id=".instanceof.Symfony\Component\Form\FormTypeInterface.0.App\Form\FilmType" class="App\Form\FilmType" autowire="true" abstract="true"/>
+    <service id=".abstract.instanceof.App\Form\FilmType" class="App\Form\FilmType" autowire="true" autoconfigure="true" abstract="true"/>
     <service id=".instanceof.Symfony\Component\Form\FormTypeInterface.0.App\Form\InscriptionType" class="App\Form\InscriptionType" autowire="true" abstract="true"/>
     <service id=".abstract.instanceof.App\Form\InscriptionType" class="App\Form\InscriptionType" autowire="true" autoconfigure="true" abstract="true"/>
     <service id=".instanceof.Symfony\Component\Form\FormTypeInterface.0.App\Form\UserPasswordType" class="App\Form\UserPasswordType" autowire="true" abstract="true"/>
@@ -6795,6 +7003,32 @@
         <argument key="usersRepository" type="service_closure" id="App\Repository\UserRepository"/>
       </argument>
     </service>
+    <service id=".service_locator.4O6N07v" class="Symfony\Component\DependencyInjection\ServiceLocator">
+      <tag name="container.service_locator"/>
+      <argument type="collection">
+        <argument key="paginator" type="service_closure" id="knp_paginator"/>
+        <argument key="repository" type="service_closure" id="App\Repository\FilmRepository"/>
+      </argument>
+    </service>
+    <service id=".service_locator.V71r_w4" class="Symfony\Component\DependencyInjection\ServiceLocator">
+      <tag name="container.service_locator"/>
+      <argument type="collection">
+        <argument key="manager" type="service_closure" id="doctrine.orm.default_entity_manager"/>
+      </argument>
+    </service>
+    <service id=".service_locator.Qw6utIN" class="Symfony\Component\DependencyInjection\ServiceLocator">
+      <tag name="container.service_locator"/>
+      <argument type="collection">
+        <argument key="film" type="service_closure" id=".errored..service_locator.Qw6utIN.App\Entity\Film"/>
+        <argument key="manager" type="service_closure" id="doctrine.orm.default_entity_manager"/>
+      </argument>
+    </service>
+    <service id=".service_locator.P7oU2Zl" class="Symfony\Component\DependencyInjection\ServiceLocator">
+      <tag name="container.service_locator"/>
+      <argument type="collection">
+        <argument key="filmRepository" type="service_closure" id="App\Repository\FilmRepository"/>
+      </argument>
+    </service>
     <service id=".service_locator.rSTd.nA" class="Symfony\Component\DependencyInjection\ServiceLocator">
       <tag name="container.service_locator"/>
       <argument type="collection">
@@ -6817,12 +7051,17 @@
         <argument key="user" type="service_closure" id=".errored..service_locator.cELnjUu.App\Entity\User"/>
       </argument>
     </service>
-    <service id=".service_locator.2aDiA.y" class="Symfony\Component\DependencyInjection\ServiceLocator">
+    <service id=".service_locator.hKScwL4" class="Symfony\Component\DependencyInjection\ServiceLocator">
       <tag name="container.service_locator"/>
       <argument type="collection">
         <argument key="App\Controller\ContactController::contact" type="service_closure" id=".service_locator.d1ey3el"/>
         <argument key="App\Controller\InscriptionController::create" type="service_closure" id=".service_locator.B46.13k"/>
         <argument key="App\Controller\InscriptionController::verifyUser" type="service_closure" id=".service_locator.yoflbtf"/>
+        <argument key="App\Controller\ManagerController::delete" type="service_closure" id=".service_locator.Qw6utIN"/>
+        <argument key="App\Controller\ManagerController::edit" type="service_closure" id=".service_locator.Qw6utIN"/>
+        <argument key="App\Controller\ManagerController::index" type="service_closure" id=".service_locator.4O6N07v"/>
+        <argument key="App\Controller\ManagerController::new" type="service_closure" id=".service_locator.V71r_w4"/>
+        <argument key="App\Controller\PlayerController::index" type="service_closure" id=".service_locator.P7oU2Zl"/>
         <argument key="App\Controller\SecurityController::login" type="service_closure" id=".service_locator.rSTd.nA"/>
         <argument key="App\Controller\UserController::edit" type="service_closure" id=".service_locator.otSeFVa"/>
         <argument key="App\Controller\UserController::editPassword" type="service_closure" id=".service_locator.cELnjUu"/>
@@ -6833,6 +7072,11 @@
         <argument key="App\Controller\ContactController:contact" type="service_closure" id=".service_locator.d1ey3el"/>
         <argument key="App\Controller\InscriptionController:create" type="service_closure" id=".service_locator.B46.13k"/>
         <argument key="App\Controller\InscriptionController:verifyUser" type="service_closure" id=".service_locator.yoflbtf"/>
+        <argument key="App\Controller\ManagerController:delete" type="service_closure" id=".service_locator.Qw6utIN"/>
+        <argument key="App\Controller\ManagerController:edit" type="service_closure" id=".service_locator.Qw6utIN"/>
+        <argument key="App\Controller\ManagerController:index" type="service_closure" id=".service_locator.4O6N07v"/>
+        <argument key="App\Controller\ManagerController:new" type="service_closure" id=".service_locator.V71r_w4"/>
+        <argument key="App\Controller\PlayerController:index" type="service_closure" id=".service_locator.P7oU2Zl"/>
         <argument key="App\Controller\SecurityController:login" type="service_closure" id=".service_locator.rSTd.nA"/>
         <argument key="App\Controller\UserController:edit" type="service_closure" id=".service_locator.otSeFVa"/>
         <argument key="App\Controller\UserController:editPassword" type="service_closure" id=".service_locator.cELnjUu"/>
@@ -7012,10 +7256,11 @@
       <argument type="service" id="debug.argument_resolver.not_tagged_controller.inner"/>
       <argument type="service" id="debug.stopwatch"/>
     </service>
-    <service id=".service_locator.U5DqqdM" class="Symfony\Component\DependencyInjection\ServiceLocator">
+    <service id=".service_locator.CiihFkQ" class="Symfony\Component\DependencyInjection\ServiceLocator">
       <tag name="container.service_locator"/>
       <argument type="collection">
         <argument key="App\Form\ContactType" type="service_closure" id="App\Form\ContactType"/>
+        <argument key="App\Form\FilmType" type="service_closure" id="App\Form\FilmType"/>
         <argument key="App\Form\InscriptionType" type="service_closure" id="App\Form\InscriptionType"/>
         <argument key="App\Form\UserPasswordType" type="service_closure" id="App\Form\UserPasswordType"/>
         <argument key="App\Form\UserType" type="service_closure" id="App\Form\UserType"/>
@@ -7410,9 +7655,21 @@
       <argument type="service" id="service_container"/>
       <factory service=".service_locator.CshazM0" method="withContext"/>
     </service>
+    <service id=".service_locator.CshazM0.App\Controller\ManagerController" class="Symfony\Component\DependencyInjection\ServiceLocator">
+      <tag name="container.service_locator_context" id="App\Controller\ManagerController"/>
+      <argument>App\Controller\ManagerController</argument>
+      <argument type="service" id="service_container"/>
+      <factory service=".service_locator.CshazM0" method="withContext"/>
+    </service>
     <service id=".service_locator.CshazM0.App\Controller\PartnersController" class="Symfony\Component\DependencyInjection\ServiceLocator">
       <tag name="container.service_locator_context" id="App\Controller\PartnersController"/>
       <argument>App\Controller\PartnersController</argument>
+      <argument type="service" id="service_container"/>
+      <factory service=".service_locator.CshazM0" method="withContext"/>
+    </service>
+    <service id=".service_locator.CshazM0.App\Controller\PlayerController" class="Symfony\Component\DependencyInjection\ServiceLocator">
+      <tag name="container.service_locator_context" id="App\Controller\PlayerController"/>
+      <argument>App\Controller\PlayerController</argument>
       <argument type="service" id="service_container"/>
       <factory service=".service_locator.CshazM0" method="withContext"/>
     </service>
@@ -7711,12 +7968,12 @@
     <service id="debug.argument_resolver.request.inner" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\RequestValueResolver"/>
     <service id="debug.argument_resolver.session.inner" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\SessionValueResolver"/>
     <service id="debug.argument_resolver.service.inner" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\ServiceValueResolver">
-      <argument type="service" id=".service_locator.2aDiA.y"/>
+      <argument type="service" id=".service_locator.hKScwL4"/>
     </service>
     <service id="debug.argument_resolver.default.inner" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\DefaultValueResolver"/>
     <service id="debug.argument_resolver.variadic.inner" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\VariadicValueResolver"/>
     <service id="debug.argument_resolver.not_tagged_controller.inner" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\NotTaggedControllerValueResolver">
-      <argument type="service" id=".service_locator.2aDiA.y"/>
+      <argument type="service" id=".service_locator.hKScwL4"/>
     </service>
     <service id="debug.traced.messenger.bus.default.inner" class="Symfony\Component\Messenger\MessageBus">
       <argument type="iterator">
@@ -7736,6 +7993,7 @@
       </call>
     </service>
     <service id=".errored..service_locator.y4_Zrx..Symfony\Component\Config\Loader\LoaderInterface" class="Symfony\Component\Config\Loader\LoaderInterface"/>
+    <service id=".errored..service_locator.Qw6utIN.App\Entity\Film" class="App\Entity\Film"/>
     <service id=".errored..service_locator.otSeFVa.App\Entity\User" class="App\Entity\User"/>
     <service id=".errored..service_locator.cELnjUu.App\Entity\User" class="App\Entity\User"/>
     <service id=".console.command.about.lazy" class="Symfony\Component\Console\Command\LazyCommand">
@@ -8025,20 +8283,6 @@
       <argument>false</argument>
       <argument type="service_closure" id="console.command.mailer_test"/>
     </service>
-    <service id=".var_dumper.command.server_dump.lazy" class="Symfony\Component\Console\Command\LazyCommand">
-      <argument>server:dump</argument>
-      <argument type="collection"/>
-      <argument>Start a dump server that collects and displays dumps in a single place</argument>
-      <argument>false</argument>
-      <argument type="service_closure" id="var_dumper.command.server_dump"/>
-    </service>
-    <service id=".monolog.command.server_log.lazy" class="Symfony\Component\Console\Command\LazyCommand">
-      <argument>server:log</argument>
-      <argument type="collection"/>
-      <argument>Start a log server that displays logs in real time</argument>
-      <argument>false</argument>
-      <argument type="service_closure" id="monolog.command.server_log"/>
-    </service>
     <service id=".twig.command.debug.lazy" class="Symfony\Component\Console\Command\LazyCommand">
       <argument>debug:twig</argument>
       <argument type="collection"/>
@@ -8052,6 +8296,20 @@
       <argument>Lint a Twig template and outputs encountered errors</argument>
       <argument>false</argument>
       <argument type="service_closure" id="twig.command.lint"/>
+    </service>
+    <service id=".var_dumper.command.server_dump.lazy" class="Symfony\Component\Console\Command\LazyCommand">
+      <argument>server:dump</argument>
+      <argument type="collection"/>
+      <argument>Start a dump server that collects and displays dumps in a single place</argument>
+      <argument>false</argument>
+      <argument type="service_closure" id="var_dumper.command.server_dump"/>
+    </service>
+    <service id=".monolog.command.server_log.lazy" class="Symfony\Component\Console\Command\LazyCommand">
+      <argument>server:log</argument>
+      <argument type="collection"/>
+      <argument>Start a log server that displays logs in real time</argument>
+      <argument>false</argument>
+      <argument type="service_closure" id="monolog.command.server_log"/>
     </service>
     <service id=".security.command.debug_firewall.lazy" class="Symfony\Component\Console\Command\LazyCommand">
       <argument>debug:firewall</argument>
@@ -8233,7 +8491,7 @@
     </service>
     <service id="console.command_loader" class="Symfony\Component\Console\CommandLoader\ContainerCommandLoader" public="true">
       <tag name="container.no_preload"/>
-      <argument type="service" id=".service_locator._b1RDyz"/>
+      <argument type="service" id=".service_locator.cut5cTT"/>
       <argument type="collection">
         <argument key="about">console.command.about</argument>
         <argument key="assets:install">console.command.assets_install</argument>
@@ -8308,10 +8566,10 @@
         <argument key="doctrine:migrations:status">doctrine_migrations.status_command</argument>
         <argument key="doctrine:migrations:up-to-date">doctrine_migrations.up_to_date_command</argument>
         <argument key="doctrine:migrations:version">doctrine_migrations.version_command</argument>
-        <argument key="server:dump">var_dumper.command.server_dump</argument>
-        <argument key="server:log">monolog.command.server_log</argument>
         <argument key="debug:twig">twig.command.debug</argument>
         <argument key="lint:twig">twig.command.lint</argument>
+        <argument key="server:dump">var_dumper.command.server_dump</argument>
+        <argument key="server:log">monolog.command.server_log</argument>
         <argument key="debug:firewall">security.command.debug_firewall</argument>
         <argument key="security:hash-password">security.command.user_password_hash</argument>
         <argument key="doctrine:fixtures:load">doctrine.fixtures_load_command</argument>
@@ -8342,7 +8600,7 @@
         <argument key="make:stimulus-controller">maker.auto_command.make_stimulus_controller</argument>
       </argument>
     </service>
-    <service id=".service_locator._b1RDyz" class="Symfony\Component\DependencyInjection\ServiceLocator">
+    <service id=".service_locator.cut5cTT" class="Symfony\Component\DependencyInjection\ServiceLocator">
       <tag name="container.service_locator"/>
       <argument type="collection">
         <argument key="console.command.about" type="service_closure" id=".console.command.about.lazy"/>
@@ -8418,10 +8676,10 @@
         <argument key="doctrine_migrations.status_command" type="service_closure" id="doctrine_migrations.status_command"/>
         <argument key="doctrine_migrations.up_to_date_command" type="service_closure" id="doctrine_migrations.up_to_date_command"/>
         <argument key="doctrine_migrations.version_command" type="service_closure" id="doctrine_migrations.version_command"/>
-        <argument key="var_dumper.command.server_dump" type="service_closure" id=".var_dumper.command.server_dump.lazy"/>
-        <argument key="monolog.command.server_log" type="service_closure" id=".monolog.command.server_log.lazy"/>
         <argument key="twig.command.debug" type="service_closure" id=".twig.command.debug.lazy"/>
         <argument key="twig.command.lint" type="service_closure" id=".twig.command.lint.lazy"/>
+        <argument key="var_dumper.command.server_dump" type="service_closure" id=".var_dumper.command.server_dump.lazy"/>
+        <argument key="monolog.command.server_log" type="service_closure" id=".monolog.command.server_log.lazy"/>
         <argument key="security.command.debug_firewall" type="service_closure" id=".security.command.debug_firewall.lazy"/>
         <argument key="security.command.user_password_hash" type="service_closure" id=".security.command.user_password_hash.lazy"/>
         <argument key="doctrine.fixtures_load_command" type="service_closure" id="doctrine.fixtures_load_command"/>
@@ -8451,86 +8709,86 @@
       </argument>
     </service>
     <service id="cache.app.recorder_inner" class="Symfony\Component\Cache\Adapter\FilesystemAdapter">
-      <argument>Q1P4c86b5h</argument>
+      <argument>0RivXZprbS</argument>
       <argument>0</argument>
-      <argument>C:\Users\ULTRABOOK DELL\OneDrive - UPEC\Bureau\Snowaddict-symfony\Un_Nouveau_Monde\var\cache\dev/pools/app</argument>
+      <argument>/Applications/MAMP/htdocs/un-nouveau-monde/var/cache/dev/pools/app</argument>
       <argument type="service" id="cache.default_marshaller" on-invalid="ignore"/>
       <call method="setLogger">
         <argument type="service" id="monolog.logger.cache" on-invalid="ignore"/>
       </call>
     </service>
     <service id="cache.system.recorder_inner" class="Symfony\Component\Cache\Adapter\AdapterInterface">
-      <argument>eFEbzblahB</argument>
+      <argument>8tg5k8aRHj</argument>
       <argument>0</argument>
       <argument>%container.build_id%</argument>
-      <argument>C:\Users\ULTRABOOK DELL\OneDrive - UPEC\Bureau\Snowaddict-symfony\Un_Nouveau_Monde\var\cache\dev/pools/system</argument>
+      <argument>/Applications/MAMP/htdocs/un-nouveau-monde/var/cache/dev/pools/system</argument>
       <argument type="service" id="monolog.logger.cache" on-invalid="ignore"/>
       <factory class="Symfony\Component\Cache\Adapter\AbstractAdapter" method="createSystemCache"/>
     </service>
     <service id="cache.validator.recorder_inner" class="Symfony\Component\Cache\Adapter\AdapterInterface">
-      <argument>Rm0dCq6Zhr</argument>
+      <argument>zIkstn-GhO</argument>
       <argument>0</argument>
       <argument>%container.build_id%</argument>
-      <argument>C:\Users\ULTRABOOK DELL\OneDrive - UPEC\Bureau\Snowaddict-symfony\Un_Nouveau_Monde\var\cache\dev/pools/system</argument>
+      <argument>/Applications/MAMP/htdocs/un-nouveau-monde/var/cache/dev/pools/system</argument>
       <argument type="service" id="monolog.logger.cache" on-invalid="ignore"/>
       <factory class="Symfony\Component\Cache\Adapter\AbstractAdapter" method="createSystemCache"/>
     </service>
     <service id="cache.serializer.recorder_inner" class="Symfony\Component\Cache\Adapter\AdapterInterface">
-      <argument>GPuxre3oJJ</argument>
+      <argument>oY6Alox3Qs</argument>
       <argument>0</argument>
       <argument>%container.build_id%</argument>
-      <argument>C:\Users\ULTRABOOK DELL\OneDrive - UPEC\Bureau\Snowaddict-symfony\Un_Nouveau_Monde\var\cache\dev/pools/system</argument>
+      <argument>/Applications/MAMP/htdocs/un-nouveau-monde/var/cache/dev/pools/system</argument>
       <argument type="service" id="monolog.logger.cache" on-invalid="ignore"/>
       <factory class="Symfony\Component\Cache\Adapter\AbstractAdapter" method="createSystemCache"/>
     </service>
     <service id="cache.annotations.recorder_inner" class="Symfony\Component\Cache\Adapter\AdapterInterface">
-      <argument>J9L-jDnFBC</argument>
+      <argument>80YJEeNF2d</argument>
       <argument>0</argument>
       <argument>%container.build_id%</argument>
-      <argument>C:\Users\ULTRABOOK DELL\OneDrive - UPEC\Bureau\Snowaddict-symfony\Un_Nouveau_Monde\var\cache\dev/pools/system</argument>
+      <argument>/Applications/MAMP/htdocs/un-nouveau-monde/var/cache/dev/pools/system</argument>
       <argument type="service" id="monolog.logger.cache" on-invalid="ignore"/>
       <factory class="Symfony\Component\Cache\Adapter\AbstractAdapter" method="createSystemCache"/>
     </service>
     <service id="cache.property_info.recorder_inner" class="Symfony\Component\Cache\Adapter\AdapterInterface">
-      <argument>c2B4euVlfg</argument>
+      <argument>4fq30+wLIO</argument>
       <argument>0</argument>
       <argument>%container.build_id%</argument>
-      <argument>C:\Users\ULTRABOOK DELL\OneDrive - UPEC\Bureau\Snowaddict-symfony\Un_Nouveau_Monde\var\cache\dev/pools/system</argument>
+      <argument>/Applications/MAMP/htdocs/un-nouveau-monde/var/cache/dev/pools/system</argument>
       <argument type="service" id="monolog.logger.cache" on-invalid="ignore"/>
       <factory class="Symfony\Component\Cache\Adapter\AbstractAdapter" method="createSystemCache"/>
     </service>
     <service id="cache.messenger.restart_workers_signal.recorder_inner" class="Symfony\Component\Cache\Adapter\FilesystemAdapter">
-      <argument>zbqELaiUOj</argument>
+      <argument>gCDK8YSrPG</argument>
       <argument>0</argument>
-      <argument>C:\Users\ULTRABOOK DELL\OneDrive - UPEC\Bureau\Snowaddict-symfony\Un_Nouveau_Monde\var\cache\dev/pools/app</argument>
+      <argument>/Applications/MAMP/htdocs/un-nouveau-monde/var/cache/dev/pools/app</argument>
       <argument type="service" id="cache.default_marshaller" on-invalid="ignore"/>
       <call method="setLogger">
         <argument type="service" id="monolog.logger.cache" on-invalid="ignore"/>
       </call>
     </service>
     <service id="cache.validator_expression_language.recorder_inner" class="Symfony\Component\Cache\Adapter\AdapterInterface">
-      <argument>8DkOT+n9AB</argument>
+      <argument>MbbsX7zOUb</argument>
       <argument>0</argument>
       <argument>%container.build_id%</argument>
-      <argument>C:\Users\ULTRABOOK DELL\OneDrive - UPEC\Bureau\Snowaddict-symfony\Un_Nouveau_Monde\var\cache\dev/pools/system</argument>
+      <argument>/Applications/MAMP/htdocs/un-nouveau-monde/var/cache/dev/pools/system</argument>
       <argument type="service" id="monolog.logger.cache" on-invalid="ignore"/>
       <factory class="Symfony\Component\Cache\Adapter\AbstractAdapter" method="createSystemCache"/>
     </service>
     <service id="cache.doctrine.orm.default.result.recorder_inner" class="Symfony\Component\Cache\Adapter\ArrayAdapter"/>
     <service id="cache.doctrine.orm.default.query.recorder_inner" class="Symfony\Component\Cache\Adapter\ArrayAdapter"/>
     <service id="cache.security_expression_language.recorder_inner" class="Symfony\Component\Cache\Adapter\AdapterInterface">
-      <argument>Z7xUF0VRxK</argument>
+      <argument>2cjdICUmwR</argument>
       <argument>0</argument>
       <argument>%container.build_id%</argument>
-      <argument>C:\Users\ULTRABOOK DELL\OneDrive - UPEC\Bureau\Snowaddict-symfony\Un_Nouveau_Monde\var\cache\dev/pools/system</argument>
+      <argument>/Applications/MAMP/htdocs/un-nouveau-monde/var/cache/dev/pools/system</argument>
       <argument type="service" id="monolog.logger.cache" on-invalid="ignore"/>
       <factory class="Symfony\Component\Cache\Adapter\AbstractAdapter" method="createSystemCache"/>
     </service>
     <service id="cache.security_is_granted_attribute_expression_language.recorder_inner" class="Symfony\Component\Cache\Adapter\AdapterInterface">
-      <argument>EbQ9NY3esi</argument>
+      <argument>0pHjuw8jgH</argument>
       <argument>0</argument>
       <argument>%container.build_id%</argument>
-      <argument>C:\Users\ULTRABOOK DELL\OneDrive - UPEC\Bureau\Snowaddict-symfony\Un_Nouveau_Monde\var\cache\dev/pools/system</argument>
+      <argument>/Applications/MAMP/htdocs/un-nouveau-monde/var/cache/dev/pools/system</argument>
       <argument type="service" id="monolog.logger.cache" on-invalid="ignore"/>
       <factory class="Symfony\Component\Cache\Adapter\AbstractAdapter" method="createSystemCache"/>
     </service>
@@ -8683,11 +8941,13 @@
     <service id="Psr\Log\LoggerInterface" alias="monolog.logger"/>
     <service id="sensio_framework_extra.converter.doctrine.orm.expression_language" alias="sensio_framework_extra.converter.doctrine.orm.expression_language.default"/>
     <service id="sensio_framework_extra.security.expression_language" alias="sensio_framework_extra.security.expression_language.default"/>
+    <service id="Knp\Component\Pager\PaginatorInterface" alias="knp_paginator"/>
+    <service id="Knp\Component\Pager\ArgumentAccess\ArgumentAccessInterface" alias="Knp\Component\Pager\ArgumentAccess\RequestArgumentAccess"/>
     <service id="Karser\Recaptcha3Bundle\Validator\Constraints\Recaptcha3Validator" alias="karser_recaptcha3.validator"/>
     <service id="karser_recaptcha3.google.request_method" alias="karser_recaptcha3.google.request_method.curl_post"/>
     <service id="container.env_var_processors_locator" alias=".service_locator.7nzbL4K" public="true"/>
     <service id="twig.loader.filesystem" alias="twig.loader.native_filesystem"/>
-    <service id="argument_resolver.controller_locator" alias=".service_locator.2aDiA.y"/>
+    <service id="argument_resolver.controller_locator" alias=".service_locator.hKScwL4"/>
     <service id="doctrine.id_generator_locator" alias=".service_locator.KLVvNIq"/>
     <service id="twig.loader" alias="twig.loader.native_filesystem"/>
     <service id="Psr\Log\LoggerInterface $requestLogger" alias="monolog.logger.request"/>
@@ -8710,10 +8970,12 @@
     <service id=".service_locator.o.uf2zi" alias=".service_locator.7nzbL4K"/>
     <service id=".service_locator.pXY0gVg" alias=".service_locator.B46.13k"/>
     <service id=".service_locator.900uUd7" alias=".service_locator.yoflbtf"/>
+    <service id=".service_locator.zpGLAJb" alias=".service_locator.4O6N07v"/>
+    <service id=".service_locator.dbzJJNj" alias=".service_locator.Qw6utIN"/>
     <service id=".service_locator.2AheOfr" alias=".service_locator.cELnjUu"/>
-    <service id=".service_locator.Mi3UsMQ" alias=".service_locator.2aDiA.y"/>
+    <service id=".service_locator.a6lrnKF" alias=".service_locator.hKScwL4"/>
     <service id=".service_locator.sZJMMrU" alias=".service_locator.pSux3IH"/>
-    <service id=".service_locator.WjkfF1j" alias=".service_locator.U5DqqdM"/>
+    <service id=".service_locator.wCtCpoC" alias=".service_locator.CiihFkQ"/>
     <service id=".service_locator.XW18Svm" alias=".service_locator.TcKhdzh"/>
     <service id=".service_locator.O24_MAy" alias=".service_locator.yY.p4P7"/>
     <service id=".service_locator.VZoQk0z" alias=".service_locator.CshazM0"/>
@@ -8725,8 +8987,8 @@
     <service id="translator.data_collector.inner" alias="translator.default"/>
     <service id="serializer" alias="debug.serializer"/>
     <service id="doctrine.migrations.migrations_factory" alias="doctrine.migrations.container_aware_migrations_factory"/>
-    <service id="var_dumper.cli_dumper" alias="var_dumper.contextualized_cli_dumper"/>
     <service id="twig.error_renderer.html.inner" alias="error_handler.error_renderer.html"/>
+    <service id="var_dumper.cli_dumper" alias="var_dumper.contextualized_cli_dumper"/>
     <service id="security.access.decision_manager" alias="debug.security.access.decision_manager"/>
     <service id="security.firewall.authenticator.main" alias="debug.security.firewall.authenticator.main"/>
     <service id="serializer.normalizer.constraint_violation_list" alias="debug.serializer.normalizer.constraint_violation_list"/>
@@ -8765,6 +9027,10 @@
     <service id=".service_locator.wmIqjX." alias=".service_locator.d1ey3el"/>
     <service id=".service_locator.AbOwiO3" alias=".service_locator.B46.13k"/>
     <service id=".service_locator.lgO4r79" alias=".service_locator.yoflbtf"/>
+    <service id=".service_locator.g6z6K_W" alias=".service_locator.4O6N07v"/>
+    <service id=".service_locator.6k5RJBU" alias=".service_locator.V71r_w4"/>
+    <service id=".service_locator.dR92X1z" alias=".service_locator.Qw6utIN"/>
+    <service id=".service_locator.LLInSK6" alias=".service_locator.P7oU2Zl"/>
     <service id=".service_locator.7NIAq8D" alias=".service_locator.rSTd.nA"/>
     <service id=".service_locator.WSlAhED" alias=".service_locator.otSeFVa"/>
     <service id=".service_locator.QfGTkjT" alias=".service_locator.cELnjUu"/>

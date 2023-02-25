@@ -12,7 +12,7 @@ class TemplatingConfig
 {
     private $controllerPatterns;
     private $_usedProperties = [];
-    
+
     /**
      * @param ParamConfigurator|list<ParamConfigurator|mixed> $value
      *
@@ -22,10 +22,10 @@ class TemplatingConfig
     {
         $this->_usedProperties['controllerPatterns'] = true;
         $this->controllerPatterns = $value;
-    
+
         return $this;
     }
-    
+
     public function __construct(array $value = [])
     {
         if (array_key_exists('controller_patterns', $value)) {
@@ -33,19 +33,19 @@ class TemplatingConfig
             $this->controllerPatterns = $value['controller_patterns'];
             unset($value['controller_patterns']);
         }
-    
+
         if ([] !== $value) {
             throw new InvalidConfigurationException(sprintf('The following keys are not supported by "%s": ', __CLASS__).implode(', ', array_keys($value)));
         }
     }
-    
+
     public function toArray(): array
     {
         $output = [];
         if (isset($this->_usedProperties['controllerPatterns'])) {
             $output['controller_patterns'] = $this->controllerPatterns;
         }
-    
+
         return $output;
     }
 

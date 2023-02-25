@@ -39,11 +39,11 @@ class UserController extends AbstractController
                 $entityManager->persist($user);
                 $entityManager->flush();
 
-                $this->addFlash('success', 'Modification réussi ');
+                $this->addFlash('success', 'Modification réussie !');
 
                 return $this->redirectToRoute('home.index');
             } else {
-                $this->addFlash('warning', 'Le mot de passe renseigné est incorrect ');
+                $this->addFlash('warning', 'Le mot de passe renseigné est incorrect.');
             }
 
         }

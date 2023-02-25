@@ -16,9 +16,9 @@ class ComposerStaticInit5fbb095e830f43399197df943bd8ac2b
         'f598d06aa772fa33d905e87be6398fb1' => __DIR__ . '/..' . '/symfony/polyfill-intl-idn/bootstrap.php',
         '6a47392539ca2329373e0d33e1dba053' => __DIR__ . '/..' . '/symfony/polyfill-intl-icu/bootstrap.php',
         '6124b4c8570aa390c21fafd04a26c69f' => __DIR__ . '/..' . '/myclabs/deep-copy/src/DeepCopy/deep_copy.php',
+        'a1105708a18b76903365ca1c4aa61b02' => __DIR__ . '/..' . '/symfony/translation/Resources/functions.php',
         'ec07570ca5a812141189b1fa81503674' => __DIR__ . '/..' . '/phpunit/phpunit/src/Framework/Assert/Functions.php',
         '92c8763cd6170fce6fcfe7e26b4e8c10' => __DIR__ . '/..' . '/symfony/phpunit-bridge/bootstrap.php',
-        'a1105708a18b76903365ca1c4aa61b02' => __DIR__ . '/..' . '/symfony/translation/Resources/functions.php',
     );
 
     public static $prefixLengthsPsr4 = array (
@@ -116,7 +116,6 @@ class ComposerStaticInit5fbb095e830f43399197df943bd8ac2b
             'Psr\\EventDispatcher\\' => 20,
             'Psr\\Container\\' => 14,
             'Psr\\Cache\\' => 10,
-            'ProxyManager\\' => 13,
             'PhpParser\\' => 10,
             'PHPStan\\PhpDocParser\\' => 21,
         ),
@@ -125,12 +124,10 @@ class ComposerStaticInit5fbb095e830f43399197df943bd8ac2b
             'Monolog\\' => 8,
             'Masterminds\\' => 12,
         ),
-        'L' => 
-        array (
-            'Laminas\\Code\\' => 13,
-        ),
         'K' => 
         array (
+            'Knp\\Component\\' => 14,
+            'Knp\\Bundle\\PaginatorBundle\\' => 27,
             'Karser\\Recaptcha3Bundle\\' => 24,
         ),
         'F' => 
@@ -480,10 +477,6 @@ class ComposerStaticInit5fbb095e830f43399197df943bd8ac2b
         array (
             0 => __DIR__ . '/..' . '/psr/cache/src',
         ),
-        'ProxyManager\\' => 
-        array (
-            0 => __DIR__ . '/..' . '/friendsofphp/proxy-manager-lts/src/ProxyManager',
-        ),
         'PhpParser\\' => 
         array (
             0 => __DIR__ . '/..' . '/nikic/php-parser/lib/PhpParser',
@@ -500,9 +493,13 @@ class ComposerStaticInit5fbb095e830f43399197df943bd8ac2b
         array (
             0 => __DIR__ . '/..' . '/masterminds/html5/src',
         ),
-        'Laminas\\Code\\' => 
+        'Knp\\Component\\' => 
         array (
-            0 => __DIR__ . '/..' . '/laminas/laminas-code/src',
+            0 => __DIR__ . '/..' . '/knplabs/knp-components/src/Knp/Component',
+        ),
+        'Knp\\Bundle\\PaginatorBundle\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/knplabs/knp-paginator-bundle/src',
         ),
         'Karser\\Recaptcha3Bundle\\' => 
         array (

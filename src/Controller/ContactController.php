@@ -22,35 +22,26 @@ class ContactController extends AbstractController {
     public function contact(Request $request, ContactFormHandler $contactFormHandler, MailerInterface $mailer) : Response
     {
         $contact = new Contact();
-
         if ($this->getUser()) {
             $contact->setFullName($this->getUser()->getFullName())
-                ->setEmail($this->getUser()-getEmail());
+                ->setEmail($this->getUser()->getEmail());
         }
-
         $form = $this->createForm(ContactType::class, $contact);
-
         $form->handleRequest($request);
-
         if ($form->isSubmitted() && $form->isValid()) {
             $contactFormHandler->handleForm($contact);
-
             $email = (new TemplatedEmail())
                 ->from($contact->getEmail())
-                ->to('blabla@blabla.com')
+                ->to('noreply@un-nouveau-monde.fr')
                 ->subject($contact->getSubject())
                 ->htmlTemplate('contact.html.twig')
                 ->context([
                     'contact' => $contact
                 ]);
-
             $mailer->send($email);
-
             $this->addFlash('success', 'Votre demande a été envoyée avec succès.');
-
             return $this->redirectToRoute('app_contact');
         }
-
         return $this->render('contact.html.twig', [
             'form' => $form->createView(),
         ]);

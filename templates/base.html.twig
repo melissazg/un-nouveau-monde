@@ -2,7 +2,7 @@
 <html>
     <head>
         <meta charset="UTF-8">
-        <title>{% block title %}Un Nouveau Monde{% endblock %}</title>
+        <title>{% block title %} Un Nouveau Monde {% endblock %}</title>
 
         {% block stylesheets %}
             {{ encore_entry_link_tags('app') }}
@@ -10,7 +10,6 @@
             <link rel="stylesheet" href="https://bootswatch.com/5/quartz/_variables.scss">
 
             <script src="https://kit.fontawesome.com/9a2ea947a1.js" crossorigin="anonymous"></script>
-
         {% endblock %}
 
         {% block javascripts %}
@@ -21,18 +20,18 @@
         {% block header %}
             {% include "_header.html.twig" %}
         {% endblock %}
+
         {% block body %}
             {% if app.user and app.user.isVerified == false %}
                 <div class="alert alert-warning alert-dismissible" role="alert">
                     <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
                     <div class="alert-message">
-                        <strong>Votre compte n'est pas activé</strong>, <a href="{{ path('resend_verif') }}">renvoyer le lien d'activation</a>
+                        <strong>Votre compte n'est pas activé</strong>, <a href="{{ path('resend_verif') }}">renvoyer le lien d'activation</a>.
                     </div>
                 </div>
             {% endif %}
-
-
         {% endblock %}
+
         {% block footer %}
             {% include "footer.html.twig" %}
         {% endblock %}
