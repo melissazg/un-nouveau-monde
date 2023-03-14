@@ -3,7 +3,6 @@
 namespace App\Repository;
 
 use App\Entity\Film;
-use http\Env\Request;
 use Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepository;
 use Doctrine\Persistence\ManagerRegistry;
 
@@ -14,14 +13,12 @@ class SearchRepository extends ServiceEntityRepository
         parent::__construct($registry, Film::class);
     }
 
-    /**
-    public function getSearchFilm(Request $request): array
+    public function getSearchResults(string $query): array
     {
-        return $this->createQueryBuilder('film')
-            ->andWhere('film.name LIKE :search')
-            ->setParameter('search' , $request)
+        return $this->createQueryBuilder('f')
+            ->where('f.name LIKE :query')
+            ->setParameter('query', '%'.$query.'%')
             ->getQuery()
-            ->getArrayResult();
+            ->getResult();
     }
-    */
 }

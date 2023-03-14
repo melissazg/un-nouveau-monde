@@ -2,22 +2,35 @@
 
 namespace App\Controller;
 
+use App\Form\SearchType;
 use App\Repository\SearchRepository;
-use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request;
+use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
-use Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepository;
+
 
 class SearchController extends AbstractController
 {
-    /**
-    #[Route('/catalogue', name: 'app_catalogue')]
-    public function index(SearchRepository $filmRepository, Request $request): Response
+    #[Route('/search', name: 'app_search')]
+    public function search(Request $request, SearchRepository $SearchRepository)
     {
-        return $this->render('catalogue/index.html.twig', [
-            'films' => $filmRepository->getSearchFilm($request),
+        $form = $this->createForm(SearchType::class);
+        $form->handleRequest($request);
+
+        if ($form->isSubmitted() && $form->isValid()) {
+            $query = $form->getData()['query'];
+
+            $search = $SearchRepository->getSearchResults($query);
+
+            return $this->render('search/results.html.twig', [
+                'query' => $query,
+                'films' => $search
+            ]);
+        }
+
+        return $this->render('search/index.html.twig', [
+            'form' => $form->createView()
         ]);
     }
-     */
 }
