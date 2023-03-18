@@ -14,4 +14,11 @@
         <iframe width="640" height="480" src={{iframePath}} scrolling="no" frameborder="0" allowfullscreen="true"></iframe>
     </ul>
 </div>
+
+    <div>
+        {{ form_start(form) }}
+        {% include "comment/index.html.twig" %}
+        {{ form_end(form) }}
+    </div>
+
 {% endblock %}

@@ -14,8 +14,8 @@ class Commentaire
     #[ORM\Column]
     private ?int $id = null;
 
-    #[ORM\Column(type: Types::DATETIME_MUTABLE)]
-    private ?\DateTimeInterface $date = null;
+    #[ORM\Column(type: Types::DATETIME_IMMUTABLE)]
+    private ?\DateTimeImmutable $date = null;
 
     #[ORM\ManyToOne(inversedBy: 'commentaires')]
 
@@ -26,8 +26,16 @@ class Commentaire
     private ?Film $film = null;
 
 
-    #[ORM\JoinColumn(nullable: false)]
+    #[ORM\Column(nullable: false)]
+    private ?string $content = null;
 
+    #[ORM\Column(nullable: true)]
+    private ?int $note = null;
+
+    public function __construct()
+    {
+        $this->date = new \DateTimeImmutable();
+    }
 
 
     public function getId(): ?int
@@ -35,12 +43,12 @@ class Commentaire
         return $this->id;
     }
 
-    public function getDate(): ?\DateTimeInterface
+    public function getDate(): ?\DateTimeImmutable
     {
         return $this->date;
     }
 
-    public function setDate(\DateTimeInterface $date): self
+    public function setDate(\DateTimeImmutable $date): self
     {
         $this->date = $date;
 
@@ -71,5 +79,31 @@ class Commentaire
 
         return $this;
     }
+
+    public function setContent(?string $content): self
+    {
+        $this->content = $content;
+
+        return $this;
+    }
+
+    public function getContent(): ?string
+    {
+        return $this->content;
+    }
+
+    public function getNote(): ?int
+    {
+        return $this->note;
+    }
+
+    public function setNote(?int $note): self
+    {
+        $this->note = $note;
+
+        return $this;
+    }
+
+
 
 }

@@ -26,7 +26,7 @@ return [
     'film.edit' => [['id'], ['_controller' => 'App\\Controller\\ManagerController::edit'], [], [['variable', '/', '[^/]++', 'id', true], ['text', '/manager/edition']], [], [], []],
     'film.delete' => [['id'], ['_controller' => 'App\\Controller\\ManagerController::delete'], [], [['variable', '/', '[^/]++', 'id', true], ['text', '/manager/supprimer']], [], [], []],
     'app_partners' => [[], ['_controller' => 'App\\Controller\\PartnersController::index'], [], [['text', '/partners']], [], [], []],
-    'app_player' => [['title'], ['_controller' => 'App\\Controller\\PlayerController::index'], [], [['variable', '/', '[^/]++', 'title', true], ['text', '/player']], [], [], []],
+    'app_player' => [['id'], ['_controller' => 'App\\Controller\\PlayerController::index'], [], [['variable', '/', '[^/]++', 'id', true], ['text', '/player']], [], [], []],
     'app_pre_login' => [[], ['_controller' => 'App\\Controller\\PreLoginController::index'], [], [['text', '/']], [], [], []],
     'app_login' => [[], ['_controller' => 'App\\Controller\\SecurityController::login'], [], [['text', '/connexion']], [], [], []],
     'app_logout' => [[], ['_controller' => 'App\\Controller\\SecurityController::logout'], [], [['text', '/logout']], [], [], []],

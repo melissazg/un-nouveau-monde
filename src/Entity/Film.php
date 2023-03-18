@@ -42,20 +42,24 @@ class Film
     #[ORM\OneToMany(mappedBy: 'film', targetEntity: Commentaire::class)]
     private Collection $commentaires;
 
-    #[ORM\OneToMany(mappedBy: 'film', targetEntity: Note::class)]
-    private Collection $notes;
-
     #[ORM\Column(length: 255)]
     private ?string $iframePath = null;
 
     #[ORM\Column(type: Types::TEXT, nullable: true)]
     private ?string $imagePath = null;
 
+    #[ORM\Column(nullable: true)]
+    private ?int $notes = null;
+
+    #[ORM\Column(nullable: true)]
+    private ?int $nbNotes = null;
+
 
     public function __construct()
     {
         $this->commentaires = new ArrayCollection();
-        $this->notes = new ArrayCollection();
+        $this->notes = 0;
+        $this->nbNotes = 0;
     }
 
     public function getId(): ?int
@@ -171,6 +175,9 @@ class Film
             // set the owning side to null (unless already changed)
             if ($commentaire->getFilm() === $this) {
                 $commentaire->setFilm(null);
+                $note = $commentaire->getNote();
+                $this->notes -= $note;
+                $this->nbNotes -= 1;
             }
         }
 
@@ -180,31 +187,9 @@ class Film
     /**
      * @return Collection<int, Note>
      */
-    public function getNotes(): Collection
+    public function getNotes(): ?int
     {
         return $this->notes;
-    }
-
-    public function addNote(Note $note): self
-    {
-        if (!$this->notes->contains($note)) {
-            $this->notes->add($note);
-            $note->setFilm($this);
-        }
-
-        return $this;
-    }
-
-    public function removeNote(Note $note): self
-    {
-        if ($this->notes->removeElement($note)) {
-            // set the owning side to null (unless already changed)
-            if ($note->getFilm() === $this) {
-                $note->setFilm(null);
-            }
-        }
-
-        return $this;
     }
 
 
@@ -213,7 +198,7 @@ class Film
         return $this->iframePath;
     }
 
-    public function setIframePath(string $iframePath): self
+    public function setIframePath(string $iframePath): void
     {
         $this->iframePath = $iframePath;
     }
@@ -232,4 +217,26 @@ class Film
 
         return $this;
     }
+
+    public function setNotes(?int $notes): void
+    {
+        $this->notes += $notes;
+
+    }
+
+    public function getNbNotes(): ?int
+    {
+        return $this->nbNotes;
+    }
+
+    public function setNbNotes(): void
+    {
+        $this->nbNotes +=1;
+    }
+
+    public function addNote(int $note){
+        $this->setNotes($note);
+        $this->setNbNotes();
+    }
+
 }

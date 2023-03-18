@@ -66,7 +66,7 @@ return [
         184 => [[['_route' => 'verify_user', '_controller' => 'App\\Controller\\InscriptionController::verifyUser'], ['token'], null, null, false, true, null]],
         220 => [[['_route' => 'film.edit', '_controller' => 'App\\Controller\\ManagerController::edit'], ['id'], ['GET' => 0, 'POST' => 1], null, false, true, null]],
         246 => [[['_route' => 'film.delete', '_controller' => 'App\\Controller\\ManagerController::delete'], ['id'], ['GET' => 0], null, false, true, null]],
-        271 => [[['_route' => 'app_player', '_controller' => 'App\\Controller\\PlayerController::index'], ['title'], null, null, false, true, null]],
+        271 => [[['_route' => 'app_player', '_controller' => 'App\\Controller\\PlayerController::index'], ['id'], ['GET' => 0, 'POST' => 1], null, false, true, null]],
         311 => [[['_route' => 'app_user_edit', '_controller' => 'App\\Controller\\UserController::edit'], ['id'], ['GET' => 0, 'POST' => 1], null, false, true, null]],
         344 => [
             [['_route' => 'app_user_edit_password', '_controller' => 'App\\Controller\\UserController::editPassword'], ['id'], ['GET' => 0, 'POST' => 1], null, false, true, null],
