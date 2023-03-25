@@ -271,3 +271,10 @@ f8fe39,127.0.0.1,POST,http://symfony-project.local/player/51,1679142810,,200
 bbedfb,127.0.0.1,GET,http://symfony-project.local/player/51,1679143148,,200
 fcf8ed,127.0.0.1,GET,http://symfony-project.local/player/51,1679143159,,200
 d06892,127.0.0.1,POST,http://symfony-project.local/player/51,1679143200,,200
+3ebafd,127.0.0.1,GET,http://symfony-project.local/connexion,1679317767,,200
+b7c8da,127.0.0.1,GET,http://symfony-project.local/favicon.ico,1679317774,31ed36,404
+31ed36,127.0.0.1,GET,http://symfony-project.local/favicon.ico,1679317774,,404
+250378,127.0.0.1,POST,http://symfony-project.local/connexion,1679317781,,302
+6d1cf0,127.0.0.1,GET,http://symfony-project.local/home,1679317781,,200
+7a52b5,127.0.0.1,GET,http://symfony-project.local/player/51,1679317790,,200
+7db929,127.0.0.1,POST,http://symfony-project.local/player/51,1679333047,,200
