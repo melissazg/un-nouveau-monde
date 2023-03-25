@@ -278,3 +278,9 @@ b7c8da,127.0.0.1,GET,http://symfony-project.local/favicon.ico,1679317774,31ed36,
 6d1cf0,127.0.0.1,GET,http://symfony-project.local/home,1679317781,,200
 7a52b5,127.0.0.1,GET,http://symfony-project.local/player/51,1679317790,,200
 7db929,127.0.0.1,POST,http://symfony-project.local/player/51,1679333047,,200
+efaf78,127.0.0.1,GET,http://symfony-project.local/connexion,1679760542,,200
+40c2a5,127.0.0.1,GET,http://symfony-project.local/favicon.ico,1679760546,d6d385,404
+d6d385,127.0.0.1,GET,http://symfony-project.local/favicon.ico,1679760546,,404
+1a81d7,127.0.0.1,POST,http://symfony-project.local/connexion,1679760553,,302
+95a5f0,127.0.0.1,GET,http://symfony-project.local/home,1679760553,,200
+a1e569,127.0.0.1,GET,http://symfony-project.local/player/51,1679760560,,200
