@@ -33,4 +33,5 @@ return [
     'app_user_profile' => [[], ['_controller' => 'App\\Controller\\UserController::index'], [], [['text', '/utilisateur/profil']], [], [], []],
     'app_user_edit' => [['id'], ['_controller' => 'App\\Controller\\UserController::edit'], [], [['variable', '/', '[^/]++', 'id', true], ['text', '/utilisateur/edition']], [], [], []],
     'app_user_edit_password' => [['id'], ['_controller' => 'App\\Controller\\UserController::editPassword'], [], [['variable', '/', '[^/]++', 'id', true], ['text', '/utilisateur/edition-mot-de-passe']], [], [], []],
+    'app_catalogue' => [[], ['_controller' => 'App\\Controller\\CatalogueController::index'], [], [['text', '/catalogue']], [], [], []],
 ];

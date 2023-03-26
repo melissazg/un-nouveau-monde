@@ -58,7 +58,10 @@ class __TwigTemplate_0679be544d477e85cdf7acaff20e91d0 extends Template
         echo "\">Accueil<span class=\"visually-hidden\">(current)</span></a>
                 </li>
                 <li class=\"nav-item\">
-                    <a class=\"nav-link\" href=\"#\">Nos films</a>
+                    <a class=\"nav-link\" href=\"";
+        // line 13
+        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_catalogue");
+        echo "\">Nos films</a>
                 </li>
                 <li class=\"nav-item\">
                     <a class=\"nav-link\" href=\"";
@@ -115,7 +118,7 @@ class __TwigTemplate_0679be544d477e85cdf7acaff20e91d0 extends Template
 
     public function getDebugInfo()
     {
-        return array (  89 => 27,  84 => 25,  78 => 22,  72 => 19,  66 => 16,  57 => 10,  47 => 3,  43 => 1,);
+        return array (  92 => 27,  87 => 25,  81 => 22,  75 => 19,  69 => 16,  63 => 13,  57 => 10,  47 => 3,  43 => 1,);
     }
 
     public function getSourceContext()
@@ -132,7 +135,7 @@ class __TwigTemplate_0679be544d477e85cdf7acaff20e91d0 extends Template
                     <a class=\"nav-link active\" href=\"{{ path('home.index') }}\">Accueil<span class=\"visually-hidden\">(current)</span></a>
                 </li>
                 <li class=\"nav-item\">
-                    <a class=\"nav-link\" href=\"#\">Nos films</a>
+                    <a class=\"nav-link\" href=\"{{ path('app_catalogue') }}\">Nos films</a>
                 </li>
                 <li class=\"nav-item\">
                     <a class=\"nav-link\" href=\"{{ path('app_about') }}\">À propos</a>

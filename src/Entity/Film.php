@@ -55,15 +55,14 @@ class Film
     private ?int $nbNotes = null;
 
 
+
+
     public function __construct()
     {
         $this->commentaires = new ArrayCollection();
         $this->notes = 0;
         $this->nbNotes = 0;
     }
-
-    #[ORM\Column(type: Types::TEXT, nullable: true)]
-    private ?string $imagePath = null;
 
     public function getId(): ?int
     {

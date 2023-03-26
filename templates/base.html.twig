@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-<html>
     <head>
         <meta charset="UTF-8">
         <title>{% block title %} Un Nouveau Monde {% endblock %}</title>
@@ -9,22 +8,8 @@
             <link rel="stylesheet" href="https://bootswatch.com/5/quartz/bootstrap.min.css">
             <link rel="stylesheet" href="https://bootswatch.com/5/quartz/_variables.scss">
             <link rel="stylesheet" href="{{ asset('style.css') }}"/>
-<head>
-    <meta charset="UTF-8">
-    <title>{% block title %} Un Nouveau Monde {% endblock %}</title>
-
-    {% block stylesheets %}
-        {{ encore_entry_link_tags('app') }}
-        <link rel="stylesheet" href="https://bootswatch.com/5/quartz/bootstrap.min.css">
-        <link rel="stylesheet" href="https://bootswatch.com/5/quartz/_variables.scss">
-
             <script src="https://kit.fontawesome.com/9a2ea947a1.js" crossorigin="anonymous"></script>
         {% endblock %}
-
-        {% block javascripts %}
-            {{ encore_entry_script_tags('app') }}
-        {% endblock %}
-    </head>
     <body>
         {% block header %}
             {% include "_header.html.twig" %}
@@ -40,9 +25,7 @@
                 </div>
             {% endif %}
         {% endblock %}
-
+    </body>
         {% block footer %}
             {% include "footer.html.twig" %}
         {% endblock %}
-    </body>
-</html>
