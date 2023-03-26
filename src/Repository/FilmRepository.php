@@ -38,16 +38,4 @@ class FilmRepository extends ServiceEntityRepository
             $this->getEntityManager()->flush();
         }
     }
-
-    /**
-     * @return Film[] Returns an array of Film objects
-     */
-    public function getFilm(): array
-    {
-        return $this->createQueryBuilder('film')
-            ->getQuery()
-            ->getArrayResult();
-    }
-
-
 }
