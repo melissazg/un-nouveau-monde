@@ -82,6 +82,6 @@ class __TwigTemplate_1fa1188bd8ca3b01dc16a302b6ad0f28 extends Template
 <p>Bonjour {{ user.firstname }},</p>
 <p>Votre inscription sur le site e-commerce est à valider en cliquant sur le lien ci-dessous :</p>
 <p><a href=\"{{ absolute_url(path('verify_user', {token: token})) }}\">{{ absolute_url(path('verify_user', {token: token})) }}</a></p>
-<p>Ce lien expirera dans 3 heures</p>", "email/register.html.twig", "C:\\laragon\\www\\un-nouveau-monde\\templates\\email\\register.html.twig");
+<p>Ce lien expirera dans 3 heures</p>", "email/register.html.twig", "C:\\Users\\ULTRABOOK DELL\\OneDrive - UPEC\\Bureau\\Snowaddict-symfony\\Un_Nouveau_Monde\\templates\\email\\register.html.twig");
     }
 }

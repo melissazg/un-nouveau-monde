@@ -58,28 +58,28 @@ class __TwigTemplate_d3371159bab1dc7cbd5c7f7e869a1ab0 extends Template
         ";
         // line 7
         $this->displayBlock('stylesheets', $context, $blocks);
-        // line 15
+        // line 14
         echo "
         ";
-        // line 16
+        // line 15
         $this->displayBlock('javascripts', $context, $blocks);
-        // line 19
+        // line 18
         echo "    </head>
     <body>
         ";
-        // line 21
+        // line 20
         $this->displayBlock('header', $context, $blocks);
+        // line 23
+        echo "
+        ";
         // line 24
-        echo "
-        ";
-        // line 25
         $this->displayBlock('body', $context, $blocks);
-        // line 35
+        // line 34
         echo "
         ";
-        // line 36
+        // line 35
         $this->displayBlock('footer', $context, $blocks);
-        // line 39
+        // line 38
         echo "    </body>
 </html>
 ";
@@ -126,10 +126,6 @@ class __TwigTemplate_d3371159bab1dc7cbd5c7f7e869a1ab0 extends Template
         echo "
             <link rel=\"stylesheet\" href=\"https://bootswatch.com/5/quartz/bootstrap.min.css\">
             <link rel=\"stylesheet\" href=\"https://bootswatch.com/5/quartz/_variables.scss\">
-            <link rel=\"stylesheet\" href=\"";
-        // line 11
-        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("style.css"), "html", null, true);
-        echo "\"/>
 
             <script src=\"https://kit.fontawesome.com/9a2ea947a1.js\" crossorigin=\"anonymous\"></script>
         ";
@@ -141,7 +137,7 @@ class __TwigTemplate_d3371159bab1dc7cbd5c7f7e869a1ab0 extends Template
 
     }
 
-    // line 16
+    // line 15
     public function block_javascripts($context, array $blocks = [])
     {
         $macros = $this->macros;
@@ -151,7 +147,7 @@ class __TwigTemplate_d3371159bab1dc7cbd5c7f7e869a1ab0 extends Template
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f->enter($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "javascripts"));
 
-        // line 17
+        // line 16
         echo "            ";
         echo twig_escape_filter($this->env, $this->env->getFunction('encore_entry_script_tags')->getCallable()("app"), "html", null, true);
         echo "
@@ -164,7 +160,7 @@ class __TwigTemplate_d3371159bab1dc7cbd5c7f7e869a1ab0 extends Template
 
     }
 
-    // line 21
+    // line 20
     public function block_header($context, array $blocks = [])
     {
         $macros = $this->macros;
@@ -174,10 +170,10 @@ class __TwigTemplate_d3371159bab1dc7cbd5c7f7e869a1ab0 extends Template
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f->enter($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "header"));
 
-        // line 22
+        // line 21
         echo "            ";
-        $this->loadTemplate("_header.html.twig", "base.html.twig", 22)->display($context);
-        // line 23
+        $this->loadTemplate("_header.html.twig", "base.html.twig", 21)->display($context);
+        // line 22
         echo "        ";
         
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f->leave($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof);
@@ -187,7 +183,7 @@ class __TwigTemplate_d3371159bab1dc7cbd5c7f7e869a1ab0 extends Template
 
     }
 
-    // line 25
+    // line 24
     public function block_body($context, array $blocks = [])
     {
         $macros = $this->macros;
@@ -197,22 +193,22 @@ class __TwigTemplate_d3371159bab1dc7cbd5c7f7e869a1ab0 extends Template
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f->enter($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "body"));
 
-        // line 26
+        // line 25
         echo "            ";
-        if ((twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 26, $this->source); })()), "user", [], "any", false, false, false, 26) && (twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 26, $this->source); })()), "user", [], "any", false, false, false, 26), "isVerified", [], "any", false, false, false, 26) == false))) {
-            // line 27
+        if ((twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 25, $this->source); })()), "user", [], "any", false, false, false, 25) && (twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 25, $this->source); })()), "user", [], "any", false, false, false, 25), "isVerified", [], "any", false, false, false, 25) == false))) {
+            // line 26
             echo "                <div class=\"alert alert-warning alert-dismissible\" role=\"alert\">
                     <button type=\"button\" class=\"btn-close\" data-bs-dismiss=\"alert\" aria-label=\"Close\"></button>
                     <div class=\"alert-message\">
                         <strong>Votre compte n'est pas activé</strong>, <a href=\"";
-            // line 30
+            // line 29
             echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("resend_verif");
             echo "\">renvoyer le lien d'activation</a>.
                     </div>
                 </div>
             ";
         }
-        // line 34
+        // line 33
         echo "        ";
         
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f->leave($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof);
@@ -222,7 +218,7 @@ class __TwigTemplate_d3371159bab1dc7cbd5c7f7e869a1ab0 extends Template
 
     }
 
-    // line 36
+    // line 35
     public function block_footer($context, array $blocks = [])
     {
         $macros = $this->macros;
@@ -232,10 +228,10 @@ class __TwigTemplate_d3371159bab1dc7cbd5c7f7e869a1ab0 extends Template
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f->enter($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "footer"));
 
-        // line 37
+        // line 36
         echo "            ";
-        $this->loadTemplate("footer.html.twig", "base.html.twig", 37)->display($context);
-        // line 38
+        $this->loadTemplate("footer.html.twig", "base.html.twig", 36)->display($context);
+        // line 37
         echo "        ";
         
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f->leave($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof);
@@ -252,7 +248,7 @@ class __TwigTemplate_d3371159bab1dc7cbd5c7f7e869a1ab0 extends Template
 
     public function getDebugInfo()
     {
-        return array (  239 => 38,  236 => 37,  226 => 36,  216 => 34,  209 => 30,  204 => 27,  201 => 26,  191 => 25,  181 => 23,  178 => 22,  168 => 21,  155 => 17,  145 => 16,  131 => 11,  124 => 8,  114 => 7,  95 => 5,  83 => 39,  81 => 36,  78 => 35,  76 => 25,  73 => 24,  71 => 21,  67 => 19,  65 => 16,  62 => 15,  60 => 7,  55 => 5,  49 => 1,);
+        return array (  235 => 37,  232 => 36,  222 => 35,  212 => 33,  205 => 29,  200 => 26,  197 => 25,  187 => 24,  177 => 22,  174 => 21,  164 => 20,  151 => 16,  141 => 15,  124 => 8,  114 => 7,  95 => 5,  83 => 38,  81 => 35,  78 => 34,  76 => 24,  73 => 23,  71 => 20,  67 => 18,  65 => 15,  62 => 14,  60 => 7,  55 => 5,  49 => 1,);
     }
 
     public function getSourceContext()
@@ -267,7 +263,6 @@ class __TwigTemplate_d3371159bab1dc7cbd5c7f7e869a1ab0 extends Template
             {{ encore_entry_link_tags('app') }}
             <link rel=\"stylesheet\" href=\"https://bootswatch.com/5/quartz/bootstrap.min.css\">
             <link rel=\"stylesheet\" href=\"https://bootswatch.com/5/quartz/_variables.scss\">
-            <link rel=\"stylesheet\" href=\"{{ asset('style.css') }}\"/>
 
             <script src=\"https://kit.fontawesome.com/9a2ea947a1.js\" crossorigin=\"anonymous\"></script>
         {% endblock %}
@@ -297,6 +292,6 @@ class __TwigTemplate_d3371159bab1dc7cbd5c7f7e869a1ab0 extends Template
         {% endblock %}
     </body>
 </html>
-", "base.html.twig", "C:\\laragon\\www\\un-nouveau-monde\\templates\\base.html.twig");
+", "base.html.twig", "C:\\Users\\ULTRABOOK DELL\\OneDrive - UPEC\\Bureau\\Snowaddict-symfony\\Un_Nouveau_Monde\\templates\\base.html.twig");
     }
 }

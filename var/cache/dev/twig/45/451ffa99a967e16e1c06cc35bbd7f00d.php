@@ -1060,6 +1060,6 @@ $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBl
     {%- set force_error = true -%}
     {{- block('form_row') -}}
 {%- endblock datetime_row %}
-", "bootstrap_base_layout.html.twig", "C:\\laragon\\www\\un-nouveau-monde\\vendor\\symfony\\twig-bridge\\Resources\\views\\Form\\bootstrap_base_layout.html.twig");
+", "bootstrap_base_layout.html.twig", "C:\\Users\\ULTRABOOK DELL\\OneDrive - UPEC\\Bureau\\Snowaddict-symfony\\Un_Nouveau_Monde\\vendor\\symfony\\twig-bridge\\Resources\\views\\Form\\bootstrap_base_layout.html.twig");
     }
 }

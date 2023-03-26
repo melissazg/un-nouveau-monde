@@ -1543,6 +1543,6 @@ $context["voter_detail"], "vote", [], "array", false, false, false, 423) == twig
         </div>
     {% endif %}
 {% endblock %}
-", "@Security/Collector/security.html.twig", "C:\\laragon\\www\\un-nouveau-monde\\vendor\\symfony\\security-bundle\\Resources\\views\\Collector\\security.html.twig");
+", "@Security/Collector/security.html.twig", "C:\\Users\\ULTRABOOK DELL\\OneDrive - UPEC\\Bureau\\Snowaddict-symfony\\Un_Nouveau_Monde\\vendor\\symfony\\security-bundle\\Resources\\views\\Collector\\security.html.twig");
     }
 }

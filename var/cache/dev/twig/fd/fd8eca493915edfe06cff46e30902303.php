@@ -172,6 +172,6 @@ class __TwigTemplate_066aad2d700da00883cc00afbfbace5c extends Template
     </div>
     <br>
 
-{% endblock %}", "home.html.twig", "C:\\laragon\\www\\un-nouveau-monde\\templates\\home.html.twig");
+{% endblock %}", "home.html.twig", "C:\\Users\\ULTRABOOK DELL\\OneDrive - UPEC\\Bureau\\Snowaddict-symfony\\Un_Nouveau_Monde\\templates\\home.html.twig");
     }
 }

@@ -204,6 +204,6 @@ class __TwigTemplate_cb03aea14bb088e6e660694a0e71214c extends Template
         </div>
     </footer>
     <!-- End -->
-", "footer.html.twig", "C:\\laragon\\www\\un-nouveau-monde\\templates\\footer.html.twig");
+", "footer.html.twig", "C:\\Users\\ULTRABOOK DELL\\OneDrive - UPEC\\Bureau\\Snowaddict-symfony\\Un_Nouveau_Monde\\templates\\footer.html.twig");
     }
 }

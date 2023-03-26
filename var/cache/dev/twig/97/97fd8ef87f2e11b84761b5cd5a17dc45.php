@@ -168,6 +168,6 @@ class __TwigTemplate_f17de37be6b8ee51660e816a76b3c290 extends Template
 
 
     {{ form_end(form) }}
-{% endblock %}", "inscription.html.twig", "C:\\laragon\\www\\un-nouveau-monde\\templates\\inscription.html.twig");
+{% endblock %}", "inscription.html.twig", "C:\\Users\\ULTRABOOK DELL\\OneDrive - UPEC\\Bureau\\Snowaddict-symfony\\Un_Nouveau_Monde\\templates\\inscription.html.twig");
     }
 }

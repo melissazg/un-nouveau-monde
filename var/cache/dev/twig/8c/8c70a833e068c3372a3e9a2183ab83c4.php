@@ -1084,6 +1084,6 @@ class __TwigTemplate_765b1aa6a3441f58cb6b95f99413b280 extends Template
         {%- endif -%}
     {% endmacro %}
 {% endblock %}
-", "@WebProfiler/Collector/mailer.html.twig", "C:\\laragon\\www\\un-nouveau-monde\\vendor\\symfony\\web-profiler-bundle\\Resources\\views\\Collector\\mailer.html.twig");
+", "@WebProfiler/Collector/mailer.html.twig", "C:\\Users\\ULTRABOOK DELL\\OneDrive - UPEC\\Bureau\\Snowaddict-symfony\\Un_Nouveau_Monde\\vendor\\symfony\\web-profiler-bundle\\Resources\\views\\Collector\\mailer.html.twig");
     }
 }
