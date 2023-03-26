@@ -21,4 +21,13 @@ class SearchRepository extends ServiceEntityRepository
             ->getQuery()
             ->getResult();
     }
+
+    public function getFilm(): array
+    {
+        return $this->createQueryBuilder('film')
+            ->getQuery()
+            ->getArrayResult();
+    }
+
+
 }

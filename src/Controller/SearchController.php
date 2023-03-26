@@ -3,34 +3,37 @@
 namespace App\Controller;
 
 use App\Form\SearchType;
-use App\Repository\SearchRepository;
 use Symfony\Component\HttpFoundation\Request;
+use App\Repository\SearchRepository;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 
-
 class SearchController extends AbstractController
 {
-    #[Route('/search', name: 'app_search')]
-    public function search(Request $request, SearchRepository $SearchRepository)
+    #[Route('/catalogue', name: 'app_catalogue')]
+    public function index(SearchRepository $SearchRepository, Request $request ): Response
     {
-        $form = $this->createForm(SearchType::class);
+        $form = $this->createForm(SearchType::class, null, [
+            'action' => $this->generateUrl('app_catalogue'),
+            'method' => 'GET'
+        ]);
         $form->handleRequest($request);
+
+        $searchResults = [];
 
         if ($form->isSubmitted() && $form->isValid()) {
             $query = $form->getData()['query'];
 
-            $search = $SearchRepository->getSearchResults($query);
-
-            return $this->render('search/results.html.twig', [
-                'query' => $query,
-                'films' => $search
-            ]);
+            $searchResults = $SearchRepository->getSearchResults($query);
+        }
+        else{
+            $searchResults = $SearchRepository->getFilm();
         }
 
-        return $this->render('search/index.html.twig', [
-            'form' => $form->createView()
+        return $this->render('catalogue/index.html.twig', [
+            'form' => $form->createView(),
+            'films' => $searchResults,
         ]);
     }
 }

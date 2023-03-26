@@ -7,15 +7,25 @@
         .example-wrapper { padding: 20px 20px; max-width: 100%; width: 100%; font: 18px/1.5 sans-serif;}
         .example-wrapper code { padding: 2px 6px; }
     </style>
-
     <div class="example-wrapper">
-        <h1>Catalogue de film d'animation</h1>
+        <h1 style="text-align: center;">Catalogue de film d'animation</h1>
         <div style="display: flex;flex-wrap: nowrap;">
-        <input class="form-control me-sm-2" type="search" placeholder="Search" style="width:85%">
-            <div style="width:15%;">
-                <a href="/search"><button class="btn btn-secondary my-2 my-sm-0" type="submit" style="width:100%; background-color: deepskyblue;">Search</button></a>
+            <div class="container custom-container mt-3" >
+                <div class="row">
+                    <div class="col-12">
+                        <form class="form-inline mb-3" action="{{ url('app_catalogue') }}" method="get">
+                            <div class="input-group">
+                                {{ form_widget(form.query, {'attr': {'class': 'form-control mr-2', 'placeholder': 'Search'}}) }}
+                                <div class="input-group-append">
+                                    {{ form_widget(form.submit, {'attr': {'class': 'btn btn-primary', 'style': 'background-color: deepskyblue;'}}) }}
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
             </div>
         </div>
+
         <ul>
             <div style="display: flex;flex-wrap: nowrap;">
             {% for film in films %}
