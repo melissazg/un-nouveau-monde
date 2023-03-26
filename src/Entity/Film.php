@@ -62,6 +62,9 @@ class Film
         $this->nbNotes = 0;
     }
 
+    #[ORM\Column(type: Types::TEXT, nullable: true)]
+    private ?string $imagePath = null;
+
     public function getId(): ?int
     {
         return $this->id;
