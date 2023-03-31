@@ -24,6 +24,8 @@ class AppFixtures extends Fixture
             $film -> setActeursPrincipaux($faker->text());
             $film -> setImagePath('https://ibb.co/JpWH9qF');
             $film -> setIframePath('https://mixdrp.to/e/qlxl7zn3fwjk64');
+            $film -> setInitNbNotes(0);
+            $film -> setInitNotes(0);
 
             $manager ->persist($film);
         }

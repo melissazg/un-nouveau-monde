@@ -28,6 +28,7 @@ return [
     'app_partners' => [[], ['_controller' => 'App\\Controller\\PartnersController::index'], [], [['text', '/partners']], [], [], []],
     'app_player' => [['id'], ['_controller' => 'App\\Controller\\PlayerController::index'], [], [['variable', '/', '[^/]++', 'id', true], ['text', '/player']], [], [], []],
     'app_pre_login' => [[], ['_controller' => 'App\\Controller\\PreLoginController::index'], [], [['text', '/']], [], [], []],
+    'app_catalogue_musique' => [[], ['_controller' => 'App\\Controller\\SearchMusiqueController::index'], [], [['text', '/catalogue_musique']], [], [], []],
     'app_login' => [[], ['_controller' => 'App\\Controller\\SecurityController::login'], [], [['text', '/connexion']], [], [], []],
     'app_logout' => [[], ['_controller' => 'App\\Controller\\SecurityController::logout'], [], [['text', '/logout']], [], [], []],
     'app_user_profile' => [[], ['_controller' => 'App\\Controller\\UserController::index'], [], [['text', '/utilisateur/profil']], [], [], []],

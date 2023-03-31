@@ -52,7 +52,7 @@ class Film
     private ?int $notes = null;
 
     #[ORM\Column(nullable: true)]
-    private ?int $nbNotes = null;
+    private ?int $nb_notes = null;
 
 
 
@@ -179,7 +179,7 @@ class Film
                 $commentaire->setFilm(null);
                 $note = $commentaire->getNote();
                 $this->notes -= $note;
-                $this->nbNotes -= 1;
+                $this->nb_notes -= 1;
             }
         }
 
@@ -220,6 +220,16 @@ class Film
         return $this;
     }
 
+    public function setInitNotes(?int $notes): void
+    {
+        $this->notes = $notes;
+    }
+
+    public function setInitNbNotes(?int $nbNotes): void
+    {
+        $this->nb_notes = $nbNotes;
+    }
+
     public function setNotes(?int $notes): void
     {
         $this->notes += $notes;
@@ -228,12 +238,12 @@ class Film
 
     public function getNbNotes(): ?int
     {
-        return $this->nbNotes;
+        return $this->nb_notes;
     }
 
     public function setNbNotes(): void
     {
-        $this->nbNotes +=1;
+        $this->nb_notes +=1;
     }
 
     public function addNote(int $note){
