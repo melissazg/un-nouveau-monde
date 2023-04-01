@@ -18,7 +18,7 @@ class AccessTokenConfig
     private $realm;
     private $tokenExtractors;
     private $_usedProperties = [];
-
+    
     /**
      * @default null
      * @param ParamConfigurator|mixed $value
@@ -28,10 +28,10 @@ class AccessTokenConfig
     {
         $this->_usedProperties['provider'] = true;
         $this->provider = $value;
-
+    
         return $this;
     }
-
+    
     /**
      * @default true
      * @param ParamConfigurator|bool $value
@@ -41,10 +41,10 @@ class AccessTokenConfig
     {
         $this->_usedProperties['rememberMe'] = true;
         $this->rememberMe = $value;
-
+    
         return $this;
     }
-
+    
     /**
      * @default null
      * @param ParamConfigurator|mixed $value
@@ -54,10 +54,10 @@ class AccessTokenConfig
     {
         $this->_usedProperties['successHandler'] = true;
         $this->successHandler = $value;
-
+    
         return $this;
     }
-
+    
     /**
      * @default null
      * @param ParamConfigurator|mixed $value
@@ -67,10 +67,10 @@ class AccessTokenConfig
     {
         $this->_usedProperties['failureHandler'] = true;
         $this->failureHandler = $value;
-
+    
         return $this;
     }
-
+    
     /**
      * @default null
      * @param ParamConfigurator|mixed $value
@@ -80,10 +80,10 @@ class AccessTokenConfig
     {
         $this->_usedProperties['tokenHandler'] = true;
         $this->tokenHandler = $value;
-
+    
         return $this;
     }
-
+    
     /**
      * @default null
      * @param ParamConfigurator|mixed $value
@@ -93,10 +93,10 @@ class AccessTokenConfig
     {
         $this->_usedProperties['realm'] = true;
         $this->realm = $value;
-
+    
         return $this;
     }
-
+    
     /**
      * @param ParamConfigurator|list<ParamConfigurator|mixed>|string $value
      *
@@ -106,10 +106,10 @@ class AccessTokenConfig
     {
         $this->_usedProperties['tokenExtractors'] = true;
         $this->tokenExtractors = $value;
-
+    
         return $this;
     }
-
+    
     public function __construct(array $value = [])
     {
         if (array_key_exists('provider', $value)) {
@@ -117,48 +117,48 @@ class AccessTokenConfig
             $this->provider = $value['provider'];
             unset($value['provider']);
         }
-
+    
         if (array_key_exists('remember_me', $value)) {
             $this->_usedProperties['rememberMe'] = true;
             $this->rememberMe = $value['remember_me'];
             unset($value['remember_me']);
         }
-
+    
         if (array_key_exists('success_handler', $value)) {
             $this->_usedProperties['successHandler'] = true;
             $this->successHandler = $value['success_handler'];
             unset($value['success_handler']);
         }
-
+    
         if (array_key_exists('failure_handler', $value)) {
             $this->_usedProperties['failureHandler'] = true;
             $this->failureHandler = $value['failure_handler'];
             unset($value['failure_handler']);
         }
-
+    
         if (array_key_exists('token_handler', $value)) {
             $this->_usedProperties['tokenHandler'] = true;
             $this->tokenHandler = $value['token_handler'];
             unset($value['token_handler']);
         }
-
+    
         if (array_key_exists('realm', $value)) {
             $this->_usedProperties['realm'] = true;
             $this->realm = $value['realm'];
             unset($value['realm']);
         }
-
+    
         if (array_key_exists('token_extractors', $value)) {
             $this->_usedProperties['tokenExtractors'] = true;
             $this->tokenExtractors = $value['token_extractors'];
             unset($value['token_extractors']);
         }
-
+    
         if ([] !== $value) {
             throw new InvalidConfigurationException(sprintf('The following keys are not supported by "%s": ', __CLASS__).implode(', ', array_keys($value)));
         }
     }
-
+    
     public function toArray(): array
     {
         $output = [];
@@ -183,7 +183,7 @@ class AccessTokenConfig
         if (isset($this->_usedProperties['tokenExtractors'])) {
             $output['token_extractors'] = $this->tokenExtractors;
         }
-
+    
         return $output;
     }
 

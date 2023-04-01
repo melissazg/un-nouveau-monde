@@ -58,7 +58,10 @@ class __TwigTemplate_0679be544d477e85cdf7acaff20e91d0 extends Template
         echo "\">Accueil<span class=\"visually-hidden\">(current)</span></a>
                 </li>
                 <li class=\"nav-item\">
-                    <a class=\"nav-link\" href=\"#\">Nos films</a>
+                    <a class=\"nav-link\" href=\"";
+        // line 13
+        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_catalogue");
+        echo "\">Nos films</a>
                 </li>
                 <li class=\"nav-item\">
                     <a class=\"nav-link\" href=\"";
@@ -78,14 +81,20 @@ class __TwigTemplate_0679be544d477e85cdf7acaff20e91d0 extends Template
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_contact");
         echo "\">Contact</a>
                 </li>
+                <li class=\"nav-item\">
+                    <a class=\"nav-link\" href=\"";
+        // line 25
+        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_cart");
+        echo "\">Votre panier</a>
+                </li>
             </ul>
             <a href=\"";
-        // line 25
+        // line 28
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_user_profile");
         echo "\" target=\"_blank\" title=\"Profil\"><i class=\"fa-solid fa-user fa-xl\"></i></a>
             &emsp;
             <a href=\"";
-        // line 27
+        // line 30
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_logout");
         echo "\" target=\"_blank\" title=\"(Dé)connexion\"><i class=\"fa-solid fa-right-to-bracket fa-xl\"></i></a>
             <form class=\"d-flex\" style=\"margin-left:20px\">
@@ -115,7 +124,7 @@ class __TwigTemplate_0679be544d477e85cdf7acaff20e91d0 extends Template
 
     public function getDebugInfo()
     {
-        return array (  89 => 27,  84 => 25,  78 => 22,  72 => 19,  66 => 16,  57 => 10,  47 => 3,  43 => 1,);
+        return array (  98 => 30,  93 => 28,  87 => 25,  81 => 22,  75 => 19,  69 => 16,  63 => 13,  57 => 10,  47 => 3,  43 => 1,);
     }
 
     public function getSourceContext()
@@ -132,7 +141,7 @@ class __TwigTemplate_0679be544d477e85cdf7acaff20e91d0 extends Template
                     <a class=\"nav-link active\" href=\"{{ path('home.index') }}\">Accueil<span class=\"visually-hidden\">(current)</span></a>
                 </li>
                 <li class=\"nav-item\">
-                    <a class=\"nav-link\" href=\"#\">Nos films</a>
+                    <a class=\"nav-link\" href=\"{{ path('app_catalogue') }}\">Nos films</a>
                 </li>
                 <li class=\"nav-item\">
                     <a class=\"nav-link\" href=\"{{ path('app_about') }}\">À propos</a>
@@ -142,6 +151,9 @@ class __TwigTemplate_0679be544d477e85cdf7acaff20e91d0 extends Template
                 </li>
                 <li class=\"nav-item\">
                     <a class=\"nav-link\" href=\"{{ path('app_contact') }}\">Contact</a>
+                </li>
+                <li class=\"nav-item\">
+                    <a class=\"nav-link\" href=\"{{ path('app_cart') }}\">Votre panier</a>
                 </li>
             </ul>
             <a href=\"{{ path('app_user_profile') }}\" target=\"_blank\" title=\"Profil\"><i class=\"fa-solid fa-user fa-xl\"></i></a>

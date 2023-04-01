@@ -15,6 +15,8 @@ return [
         '/_profiler/xdebug' => [[['_route' => '_profiler_xdebug', '_controller' => 'web_profiler.controller.profiler::xdebugAction'], null, null, null, false, false, null]],
         '/_profiler/open' => [[['_route' => '_profiler_open_file', '_controller' => 'web_profiler.controller.profiler::openAction'], null, null, null, false, false, null]],
         '/about' => [[['_route' => 'app_about', '_controller' => 'App\\Controller\\AboutController::index'], null, ['GET' => 0], null, false, false, null]],
+        '/cart' => [[['_route' => 'app_cart', '_controller' => 'App\\Controller\\CartController::index'], null, null, null, false, false, null]],
+        '/delete' => [[['_route' => 'cart_deleteAll', '_controller' => 'App\\Controller\\CartController::deleteAll'], null, null, null, false, false, null]],
         '/contact' => [[['_route' => 'app_contact', '_controller' => 'App\\Controller\\ContactController::contact'], null, ['GET' => 0, 'POST' => 1], null, false, false, null]],
         '/home' => [[['_route' => 'home.index', '_controller' => 'App\\Controller\\HomeController::index'], null, ['GET' => 0], null, false, false, null]],
         '/inscription' => [[['_route' => 'inscription.index', '_controller' => 'App\\Controller\\InscriptionController::create'], null, ['GET' => 0, 'POST' => 1], null, false, false, null]],
@@ -25,6 +27,7 @@ return [
         '/connexion' => [[['_route' => 'app_login', '_controller' => 'App\\Controller\\SecurityController::login'], null, ['GET' => 0, 'POST' => 1], null, false, false, null]],
         '/logout' => [[['_route' => 'app_logout', '_controller' => 'App\\Controller\\SecurityController::logout'], null, null, null, false, false, null]],
         '/utilisateur/profil' => [[['_route' => 'app_user_profile', '_controller' => 'App\\Controller\\UserController::index'], null, ['GET' => 0, 'POST' => 1], null, false, false, null]],
+        '/catalogue' => [[['_route' => 'app_catalogue', '_controller' => 'App\\Controller\\CatalogueController::index'], null, ['GET' => 0], null, false, false, null]],
     ],
     [ // $regexpList
         0 => '{^(?'
@@ -43,15 +46,18 @@ return [
                         .'|(*:159)'
                     .')'
                 .')'
-                .'|/verif/([^/]++)(*:184)'
+                .'|/add/([^/]++)(*:182)'
+                .'|/remove/([^/]++)(*:206)'
+                .'|/delete/([^/]++)(*:230)'
+                .'|/verif/([^/]++)(*:253)'
                 .'|/manager/(?'
-                    .'|edition/([^/]++)(*:220)'
-                    .'|supprimer/([^/]++)(*:246)'
+                    .'|edition/([^/]++)(*:289)'
+                    .'|supprimer/([^/]++)(*:315)'
                 .')'
-                .'|/player/([^/]++)(*:271)'
+                .'|/player/([^/]++)(*:340)'
                 .'|/utilisateur/edition(?'
-                    .'|/([^/]++)(*:311)'
-                    .'|\\-mot\\-de\\-passe/([^/]++)(*:344)'
+                    .'|/([^/]++)(*:380)'
+                    .'|\\-mot\\-de\\-passe/([^/]++)(*:413)'
                 .')'
             .')/?$}sDu',
     ],
@@ -63,12 +69,15 @@ return [
         136 => [[['_route' => '_profiler_exception', '_controller' => 'web_profiler.controller.exception_panel::body'], ['token'], null, null, false, false, null]],
         149 => [[['_route' => '_profiler_exception_css', '_controller' => 'web_profiler.controller.exception_panel::stylesheet'], ['token'], null, null, false, false, null]],
         159 => [[['_route' => '_profiler', '_controller' => 'web_profiler.controller.profiler::panelAction'], ['token'], null, null, false, true, null]],
-        184 => [[['_route' => 'verify_user', '_controller' => 'App\\Controller\\InscriptionController::verifyUser'], ['token'], null, null, false, true, null]],
-        220 => [[['_route' => 'film.edit', '_controller' => 'App\\Controller\\ManagerController::edit'], ['id'], ['GET' => 0, 'POST' => 1], null, false, true, null]],
-        246 => [[['_route' => 'film.delete', '_controller' => 'App\\Controller\\ManagerController::delete'], ['id'], ['GET' => 0], null, false, true, null]],
-        271 => [[['_route' => 'app_player', '_controller' => 'App\\Controller\\PlayerController::index'], ['id'], ['GET' => 0, 'POST' => 1], null, false, true, null]],
-        311 => [[['_route' => 'app_user_edit', '_controller' => 'App\\Controller\\UserController::edit'], ['id'], ['GET' => 0, 'POST' => 1], null, false, true, null]],
-        344 => [
+        182 => [[['_route' => 'cart_add', '_controller' => 'App\\Controller\\CartController::add'], ['id'], null, null, false, true, null]],
+        206 => [[['_route' => 'cart_remove', '_controller' => 'App\\Controller\\CartController::remove'], ['id'], null, null, false, true, null]],
+        230 => [[['_route' => 'cart_delete', '_controller' => 'App\\Controller\\CartController::delete'], ['id'], null, null, false, true, null]],
+        253 => [[['_route' => 'verify_user', '_controller' => 'App\\Controller\\InscriptionController::verifyUser'], ['token'], null, null, false, true, null]],
+        289 => [[['_route' => 'film.edit', '_controller' => 'App\\Controller\\ManagerController::edit'], ['id'], ['GET' => 0, 'POST' => 1], null, false, true, null]],
+        315 => [[['_route' => 'film.delete', '_controller' => 'App\\Controller\\ManagerController::delete'], ['id'], ['GET' => 0], null, false, true, null]],
+        340 => [[['_route' => 'app_player', '_controller' => 'App\\Controller\\PlayerController::index'], ['id'], ['GET' => 0, 'POST' => 1], null, false, true, null]],
+        380 => [[['_route' => 'app_user_edit', '_controller' => 'App\\Controller\\UserController::edit'], ['id'], ['GET' => 0, 'POST' => 1], null, false, true, null]],
+        413 => [
             [['_route' => 'app_user_edit_password', '_controller' => 'App\\Controller\\UserController::editPassword'], ['id'], ['GET' => 0, 'POST' => 1], null, false, true, null],
             [null, null, null, null, false, false, 0],
         ],
