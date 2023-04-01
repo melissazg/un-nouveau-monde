@@ -22,7 +22,7 @@ class AppFixtures extends Fixture
             $film -> setDate($faker -> dateTime);
             $film -> setDuree($faker->dateTime);
             $film -> setActeursPrincipaux($faker->text());
-            $film -> setImagePath('https://ibb.co/JpWH9qF');
+            $film -> setImagePath('https://i.ibb.co/09prxKV/index1.jpg');
             $film -> setIframePath('https://mixdrp.to/e/qlxl7zn3fwjk64');
             $film -> setInitNbNotes(0);
             $film -> setInitNotes(0);

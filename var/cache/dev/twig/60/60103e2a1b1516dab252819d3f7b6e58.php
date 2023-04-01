@@ -136,7 +136,7 @@ class __TwigTemplate_2e096d1b22915f2d7bcc474763f037a2 extends Template
             echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["film"], "name", [], "any", false, false, false, 35));
             echo "</h5>
                         <p class=\"card-text\" style=\"height:20%;\">Note moyenne : 10</p>
-                        <a href=\"/player/";
+                        <a href=\"/public/player/";
             // line 37
             echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["film"], "id", [], "any", false, false, false, 37));
             echo "\" class=\"btn btn-primary\" style=\"height:35%;color:white; background-color:deepskyblue;text-align: center;\">Go watch</a>
@@ -213,7 +213,7 @@ class __TwigTemplate_2e096d1b22915f2d7bcc474763f037a2 extends Template
                     <div class=\"card-body\" style=\"height:50%;\">
                         <h5 class=\"card-title\" style=\"height:30%; font-weight: bold;font-size: 25px;text-align: center;\">{{ film.name|e }}</h5>
                         <p class=\"card-text\" style=\"height:20%;\">Note moyenne : 10</p>
-                        <a href=\"/player/{{ film.id|e }}\" class=\"btn btn-primary\" style=\"height:35%;color:white; background-color:deepskyblue;text-align: center;\">Go watch</a>
+                        <a href=\"/public/player/{{ film.id|e }}\" class=\"btn btn-primary\" style=\"height:35%;color:white; background-color:deepskyblue;text-align: center;\">Go watch</a>
                     </div>
                 </div>
             {% endfor %}

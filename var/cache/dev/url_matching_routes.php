@@ -22,11 +22,11 @@ return [
         '/manager/nouveau' => [[['_route' => 'film.new', '_controller' => 'App\\Controller\\ManagerController::new'], null, ['GET' => 0, 'POST' => 1], null, false, false, null]],
         '/partners' => [[['_route' => 'app_partners', '_controller' => 'App\\Controller\\PartnersController::index'], null, ['GET' => 0], null, false, false, null]],
         '/' => [[['_route' => 'app_pre_login', '_controller' => 'App\\Controller\\PreLoginController::index'], null, ['GET' => 0, 'POST' => 1], null, false, false, null]],
+        '/catalogue' => [[['_route' => 'app_catalogue', '_controller' => 'App\\Controller\\SearchController::index'], null, null, null, false, false, null]],
         '/catalogue_musique' => [[['_route' => 'app_catalogue_musique', '_controller' => 'App\\Controller\\SearchMusiqueController::index'], null, null, null, false, false, null]],
         '/connexion' => [[['_route' => 'app_login', '_controller' => 'App\\Controller\\SecurityController::login'], null, ['GET' => 0, 'POST' => 1], null, false, false, null]],
         '/logout' => [[['_route' => 'app_logout', '_controller' => 'App\\Controller\\SecurityController::logout'], null, null, null, false, false, null]],
         '/utilisateur/profil' => [[['_route' => 'app_user_profile', '_controller' => 'App\\Controller\\UserController::index'], null, ['GET' => 0, 'POST' => 1], null, false, false, null]],
-        '/catalogue' => [[['_route' => 'app_catalogue', '_controller' => 'App\\Controller\\CatalogueController::index'], null, ['GET' => 0], null, false, false, null]],
     ],
     [ // $regexpList
         0 => '{^(?'
@@ -50,10 +50,13 @@ return [
                     .'|edition/([^/]++)(*:220)'
                     .'|supprimer/([^/]++)(*:246)'
                 .')'
-                .'|/player/([^/]++)(*:271)'
+                .'|/player(?'
+                    .'|/([^/]++)(*:274)'
+                    .'|_musique/([^/]++)(*:299)'
+                .')'
                 .'|/utilisateur/edition(?'
-                    .'|/([^/]++)(*:311)'
-                    .'|\\-mot\\-de\\-passe/([^/]++)(*:344)'
+                    .'|/([^/]++)(*:340)'
+                    .'|\\-mot\\-de\\-passe/([^/]++)(*:373)'
                 .')'
             .')/?$}sDu',
     ],
@@ -68,9 +71,10 @@ return [
         184 => [[['_route' => 'verify_user', '_controller' => 'App\\Controller\\InscriptionController::verifyUser'], ['token'], null, null, false, true, null]],
         220 => [[['_route' => 'film.edit', '_controller' => 'App\\Controller\\ManagerController::edit'], ['id'], ['GET' => 0, 'POST' => 1], null, false, true, null]],
         246 => [[['_route' => 'film.delete', '_controller' => 'App\\Controller\\ManagerController::delete'], ['id'], ['GET' => 0], null, false, true, null]],
-        271 => [[['_route' => 'app_player', '_controller' => 'App\\Controller\\PlayerController::index'], ['id'], ['GET' => 0, 'POST' => 1], null, false, true, null]],
-        311 => [[['_route' => 'app_user_edit', '_controller' => 'App\\Controller\\UserController::edit'], ['id'], ['GET' => 0, 'POST' => 1], null, false, true, null]],
-        344 => [
+        274 => [[['_route' => 'app_player', '_controller' => 'App\\Controller\\PlayerController::index'], ['id'], ['GET' => 0, 'POST' => 1], null, false, true, null]],
+        299 => [[['_route' => 'app_player_musique', '_controller' => 'App\\Controller\\PlayerMusiqueController::index'], ['id'], ['GET' => 0, 'POST' => 1], null, false, true, null]],
+        340 => [[['_route' => 'app_user_edit', '_controller' => 'App\\Controller\\UserController::edit'], ['id'], ['GET' => 0, 'POST' => 1], null, false, true, null]],
+        373 => [
             [['_route' => 'app_user_edit_password', '_controller' => 'App\\Controller\\UserController::editPassword'], ['id'], ['GET' => 0, 'POST' => 1], null, false, true, null],
             [null, null, null, null, false, false, 0],
         ],

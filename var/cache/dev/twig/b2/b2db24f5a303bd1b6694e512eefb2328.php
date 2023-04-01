@@ -12,7 +12,7 @@ use Twig\Sandbox\SecurityNotAllowedFunctionError;
 use Twig\Source;
 use Twig\Template;
 
-/* _header.html.twig */
+/* _header.html.Twig */
 class __TwigTemplate_0679be544d477e85cdf7acaff20e91d0 extends Template
 {
     private $source;
@@ -34,10 +34,10 @@ class __TwigTemplate_0679be544d477e85cdf7acaff20e91d0 extends Template
     {
         $macros = $this->macros;
         $__internal_5a27a8ba21ca79b61932376b2fa922d2 = $this->extensions["Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension"];
-        $__internal_5a27a8ba21ca79b61932376b2fa922d2->enter($__internal_5a27a8ba21ca79b61932376b2fa922d2_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "template", "_header.html.twig"));
+        $__internal_5a27a8ba21ca79b61932376b2fa922d2->enter($__internal_5a27a8ba21ca79b61932376b2fa922d2_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "template", "_header.html.Twig"));
 
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
-        $__internal_6f47bbe9983af81f1e7450e9a3e3768f->enter($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "template", "_header.html.twig"));
+        $__internal_6f47bbe9983af81f1e7450e9a3e3768f->enter($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "template", "_header.html.Twig"));
 
         // line 1
         echo "<nav class=\"navbar navbar-expand-lg navbar-dark bg-dark\">
@@ -114,7 +114,7 @@ class __TwigTemplate_0679be544d477e85cdf7acaff20e91d0 extends Template
 
     public function getTemplateName()
     {
-        return "_header.html.twig";
+        return "_header.html.Twig";
     }
 
     public function isTraitable()
@@ -165,6 +165,6 @@ class __TwigTemplate_0679be544d477e85cdf7acaff20e91d0 extends Template
             </form>
         </div>
     </div>
-</nav>", "_header.html.twig", "C:\\laragon\\www\\un-nouveau-monde\\templates\\_header.html.Twig");
+</nav>", "_header.html.Twig", "C:\\laragon\\www\\un-nouveau-monde\\templates\\_header.html.Twig");
     }
 }

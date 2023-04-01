@@ -20,8 +20,6 @@ class SearchMusiqueController extends AbstractController
         ]);
         $form->handleRequest($request);
 
-        $searchResults = [];
-
         if ($form->isSubmitted() && $form->isValid()) {
             $query = $form->getData()['query'];
 

@@ -189,4 +189,14 @@ class Musique
     {
         $this->nb_notes = $nbNotes;
     }
+
+    public function addNote(int $note){
+        $this->setNotes($note);
+    }
+
+    public function __toString(): string
+    {
+        return $this->getName();
+    }
+
 }

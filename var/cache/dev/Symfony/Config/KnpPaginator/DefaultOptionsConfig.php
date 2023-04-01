@@ -19,7 +19,7 @@ class DefaultOptionsConfig
     private $pageOutOfRange;
     private $defaultLimit;
     private $_usedProperties = [];
-
+    
     /**
      * @default 'sort'
      * @param ParamConfigurator|mixed $value
@@ -29,10 +29,10 @@ class DefaultOptionsConfig
     {
         $this->_usedProperties['sortFieldName'] = true;
         $this->sortFieldName = $value;
-
+    
         return $this;
     }
-
+    
     /**
      * @default 'direction'
      * @param ParamConfigurator|mixed $value
@@ -42,10 +42,10 @@ class DefaultOptionsConfig
     {
         $this->_usedProperties['sortDirectionName'] = true;
         $this->sortDirectionName = $value;
-
+    
         return $this;
     }
-
+    
     /**
      * @default 'filterField'
      * @param ParamConfigurator|mixed $value
@@ -55,10 +55,10 @@ class DefaultOptionsConfig
     {
         $this->_usedProperties['filterFieldName'] = true;
         $this->filterFieldName = $value;
-
+    
         return $this;
     }
-
+    
     /**
      * @default 'filterValue'
      * @param ParamConfigurator|mixed $value
@@ -68,10 +68,10 @@ class DefaultOptionsConfig
     {
         $this->_usedProperties['filterValueName'] = true;
         $this->filterValueName = $value;
-
+    
         return $this;
     }
-
+    
     /**
      * @default 'page'
      * @param ParamConfigurator|mixed $value
@@ -81,10 +81,10 @@ class DefaultOptionsConfig
     {
         $this->_usedProperties['pageName'] = true;
         $this->pageName = $value;
-
+    
         return $this;
     }
-
+    
     /**
      * @default true
      * @param ParamConfigurator|bool $value
@@ -94,10 +94,10 @@ class DefaultOptionsConfig
     {
         $this->_usedProperties['distinct'] = true;
         $this->distinct = $value;
-
+    
         return $this;
     }
-
+    
     /**
      * @default 'ignore'
      * @param ParamConfigurator|mixed $value
@@ -107,10 +107,10 @@ class DefaultOptionsConfig
     {
         $this->_usedProperties['pageOutOfRange'] = true;
         $this->pageOutOfRange = $value;
-
+    
         return $this;
     }
-
+    
     /**
      * @default 10
      * @param ParamConfigurator|mixed $value
@@ -120,10 +120,10 @@ class DefaultOptionsConfig
     {
         $this->_usedProperties['defaultLimit'] = true;
         $this->defaultLimit = $value;
-
+    
         return $this;
     }
-
+    
     public function __construct(array $value = [])
     {
         if (array_key_exists('sort_field_name', $value)) {
@@ -131,54 +131,54 @@ class DefaultOptionsConfig
             $this->sortFieldName = $value['sort_field_name'];
             unset($value['sort_field_name']);
         }
-
+    
         if (array_key_exists('sort_direction_name', $value)) {
             $this->_usedProperties['sortDirectionName'] = true;
             $this->sortDirectionName = $value['sort_direction_name'];
             unset($value['sort_direction_name']);
         }
-
+    
         if (array_key_exists('filter_field_name', $value)) {
             $this->_usedProperties['filterFieldName'] = true;
             $this->filterFieldName = $value['filter_field_name'];
             unset($value['filter_field_name']);
         }
-
+    
         if (array_key_exists('filter_value_name', $value)) {
             $this->_usedProperties['filterValueName'] = true;
             $this->filterValueName = $value['filter_value_name'];
             unset($value['filter_value_name']);
         }
-
+    
         if (array_key_exists('page_name', $value)) {
             $this->_usedProperties['pageName'] = true;
             $this->pageName = $value['page_name'];
             unset($value['page_name']);
         }
-
+    
         if (array_key_exists('distinct', $value)) {
             $this->_usedProperties['distinct'] = true;
             $this->distinct = $value['distinct'];
             unset($value['distinct']);
         }
-
+    
         if (array_key_exists('page_out_of_range', $value)) {
             $this->_usedProperties['pageOutOfRange'] = true;
             $this->pageOutOfRange = $value['page_out_of_range'];
             unset($value['page_out_of_range']);
         }
-
+    
         if (array_key_exists('default_limit', $value)) {
             $this->_usedProperties['defaultLimit'] = true;
             $this->defaultLimit = $value['default_limit'];
             unset($value['default_limit']);
         }
-
+    
         if ([] !== $value) {
             throw new InvalidConfigurationException(sprintf('The following keys are not supported by "%s": ', __CLASS__).implode(', ', array_keys($value)));
         }
     }
-
+    
     public function toArray(): array
     {
         $output = [];
@@ -206,7 +206,7 @@ class DefaultOptionsConfig
         if (isset($this->_usedProperties['defaultLimit'])) {
             $output['default_limit'] = $this->defaultLimit;
         }
-
+    
         return $output;
     }
 
