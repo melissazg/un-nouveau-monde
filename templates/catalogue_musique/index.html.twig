@@ -4,7 +4,7 @@
 
 {% block body %}
     <style>
-        .example-wrapper { padding: 20px 20px; max-width: 100%; width: 100%; font: 18px/1.5 sans-serif;}
+        .example-wrapper {padding: 20px 20px; max-width: 100%; width: 100%; font: 18px/1.5 sans-serif;}
         .example-wrapper code { padding: 2px 6px; }
     </style>
     <div class="example-wrapper">
@@ -27,9 +27,9 @@
         </div>
 
         <ul>
-            <div style="display: flex;flex-wrap: nowrap;">
+            <div style="display: flex;flex-wrap: wrap; justify-content: center;">
                 {% for musique in musiques %}
-                    <div class="card" style="width: 20rem; height: 25rem; margin: 20px 20px; color:white; background-color: #441b71">
+                    <div class="card" style="width: 20rem; height: 25rem; margin-top: 20px; margin-bottom: 20px; margin-right: 20px; color:white; background-color: #441b71">
                         <img class="card-img-top" src="{{ musique.image_path|e }}" alt="" style="height: 50%;">
                         <div class="card-body" style="height:50%;">
                             <h5 class="card-title" style="height:30%; font-weight: bold;font-size: 25px;text-align: center;">{{ musique.name|e }}</h5>

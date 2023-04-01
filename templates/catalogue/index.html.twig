@@ -27,9 +27,9 @@
         </div>
 
         <ul>
-            <div style="display: flex;flex-wrap: nowrap;">
+            <div style="display: flex;flex-wrap: wrap; justify-content: center;">
             {% for film in films %}
-                <div class="card" style="width: 20rem; height: 25rem; margin: 20px 20px; color:white; background-color: #441b71">
+                <div class="card" style="width: 20rem; height: 25rem; margin-top: 20px; margin-bottom: 20px; margin-right: 20px; color:white; background-color: #441b71">
                     <img class="card-img-top" src="{{ film.imagePath|e }}" alt="" style="height: 50%;">
                     <div class="card-body" style="height:50%;">
                         <h5 class="card-title" style="height:30%; font-weight: bold;font-size: 25px;text-align: center;">{{ film.name|e }}</h5>

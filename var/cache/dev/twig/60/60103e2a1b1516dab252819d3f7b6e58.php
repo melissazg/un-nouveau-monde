@@ -118,14 +118,14 @@ class __TwigTemplate_2e096d1b22915f2d7bcc474763f037a2 extends Template
         </div>
 
         <ul>
-            <div style=\"display: flex;flex-wrap: nowrap;\">
+            <div style=\"display: flex;flex-wrap: wrap; justify-content: center;\">
             ";
         // line 31
         $context['_parent'] = $context;
         $context['_seq'] = twig_ensure_traversable((isset($context["films"]) || array_key_exists("films", $context) ? $context["films"] : (function () { throw new RuntimeError('Variable "films" does not exist.', 31, $this->source); })()));
         foreach ($context['_seq'] as $context["_key"] => $context["film"]) {
             // line 32
-            echo "                <div class=\"card\" style=\"width: 20rem; height: 25rem; margin: 20px 20px; color:white; background-color: #441b71\">
+            echo "                <div class=\"card\" style=\"width: 20rem; height: 25rem; margin-top: 20px; margin-bottom: 20px; margin-right: 20px; color:white; background-color: #441b71\">
                     <img class=\"card-img-top\" src=\"";
             // line 33
             echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["film"], "imagePath", [], "any", false, false, false, 33));
@@ -206,9 +206,9 @@ class __TwigTemplate_2e096d1b22915f2d7bcc474763f037a2 extends Template
         </div>
 
         <ul>
-            <div style=\"display: flex;flex-wrap: nowrap;\">
+            <div style=\"display: flex;flex-wrap: wrap; justify-content: center;\">
             {% for film in films %}
-                <div class=\"card\" style=\"width: 20rem; height: 25rem; margin: 20px 20px; color:white; background-color: #441b71\">
+                <div class=\"card\" style=\"width: 20rem; height: 25rem; margin-top: 20px; margin-bottom: 20px; margin-right: 20px; color:white; background-color: #441b71\">
                     <img class=\"card-img-top\" src=\"{{ film.imagePath|e }}\" alt=\"\" style=\"height: 50%;\">
                     <div class=\"card-body\" style=\"height:50%;\">
                         <h5 class=\"card-title\" style=\"height:30%; font-weight: bold;font-size: 25px;text-align: center;\">{{ film.name|e }}</h5>

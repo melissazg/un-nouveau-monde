@@ -86,7 +86,7 @@ class __TwigTemplate_69cb125cbd7998f1bf66a240fac5d9ec extends Template
 
         // line 6
         echo "    <style>
-        .example-wrapper { padding: 20px 20px; max-width: 100%; width: 100%; font: 18px/1.5 sans-serif;}
+        .example-wrapper {padding: 20px 20px; max-width: 100%; width: 100%; font: 18px/1.5 sans-serif;}
         .example-wrapper code { padding: 2px 6px; }
     </style>
     <div class=\"example-wrapper\">
@@ -118,14 +118,14 @@ class __TwigTemplate_69cb125cbd7998f1bf66a240fac5d9ec extends Template
         </div>
 
         <ul>
-            <div style=\"display: flex;flex-wrap: nowrap;\">
+            <div style=\"display: flex;flex-wrap: wrap; justify-content: center;\">
                 ";
         // line 31
         $context['_parent'] = $context;
         $context['_seq'] = twig_ensure_traversable((isset($context["musiques"]) || array_key_exists("musiques", $context) ? $context["musiques"] : (function () { throw new RuntimeError('Variable "musiques" does not exist.', 31, $this->source); })()));
         foreach ($context['_seq'] as $context["_key"] => $context["musique"]) {
             // line 32
-            echo "                    <div class=\"card\" style=\"width: 20rem; height: 25rem; margin: 20px 20px; color:white; background-color: #441b71\">
+            echo "                    <div class=\"card\" style=\"width: 20rem; height: 25rem; margin-top: 20px; margin-bottom: 20px; margin-right: 20px; color:white; background-color: #441b71\">
                         <img class=\"card-img-top\" src=\"";
             // line 33
             echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["musique"], "image_path", [], "any", false, false, false, 33));
@@ -183,7 +183,7 @@ class __TwigTemplate_69cb125cbd7998f1bf66a240fac5d9ec extends Template
 
 {% block body %}
     <style>
-        .example-wrapper { padding: 20px 20px; max-width: 100%; width: 100%; font: 18px/1.5 sans-serif;}
+        .example-wrapper {padding: 20px 20px; max-width: 100%; width: 100%; font: 18px/1.5 sans-serif;}
         .example-wrapper code { padding: 2px 6px; }
     </style>
     <div class=\"example-wrapper\">
@@ -206,9 +206,9 @@ class __TwigTemplate_69cb125cbd7998f1bf66a240fac5d9ec extends Template
         </div>
 
         <ul>
-            <div style=\"display: flex;flex-wrap: nowrap;\">
+            <div style=\"display: flex;flex-wrap: wrap; justify-content: center;\">
                 {% for musique in musiques %}
-                    <div class=\"card\" style=\"width: 20rem; height: 25rem; margin: 20px 20px; color:white; background-color: #441b71\">
+                    <div class=\"card\" style=\"width: 20rem; height: 25rem; margin-top: 20px; margin-bottom: 20px; margin-right: 20px; color:white; background-color: #441b71\">
                         <img class=\"card-img-top\" src=\"{{ musique.image_path|e }}\" alt=\"\" style=\"height: 50%;\">
                         <div class=\"card-body\" style=\"height:50%;\">
                             <h5 class=\"card-title\" style=\"height:30%; font-weight: bold;font-size: 25px;text-align: center;\">{{ musique.name|e }}</h5>

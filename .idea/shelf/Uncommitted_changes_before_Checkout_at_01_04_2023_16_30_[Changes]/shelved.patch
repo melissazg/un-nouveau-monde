@@ -1,0 +1,117 @@
+Index: src/Controller/SearchController.php
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?php\r\n\r\nnamespace App\\Controller;\r\n\r\nuse App\\Form\\SearchType;\r\nuse Symfony\\Component\\HttpFoundation\\Request;\r\nuse App\\Repository\\SearchRepository;\r\nuse Symfony\\Bundle\\FrameworkBundle\\Controller\\AbstractController;\r\nuse Symfony\\Component\\HttpFoundation\\Response;\r\nuse Symfony\\Component\\Routing\\Annotation\\Route;\r\n\r\nclass SearchController extends AbstractController\r\n{\r\n    #[Route('/catalogue', name: 'app_catalogue')]\r\n    public function index(SearchRepository $SearchRepository, Request $request ): Response\r\n    {\r\n        $form = $this->createForm(SearchType::class, null, [\r\n            'action' => $this->generateUrl('app_catalogue'),\r\n            'method' => 'GET'\r\n        ]);\r\n        $form->handleRequest($request);\r\n\r\n        $searchResults = [];\r\n\r\n        if ($form->isSubmitted() && $form->isValid()) {\r\n            $query = $form->getData()['query'];\r\n\r\n            $searchResults = $SearchRepository->getSearchResults($query);\r\n        }\r\n        else{\r\n            $searchResults = $SearchRepository->getFilm();\r\n        }\r\n\r\n        return $this->render('catalogue/index.html.twig', [\r\n            'form' => $form->createView(),\r\n            'films' => $searchResults,\r\n        ]);\r\n    }\r\n}
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/Controller/SearchController.php b/src/Controller/SearchController.php
+--- a/src/Controller/SearchController.php	(revision 9db8a3d79ddd6c099b217a62cb44c3288c85e083)
++++ b/src/Controller/SearchController.php	(date 1680358916381)
+@@ -20,8 +20,6 @@
+         ]);
+         $form->handleRequest($request);
+ 
+-        $searchResults = [];
+-
+         if ($form->isSubmitted() && $form->isValid()) {
+             $query = $form->getData()['query'];
+ 
+Index: src/Repository/FilmRepository.php
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?php\r\n\r\nnamespace App\\Repository;\r\n\r\nuse App\\Entity\\Film;\r\nuse Doctrine\\Bundle\\DoctrineBundle\\Repository\\ServiceEntityRepository;\r\nuse Doctrine\\Persistence\\ManagerRegistry;\r\n\r\n/**\r\n * @extends ServiceEntityRepository<Film>\r\n *\r\n * @method Film|null find($id, $lockMode = null, $lockVersion = null)\r\n * @method Film|null findOneBy(array $criteria, array $orderBy = null)\r\n * @method Film[]    findAll()\r\n * @method Film[]    findBy(array $criteria, array $orderBy = null, $limit = null, $offset = null)\r\n */\r\nclass FilmRepository extends ServiceEntityRepository\r\n{\r\n    public function __construct(ManagerRegistry $registry)\r\n    {\r\n        parent::__construct($registry, Film::class);\r\n    }\r\n\r\n    public function save(Film $entity, bool $flush = false): void\r\n    {\r\n        $this->getEntityManager()->persist($entity);\r\n\r\n        if ($flush) {\r\n            $this->getEntityManager()->flush();\r\n        }\r\n    }\r\n\r\n    public function remove(Film $entity, bool $flush = false): void\r\n    {\r\n        $this->getEntityManager()->remove($entity);\r\n\r\n        if ($flush) {\r\n            $this->getEntityManager()->flush();\r\n        }\r\n    }\r\n\r\n    public function getIframeByName($title){\r\n        return $this->createQueryBuilder('f')\r\n            ->andWhere('f.name =:title')\r\n            ->setParameter('title', $title)\r\n            ->setMaxResults(1)\r\n            ->getQuery()\r\n            ->getOneOrNullResult()\r\n            ;\r\n    }\r\n\r\n//    /**\r\n//     * @return Film[] Returns an array of Film objects\r\n//     */\r\n//    public function findByExampleField($value): array\r\n//    {\r\n//        return $this->createQueryBuilder('f')\r\n//            ->andWhere('f.exampleField = :val')\r\n//            ->setParameter('val', $value)\r\n//            ->orderBy('f.id', 'ASC')\r\n//            ->setMaxResults(10)\r\n//            ->getQuery()\r\n//            ->getResult()\r\n//        ;\r\n//    }\r\n\r\n//    public function findOneBySomeField($value): ?Film\r\n//    {\r\n//        return $this->createQueryBuilder('f')\r\n//            ->andWhere('f.exampleField = :val')\r\n//            ->setParameter('val', $value)\r\n//            ->getQuery()\r\n//            ->getOneOrNullResult()\r\n//        ;\r\n//    }\r\n}\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/Repository/FilmRepository.php b/src/Repository/FilmRepository.php
+--- a/src/Repository/FilmRepository.php	(revision 9db8a3d79ddd6c099b217a62cb44c3288c85e083)
++++ b/src/Repository/FilmRepository.php	(date 1680359087725)
+@@ -49,6 +49,15 @@
+             ;
+     }
+ 
++    public function getFilmByRealisateur(String $name){
++        return $this->createQueryBuilder('f')
++            ->where('f.name = :query')
++            ->setParameter('query', '%'.$name.'%')
++            ->getQuery()
++            ->getResult();
++    }
++
++
+ //    /**
+ //     * @return Film[] Returns an array of Film objects
+ //     */
+Index: templates/filmRealisateur/index.html.twig
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/templates/filmRealisateur/index.html.twig b/templates/filmRealisateur/index.html.twig
+new file mode 100644
+--- /dev/null	(date 1680358790804)
++++ b/templates/filmRealisateur/index.html.twig	(date 1680358790804)
+@@ -0,0 +1,27 @@
++{% extends 'base.html.twig' %}
++
++{% block title %}Catalogue{% endblock %}
++
++{% block body %}
++    <style>
++        .example-wrapper { padding: 20px 20px; max-width: 100%; width: 100%; font: 18px/1.5 sans-serif;}
++        .example-wrapper code { padding: 2px 6px; }
++    </style>
++    <div class="example-wrapper">
++        <h1 style="text-align: center;">Film du réalisateur</h1>
++        <ul>
++            <div style="display: flex;flex-wrap: nowrap;">
++                {% for film in films %}
++                    <div class="card" style="width: 20rem; height: 25rem; margin: 20px 20px; color:white; background-color: #441b71">
++                        <img class="card-img-top" src="{{ film.imagePath|e }}" alt="" style="height: 50%;">
++                        <div class="card-body" style="height:50%;">
++                            <h5 class="card-title" style="height:30%; font-weight: bold;font-size: 25px;text-align: center;">{{ film.name|e }}</h5>
++                            <p class="card-text" style="height:20%;">Note moyenne : 10</p>
++                            <a href="/player/{{ film.id|e }}" class="btn btn-primary" style="height:35%;color:white; background-color:deepskyblue;text-align: center;">Go watch</a>
++                        </div>
++                    </div>
++                {% endfor %}
++            </div>
++        </ul>
++    </div>
++{% endblock %}
+Index: src/Controller/FilmRealisateurController.php
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/Controller/FilmRealisateurController.php b/src/Controller/FilmRealisateurController.php
+new file mode 100644
+--- /dev/null	(date 1680359391293)
++++ b/src/Controller/FilmRealisateurController.php	(date 1680359391293)
+@@ -0,0 +1,24 @@
++<?php
++
++namespace App\Controller;
++
++use App\Repository\FilmRepository;
++use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
++use Symfony\Component\HttpFoundation\Response;
++use Symfony\Component\Routing\Annotation\Route;
++
++class FilmRealisateurController extends AbstractController
++{
++    #[Route('/filmRealisateur/{name}', name: 'app_filmRealisateur', methods: ['GET', 'POST'])]
++    public function index(FilmRepository $SearchRepository): Response
++    {
++
++
++        $searchResults = $SearchRepository->getFilmByRealisateur($name);
++
++
++        return $this->render('filmRealisateur/index.html.twig', [
++            'films' => $searchResults,
++        ]);
++    }
++}
+\ No newline at end of file

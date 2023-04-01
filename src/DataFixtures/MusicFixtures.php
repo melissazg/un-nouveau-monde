@@ -13,7 +13,7 @@ class MusicFixtures extends Fixture
         $faker = Factory::create('fr_FR');
 
 
-        for ($i = 0; $i < 4; $i++){
+        for ($i = 0; $i < 10; $i++){
             $film = new Musique();
             $film -> setName($faker -> word());
             $film -> setGenre($faker -> word());
