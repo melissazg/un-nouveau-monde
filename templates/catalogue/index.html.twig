@@ -34,7 +34,7 @@
                     <div class="card-body" style="height:50%;">
                         <h5 class="card-title" style="height:30%; font-weight: bold;font-size: 25px;text-align: center;">{{ film.name|e }}</h5>
                         <p class="card-text" style="height:20%;">Note moyenne : 10</p>
-                        <a href="#" class="btn btn-primary" style="height:35%;color:white; background-color:deepskyblue;text-align: center;">Go watch</a>
+                        <a href="player/{{ film.id|e }}" class="btn btn-primary" style="height:35%;color:white; background-color:deepskyblue;text-align: center;">Go watch</a>
                     </div>
                 </div>
             {% endfor %}

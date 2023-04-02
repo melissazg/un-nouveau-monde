@@ -370,6 +370,16 @@
         <argument type="service" id=".service_locator.CshazM0.App\Controller\AboutController"/>
       </call>
     </service>
+<<<<<<< HEAD
+=======
+    <service id="App\Controller\CartController" class="App\Controller\CartController" public="true" autowire="true" autoconfigure="true">
+      <tag name="controller.service_arguments"/>
+      <tag name="container.service_subscriber"/>
+      <call method="setContainer">
+        <argument type="service" id=".service_locator.CshazM0.App\Controller\CartController"/>
+      </call>
+    </service>
+>>>>>>> panier
     <service id="App\Controller\CatalogueController" class="App\Controller\CatalogueController" public="true" autowire="true" autoconfigure="true">
       <tag name="controller.service_arguments"/>
       <tag name="container.service_subscriber"/>
@@ -452,6 +462,7 @@
       <tag name="doctrine.fixture.orm"/>
     </service>
     <service id="App\DataFixtures\UsersFixtures" class="App\DataFixtures\UsersFixtures" autowire="true" autoconfigure="true">
+      <tag name="doctrine.fixture.orm"/>
       <argument type="service" id="security.user_password_hasher"/>
     </service>
     <service id="App\Form\CommentType" class="App\Form\CommentType" autowire="true" autoconfigure="true">
@@ -482,7 +493,7 @@
     <service id="App\Form\UserType" class="App\Form\UserType" autowire="true" autoconfigure="true">
       <tag name="form.type"/>
     </service>
-    <service id="App\Repository\CollaborateursRepository" class="App\Repository\CollaborateursRepository" autowire="true" autoconfigure="true">
+    <service id="App\Repository\ClientRepository" class="App\Repository\ClientRepository" autowire="true" autoconfigure="true">
       <tag name="doctrine.repository_service"/>
       <argument type="service" id="doctrine"/>
     </service>
@@ -4415,7 +4426,11 @@
     <service id="doctrine.orm.configuration" class="Doctrine\ORM\Configuration" abstract="true"/>
     <service id="doctrine.orm.entity_manager.abstract" class="Doctrine\ORM\EntityManager" lazy="true" abstract="true"/>
     <service id="doctrine.orm.container_repository_factory" class="Doctrine\Bundle\DoctrineBundle\Repository\ContainerRepositoryFactory">
+<<<<<<< HEAD
       <argument type="service" id=".service_locator.JzkkBjN"/>
+=======
+      <argument type="service" id=".service_locator.lLcEAlc"/>
+>>>>>>> panier
     </service>
     <service id="doctrine.orm.manager_configurator.abstract" class="Doctrine\Bundle\DoctrineBundle\ManagerConfigurator" abstract="true">
       <argument type="collection"/>
@@ -6513,6 +6528,10 @@
             <argument key="fixture" type="service" id="App\DataFixtures\AppFixtures"/>
             <argument key="groups" type="collection"/>
           </argument>
+          <argument type="collection">
+            <argument key="fixture" type="service" id="App\DataFixtures\UsersFixtures"/>
+            <argument key="groups" type="collection"/>
+          </argument>
         </argument>
       </call>
     </service>
@@ -6601,6 +6620,12 @@
     <service id=".instanceof.Symfony\Contracts\Service\ServiceSubscriberInterface.0.App\Controller\AboutController" class="App\Controller\AboutController" autowire="true" abstract="true"/>
     <service id=".instanceof.Symfony\Bundle\FrameworkBundle\Controller\AbstractController.0.App\Controller\AboutController" class="App\Controller\AboutController" autowire="true" abstract="true"/>
     <service id=".abstract.instanceof.App\Controller\AboutController" class="App\Controller\AboutController" autowire="true" autoconfigure="true" abstract="true"/>
+<<<<<<< HEAD
+=======
+    <service id=".instanceof.Symfony\Contracts\Service\ServiceSubscriberInterface.0.App\Controller\CartController" class="App\Controller\CartController" autowire="true" abstract="true"/>
+    <service id=".instanceof.Symfony\Bundle\FrameworkBundle\Controller\AbstractController.0.App\Controller\CartController" class="App\Controller\CartController" autowire="true" abstract="true"/>
+    <service id=".abstract.instanceof.App\Controller\CartController" class="App\Controller\CartController" autowire="true" autoconfigure="true" abstract="true"/>
+>>>>>>> panier
     <service id=".instanceof.Symfony\Contracts\Service\ServiceSubscriberInterface.0.App\Controller\CatalogueController" class="App\Controller\CatalogueController" autowire="true" abstract="true"/>
     <service id=".instanceof.Symfony\Bundle\FrameworkBundle\Controller\AbstractController.0.App\Controller\CatalogueController" class="App\Controller\CatalogueController" autowire="true" abstract="true"/>
     <service id=".abstract.instanceof.App\Controller\CatalogueController" class="App\Controller\CatalogueController" autowire="true" autoconfigure="true" abstract="true"/>
@@ -6636,6 +6661,8 @@
     <service id=".abstract.instanceof.App\Controller\UserController" class="App\Controller\UserController" autowire="true" autoconfigure="true" abstract="true"/>
     <service id=".instanceof.Doctrine\Bundle\FixturesBundle\ORMFixtureInterface.0.App\DataFixtures\AppFixtures" class="App\DataFixtures\AppFixtures" autowire="true" abstract="true"/>
     <service id=".abstract.instanceof.App\DataFixtures\AppFixtures" class="App\DataFixtures\AppFixtures" autowire="true" autoconfigure="true" abstract="true"/>
+    <service id=".instanceof.Doctrine\Bundle\FixturesBundle\ORMFixtureInterface.0.App\DataFixtures\UsersFixtures" class="App\DataFixtures\UsersFixtures" autowire="true" abstract="true"/>
+    <service id=".abstract.instanceof.App\DataFixtures\UsersFixtures" class="App\DataFixtures\UsersFixtures" autowire="true" autoconfigure="true" abstract="true"/>
     <service id=".instanceof.Symfony\Component\Form\FormTypeInterface.0.App\Form\CommentType" class="App\Form\CommentType" autowire="true" abstract="true"/>
     <service id=".abstract.instanceof.App\Form\CommentType" class="App\Form\CommentType" autowire="true" autoconfigure="true" abstract="true"/>
     <service id=".instanceof.Symfony\Component\Form\FormTypeInterface.0.App\Form\ContactType" class="App\Form\ContactType" autowire="true" abstract="true"/>
@@ -6650,8 +6677,8 @@
     <service id=".abstract.instanceof.App\Form\UserPasswordType" class="App\Form\UserPasswordType" autowire="true" autoconfigure="true" abstract="true"/>
     <service id=".instanceof.Symfony\Component\Form\FormTypeInterface.0.App\Form\UserType" class="App\Form\UserType" autowire="true" abstract="true"/>
     <service id=".abstract.instanceof.App\Form\UserType" class="App\Form\UserType" autowire="true" autoconfigure="true" abstract="true"/>
-    <service id=".instanceof.Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepositoryInterface.0.App\Repository\CollaborateursRepository" class="App\Repository\CollaborateursRepository" autowire="true" abstract="true"/>
-    <service id=".abstract.instanceof.App\Repository\CollaborateursRepository" class="App\Repository\CollaborateursRepository" autowire="true" autoconfigure="true" abstract="true"/>
+    <service id=".instanceof.Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepositoryInterface.0.App\Repository\ClientRepository" class="App\Repository\ClientRepository" autowire="true" abstract="true"/>
+    <service id=".abstract.instanceof.App\Repository\ClientRepository" class="App\Repository\ClientRepository" autowire="true" autoconfigure="true" abstract="true"/>
     <service id=".instanceof.Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepositoryInterface.0.App\Repository\CommentaireRepository" class="App\Repository\CommentaireRepository" autowire="true" abstract="true"/>
     <service id=".abstract.instanceof.App\Repository\CommentaireRepository" class="App\Repository\CommentaireRepository" autowire="true" autoconfigure="true" abstract="true"/>
     <service id=".instanceof.Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepositoryInterface.0.App\Repository\ContactRepository" class="App\Repository\ContactRepository" autowire="true" abstract="true"/>
@@ -7001,6 +7028,21 @@
         <argument key="loader" type="service_closure" id=".errored..service_locator.y4_Zrx..Symfony\Component\Config\Loader\LoaderInterface"/>
       </argument>
     </service>
+<<<<<<< HEAD
+=======
+    <service id=".service_locator.P7oU2Zl" class="Symfony\Component\DependencyInjection\ServiceLocator">
+      <tag name="container.service_locator"/>
+      <argument type="collection">
+        <argument key="filmRepository" type="service_closure" id="App\Repository\FilmRepository"/>
+      </argument>
+    </service>
+    <service id=".service_locator.d_Zi8_Z" class="Symfony\Component\DependencyInjection\ServiceLocator">
+      <tag name="container.service_locator"/>
+      <argument type="collection">
+        <argument key="film" type="service_closure" id=".errored..service_locator.d_Zi8_Z.App\Entity\Film"/>
+      </argument>
+    </service>
+>>>>>>> panier
     <service id=".service_locator.avYFkEZ" class="Symfony\Component\DependencyInjection\ServiceLocator">
       <tag name="container.service_locator"/>
       <argument type="collection">
@@ -7083,9 +7125,19 @@
         <argument key="user" type="service_closure" id=".errored..service_locator.cELnjUu.App\Entity\User"/>
       </argument>
     </service>
+<<<<<<< HEAD
     <service id=".service_locator.9BY5AlA" class="Symfony\Component\DependencyInjection\ServiceLocator">
       <tag name="container.service_locator"/>
       <argument type="collection">
+=======
+    <service id=".service_locator.uGawp6m" class="Symfony\Component\DependencyInjection\ServiceLocator">
+      <tag name="container.service_locator"/>
+      <argument type="collection">
+        <argument key="App\Controller\CartController::add" type="service_closure" id=".service_locator.d_Zi8_Z"/>
+        <argument key="App\Controller\CartController::delete" type="service_closure" id=".service_locator.d_Zi8_Z"/>
+        <argument key="App\Controller\CartController::index" type="service_closure" id=".service_locator.P7oU2Zl"/>
+        <argument key="App\Controller\CartController::remove" type="service_closure" id=".service_locator.d_Zi8_Z"/>
+>>>>>>> panier
         <argument key="App\Controller\CatalogueController::index" type="service_closure" id=".service_locator.avYFkEZ"/>
         <argument key="App\Controller\ContactController::contact" type="service_closure" id=".service_locator.d1ey3el"/>
         <argument key="App\Controller\InscriptionController::create" type="service_closure" id=".service_locator.B46.13k"/>
@@ -7103,6 +7155,13 @@
         <argument key="App\Kernel::registerContainerConfiguration" type="service_closure" id=".service_locator.y4_Zrx."/>
         <argument key="kernel::loadRoutes" type="service_closure" id=".service_locator.y4_Zrx."/>
         <argument key="kernel::registerContainerConfiguration" type="service_closure" id=".service_locator.y4_Zrx."/>
+<<<<<<< HEAD
+=======
+        <argument key="App\Controller\CartController:add" type="service_closure" id=".service_locator.d_Zi8_Z"/>
+        <argument key="App\Controller\CartController:delete" type="service_closure" id=".service_locator.d_Zi8_Z"/>
+        <argument key="App\Controller\CartController:index" type="service_closure" id=".service_locator.P7oU2Zl"/>
+        <argument key="App\Controller\CartController:remove" type="service_closure" id=".service_locator.d_Zi8_Z"/>
+>>>>>>> panier
         <argument key="App\Controller\CatalogueController:index" type="service_closure" id=".service_locator.avYFkEZ"/>
         <argument key="App\Controller\ContactController:contact" type="service_closure" id=".service_locator.d1ey3el"/>
         <argument key="App\Controller\InscriptionController:create" type="service_closure" id=".service_locator.B46.13k"/>
@@ -7396,10 +7455,14 @@
         <argument key="doctrine.orm.messenger.doctrine_schema_subscriber" type="service_closure" id="doctrine.orm.messenger.doctrine_schema_subscriber"/>
       </argument>
     </service>
+<<<<<<< HEAD
     <service id=".service_locator.JzkkBjN" class="Symfony\Component\DependencyInjection\ServiceLocator">
+=======
+    <service id=".service_locator.lLcEAlc" class="Symfony\Component\DependencyInjection\ServiceLocator">
+>>>>>>> panier
       <tag name="container.service_locator"/>
       <argument type="collection">
-        <argument key="App\Repository\CollaborateursRepository" type="service_closure" id="App\Repository\CollaborateursRepository"/>
+        <argument key="App\Repository\ClientRepository" type="service_closure" id="App\Repository\ClientRepository"/>
         <argument key="App\Repository\CommentaireRepository" type="service_closure" id="App\Repository\CommentaireRepository"/>
         <argument key="App\Repository\ContactRepository" type="service_closure" id="App\Repository\ContactRepository"/>
         <argument key="App\Repository\FilmRepository" type="service_closure" id="App\Repository\FilmRepository"/>
@@ -7676,6 +7739,15 @@
       <argument type="service" id="service_container"/>
       <factory service=".service_locator.CshazM0" method="withContext"/>
     </service>
+<<<<<<< HEAD
+=======
+    <service id=".service_locator.CshazM0.App\Controller\CartController" class="Symfony\Component\DependencyInjection\ServiceLocator">
+      <tag name="container.service_locator_context" id="App\Controller\CartController"/>
+      <argument>App\Controller\CartController</argument>
+      <argument type="service" id="service_container"/>
+      <factory service=".service_locator.CshazM0" method="withContext"/>
+    </service>
+>>>>>>> panier
     <service id=".service_locator.CshazM0.App\Controller\CatalogueController" class="Symfony\Component\DependencyInjection\ServiceLocator">
       <tag name="container.service_locator_context" id="App\Controller\CatalogueController"/>
       <argument>App\Controller\CatalogueController</argument>
@@ -8019,12 +8091,20 @@
     <service id="debug.argument_resolver.request.inner" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\RequestValueResolver"/>
     <service id="debug.argument_resolver.session.inner" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\SessionValueResolver"/>
     <service id="debug.argument_resolver.service.inner" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\ServiceValueResolver">
+<<<<<<< HEAD
       <argument type="service" id=".service_locator.9BY5AlA"/>
+=======
+      <argument type="service" id=".service_locator.uGawp6m"/>
+>>>>>>> panier
     </service>
     <service id="debug.argument_resolver.default.inner" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\DefaultValueResolver"/>
     <service id="debug.argument_resolver.variadic.inner" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\VariadicValueResolver"/>
     <service id="debug.argument_resolver.not_tagged_controller.inner" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\NotTaggedControllerValueResolver">
+<<<<<<< HEAD
       <argument type="service" id=".service_locator.9BY5AlA"/>
+=======
+      <argument type="service" id=".service_locator.uGawp6m"/>
+>>>>>>> panier
     </service>
     <service id="debug.traced.messenger.bus.default.inner" class="Symfony\Component\Messenger\MessageBus">
       <argument type="iterator">
@@ -8044,6 +8124,7 @@
       </call>
     </service>
     <service id=".errored..service_locator.y4_Zrx..Symfony\Component\Config\Loader\LoaderInterface" class="Symfony\Component\Config\Loader\LoaderInterface"/>
+    <service id=".errored..service_locator.d_Zi8_Z.App\Entity\Film" class="App\Entity\Film"/>
     <service id=".errored..service_locator.Qw6utIN.App\Entity\Film" class="App\Entity\Film"/>
     <service id=".errored..service_locator.sUM6vBH.App\Entity\Film" class="App\Entity\Film"/>
     <service id=".errored..service_locator.otSeFVa.App\Entity\User" class="App\Entity\User"/>
@@ -8999,7 +9080,11 @@
     <service id="karser_recaptcha3.google.request_method" alias="karser_recaptcha3.google.request_method.curl_post"/>
     <service id="container.env_var_processors_locator" alias=".service_locator.7nzbL4K" public="true"/>
     <service id="twig.loader.filesystem" alias="twig.loader.native_filesystem"/>
+<<<<<<< HEAD
     <service id="argument_resolver.controller_locator" alias=".service_locator.9BY5AlA"/>
+=======
+    <service id="argument_resolver.controller_locator" alias=".service_locator.uGawp6m"/>
+>>>>>>> panier
     <service id="doctrine.id_generator_locator" alias=".service_locator.KLVvNIq"/>
     <service id="twig.loader" alias="twig.loader.native_filesystem"/>
     <service id="Psr\Log\LoggerInterface $requestLogger" alias="monolog.logger.request"/>
@@ -9026,7 +9111,11 @@
     <service id=".service_locator.dbzJJNj" alias=".service_locator.Qw6utIN"/>
     <service id=".service_locator.EhIXrCS" alias=".service_locator.sUM6vBH"/>
     <service id=".service_locator.2AheOfr" alias=".service_locator.cELnjUu"/>
+<<<<<<< HEAD
     <service id=".service_locator.VNg_vjd" alias=".service_locator.9BY5AlA"/>
+=======
+    <service id=".service_locator.RHYOCaw" alias=".service_locator.uGawp6m"/>
+>>>>>>> panier
     <service id=".service_locator.sZJMMrU" alias=".service_locator.pSux3IH"/>
     <service id=".service_locator.zpC4TRG" alias=".service_locator.U6.DLCg"/>
     <service id=".service_locator.XW18Svm" alias=".service_locator.TcKhdzh"/>
@@ -9077,6 +9166,11 @@
     <service id="messenger.bus.default" alias="debug.traced.messenger.bus.default"/>
     <service id="doctrine.orm.default_metadata_driver" alias=".doctrine.orm.default_metadata_driver"/>
     <service id=".service_locator.gFlme_s" alias=".service_locator.y4_Zrx."/>
+<<<<<<< HEAD
+=======
+    <service id=".service_locator.LLInSK6" alias=".service_locator.P7oU2Zl"/>
+    <service id=".service_locator.e4ykKCH" alias=".service_locator.d_Zi8_Z"/>
+>>>>>>> panier
     <service id=".service_locator.pshiYgR" alias=".service_locator.avYFkEZ"/>
     <service id=".service_locator.wmIqjX." alias=".service_locator.d1ey3el"/>
     <service id=".service_locator.AbOwiO3" alias=".service_locator.B46.13k"/>

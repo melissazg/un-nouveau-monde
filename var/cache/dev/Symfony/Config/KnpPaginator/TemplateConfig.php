@@ -14,7 +14,7 @@ class TemplateConfig
     private $filtration;
     private $sortable;
     private $_usedProperties = [];
-
+    
     /**
      * @default '@KnpPaginator/Pagination/sliding.html.twig'
      * @param ParamConfigurator|mixed $value
@@ -24,10 +24,10 @@ class TemplateConfig
     {
         $this->_usedProperties['pagination'] = true;
         $this->pagination = $value;
-
+    
         return $this;
     }
-
+    
     /**
      * @default '@KnpPaginator/Pagination/filtration.html.twig'
      * @param ParamConfigurator|mixed $value
@@ -37,10 +37,10 @@ class TemplateConfig
     {
         $this->_usedProperties['filtration'] = true;
         $this->filtration = $value;
-
+    
         return $this;
     }
-
+    
     /**
      * @default '@KnpPaginator/Pagination/sortable_link.html.twig'
      * @param ParamConfigurator|mixed $value
@@ -50,10 +50,10 @@ class TemplateConfig
     {
         $this->_usedProperties['sortable'] = true;
         $this->sortable = $value;
-
+    
         return $this;
     }
-
+    
     public function __construct(array $value = [])
     {
         if (array_key_exists('pagination', $value)) {
@@ -61,24 +61,24 @@ class TemplateConfig
             $this->pagination = $value['pagination'];
             unset($value['pagination']);
         }
-
+    
         if (array_key_exists('filtration', $value)) {
             $this->_usedProperties['filtration'] = true;
             $this->filtration = $value['filtration'];
             unset($value['filtration']);
         }
-
+    
         if (array_key_exists('sortable', $value)) {
             $this->_usedProperties['sortable'] = true;
             $this->sortable = $value['sortable'];
             unset($value['sortable']);
         }
-
+    
         if ([] !== $value) {
             throw new InvalidConfigurationException(sprintf('The following keys are not supported by "%s": ', __CLASS__).implode(', ', array_keys($value)));
         }
     }
-
+    
     public function toArray(): array
     {
         $output = [];
@@ -91,7 +91,7 @@ class TemplateConfig
         if (isset($this->_usedProperties['sortable'])) {
             $output['sortable'] = $this->sortable;
         }
-
+    
         return $output;
     }
 

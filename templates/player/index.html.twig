@@ -13,6 +13,11 @@
     <ul>
         <iframe width="640" height="480" src={{iframePath}} scrolling="no" frameborder="0" allowfullscreen="true"></iframe>
     </ul>
+    <span style="display: inline-block; margin-left: 10px; font-size: 14px; color: #333;">Prix : {{ film.prix }} €</span>
+    <a href="{{ path("cart_add", {id: film.id })}}" class="btn"  style="background: linear-gradient(to bottom right, #4c84ff, #a45bff); color: #fff; border: none; border-radius: 5px; padding: 10px 20px; text-align: center; text-decoration: none; display: inline-block; font-size: 16px; cursor: pointer; transition: background 0.3s;">
+        <i class="bi bi-cart-plus"></i> Ajouter
+    </a>
+
 </div>
 
     <div>

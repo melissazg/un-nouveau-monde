@@ -1,3 +1,7 @@
 <?php //%5BC%5DApp%255CController%255CSecurityController%2523login
 
+<<<<<<< HEAD
 return [PHP_INT_MAX, 1680310647];
+=======
+return [PHP_INT_MAX, 1680321458];
+>>>>>>> panier
