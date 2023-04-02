@@ -377,13 +377,6 @@
         <argument type="service" id=".service_locator.CshazM0.App\Controller\CartController"/>
       </call>
     </service>
-    <service id="App\Controller\CatalogueController" class="App\Controller\CatalogueController" public="true" autowire="true" autoconfigure="true">
-      <tag name="controller.service_arguments"/>
-      <tag name="container.service_subscriber"/>
-      <call method="setContainer">
-        <argument type="service" id=".service_locator.CshazM0.App\Controller\CatalogueController"/>
-      </call>
-    </service>
     <service id="App\Controller\ContactController" class="App\Controller\ContactController" public="true" autowire="true" autoconfigure="true">
       <tag name="controller.service_arguments"/>
       <tag name="container.service_subscriber"/>
@@ -6616,9 +6609,6 @@
     <service id=".instanceof.Symfony\Contracts\Service\ServiceSubscriberInterface.0.App\Controller\CartController" class="App\Controller\CartController" autowire="true" abstract="true"/>
     <service id=".instanceof.Symfony\Bundle\FrameworkBundle\Controller\AbstractController.0.App\Controller\CartController" class="App\Controller\CartController" autowire="true" abstract="true"/>
     <service id=".abstract.instanceof.App\Controller\CartController" class="App\Controller\CartController" autowire="true" autoconfigure="true" abstract="true"/>
-    <service id=".instanceof.Symfony\Contracts\Service\ServiceSubscriberInterface.0.App\Controller\CatalogueController" class="App\Controller\CatalogueController" autowire="true" abstract="true"/>
-    <service id=".instanceof.Symfony\Bundle\FrameworkBundle\Controller\AbstractController.0.App\Controller\CatalogueController" class="App\Controller\CatalogueController" autowire="true" abstract="true"/>
-    <service id=".abstract.instanceof.App\Controller\CatalogueController" class="App\Controller\CatalogueController" autowire="true" autoconfigure="true" abstract="true"/>
     <service id=".instanceof.Symfony\Contracts\Service\ServiceSubscriberInterface.0.App\Controller\ContactController" class="App\Controller\ContactController" autowire="true" abstract="true"/>
     <service id=".instanceof.Symfony\Bundle\FrameworkBundle\Controller\AbstractController.0.App\Controller\ContactController" class="App\Controller\ContactController" autowire="true" abstract="true"/>
     <service id=".abstract.instanceof.App\Controller\ContactController" class="App\Controller\ContactController" autowire="true" autoconfigure="true" abstract="true"/>
@@ -7030,12 +7020,6 @@
         <argument key="film" type="service_closure" id=".errored..service_locator.d_Zi8_Z.App\Entity\Film"/>
       </argument>
     </service>
-    <service id=".service_locator.avYFkEZ" class="Symfony\Component\DependencyInjection\ServiceLocator">
-      <tag name="container.service_locator"/>
-      <argument type="collection">
-        <argument key="SearchRepository" type="service_closure" id="App\Repository\SearchRepository"/>
-      </argument>
-    </service>
     <service id=".service_locator.d1ey3el" class="Symfony\Component\DependencyInjection\ServiceLocator">
       <tag name="container.service_locator"/>
       <argument type="collection">
@@ -7090,6 +7074,12 @@
         <argument key="userRepository" type="service_closure" id="App\Repository\UserRepository"/>
       </argument>
     </service>
+    <service id=".service_locator.avYFkEZ" class="Symfony\Component\DependencyInjection\ServiceLocator">
+      <tag name="container.service_locator"/>
+      <argument type="collection">
+        <argument key="SearchRepository" type="service_closure" id="App\Repository\SearchRepository"/>
+      </argument>
+    </service>
     <service id=".service_locator.rSTd.nA" class="Symfony\Component\DependencyInjection\ServiceLocator">
       <tag name="container.service_locator"/>
       <argument type="collection">
@@ -7112,14 +7102,13 @@
         <argument key="user" type="service_closure" id=".errored..service_locator.cELnjUu.App\Entity\User"/>
       </argument>
     </service>
-    <service id=".service_locator.uGawp6m" class="Symfony\Component\DependencyInjection\ServiceLocator">
+    <service id=".service_locator.7kc807." class="Symfony\Component\DependencyInjection\ServiceLocator">
       <tag name="container.service_locator"/>
       <argument type="collection">
         <argument key="App\Controller\CartController::add" type="service_closure" id=".service_locator.d_Zi8_Z"/>
         <argument key="App\Controller\CartController::delete" type="service_closure" id=".service_locator.d_Zi8_Z"/>
         <argument key="App\Controller\CartController::index" type="service_closure" id=".service_locator.P7oU2Zl"/>
         <argument key="App\Controller\CartController::remove" type="service_closure" id=".service_locator.d_Zi8_Z"/>
-        <argument key="App\Controller\CatalogueController::index" type="service_closure" id=".service_locator.avYFkEZ"/>
         <argument key="App\Controller\ContactController::contact" type="service_closure" id=".service_locator.d1ey3el"/>
         <argument key="App\Controller\InscriptionController::create" type="service_closure" id=".service_locator.B46.13k"/>
         <argument key="App\Controller\InscriptionController::verifyUser" type="service_closure" id=".service_locator.yoflbtf"/>
@@ -7140,7 +7129,6 @@
         <argument key="App\Controller\CartController:delete" type="service_closure" id=".service_locator.d_Zi8_Z"/>
         <argument key="App\Controller\CartController:index" type="service_closure" id=".service_locator.P7oU2Zl"/>
         <argument key="App\Controller\CartController:remove" type="service_closure" id=".service_locator.d_Zi8_Z"/>
-        <argument key="App\Controller\CatalogueController:index" type="service_closure" id=".service_locator.avYFkEZ"/>
         <argument key="App\Controller\ContactController:contact" type="service_closure" id=".service_locator.d1ey3el"/>
         <argument key="App\Controller\InscriptionController:create" type="service_closure" id=".service_locator.B46.13k"/>
         <argument key="App\Controller\InscriptionController:verifyUser" type="service_closure" id=".service_locator.yoflbtf"/>
@@ -7719,12 +7707,6 @@
       <argument type="service" id="service_container"/>
       <factory service=".service_locator.CshazM0" method="withContext"/>
     </service>
-    <service id=".service_locator.CshazM0.App\Controller\CatalogueController" class="Symfony\Component\DependencyInjection\ServiceLocator">
-      <tag name="container.service_locator_context" id="App\Controller\CatalogueController"/>
-      <argument>App\Controller\CatalogueController</argument>
-      <argument type="service" id="service_container"/>
-      <factory service=".service_locator.CshazM0" method="withContext"/>
-    </service>
     <service id=".service_locator.CshazM0.App\Controller\ContactController" class="Symfony\Component\DependencyInjection\ServiceLocator">
       <tag name="container.service_locator_context" id="App\Controller\ContactController"/>
       <argument>App\Controller\ContactController</argument>
@@ -8062,12 +8044,12 @@
     <service id="debug.argument_resolver.request.inner" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\RequestValueResolver"/>
     <service id="debug.argument_resolver.session.inner" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\SessionValueResolver"/>
     <service id="debug.argument_resolver.service.inner" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\ServiceValueResolver">
-      <argument type="service" id=".service_locator.uGawp6m"/>
+      <argument type="service" id=".service_locator.7kc807."/>
     </service>
     <service id="debug.argument_resolver.default.inner" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\DefaultValueResolver"/>
     <service id="debug.argument_resolver.variadic.inner" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\VariadicValueResolver"/>
     <service id="debug.argument_resolver.not_tagged_controller.inner" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\NotTaggedControllerValueResolver">
-      <argument type="service" id=".service_locator.uGawp6m"/>
+      <argument type="service" id=".service_locator.7kc807."/>
     </service>
     <service id="debug.traced.messenger.bus.default.inner" class="Symfony\Component\Messenger\MessageBus">
       <argument type="iterator">
@@ -9043,7 +9025,7 @@
     <service id="karser_recaptcha3.google.request_method" alias="karser_recaptcha3.google.request_method.curl_post"/>
     <service id="container.env_var_processors_locator" alias=".service_locator.7nzbL4K" public="true"/>
     <service id="twig.loader.filesystem" alias="twig.loader.native_filesystem"/>
-    <service id="argument_resolver.controller_locator" alias=".service_locator.uGawp6m"/>
+    <service id="argument_resolver.controller_locator" alias=".service_locator.7kc807."/>
     <service id="doctrine.id_generator_locator" alias=".service_locator.KLVvNIq"/>
     <service id="twig.loader" alias="twig.loader.native_filesystem"/>
     <service id="Psr\Log\LoggerInterface $requestLogger" alias="monolog.logger.request"/>
@@ -9070,7 +9052,7 @@
     <service id=".service_locator.dbzJJNj" alias=".service_locator.Qw6utIN"/>
     <service id=".service_locator.EhIXrCS" alias=".service_locator.sUM6vBH"/>
     <service id=".service_locator.2AheOfr" alias=".service_locator.cELnjUu"/>
-    <service id=".service_locator.RHYOCaw" alias=".service_locator.uGawp6m"/>
+    <service id=".service_locator.8VwTF50" alias=".service_locator.7kc807."/>
     <service id=".service_locator.sZJMMrU" alias=".service_locator.pSux3IH"/>
     <service id=".service_locator.zpC4TRG" alias=".service_locator.U6.DLCg"/>
     <service id=".service_locator.XW18Svm" alias=".service_locator.TcKhdzh"/>
@@ -9123,7 +9105,6 @@
     <service id=".service_locator.gFlme_s" alias=".service_locator.y4_Zrx."/>
     <service id=".service_locator.LLInSK6" alias=".service_locator.P7oU2Zl"/>
     <service id=".service_locator.e4ykKCH" alias=".service_locator.d_Zi8_Z"/>
-    <service id=".service_locator.pshiYgR" alias=".service_locator.avYFkEZ"/>
     <service id=".service_locator.wmIqjX." alias=".service_locator.d1ey3el"/>
     <service id=".service_locator.AbOwiO3" alias=".service_locator.B46.13k"/>
     <service id=".service_locator.lgO4r79" alias=".service_locator.yoflbtf"/>
@@ -9131,6 +9112,7 @@
     <service id=".service_locator.6k5RJBU" alias=".service_locator.V71r_w4"/>
     <service id=".service_locator.dR92X1z" alias=".service_locator.Qw6utIN"/>
     <service id=".service_locator.q8kBOyX" alias=".service_locator.sUM6vBH"/>
+    <service id=".service_locator.pshiYgR" alias=".service_locator.avYFkEZ"/>
     <service id=".service_locator.7NIAq8D" alias=".service_locator.rSTd.nA"/>
     <service id=".service_locator.WSlAhED" alias=".service_locator.otSeFVa"/>
     <service id=".service_locator.QfGTkjT" alias=".service_locator.cELnjUu"/>

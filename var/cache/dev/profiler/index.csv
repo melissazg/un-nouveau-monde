@@ -157,3 +157,7 @@ b69fdc,::1,GET,http://localhost/un-nouveau-monde/public/delete,1680359113,f02804
 f02804,::1,GET,http://localhost/un-nouveau-monde/public/delete,1680359113,,500
 94f025,::1,GET,http://localhost/un-nouveau-monde/public/delete,1680359133,,302
 4e7dd9,::1,GET,http://localhost/un-nouveau-monde/public/cart,1680359133,,200
+e17d15,::1,GET,http://localhost/un-nouveau-monde/public/home,1680456236,,200
+0fdea3,::1,GET,http://localhost/un-nouveau-monde/public/,1680456243,,200
+d4fb4d,::1,GET,http://localhost/un-nouveau-monde/public/home,1680456267,,200
+08087f,::1,GET,http://localhost/un-nouveau-monde/public/cart,1680456268,,200

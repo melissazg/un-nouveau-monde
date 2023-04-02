@@ -24,10 +24,10 @@ return [
         '/manager/nouveau' => [[['_route' => 'film.new', '_controller' => 'App\\Controller\\ManagerController::new'], null, ['GET' => 0, 'POST' => 1], null, false, false, null]],
         '/partners' => [[['_route' => 'app_partners', '_controller' => 'App\\Controller\\PartnersController::index'], null, ['GET' => 0], null, false, false, null]],
         '/' => [[['_route' => 'app_pre_login', '_controller' => 'App\\Controller\\PreLoginController::index'], null, ['GET' => 0, 'POST' => 1], null, false, false, null]],
+        '/catalogue' => [[['_route' => 'app_catalogue', '_controller' => 'App\\Controller\\SearchController::index'], null, null, null, false, false, null]],
         '/connexion' => [[['_route' => 'app_login', '_controller' => 'App\\Controller\\SecurityController::login'], null, ['GET' => 0, 'POST' => 1], null, false, false, null]],
         '/logout' => [[['_route' => 'app_logout', '_controller' => 'App\\Controller\\SecurityController::logout'], null, null, null, false, false, null]],
         '/utilisateur/profil' => [[['_route' => 'app_user_profile', '_controller' => 'App\\Controller\\UserController::index'], null, ['GET' => 0, 'POST' => 1], null, false, false, null]],
-        '/catalogue' => [[['_route' => 'app_catalogue', '_controller' => 'App\\Controller\\CatalogueController::index'], null, ['GET' => 0], null, false, false, null]],
     ],
     [ // $regexpList
         0 => '{^(?'
