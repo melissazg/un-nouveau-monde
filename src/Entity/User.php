@@ -5,6 +5,8 @@ namespace App\Entity;
 use App\Repository\UserRepository;
 use Doctrine\DBAL\Types\Types;
 use Doctrine\ORM\Mapping as ORM;
+use phpDocumentor\Reflection\Types\Integer;
+use phpDocumentor\Reflection\Types\InterfaceString;
 use Symfony\Bridge\Doctrine\Validator\Constraints\UniqueEntity;
 use Symfony\Component\Security\Core\User\PasswordAuthenticatedUserInterface;
 use Symfony\Component\Security\Core\User\UserInterface;
@@ -155,9 +157,11 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
         return strtoupper($this->lastName);
     }
 
-    public function setLastName(string $lastName): void
+    public function setLastName(string $lastName): self
     {
         $this->lastName = $lastName;
+
+        return $this;
     }
 
     public function getFullName(): ?string
@@ -289,5 +293,6 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
     {
         $this->plainPassword = $plainPassword;
     }
+
 }
 

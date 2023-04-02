@@ -2,12 +2,11 @@
 
 namespace App\DataFixtures;
 
-use App\Entity\Film;
+use App\Entity\Musique;
 use Doctrine\Bundle\FixturesBundle\Fixture;
 use Doctrine\Persistence\ObjectManager;
 use Faker\Factory;
-
-class AppFixtures extends Fixture
+class MusicFixtures extends Fixture
 {
     public function load(ObjectManager $manager): void
     {
@@ -15,7 +14,7 @@ class AppFixtures extends Fixture
 
 
         for ($i = 0; $i < 10; $i++){
-            $film = new Film();
+            $film = new Musique();
             $film -> setName($faker -> word());
             $film -> setGenre($faker -> word());
             $film -> setRealisateur($faker->name());

@@ -2,25 +2,23 @@
 
 namespace App\Controller;
 
-use App\Form\SearchType;
+use App\Form\SearchMusiqueType;
 use Symfony\Component\HttpFoundation\Request;
-use App\Repository\SearchRepository;
+use App\Repository\SearchMusiqueRepository;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 
-class CatalogueController extends AbstractController
+class SearchMusiqueController extends AbstractController
 {
-    #[Route('/catalogue', name: 'app_catalogue')]
-    public function index(SearchRepository $SearchRepository, Request $request ): Response
+    #[Route('/catalogue_musique', name: 'app_catalogue_musique')]
+    public function index(SearchMusiqueRepository $SearchRepository, Request $request ): Response
     {
-        $form = $this->createForm(SearchType::class, null, [
-            'action' => $this->generateUrl('app_catalogue'),
+        $form = $this->createForm(SearchMusiqueType::class, null, [
+            'action' => $this->generateUrl('app_catalogue_musique'),
             'method' => 'GET'
         ]);
         $form->handleRequest($request);
-
-        $searchResults = [];
 
         if ($form->isSubmitted() && $form->isValid()) {
             $query = $form->getData()['query'];
@@ -31,11 +29,9 @@ class CatalogueController extends AbstractController
             $searchResults = $SearchRepository->getFilm();
         }
 
-        return $this->render('catalogue/index.html.twig', [
+        return $this->render('catalogue_musique/index.html.twig', [
             'form' => $form->createView(),
-            'films' => $searchResults,
+            'musiques' => $searchResults,
         ]);
     }
 }
-
-
