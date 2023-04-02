@@ -13,17 +13,19 @@ class AppFixtures extends Fixture
         $faker = Factory::create('fr_FR');
 
 
-        for ($i = 0; $i < 50; $i++){
+        for ($i = 0; $i < 10; $i++){
             $film = new Film();
-            $film ->setName($faker -> word());
+            $film -> setName($faker -> word());
             $film -> setGenre($faker -> word());
             $film -> setRealisateur($faker->name());
             $film -> setDescription($faker->text());
             $film -> setDate($faker -> dateTime);
             $film -> setDuree($faker->dateTime);
             $film -> setActeursPrincipaux($faker->text());
+            $film -> setImagePath('https://i.ibb.co/09prxKV/index1.jpg');
             $film -> setIframePath('https://mixdrp.to/e/qlxl7zn3fwjk64');
-
+            $film -> setInitNbNotes(0);
+            $film -> setInitNotes(0);
 
             $manager ->persist($film);
         }
