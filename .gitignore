@@ -1,0 +1,17 @@
+# Symfony specific
+/var/cache/*
+/var/log/*
+/.env.local
+
+# Composer
+/vendor/
+
+# IDE
+/.idea/
+/.vscode/
+*.sublime-project
+*.sublime-workspace
+
+# System
+.DS_Store
+Thumbs.db
