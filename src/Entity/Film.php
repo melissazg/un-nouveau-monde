@@ -52,9 +52,10 @@ class Film
     private ?int $notes = null;
 
     #[ORM\Column(nullable: true)]
-    private ?int $nb_notes = null;
+    private ?int $nbNotes = null;
 
-
+    #[ORM\Column]
+    private ?int $prix = null;
 
 
     public function __construct()
@@ -63,6 +64,7 @@ class Film
         $this->notes = 0;
         $this->nbNotes = 0;
     }
+
 
     public function getId(): ?int
     {
@@ -179,7 +181,7 @@ class Film
                 $commentaire->setFilm(null);
                 $note = $commentaire->getNote();
                 $this->notes -= $note;
-                $this->nb_notes -= 1;
+                $this->nbNotes -= 1;
             }
         }
 
@@ -220,16 +222,6 @@ class Film
         return $this;
     }
 
-    public function setInitNotes(?int $notes): void
-    {
-        $this->notes = $notes;
-    }
-
-    public function setInitNbNotes(?int $nbNotes): void
-    {
-        $this->nb_notes = $nbNotes;
-    }
-
     public function setNotes(?int $notes): void
     {
         $this->notes += $notes;
@@ -238,17 +230,29 @@ class Film
 
     public function getNbNotes(): ?int
     {
-        return $this->nb_notes;
+        return $this->nbNotes;
     }
 
     public function setNbNotes(): void
     {
-        $this->nb_notes +=1;
+        $this->nbNotes +=1;
     }
 
     public function addNote(int $note){
         $this->setNotes($note);
         $this->setNbNotes();
+    }
+
+    public function getPrix(): ?int
+    {
+        return $this->prix;
+    }
+
+    public function setPrix(int $prix): self
+    {
+        $this->prix = $prix;
+
+        return $this;
     }
 
 }
