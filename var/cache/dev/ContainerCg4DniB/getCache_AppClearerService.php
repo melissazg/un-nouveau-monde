@@ -1,10 +1,6 @@
 <?php
 
-<<<<<<<< HEAD:var/cache/dev/ContainerCg4DniB/getCache_AppClearerService.php
 namespace ContainerCg4DniB;
-========
-namespace ContainerE3z86jQ;
->>>>>>>> panier:var/cache/dev/ContainerE3z86jQ/getCache_AppClearerService.php
 
 
 use Symfony\Component\DependencyInjection\Argument\RewindableGenerator;

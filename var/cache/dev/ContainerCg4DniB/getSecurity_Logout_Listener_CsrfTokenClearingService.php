@@ -1,10 +1,6 @@
 <?php
 
-<<<<<<<< HEAD:var/cache/dev/ContainerCg4DniB/getSecurity_Logout_Listener_CsrfTokenClearingService.php
 namespace ContainerCg4DniB;
-========
-namespace ContainerE3z86jQ;
->>>>>>>> panier:var/cache/dev/ContainerE3z86jQ/getSecurity_Logout_Listener_CsrfTokenClearingService.php
 
 
 use Symfony\Component\DependencyInjection\Argument\RewindableGenerator;

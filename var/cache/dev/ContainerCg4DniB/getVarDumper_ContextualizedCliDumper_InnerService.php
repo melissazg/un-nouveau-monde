@@ -1,10 +1,6 @@
 <?php
 
-<<<<<<<< HEAD:var/cache/dev/ContainerCg4DniB/getVarDumper_ContextualizedCliDumper_InnerService.php
 namespace ContainerCg4DniB;
-========
-namespace ContainerE3z86jQ;
->>>>>>>> panier:var/cache/dev/ContainerE3z86jQ/getVarDumper_ContextualizedCliDumper_InnerService.php
 
 
 use Symfony\Component\DependencyInjection\Argument\RewindableGenerator;

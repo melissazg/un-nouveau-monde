@@ -1,10 +1,6 @@
 <?php
 
-<<<<<<<< HEAD:var/cache/dev/ContainerCg4DniB/getSecurity_Firewall_Map_Context_MainService.php
 namespace ContainerCg4DniB;
-========
-namespace ContainerE3z86jQ;
->>>>>>>> panier:var/cache/dev/ContainerE3z86jQ/getSecurity_Firewall_Map_Context_MainService.php
 
 
 use Symfony\Component\DependencyInjection\Argument\RewindableGenerator;

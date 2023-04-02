@@ -1,10 +1,6 @@
 <?php
 
-<<<<<<<< HEAD:var/cache/dev/ContainerCg4DniB/App_KernelDevDebugContainer.php
 namespace ContainerCg4DniB;
-========
-namespace ContainerE3z86jQ;
->>>>>>>> panier:var/cache/dev/ContainerE3z86jQ/App_KernelDevDebugContainer.php
 
 
 use Symfony\Component\DependencyInjection\Argument\RewindableGenerator;
@@ -61,10 +57,6 @@ class App_KernelDevDebugContainer extends Container
         ];
         $this->fileMap = [
             'App\\Controller\\AboutController' => 'getAboutControllerService',
-<<<<<<<< HEAD:var/cache/dev/ContainerCg4DniB/App_KernelDevDebugContainer.php
-========
-            'App\\Controller\\CartController' => 'getCartControllerService',
->>>>>>>> panier:var/cache/dev/ContainerE3z86jQ/App_KernelDevDebugContainer.php
             'App\\Controller\\CatalogueController' => 'getCatalogueControllerService',
             'App\\Controller\\ContactController' => 'getContactControllerService',
             'App\\Controller\\HomeController' => 'getHomeControllerService',
@@ -678,7 +670,7 @@ class App_KernelDevDebugContainer extends Container
         $a->setEntityListenerResolver(new \Doctrine\Bundle\DoctrineBundle\Mapping\ContainerEntityListenerResolver($this));
         $a->setLazyGhostObjectEnabled(true);
         $a->setRepositoryFactory(new \Doctrine\Bundle\DoctrineBundle\Repository\ContainerRepositoryFactory(new \Symfony\Component\DependencyInjection\Argument\ServiceLocator($this->getService, [
-            'App\\Repository\\ClientRepository' => ['privates', 'App\\Repository\\ClientRepository', 'getClientRepositoryService', true],
+            'App\\Repository\\CollaborateursRepository' => ['privates', 'App\\Repository\\CollaborateursRepository', 'getCollaborateursRepositoryService', true],
             'App\\Repository\\CommentaireRepository' => ['privates', 'App\\Repository\\CommentaireRepository', 'getCommentaireRepositoryService', true],
             'App\\Repository\\ContactRepository' => ['privates', 'App\\Repository\\ContactRepository', 'getContactRepositoryService', true],
             'App\\Repository\\FilmRepository' => ['privates', 'App\\Repository\\FilmRepository', 'getFilmRepositoryService', true],
@@ -686,7 +678,7 @@ class App_KernelDevDebugContainer extends Container
             'App\\Repository\\SearchRepository' => ['privates', 'App\\Repository\\SearchRepository', 'getSearchRepositoryService', true],
             'App\\Repository\\UserRepository' => ['privates', 'App\\Repository\\UserRepository', 'getUserRepositoryService', true],
         ], [
-            'App\\Repository\\ClientRepository' => '?',
+            'App\\Repository\\CollaborateursRepository' => '?',
             'App\\Repository\\CommentaireRepository' => '?',
             'App\\Repository\\ContactRepository' => '?',
             'App\\Repository\\FilmRepository' => '?',

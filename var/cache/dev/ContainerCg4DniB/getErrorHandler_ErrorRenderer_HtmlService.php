@@ -1,10 +1,6 @@
 <?php
 
-<<<<<<<< HEAD:var/cache/dev/ContainerCg4DniB/getErrorHandler_ErrorRenderer_HtmlService.php
 namespace ContainerCg4DniB;
-========
-namespace ContainerE3z86jQ;
->>>>>>>> panier:var/cache/dev/ContainerE3z86jQ/getErrorHandler_ErrorRenderer_HtmlService.php
 
 
 use Symfony\Component\DependencyInjection\Argument\RewindableGenerator;

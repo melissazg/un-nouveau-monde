@@ -1,10 +1,6 @@
 <?php
 
-<<<<<<<< HEAD:var/cache/dev/ContainerCg4DniB/getRunSqlCommandService.php
 namespace ContainerCg4DniB;
-========
-namespace ContainerE3z86jQ;
->>>>>>>> panier:var/cache/dev/ContainerE3z86jQ/getRunSqlCommandService.php
 
 
 use Symfony\Component\DependencyInjection\Argument\RewindableGenerator;

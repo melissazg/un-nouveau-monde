@@ -1,10 +1,6 @@
 <?php
 
-<<<<<<<< HEAD:var/cache/dev/ContainerCg4DniB/getDoctrineMigrations_ExecuteCommandService.php
 namespace ContainerCg4DniB;
-========
-namespace ContainerE3z86jQ;
->>>>>>>> panier:var/cache/dev/ContainerE3z86jQ/getDoctrineMigrations_ExecuteCommandService.php
 
 
 use Symfony\Component\DependencyInjection\Argument\RewindableGenerator;

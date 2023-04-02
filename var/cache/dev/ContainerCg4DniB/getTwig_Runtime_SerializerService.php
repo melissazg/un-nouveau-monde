@@ -1,10 +1,6 @@
 <?php
 
-<<<<<<<< HEAD:var/cache/dev/ContainerCg4DniB/getTwig_Runtime_SerializerService.php
 namespace ContainerCg4DniB;
-========
-namespace ContainerE3z86jQ;
->>>>>>>> panier:var/cache/dev/ContainerE3z86jQ/getTwig_Runtime_SerializerService.php
 
 
 use Symfony\Component\DependencyInjection\Argument\RewindableGenerator;

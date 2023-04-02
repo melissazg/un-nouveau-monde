@@ -1,10 +1,6 @@
 <?php
 
-<<<<<<<< HEAD:var/cache/dev/ContainerCg4DniB/get_Messenger_HandlerDescriptor_VMw0m61Service.php
 namespace ContainerCg4DniB;
-========
-namespace ContainerE3z86jQ;
->>>>>>>> panier:var/cache/dev/ContainerE3z86jQ/get_Messenger_HandlerDescriptor_VMw0m61Service.php
 
 
 use Symfony\Component\DependencyInjection\Argument\RewindableGenerator;

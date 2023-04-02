@@ -1,10 +1,6 @@
 <?php
 
-<<<<<<<< HEAD:var/cache/dev/ContainerCg4DniB/getDebug_Security_Voter_Security_Access_SimpleRoleVoterService.php
 namespace ContainerCg4DniB;
-========
-namespace ContainerE3z86jQ;
->>>>>>>> panier:var/cache/dev/ContainerE3z86jQ/getDebug_Security_Voter_Security_Access_SimpleRoleVoterService.php
 
 
 use Symfony\Component\DependencyInjection\Argument\RewindableGenerator;

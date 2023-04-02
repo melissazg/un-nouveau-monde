@@ -1,10 +1,6 @@
 <?php
 
-<<<<<<<< HEAD:var/cache/dev/ContainerCg4DniB/getKarserRecaptcha3_ValidatorService.php
 namespace ContainerCg4DniB;
-========
-namespace ContainerE3z86jQ;
->>>>>>>> panier:var/cache/dev/ContainerE3z86jQ/getKarserRecaptcha3_ValidatorService.php
 
 
 use Symfony\Component\DependencyInjection\Argument\RewindableGenerator;

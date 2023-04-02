@@ -1,10 +1,6 @@
 <?php
 
-<<<<<<<< HEAD:var/cache/dev/ContainerCg4DniB/getDebug_ArgumentResolver_ServiceService.php
 namespace ContainerCg4DniB;
-========
-namespace ContainerE3z86jQ;
->>>>>>>> panier:var/cache/dev/ContainerE3z86jQ/getDebug_ArgumentResolver_ServiceService.php
 
 
 use Symfony\Component\DependencyInjection\Argument\RewindableGenerator;
@@ -27,11 +23,7 @@ class getDebug_ArgumentResolver_ServiceService extends App_KernelDevDebugContain
         include_once \dirname(__DIR__, 4).''.\DIRECTORY_SEPARATOR.'vendor'.\DIRECTORY_SEPARATOR.'symfony'.\DIRECTORY_SEPARATOR.'http-kernel'.\DIRECTORY_SEPARATOR.'Controller'.\DIRECTORY_SEPARATOR.'ArgumentResolver'.\DIRECTORY_SEPARATOR.'TraceableValueResolver.php';
         include_once \dirname(__DIR__, 4).''.\DIRECTORY_SEPARATOR.'vendor'.\DIRECTORY_SEPARATOR.'symfony'.\DIRECTORY_SEPARATOR.'http-kernel'.\DIRECTORY_SEPARATOR.'Controller'.\DIRECTORY_SEPARATOR.'ArgumentResolver'.\DIRECTORY_SEPARATOR.'ServiceValueResolver.php';
 
-<<<<<<<< HEAD:var/cache/dev/ContainerCg4DniB/getDebug_ArgumentResolver_ServiceService.php
         $a = ($container->privates['.service_locator.9BY5AlA'] ?? $container->load('get_ServiceLocator_9BY5AlAService'));
-========
-        $a = ($container->privates['.service_locator.UWoH5hj'] ?? $container->load('get_ServiceLocator_UWoH5hjService'));
->>>>>>>> panier:var/cache/dev/ContainerE3z86jQ/getDebug_ArgumentResolver_ServiceService.php
 
         if (isset($container->privates['debug.argument_resolver.service'])) {
             return $container->privates['debug.argument_resolver.service'];

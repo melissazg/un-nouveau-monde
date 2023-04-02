@@ -1,10 +1,6 @@
 <?php
 
-<<<<<<<< HEAD:var/cache/dev/ContainerCg4DniB/get_Twig_Command_Lint_LazyService.php
 namespace ContainerCg4DniB;
-========
-namespace ContainerE3z86jQ;
->>>>>>>> panier:var/cache/dev/ContainerE3z86jQ/get_Twig_Command_Lint_LazyService.php
 
 
 use Symfony\Component\DependencyInjection\Argument\RewindableGenerator;

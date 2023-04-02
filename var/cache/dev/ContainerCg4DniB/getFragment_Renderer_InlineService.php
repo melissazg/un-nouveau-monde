@@ -1,10 +1,6 @@
 <?php
 
-<<<<<<<< HEAD:var/cache/dev/ContainerCg4DniB/getFragment_Renderer_InlineService.php
 namespace ContainerCg4DniB;
-========
-namespace ContainerE3z86jQ;
->>>>>>>> panier:var/cache/dev/ContainerE3z86jQ/getFragment_Renderer_InlineService.php
 
 
 use Symfony\Component\DependencyInjection\Argument\RewindableGenerator;

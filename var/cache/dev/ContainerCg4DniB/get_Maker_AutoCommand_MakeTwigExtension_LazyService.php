@@ -1,10 +1,6 @@
 <?php
 
-<<<<<<<< HEAD:var/cache/dev/ContainerCg4DniB/get_Maker_AutoCommand_MakeTwigExtension_LazyService.php
 namespace ContainerCg4DniB;
-========
-namespace ContainerE3z86jQ;
->>>>>>>> panier:var/cache/dev/ContainerE3z86jQ/get_Maker_AutoCommand_MakeTwigExtension_LazyService.php
 
 
 use Symfony\Component\DependencyInjection\Argument\RewindableGenerator;

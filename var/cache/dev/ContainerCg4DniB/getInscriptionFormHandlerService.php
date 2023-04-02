@@ -1,10 +1,6 @@
 <?php
 
-<<<<<<<< HEAD:var/cache/dev/ContainerCg4DniB/getInscriptionFormHandlerService.php
 namespace ContainerCg4DniB;
-========
-namespace ContainerE3z86jQ;
->>>>>>>> panier:var/cache/dev/ContainerE3z86jQ/getInscriptionFormHandlerService.php
 
 
 use Symfony\Component\DependencyInjection\Argument\RewindableGenerator;

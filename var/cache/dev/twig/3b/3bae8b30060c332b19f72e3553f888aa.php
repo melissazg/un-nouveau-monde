@@ -48,14 +48,14 @@ class __TwigTemplate_d3371159bab1dc7cbd5c7f7e869a1ab0 extends Template
         // line 1
         echo "<!DOCTYPE html>
 <html>
-<head>
-    <meta charset=\"UTF-8\">
-    <title>";
+    <head>
+        <meta charset=\"UTF-8\">
+        <title>";
         // line 5
         $this->displayBlock('title', $context, $blocks);
         echo "</title>
 
-    ";
+        ";
         // line 7
         $this->displayBlock('stylesheets', $context, $blocks);
         // line 15
@@ -81,7 +81,8 @@ class __TwigTemplate_d3371159bab1dc7cbd5c7f7e869a1ab0 extends Template
         $this->displayBlock('footer', $context, $blocks);
         // line 39
         echo "    </body>
-</html>";
+</html>
+";
         
         $__internal_5a27a8ba21ca79b61932376b2fa922d2->leave($__internal_5a27a8ba21ca79b61932376b2fa922d2_prof);
 
@@ -120,12 +121,15 @@ class __TwigTemplate_d3371159bab1dc7cbd5c7f7e869a1ab0 extends Template
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f->enter($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "stylesheets"));
 
         // line 8
-        echo "        ";
+        echo "            ";
         echo twig_escape_filter($this->env, $this->env->getFunction('encore_entry_link_tags')->getCallable()("app"), "html", null, true);
         echo "
-        <link rel=\"stylesheet\" href=\"https://bootswatch.com/5/quartz/bootstrap.min.css\">
-        <link rel=\"stylesheet\" href=\"https://bootswatch.com/5/quartz/_variables.scss\">
-        <link href=\"https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css\" rel=\"stylesheet\">
+            <link rel=\"stylesheet\" href=\"https://bootswatch.com/5/quartz/bootstrap.min.css\">
+            <link rel=\"stylesheet\" href=\"https://bootswatch.com/5/quartz/_variables.scss\">
+            <link rel=\"stylesheet\" href=\"";
+        // line 11
+        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("style.css"), "html", null, true);
+        echo "\"/>
 
             <script src=\"https://kit.fontawesome.com/9a2ea947a1.js\" crossorigin=\"anonymous\"></script>
         ";
@@ -248,22 +252,22 @@ class __TwigTemplate_d3371159bab1dc7cbd5c7f7e869a1ab0 extends Template
 
     public function getDebugInfo()
     {
-        return array (  235 => 38,  232 => 37,  222 => 36,  212 => 34,  205 => 30,  200 => 27,  197 => 26,  187 => 25,  177 => 23,  174 => 22,  164 => 21,  151 => 17,  141 => 16,  123 => 8,  113 => 7,  94 => 5,  83 => 39,  81 => 36,  78 => 35,  76 => 25,  73 => 24,  71 => 21,  67 => 19,  65 => 16,  62 => 15,  60 => 7,  55 => 5,  49 => 1,);
+        return array (  239 => 38,  236 => 37,  226 => 36,  216 => 34,  209 => 30,  204 => 27,  201 => 26,  191 => 25,  181 => 23,  178 => 22,  168 => 21,  155 => 17,  145 => 16,  131 => 11,  124 => 8,  114 => 7,  95 => 5,  83 => 39,  81 => 36,  78 => 35,  76 => 25,  73 => 24,  71 => 21,  67 => 19,  65 => 16,  62 => 15,  60 => 7,  55 => 5,  49 => 1,);
     }
 
     public function getSourceContext()
     {
         return new Source("<!DOCTYPE html>
 <html>
-<head>
-    <meta charset=\"UTF-8\">
-    <title>{% block title %} Un Nouveau Monde {% endblock %}</title>
+    <head>
+        <meta charset=\"UTF-8\">
+        <title>{% block title %} Un Nouveau Monde {% endblock %}</title>
 
-    {% block stylesheets %}
-        {{ encore_entry_link_tags('app') }}
-        <link rel=\"stylesheet\" href=\"https://bootswatch.com/5/quartz/bootstrap.min.css\">
-        <link rel=\"stylesheet\" href=\"https://bootswatch.com/5/quartz/_variables.scss\">
-        <link href=\"https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css\" rel=\"stylesheet\">
+        {% block stylesheets %}
+            {{ encore_entry_link_tags('app') }}
+            <link rel=\"stylesheet\" href=\"https://bootswatch.com/5/quartz/bootstrap.min.css\">
+            <link rel=\"stylesheet\" href=\"https://bootswatch.com/5/quartz/_variables.scss\">
+            <link rel=\"stylesheet\" href=\"{{ asset('style.css') }}\"/>
 
             <script src=\"https://kit.fontawesome.com/9a2ea947a1.js\" crossorigin=\"anonymous\"></script>
         {% endblock %}
@@ -292,6 +296,7 @@ class __TwigTemplate_d3371159bab1dc7cbd5c7f7e869a1ab0 extends Template
             {% include \"footer.html.twig\" %}
         {% endblock %}
     </body>
-</html>", "base.html.twig", "C:\\laragon\\www\\un-nouveau-monde\\templates\\base.html.twig");
+</html>
+", "base.html.twig", "C:\\laragon\\www\\un-nouveau-monde\\templates\\base.html.twig");
     }
 }

@@ -1,10 +1,6 @@
 <?php
 
-<<<<<<<< HEAD:var/cache/dev/ContainerCg4DniB/getForm_TypeExtension_CsrfService.php
 namespace ContainerCg4DniB;
-========
-namespace ContainerE3z86jQ;
->>>>>>>> panier:var/cache/dev/ContainerE3z86jQ/getForm_TypeExtension_CsrfService.php
 
 
 use Symfony\Component\DependencyInjection\Argument\RewindableGenerator;

@@ -1,10 +1,6 @@
 <?php
 
-<<<<<<<< HEAD:var/cache/dev/ContainerCg4DniB/getContainer_EnvVarProcessorsLocatorService.php
 namespace ContainerCg4DniB;
-========
-namespace ContainerE3z86jQ;
->>>>>>>> panier:var/cache/dev/ContainerE3z86jQ/getContainer_EnvVarProcessorsLocatorService.php
 
 
 use Symfony\Component\DependencyInjection\Argument\RewindableGenerator;

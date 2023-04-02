@@ -1,10 +1,6 @@
 <?php
 
-<<<<<<<< HEAD:var/cache/dev/ContainerCg4DniB/getDebug_DumpListenerService.php
 namespace ContainerCg4DniB;
-========
-namespace ContainerE3z86jQ;
->>>>>>>> panier:var/cache/dev/ContainerE3z86jQ/getDebug_DumpListenerService.php
 
 
 use Symfony\Component\DependencyInjection\Argument\RewindableGenerator;

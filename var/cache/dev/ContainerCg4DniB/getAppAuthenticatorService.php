@@ -1,10 +1,6 @@
 <?php
 
-<<<<<<<< HEAD:var/cache/dev/ContainerCg4DniB/getAppAuthenticatorService.php
 namespace ContainerCg4DniB;
-========
-namespace ContainerE3z86jQ;
->>>>>>>> panier:var/cache/dev/ContainerE3z86jQ/getAppAuthenticatorService.php
 
 
 use Symfony\Component\DependencyInjection\Argument\RewindableGenerator;

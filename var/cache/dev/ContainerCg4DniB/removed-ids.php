@@ -1,18 +1,10 @@
 <?php
 
-<<<<<<<< HEAD:var/cache/dev/ContainerCg4DniB/removed-ids.php
 namespace ContainerCg4DniB;
-========
-namespace ContainerE3z86jQ;
->>>>>>>> panier:var/cache/dev/ContainerE3z86jQ/removed-ids.php
 
 return [
     '.1_ServiceLocator~8v7ruFj' => true,
     '.abstract.instanceof.App\\Controller\\AboutController' => true,
-<<<<<<<< HEAD:var/cache/dev/ContainerCg4DniB/removed-ids.php
-========
-    '.abstract.instanceof.App\\Controller\\CartController' => true,
->>>>>>>> panier:var/cache/dev/ContainerE3z86jQ/removed-ids.php
     '.abstract.instanceof.App\\Controller\\CatalogueController' => true,
     '.abstract.instanceof.App\\Controller\\ContactController' => true,
     '.abstract.instanceof.App\\Controller\\HomeController' => true,
@@ -25,7 +17,6 @@ return [
     '.abstract.instanceof.App\\Controller\\SecurityController' => true,
     '.abstract.instanceof.App\\Controller\\UserController' => true,
     '.abstract.instanceof.App\\DataFixtures\\AppFixtures' => true,
-    '.abstract.instanceof.App\\DataFixtures\\UsersFixtures' => true,
     '.abstract.instanceof.App\\Form\\CommentType' => true,
     '.abstract.instanceof.App\\Form\\ContactType' => true,
     '.abstract.instanceof.App\\Form\\FilmType' => true,
@@ -33,7 +24,7 @@ return [
     '.abstract.instanceof.App\\Form\\SearchType' => true,
     '.abstract.instanceof.App\\Form\\UserPasswordType' => true,
     '.abstract.instanceof.App\\Form\\UserType' => true,
-    '.abstract.instanceof.App\\Repository\\ClientRepository' => true,
+    '.abstract.instanceof.App\\Repository\\CollaborateursRepository' => true,
     '.abstract.instanceof.App\\Repository\\CommentaireRepository' => true,
     '.abstract.instanceof.App\\Repository\\ContactRepository' => true,
     '.abstract.instanceof.App\\Repository\\FilmRepository' => true,
@@ -89,14 +80,10 @@ return [
     '.doctrine.orm.default_metadata_driver.inner' => true,
     '.errored..service_locator.Qw6utIN.App\\Entity\\Film' => true,
     '.errored..service_locator.cELnjUu.App\\Entity\\User' => true,
-<<<<<<<< HEAD:var/cache/dev/ContainerCg4DniB/removed-ids.php
-========
-    '.errored..service_locator.d_Zi8_Z.App\\Entity\\Film' => true,
->>>>>>>> panier:var/cache/dev/ContainerE3z86jQ/removed-ids.php
     '.errored..service_locator.otSeFVa.App\\Entity\\User' => true,
     '.errored..service_locator.sUM6vBH.App\\Entity\\Film' => true,
     '.errored..service_locator.y4_Zrx..Symfony\\Component\\Config\\Loader\\LoaderInterface' => true,
-    '.instanceof.Doctrine\\Bundle\\DoctrineBundle\\Repository\\ServiceEntityRepositoryInterface.0.App\\Repository\\ClientRepository' => true,
+    '.instanceof.Doctrine\\Bundle\\DoctrineBundle\\Repository\\ServiceEntityRepositoryInterface.0.App\\Repository\\CollaborateursRepository' => true,
     '.instanceof.Doctrine\\Bundle\\DoctrineBundle\\Repository\\ServiceEntityRepositoryInterface.0.App\\Repository\\CommentaireRepository' => true,
     '.instanceof.Doctrine\\Bundle\\DoctrineBundle\\Repository\\ServiceEntityRepositoryInterface.0.App\\Repository\\ContactRepository' => true,
     '.instanceof.Doctrine\\Bundle\\DoctrineBundle\\Repository\\ServiceEntityRepositoryInterface.0.App\\Repository\\FilmRepository' => true,
@@ -104,12 +91,7 @@ return [
     '.instanceof.Doctrine\\Bundle\\DoctrineBundle\\Repository\\ServiceEntityRepositoryInterface.0.App\\Repository\\SearchRepository' => true,
     '.instanceof.Doctrine\\Bundle\\DoctrineBundle\\Repository\\ServiceEntityRepositoryInterface.0.App\\Repository\\UserRepository' => true,
     '.instanceof.Doctrine\\Bundle\\FixturesBundle\\ORMFixtureInterface.0.App\\DataFixtures\\AppFixtures' => true,
-    '.instanceof.Doctrine\\Bundle\\FixturesBundle\\ORMFixtureInterface.0.App\\DataFixtures\\UsersFixtures' => true,
     '.instanceof.Symfony\\Bundle\\FrameworkBundle\\Controller\\AbstractController.0.App\\Controller\\AboutController' => true,
-<<<<<<<< HEAD:var/cache/dev/ContainerCg4DniB/removed-ids.php
-========
-    '.instanceof.Symfony\\Bundle\\FrameworkBundle\\Controller\\AbstractController.0.App\\Controller\\CartController' => true,
->>>>>>>> panier:var/cache/dev/ContainerE3z86jQ/removed-ids.php
     '.instanceof.Symfony\\Bundle\\FrameworkBundle\\Controller\\AbstractController.0.App\\Controller\\CatalogueController' => true,
     '.instanceof.Symfony\\Bundle\\FrameworkBundle\\Controller\\AbstractController.0.App\\Controller\\ContactController' => true,
     '.instanceof.Symfony\\Bundle\\FrameworkBundle\\Controller\\AbstractController.0.App\\Controller\\HomeController' => true,
@@ -129,10 +111,6 @@ return [
     '.instanceof.Symfony\\Component\\Form\\FormTypeInterface.0.App\\Form\\UserPasswordType' => true,
     '.instanceof.Symfony\\Component\\Form\\FormTypeInterface.0.App\\Form\\UserType' => true,
     '.instanceof.Symfony\\Contracts\\Service\\ServiceSubscriberInterface.0.App\\Controller\\AboutController' => true,
-<<<<<<<< HEAD:var/cache/dev/ContainerCg4DniB/removed-ids.php
-========
-    '.instanceof.Symfony\\Contracts\\Service\\ServiceSubscriberInterface.0.App\\Controller\\CartController' => true,
->>>>>>>> panier:var/cache/dev/ContainerE3z86jQ/removed-ids.php
     '.instanceof.Symfony\\Contracts\\Service\\ServiceSubscriberInterface.0.App\\Controller\\CatalogueController' => true,
     '.instanceof.Symfony\\Contracts\\Service\\ServiceSubscriberInterface.0.App\\Controller\\ContactController' => true,
     '.instanceof.Symfony\\Contracts\\Service\\ServiceSubscriberInterface.0.App\\Controller\\HomeController' => true,
@@ -185,25 +163,17 @@ return [
     '.service_locator.2AheOfr' => true,
     '.service_locator.4O6N07v' => true,
     '.service_locator.5cAhUFF' => true,
-    '.service_locator.5ih9HrP' => true,
     '.service_locator.6k5RJBU' => true,
     '.service_locator.7NIAq8D' => true,
     '.service_locator.7nzbL4K' => true,
     '.service_locator.80edgLI' => true,
     '.service_locator.900uUd7' => true,
     '.service_locator.913mCm7' => true,
-<<<<<<<< HEAD:var/cache/dev/ContainerCg4DniB/removed-ids.php
     '.service_locator.9BY5AlA' => true,
-========
->>>>>>>> panier:var/cache/dev/ContainerE3z86jQ/removed-ids.php
     '.service_locator.AbOwiO3' => true,
     '.service_locator.B46.13k' => true,
     '.service_locator.CshazM0' => true,
     '.service_locator.CshazM0.App\\Controller\\AboutController' => true,
-<<<<<<<< HEAD:var/cache/dev/ContainerCg4DniB/removed-ids.php
-========
-    '.service_locator.CshazM0.App\\Controller\\CartController' => true,
->>>>>>>> panier:var/cache/dev/ContainerE3z86jQ/removed-ids.php
     '.service_locator.CshazM0.App\\Controller\\CatalogueController' => true,
     '.service_locator.CshazM0.App\\Controller\\ContactController' => true,
     '.service_locator.CshazM0.App\\Controller\\HomeController' => true,
@@ -216,26 +186,17 @@ return [
     '.service_locator.CshazM0.App\\Controller\\SecurityController' => true,
     '.service_locator.CshazM0.App\\Controller\\UserController' => true,
     '.service_locator.EhIXrCS' => true,
-<<<<<<<< HEAD:var/cache/dev/ContainerCg4DniB/removed-ids.php
     '.service_locator.JzkkBjN' => true,
-========
->>>>>>>> panier:var/cache/dev/ContainerE3z86jQ/removed-ids.php
     '.service_locator.KLVvNIq' => true,
     '.service_locator.Kl0E_Fe' => true,
     '.service_locator.Kyflpr1' => true,
-    '.service_locator.LLInSK6' => true,
     '.service_locator.LcVn9Hr' => true,
     '.service_locator.NBUFN6A' => true,
     '.service_locator.O24_MAy' => true,
-    '.service_locator.P7oU2Zl' => true,
     '.service_locator.QfGTkjT' => true,
     '.service_locator.Qw6utIN' => true,
     '.service_locator.TcKhdzh' => true,
     '.service_locator.U6.DLCg' => true,
-<<<<<<<< HEAD:var/cache/dev/ContainerCg4DniB/removed-ids.php
-========
-    '.service_locator.UWoH5hj' => true,
->>>>>>>> panier:var/cache/dev/ContainerE3z86jQ/removed-ids.php
     '.service_locator.V71r_w4' => true,
     '.service_locator.VNg_vjd' => true,
     '.service_locator.VZoQk0z' => true,
@@ -257,9 +218,7 @@ return [
     '.service_locator.cut5cTT' => true,
     '.service_locator.d1ey3el' => true,
     '.service_locator.dR92X1z' => true,
-    '.service_locator.d_Zi8_Z' => true,
     '.service_locator.dbzJJNj' => true,
-    '.service_locator.e4ykKCH' => true,
     '.service_locator.etVElvN' => true,
     '.service_locator.etVElvN.twig.template_cache_warmer' => true,
     '.service_locator.fuYM_Z.' => true,
@@ -268,7 +227,6 @@ return [
     '.service_locator.gFlme_s' => true,
     '.service_locator.h8Jkkd2' => true,
     '.service_locator.hnz5ZNh' => true,
-    '.service_locator.lLcEAlc' => true,
     '.service_locator.lLv4pWF' => true,
     '.service_locator.lgO4r79' => true,
     '.service_locator.o.uf2zi' => true,
@@ -308,7 +266,7 @@ return [
     'App\\Form\\SearchType' => true,
     'App\\Form\\UserPasswordType' => true,
     'App\\Form\\UserType' => true,
-    'App\\Repository\\ClientRepository' => true,
+    'App\\Repository\\CollaborateursRepository' => true,
     'App\\Repository\\CommentaireRepository' => true,
     'App\\Repository\\ContactRepository' => true,
     'App\\Repository\\FilmRepository' => true,

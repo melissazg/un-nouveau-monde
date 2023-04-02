@@ -1,10 +1,6 @@
 <?php
 
-<<<<<<<< HEAD:var/cache/dev/ContainerCg4DniB/getMessenger_Listener_StopWorkerOnRestartSignalListenerService.php
 namespace ContainerCg4DniB;
-========
-namespace ContainerE3z86jQ;
->>>>>>>> panier:var/cache/dev/ContainerE3z86jQ/getMessenger_Listener_StopWorkerOnRestartSignalListenerService.php
 
 
 use Symfony\Component\DependencyInjection\Argument\RewindableGenerator;

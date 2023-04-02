@@ -1,10 +1,6 @@
 <?php
 
-<<<<<<<< HEAD:var/cache/dev/ContainerCg4DniB/get_ServiceLocator_CshazM0Service.php
 namespace ContainerCg4DniB;
-========
-namespace ContainerE3z86jQ;
->>>>>>>> panier:var/cache/dev/ContainerE3z86jQ/get_ServiceLocator_CshazM0Service.php
 
 
 use Symfony\Component\DependencyInjection\Argument\RewindableGenerator;

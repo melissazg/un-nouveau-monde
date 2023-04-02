@@ -1,10 +1,6 @@
 <?php
 
-<<<<<<<< HEAD:var/cache/dev/ContainerCg4DniB/getMonolog_Logger_MailerService.php
 namespace ContainerCg4DniB;
-========
-namespace ContainerE3z86jQ;
->>>>>>>> panier:var/cache/dev/ContainerE3z86jQ/getMonolog_Logger_MailerService.php
 
 
 use Symfony\Component\DependencyInjection\Argument\RewindableGenerator;

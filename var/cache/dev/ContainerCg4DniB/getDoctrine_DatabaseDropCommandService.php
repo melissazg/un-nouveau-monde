@@ -1,10 +1,6 @@
 <?php
 
-<<<<<<<< HEAD:var/cache/dev/ContainerCg4DniB/getDoctrine_DatabaseDropCommandService.php
 namespace ContainerCg4DniB;
-========
-namespace ContainerE3z86jQ;
->>>>>>>> panier:var/cache/dev/ContainerE3z86jQ/getDoctrine_DatabaseDropCommandService.php
 
 
 use Symfony\Component\DependencyInjection\Argument\RewindableGenerator;

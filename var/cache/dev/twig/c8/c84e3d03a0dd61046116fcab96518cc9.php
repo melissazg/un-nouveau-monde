@@ -101,30 +101,19 @@ class __TwigTemplate_4c9c0304f6e5fe6cff105cc964459ee1 extends Template
         echo twig_escape_filter($this->env, (isset($context["iframePath"]) || array_key_exists("iframePath", $context) ? $context["iframePath"] : (function () { throw new RuntimeError('Variable "iframePath" does not exist.', 14, $this->source); })()), "html", null, true);
         echo " scrolling=\"no\" frameborder=\"0\" allowfullscreen=\"true\"></iframe>
     </ul>
-    <span style=\"display: inline-block; margin-left: 10px; font-size: 14px; color: #333;\">Prix : ";
-        // line 16
-        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["film"]) || array_key_exists("film", $context) ? $context["film"] : (function () { throw new RuntimeError('Variable "film" does not exist.', 16, $this->source); })()), "prix", [], "any", false, false, false, 16), "html", null, true);
-        echo " €</span>
-    <a href=\"";
-        // line 17
-        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("cart_add", ["id" => twig_get_attribute($this->env, $this->source, (isset($context["film"]) || array_key_exists("film", $context) ? $context["film"] : (function () { throw new RuntimeError('Variable "film" does not exist.', 17, $this->source); })()), "id", [], "any", false, false, false, 17)]), "html", null, true);
-        echo "\" class=\"btn\"  style=\"background: linear-gradient(to bottom right, #4c84ff, #a45bff); color: #fff; border: none; border-radius: 5px; padding: 10px 20px; text-align: center; text-decoration: none; display: inline-block; font-size: 16px; cursor: pointer; transition: background 0.3s;\">
-        <i class=\"bi bi-cart-plus\"></i> Ajouter
-    </a>
-
 </div>
 
     <div>
         ";
-        // line 24
-        echo         $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderBlock((isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 24, $this->source); })()), 'form_start');
+        // line 19
+        echo         $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderBlock((isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 19, $this->source); })()), 'form_start');
         echo "
         ";
-        // line 25
-        $this->loadTemplate("comment/index.html.twig", "player/index.html.twig", 25)->display($context);
-        // line 26
+        // line 20
+        $this->loadTemplate("comment/index.html.twig", "player/index.html.twig", 20)->display($context);
+        // line 21
         echo "        ";
-        echo         $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderBlock((isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 26, $this->source); })()), 'form_end');
+        echo         $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderBlock((isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 21, $this->source); })()), 'form_end');
         echo "
     </div>
 
@@ -149,7 +138,7 @@ class __TwigTemplate_4c9c0304f6e5fe6cff105cc964459ee1 extends Template
 
     public function getDebugInfo()
     {
-        return array (  126 => 26,  124 => 25,  120 => 24,  110 => 17,  106 => 16,  101 => 14,  96 => 12,  88 => 6,  78 => 5,  59 => 3,  36 => 1,);
+        return array (  115 => 21,  113 => 20,  109 => 19,  101 => 14,  96 => 12,  88 => 6,  78 => 5,  59 => 3,  36 => 1,);
     }
 
     public function getSourceContext()
@@ -169,11 +158,6 @@ class __TwigTemplate_4c9c0304f6e5fe6cff105cc964459ee1 extends Template
     <ul>
         <iframe width=\"640\" height=\"480\" src={{iframePath}} scrolling=\"no\" frameborder=\"0\" allowfullscreen=\"true\"></iframe>
     </ul>
-    <span style=\"display: inline-block; margin-left: 10px; font-size: 14px; color: #333;\">Prix : {{ film.prix }} €</span>
-    <a href=\"{{ path(\"cart_add\", {id: film.id })}}\" class=\"btn\"  style=\"background: linear-gradient(to bottom right, #4c84ff, #a45bff); color: #fff; border: none; border-radius: 5px; padding: 10px 20px; text-align: center; text-decoration: none; display: inline-block; font-size: 16px; cursor: pointer; transition: background 0.3s;\">
-        <i class=\"bi bi-cart-plus\"></i> Ajouter
-    </a>
-
 </div>
 
     <div>

@@ -1,5 +1,14 @@
 <!DOCTYPE html>
 <html>
+    <head>
+        <meta charset="UTF-8">
+        <title>{% block title %} Un Nouveau Monde {% endblock %}</title>
+
+        {% block stylesheets %}
+            {{ encore_entry_link_tags('app') }}
+            <link rel="stylesheet" href="https://bootswatch.com/5/quartz/bootstrap.min.css">
+            <link rel="stylesheet" href="https://bootswatch.com/5/quartz/_variables.scss">
+            <link rel="stylesheet" href="{{ asset('style.css') }}"/>
 <head>
     <meta charset="UTF-8">
     <title>{% block title %} Un Nouveau Monde {% endblock %}</title>
@@ -8,7 +17,6 @@
         {{ encore_entry_link_tags('app') }}
         <link rel="stylesheet" href="https://bootswatch.com/5/quartz/bootstrap.min.css">
         <link rel="stylesheet" href="https://bootswatch.com/5/quartz/_variables.scss">
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" rel="stylesheet">
 
             <script src="https://kit.fontawesome.com/9a2ea947a1.js" crossorigin="anonymous"></script>
         {% endblock %}

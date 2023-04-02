@@ -1,10 +1,6 @@
 <?php
 
-<<<<<<<< HEAD:var/cache/dev/ContainerCg4DniB/getSecurity_AccessListenerService.php
 namespace ContainerCg4DniB;
-========
-namespace ContainerE3z86jQ;
->>>>>>>> panier:var/cache/dev/ContainerE3z86jQ/getSecurity_AccessListenerService.php
 
 
 use Symfony\Component\DependencyInjection\Argument\RewindableGenerator;

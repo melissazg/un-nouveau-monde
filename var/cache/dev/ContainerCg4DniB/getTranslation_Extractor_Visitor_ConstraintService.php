@@ -1,10 +1,6 @@
 <?php
 
-<<<<<<<< HEAD:var/cache/dev/ContainerCg4DniB/getTranslation_Extractor_Visitor_ConstraintService.php
 namespace ContainerCg4DniB;
-========
-namespace ContainerE3z86jQ;
->>>>>>>> panier:var/cache/dev/ContainerE3z86jQ/getTranslation_Extractor_Visitor_ConstraintService.php
 
 
 use Symfony\Component\DependencyInjection\Argument\RewindableGenerator;

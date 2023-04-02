@@ -1,10 +1,6 @@
 <?php
 
-<<<<<<<< HEAD:var/cache/dev/ContainerCg4DniB/getConsole_Command_CachePoolInvalidateTagsService.php
 namespace ContainerCg4DniB;
-========
-namespace ContainerE3z86jQ;
->>>>>>>> panier:var/cache/dev/ContainerE3z86jQ/getConsole_Command_CachePoolInvalidateTagsService.php
 
 
 use Symfony\Component\DependencyInjection\Argument\RewindableGenerator;

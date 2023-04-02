@@ -1,10 +1,6 @@
 <?php
 
-<<<<<<<< HEAD:var/cache/dev/ContainerCg4DniB/getMaker_AutoCommand_MakeStimulusControllerService.php
 namespace ContainerCg4DniB;
-========
-namespace ContainerE3z86jQ;
->>>>>>>> panier:var/cache/dev/ContainerE3z86jQ/getMaker_AutoCommand_MakeStimulusControllerService.php
 
 
 use Symfony\Component\DependencyInjection\Argument\RewindableGenerator;

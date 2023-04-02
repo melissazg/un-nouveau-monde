@@ -1,10 +1,6 @@
 <?php
 
-<<<<<<<< HEAD:var/cache/dev/ContainerCg4DniB/getNotifier_TransportFactory_NullService.php
 namespace ContainerCg4DniB;
-========
-namespace ContainerE3z86jQ;
->>>>>>>> panier:var/cache/dev/ContainerE3z86jQ/getNotifier_TransportFactory_NullService.php
 
 
 use Symfony\Component\DependencyInjection\Argument\RewindableGenerator;
