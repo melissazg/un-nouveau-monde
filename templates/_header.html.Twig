@@ -13,7 +13,7 @@
                     <a class="nav-link" href="{{ path('app_catalogue') }}">Nos films</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="{{ path('app_catalogue_musique') }}">Nos musique</a>
+                    <a class="nav-link" href="{{ path('app_catalogue_musique') }}">Nos musiques</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="{{ path('app_about') }}">À propos</a>
@@ -24,16 +24,22 @@
                 <li class="nav-item">
                     <a class="nav-link" href="{{ path('app_contact') }}">Contact</a>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="{{ path('app_cart') }}">Votre panier</a>
-                </li>
+                {% if is_granted('ROLE_ADMIN') %}
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ path('app_manager') }}">Gérer les films</a>
+                    </li>
+                {% endif %}
             </ul>
-            <a href="{{ path('app_user_profile') }}" target="_blank" title="Profil"><i class="fa-solid fa-user fa-xl"></i></a>
+            {% if is_granted('ROLE_USER') %}
+            <a class="nav-link" href="{{ path('app_cart') }}"><i class="fa-solid fa-bag-shopping fa-xl"></i></a>
+            {% endif %}
             &emsp;
-            <a href="{{ path('app_logout') }}" target="_blank" title="(Dé)connexion"><i class="fa-solid fa-right-to-bracket fa-xl"></i></a>
+            <a href="{{ path('app_user_profile') }}"  title="Profil"><i class="fa-solid fa-user fa-xl"></i></a>
+            &emsp;
+            <a href="{{ path('app_logout') }}"  title="(Dé)connexion"><i class="fa-solid fa-right-to-bracket fa-xl"></i></a>
             <form class="d-flex" style="margin-left:20px">
                 <input class="form-control me-sm-2" type="search" placeholder="Rechercher">
-                <button class="btn btn-primary btn-lg" type="submit"><i class="fa-regular fa-magnifying-glass"></i></button>
+                <button class="btn btn-primary btn-lg" type="submit"><i class="fa-sharp fa-regular fa-magnifying-glass"></i></button>
             </form>
         </div>
     </div>
