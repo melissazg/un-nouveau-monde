@@ -81,8 +81,7 @@ class __TwigTemplate_d3371159bab1dc7cbd5c7f7e869a1ab0 extends Template
         $this->displayBlock('footer', $context, $blocks);
         // line 38
         echo "    </body>
-</html>
-";
+</html>";
         
         $__internal_5a27a8ba21ca79b61932376b2fa922d2->leave($__internal_5a27a8ba21ca79b61932376b2fa922d2_prof);
 
@@ -126,7 +125,10 @@ class __TwigTemplate_d3371159bab1dc7cbd5c7f7e869a1ab0 extends Template
         echo "
             <link rel=\"stylesheet\" href=\"https://bootswatch.com/5/quartz/bootstrap.min.css\">
             <link rel=\"stylesheet\" href=\"https://bootswatch.com/5/quartz/_variables.scss\">
-
+            <link rel=\"stylesheet\" href=\"";
+        // line 11
+        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("style.css"), "html", null, true);
+        echo "\"/>
             <script src=\"https://kit.fontawesome.com/9a2ea947a1.js\" crossorigin=\"anonymous\"></script>
         ";
         
@@ -248,7 +250,7 @@ class __TwigTemplate_d3371159bab1dc7cbd5c7f7e869a1ab0 extends Template
 
     public function getDebugInfo()
     {
-        return array (  235 => 37,  232 => 36,  222 => 35,  212 => 33,  205 => 29,  200 => 26,  197 => 25,  187 => 24,  177 => 22,  174 => 21,  164 => 20,  151 => 16,  141 => 15,  124 => 8,  114 => 7,  95 => 5,  83 => 38,  81 => 35,  78 => 34,  76 => 24,  73 => 23,  71 => 20,  67 => 18,  65 => 15,  62 => 14,  60 => 7,  55 => 5,  49 => 1,);
+        return array (  237 => 37,  234 => 36,  224 => 35,  214 => 33,  207 => 29,  202 => 26,  199 => 25,  189 => 24,  179 => 22,  176 => 21,  166 => 20,  153 => 16,  143 => 15,  130 => 11,  123 => 8,  113 => 7,  94 => 5,  83 => 38,  81 => 35,  78 => 34,  76 => 24,  73 => 23,  71 => 20,  67 => 18,  65 => 15,  62 => 14,  60 => 7,  55 => 5,  49 => 1,);
     }
 
     public function getSourceContext()
@@ -263,7 +265,7 @@ class __TwigTemplate_d3371159bab1dc7cbd5c7f7e869a1ab0 extends Template
             {{ encore_entry_link_tags('app') }}
             <link rel=\"stylesheet\" href=\"https://bootswatch.com/5/quartz/bootstrap.min.css\">
             <link rel=\"stylesheet\" href=\"https://bootswatch.com/5/quartz/_variables.scss\">
-
+            <link rel=\"stylesheet\" href=\"{{ asset('style.css') }}\"/>
             <script src=\"https://kit.fontawesome.com/9a2ea947a1.js\" crossorigin=\"anonymous\"></script>
         {% endblock %}
 
@@ -291,7 +293,6 @@ class __TwigTemplate_d3371159bab1dc7cbd5c7f7e869a1ab0 extends Template
             {% include \"footer.html.twig\" %}
         {% endblock %}
     </body>
-</html>
-", "base.html.twig", "C:\\Users\\ULTRABOOK DELL\\OneDrive - UPEC\\Bureau\\Snowaddict-symfony\\Un_Nouveau_Monde\\templates\\base.html.twig");
+</html>", "base.html.twig", "C:\\Users\\ULTRABOOK DELL\\OneDrive - UPEC\\Bureau\\Snowaddict-symfony\\Un_Nouveau_Monde\\templates\\base.html.twig");
     }
 }

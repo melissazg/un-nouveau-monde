@@ -13,7 +13,7 @@ class SecurityConfig
     private $annotations;
     private $expressionLanguage;
     private $_usedProperties = [];
-
+    
     /**
      * @default true
      * @param ParamConfigurator|bool $value
@@ -23,10 +23,10 @@ class SecurityConfig
     {
         $this->_usedProperties['annotations'] = true;
         $this->annotations = $value;
-
+    
         return $this;
     }
-
+    
     /**
      * @default 'sensio_framework_extra.security.expression_language.default'
      * @param ParamConfigurator|mixed $value
@@ -36,10 +36,10 @@ class SecurityConfig
     {
         $this->_usedProperties['expressionLanguage'] = true;
         $this->expressionLanguage = $value;
-
+    
         return $this;
     }
-
+    
     public function __construct(array $value = [])
     {
         if (array_key_exists('annotations', $value)) {
@@ -47,18 +47,18 @@ class SecurityConfig
             $this->annotations = $value['annotations'];
             unset($value['annotations']);
         }
-
+    
         if (array_key_exists('expression_language', $value)) {
             $this->_usedProperties['expressionLanguage'] = true;
             $this->expressionLanguage = $value['expression_language'];
             unset($value['expression_language']);
         }
-
+    
         if ([] !== $value) {
             throw new InvalidConfigurationException(sprintf('The following keys are not supported by "%s": ', __CLASS__).implode(', ', array_keys($value)));
         }
     }
-
+    
     public function toArray(): array
     {
         $output = [];
@@ -68,7 +68,7 @@ class SecurityConfig
         if (isset($this->_usedProperties['expressionLanguage'])) {
             $output['expression_language'] = $this->expressionLanguage;
         }
-
+    
         return $output;
     }
 

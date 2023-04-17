@@ -20,7 +20,7 @@ use Symfony\Component\Security\Http\Authentication\UserAuthenticatorInterface;
 
 class InscriptionController extends AbstractController{
 
-    #[Route('/inscription', name:'inscription.index', methods: ['GET','POST'])]
+    #[Route('/utilisateur/inscription', name:'inscription.index', methods: ['GET','POST'])]
     public function create(Request $request, InscriptionFormHandler $inscriptionFormHandler,UserPasswordHasherInterface $passwordHasher, UserAuthenticatorInterface $userAuthenticator, AppAuthenticator $authenticator,SendMailService $mail,JWTService $jwt) : Response {
         $user = new User();
         $user->setRoles(['ROLE_USER']);

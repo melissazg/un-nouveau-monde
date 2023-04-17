@@ -420,6 +420,13 @@
         <argument type="service" id=".service_locator.CshazM0.App\Controller\PreLoginController"/>
       </call>
     </service>
+    <service id="App\Controller\SearchController" class="App\Controller\SearchController" public="true" autowire="true" autoconfigure="true">
+      <tag name="controller.service_arguments"/>
+      <tag name="container.service_subscriber"/>
+      <call method="setContainer">
+        <argument type="service" id=".service_locator.CshazM0.App\Controller\SearchController"/>
+      </call>
+    </service>
     <service id="App\Controller\SecurityController" class="App\Controller\SecurityController" public="true" autowire="true" autoconfigure="true">
       <tag name="controller.service_arguments"/>
       <tag name="container.service_subscriber"/>
@@ -438,6 +445,7 @@
       <tag name="doctrine.fixture.orm"/>
     </service>
     <service id="App\DataFixtures\UsersFixtures" class="App\DataFixtures\UsersFixtures" autowire="true" autoconfigure="true">
+      <tag name="doctrine.fixture.orm"/>
       <argument type="service" id="security.user_password_hasher"/>
     </service>
     <service id="App\Form\CommentType" class="App\Form\CommentType" autowire="true" autoconfigure="true">
@@ -449,6 +457,9 @@
     <service id="App\Form\FilmType" class="App\Form\FilmType" autowire="true" autoconfigure="true">
       <tag name="form.type"/>
     </service>
+    <service id="App\Form\FilterType" class="App\Form\FilterType" autowire="true" autoconfigure="true">
+      <tag name="form.type"/>
+    </service>
     <service id="App\Form\FormHandler\ContactFormHandler" class="App\Form\FormHandler\ContactFormHandler" autowire="true" autoconfigure="true">
       <argument type="service" id="doctrine.orm.default_entity_manager"/>
     </service>
@@ -457,6 +468,10 @@
     </service>
     <service id="App\Form\InscriptionType" class="App\Form\InscriptionType" autowire="true" autoconfigure="true">
       <tag name="form.type"/>
+    </service>
+    <service id="App\Form\SearchType" class="App\Form\SearchType" autowire="true" autoconfigure="true">
+      <tag name="form.type"/>
+      <argument type="service" id="router.default"/>
     </service>
     <service id="App\Form\UserPasswordType" class="App\Form\UserPasswordType" autowire="true" autoconfigure="true">
       <tag name="form.type"/>
@@ -481,6 +496,10 @@
       <argument type="service" id="doctrine"/>
     </service>
     <service id="App\Repository\NoteRepository" class="App\Repository\NoteRepository" autowire="true" autoconfigure="true">
+      <tag name="doctrine.repository_service"/>
+      <argument type="service" id="doctrine"/>
+    </service>
+    <service id="App\Repository\SearchRepository" class="App\Repository\SearchRepository" autowire="true" autoconfigure="true">
       <tag name="doctrine.repository_service"/>
       <argument type="service" id="doctrine"/>
     </service>
@@ -1332,7 +1351,9 @@
         <argument>App\Form\CommentType</argument>
         <argument>App\Form\ContactType</argument>
         <argument>App\Form\FilmType</argument>
+        <argument>App\Form\FilterType</argument>
         <argument>App\Form\InscriptionType</argument>
+        <argument>App\Form\SearchType</argument>
         <argument>App\Form\UserPasswordType</argument>
         <argument>App\Form\UserType</argument>
         <argument>Symfony\Component\Form\Extension\Core\Type\FormType</argument>
@@ -3494,7 +3515,7 @@
       <argument type="service" id="form.registry"/>
     </service>
     <service id="form.extension" class="Symfony\Component\Form\Extension\DependencyInjection\DependencyInjectionExtension">
-      <argument type="service" id=".service_locator.9PPfHmt"/>
+      <argument type="service" id=".service_locator.iLuL88V"/>
       <argument type="collection">
         <argument key="Symfony\Component\Form\Extension\Core\Type\FormType" type="iterator">
           <argument type="service" id="form.type_extension.form.transformation_failure_handling"/>
@@ -4392,7 +4413,7 @@
     <service id="doctrine.orm.configuration" class="Doctrine\ORM\Configuration" abstract="true"/>
     <service id="doctrine.orm.entity_manager.abstract" class="Doctrine\ORM\EntityManager" lazy="true" abstract="true"/>
     <service id="doctrine.orm.container_repository_factory" class="Doctrine\Bundle\DoctrineBundle\Repository\ContainerRepositoryFactory">
-      <argument type="service" id=".service_locator.1ko1SxO"/>
+      <argument type="service" id=".service_locator.JzkkBjN"/>
     </service>
     <service id="doctrine.orm.manager_configurator.abstract" class="Doctrine\Bundle\DoctrineBundle\ManagerConfigurator" abstract="true">
       <argument type="collection"/>
@@ -6490,6 +6511,10 @@
             <argument key="fixture" type="service" id="App\DataFixtures\AppFixtures"/>
             <argument key="groups" type="collection"/>
           </argument>
+          <argument type="collection">
+            <argument key="fixture" type="service" id="App\DataFixtures\UsersFixtures"/>
+            <argument key="groups" type="collection"/>
+          </argument>
         </argument>
       </call>
     </service>
@@ -6599,6 +6624,9 @@
     <service id=".instanceof.Symfony\Contracts\Service\ServiceSubscriberInterface.0.App\Controller\PreLoginController" class="App\Controller\PreLoginController" autowire="true" abstract="true"/>
     <service id=".instanceof.Symfony\Bundle\FrameworkBundle\Controller\AbstractController.0.App\Controller\PreLoginController" class="App\Controller\PreLoginController" autowire="true" abstract="true"/>
     <service id=".abstract.instanceof.App\Controller\PreLoginController" class="App\Controller\PreLoginController" autowire="true" autoconfigure="true" abstract="true"/>
+    <service id=".instanceof.Symfony\Contracts\Service\ServiceSubscriberInterface.0.App\Controller\SearchController" class="App\Controller\SearchController" autowire="true" abstract="true"/>
+    <service id=".instanceof.Symfony\Bundle\FrameworkBundle\Controller\AbstractController.0.App\Controller\SearchController" class="App\Controller\SearchController" autowire="true" abstract="true"/>
+    <service id=".abstract.instanceof.App\Controller\SearchController" class="App\Controller\SearchController" autowire="true" autoconfigure="true" abstract="true"/>
     <service id=".instanceof.Symfony\Contracts\Service\ServiceSubscriberInterface.0.App\Controller\SecurityController" class="App\Controller\SecurityController" autowire="true" abstract="true"/>
     <service id=".instanceof.Symfony\Bundle\FrameworkBundle\Controller\AbstractController.0.App\Controller\SecurityController" class="App\Controller\SecurityController" autowire="true" abstract="true"/>
     <service id=".abstract.instanceof.App\Controller\SecurityController" class="App\Controller\SecurityController" autowire="true" autoconfigure="true" abstract="true"/>
@@ -6607,14 +6635,20 @@
     <service id=".abstract.instanceof.App\Controller\UserController" class="App\Controller\UserController" autowire="true" autoconfigure="true" abstract="true"/>
     <service id=".instanceof.Doctrine\Bundle\FixturesBundle\ORMFixtureInterface.0.App\DataFixtures\AppFixtures" class="App\DataFixtures\AppFixtures" autowire="true" abstract="true"/>
     <service id=".abstract.instanceof.App\DataFixtures\AppFixtures" class="App\DataFixtures\AppFixtures" autowire="true" autoconfigure="true" abstract="true"/>
+    <service id=".instanceof.Doctrine\Bundle\FixturesBundle\ORMFixtureInterface.0.App\DataFixtures\UsersFixtures" class="App\DataFixtures\UsersFixtures" autowire="true" abstract="true"/>
+    <service id=".abstract.instanceof.App\DataFixtures\UsersFixtures" class="App\DataFixtures\UsersFixtures" autowire="true" autoconfigure="true" abstract="true"/>
     <service id=".instanceof.Symfony\Component\Form\FormTypeInterface.0.App\Form\CommentType" class="App\Form\CommentType" autowire="true" abstract="true"/>
     <service id=".abstract.instanceof.App\Form\CommentType" class="App\Form\CommentType" autowire="true" autoconfigure="true" abstract="true"/>
     <service id=".instanceof.Symfony\Component\Form\FormTypeInterface.0.App\Form\ContactType" class="App\Form\ContactType" autowire="true" abstract="true"/>
     <service id=".abstract.instanceof.App\Form\ContactType" class="App\Form\ContactType" autowire="true" autoconfigure="true" abstract="true"/>
     <service id=".instanceof.Symfony\Component\Form\FormTypeInterface.0.App\Form\FilmType" class="App\Form\FilmType" autowire="true" abstract="true"/>
     <service id=".abstract.instanceof.App\Form\FilmType" class="App\Form\FilmType" autowire="true" autoconfigure="true" abstract="true"/>
+    <service id=".instanceof.Symfony\Component\Form\FormTypeInterface.0.App\Form\FilterType" class="App\Form\FilterType" autowire="true" abstract="true"/>
+    <service id=".abstract.instanceof.App\Form\FilterType" class="App\Form\FilterType" autowire="true" autoconfigure="true" abstract="true"/>
     <service id=".instanceof.Symfony\Component\Form\FormTypeInterface.0.App\Form\InscriptionType" class="App\Form\InscriptionType" autowire="true" abstract="true"/>
     <service id=".abstract.instanceof.App\Form\InscriptionType" class="App\Form\InscriptionType" autowire="true" autoconfigure="true" abstract="true"/>
+    <service id=".instanceof.Symfony\Component\Form\FormTypeInterface.0.App\Form\SearchType" class="App\Form\SearchType" autowire="true" abstract="true"/>
+    <service id=".abstract.instanceof.App\Form\SearchType" class="App\Form\SearchType" autowire="true" autoconfigure="true" abstract="true"/>
     <service id=".instanceof.Symfony\Component\Form\FormTypeInterface.0.App\Form\UserPasswordType" class="App\Form\UserPasswordType" autowire="true" abstract="true"/>
     <service id=".abstract.instanceof.App\Form\UserPasswordType" class="App\Form\UserPasswordType" autowire="true" autoconfigure="true" abstract="true"/>
     <service id=".instanceof.Symfony\Component\Form\FormTypeInterface.0.App\Form\UserType" class="App\Form\UserType" autowire="true" abstract="true"/>
@@ -6629,6 +6663,8 @@
     <service id=".abstract.instanceof.App\Repository\FilmRepository" class="App\Repository\FilmRepository" autowire="true" autoconfigure="true" abstract="true"/>
     <service id=".instanceof.Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepositoryInterface.0.App\Repository\NoteRepository" class="App\Repository\NoteRepository" autowire="true" abstract="true"/>
     <service id=".abstract.instanceof.App\Repository\NoteRepository" class="App\Repository\NoteRepository" autowire="true" autoconfigure="true" abstract="true"/>
+    <service id=".instanceof.Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepositoryInterface.0.App\Repository\SearchRepository" class="App\Repository\SearchRepository" autowire="true" abstract="true"/>
+    <service id=".abstract.instanceof.App\Repository\SearchRepository" class="App\Repository\SearchRepository" autowire="true" autoconfigure="true" abstract="true"/>
     <service id=".instanceof.Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepositoryInterface.0.App\Repository\UserRepository" class="App\Repository\UserRepository" autowire="true" abstract="true"/>
     <service id=".abstract.instanceof.App\Repository\UserRepository" class="App\Repository\UserRepository" autowire="true" autoconfigure="true" abstract="true"/>
     <service id=".service_locator.7nzbL4K" class="Symfony\Component\DependencyInjection\ServiceLocator">
@@ -7022,6 +7058,13 @@
         <argument key="userRepository" type="service_closure" id="App\Repository\UserRepository"/>
       </argument>
     </service>
+    <service id=".service_locator..kw35iE" class="Symfony\Component\DependencyInjection\ServiceLocator">
+      <tag name="container.service_locator"/>
+      <argument type="collection">
+        <argument key="SearchRepository" type="service_closure" id="App\Repository\SearchRepository"/>
+        <argument key="filmRepository" type="service_closure" id="App\Repository\FilmRepository"/>
+      </argument>
+    </service>
     <service id=".service_locator.rSTd.nA" class="Symfony\Component\DependencyInjection\ServiceLocator">
       <tag name="container.service_locator"/>
       <argument type="collection">
@@ -7044,7 +7087,7 @@
         <argument key="user" type="service_closure" id=".errored..service_locator.cELnjUu.App\Entity\User"/>
       </argument>
     </service>
-    <service id=".service_locator.N1NtVFB" class="Symfony\Component\DependencyInjection\ServiceLocator">
+    <service id=".service_locator.yDpvj8H" class="Symfony\Component\DependencyInjection\ServiceLocator">
       <tag name="container.service_locator"/>
       <argument type="collection">
         <argument key="App\Controller\ContactController::contact" type="service_closure" id=".service_locator.d1ey3el"/>
@@ -7055,6 +7098,7 @@
         <argument key="App\Controller\ManagerController::index" type="service_closure" id=".service_locator.4O6N07v"/>
         <argument key="App\Controller\ManagerController::new" type="service_closure" id=".service_locator.V71r_w4"/>
         <argument key="App\Controller\PlayerController::index" type="service_closure" id=".service_locator.sUM6vBH"/>
+        <argument key="App\Controller\SearchController::index" type="service_closure" id=".service_locator..kw35iE"/>
         <argument key="App\Controller\SecurityController::login" type="service_closure" id=".service_locator.rSTd.nA"/>
         <argument key="App\Controller\UserController::edit" type="service_closure" id=".service_locator.otSeFVa"/>
         <argument key="App\Controller\UserController::editPassword" type="service_closure" id=".service_locator.cELnjUu"/>
@@ -7070,6 +7114,7 @@
         <argument key="App\Controller\ManagerController:index" type="service_closure" id=".service_locator.4O6N07v"/>
         <argument key="App\Controller\ManagerController:new" type="service_closure" id=".service_locator.V71r_w4"/>
         <argument key="App\Controller\PlayerController:index" type="service_closure" id=".service_locator.sUM6vBH"/>
+        <argument key="App\Controller\SearchController:index" type="service_closure" id=".service_locator..kw35iE"/>
         <argument key="App\Controller\SecurityController:login" type="service_closure" id=".service_locator.rSTd.nA"/>
         <argument key="App\Controller\UserController:edit" type="service_closure" id=".service_locator.otSeFVa"/>
         <argument key="App\Controller\UserController:editPassword" type="service_closure" id=".service_locator.cELnjUu"/>
@@ -7249,13 +7294,15 @@
       <argument type="service" id="debug.argument_resolver.not_tagged_controller.inner"/>
       <argument type="service" id="debug.stopwatch"/>
     </service>
-    <service id=".service_locator.9PPfHmt" class="Symfony\Component\DependencyInjection\ServiceLocator">
+    <service id=".service_locator.iLuL88V" class="Symfony\Component\DependencyInjection\ServiceLocator">
       <tag name="container.service_locator"/>
       <argument type="collection">
         <argument key="App\Form\CommentType" type="service_closure" id="App\Form\CommentType"/>
         <argument key="App\Form\ContactType" type="service_closure" id="App\Form\ContactType"/>
         <argument key="App\Form\FilmType" type="service_closure" id="App\Form\FilmType"/>
+        <argument key="App\Form\FilterType" type="service_closure" id="App\Form\FilterType"/>
         <argument key="App\Form\InscriptionType" type="service_closure" id="App\Form\InscriptionType"/>
+        <argument key="App\Form\SearchType" type="service_closure" id="App\Form\SearchType"/>
         <argument key="App\Form\UserPasswordType" type="service_closure" id="App\Form\UserPasswordType"/>
         <argument key="App\Form\UserType" type="service_closure" id="App\Form\UserType"/>
         <argument key="Karser\Recaptcha3Bundle\Form\Recaptcha3Type" type="service_closure" id="karser_recaptcha3.form.type"/>
@@ -7352,7 +7399,7 @@
         <argument key="doctrine.orm.messenger.doctrine_schema_subscriber" type="service_closure" id="doctrine.orm.messenger.doctrine_schema_subscriber"/>
       </argument>
     </service>
-    <service id=".service_locator.1ko1SxO" class="Symfony\Component\DependencyInjection\ServiceLocator">
+    <service id=".service_locator.JzkkBjN" class="Symfony\Component\DependencyInjection\ServiceLocator">
       <tag name="container.service_locator"/>
       <argument type="collection">
         <argument key="App\Repository\CollaborateursRepository" type="service_closure" id="App\Repository\CollaborateursRepository"/>
@@ -7360,6 +7407,7 @@
         <argument key="App\Repository\ContactRepository" type="service_closure" id="App\Repository\ContactRepository"/>
         <argument key="App\Repository\FilmRepository" type="service_closure" id="App\Repository\FilmRepository"/>
         <argument key="App\Repository\NoteRepository" type="service_closure" id="App\Repository\NoteRepository"/>
+        <argument key="App\Repository\SearchRepository" type="service_closure" id="App\Repository\SearchRepository"/>
         <argument key="App\Repository\UserRepository" type="service_closure" id="App\Repository\UserRepository"/>
       </argument>
     </service>
@@ -7673,6 +7721,12 @@
       <argument type="service" id="service_container"/>
       <factory service=".service_locator.CshazM0" method="withContext"/>
     </service>
+    <service id=".service_locator.CshazM0.App\Controller\SearchController" class="Symfony\Component\DependencyInjection\ServiceLocator">
+      <tag name="container.service_locator_context" id="App\Controller\SearchController"/>
+      <argument>App\Controller\SearchController</argument>
+      <argument type="service" id="service_container"/>
+      <factory service=".service_locator.CshazM0" method="withContext"/>
+    </service>
     <service id=".service_locator.CshazM0.App\Controller\SecurityController" class="Symfony\Component\DependencyInjection\ServiceLocator">
       <tag name="container.service_locator_context" id="App\Controller\SecurityController"/>
       <argument>App\Controller\SecurityController</argument>
@@ -7962,12 +8016,12 @@
     <service id="debug.argument_resolver.request.inner" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\RequestValueResolver"/>
     <service id="debug.argument_resolver.session.inner" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\SessionValueResolver"/>
     <service id="debug.argument_resolver.service.inner" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\ServiceValueResolver">
-      <argument type="service" id=".service_locator.N1NtVFB"/>
+      <argument type="service" id=".service_locator.yDpvj8H"/>
     </service>
     <service id="debug.argument_resolver.default.inner" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\DefaultValueResolver"/>
     <service id="debug.argument_resolver.variadic.inner" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\VariadicValueResolver"/>
     <service id="debug.argument_resolver.not_tagged_controller.inner" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\NotTaggedControllerValueResolver">
-      <argument type="service" id=".service_locator.N1NtVFB"/>
+      <argument type="service" id=".service_locator.yDpvj8H"/>
     </service>
     <service id="debug.traced.messenger.bus.default.inner" class="Symfony\Component\Messenger\MessageBus">
       <argument type="iterator">
@@ -8942,7 +8996,7 @@
     <service id="karser_recaptcha3.google.request_method" alias="karser_recaptcha3.google.request_method.curl_post"/>
     <service id="container.env_var_processors_locator" alias=".service_locator.7nzbL4K" public="true"/>
     <service id="twig.loader.filesystem" alias="twig.loader.native_filesystem"/>
-    <service id="argument_resolver.controller_locator" alias=".service_locator.N1NtVFB"/>
+    <service id="argument_resolver.controller_locator" alias=".service_locator.yDpvj8H"/>
     <service id="doctrine.id_generator_locator" alias=".service_locator.KLVvNIq"/>
     <service id="twig.loader" alias="twig.loader.native_filesystem"/>
     <service id="Psr\Log\LoggerInterface $requestLogger" alias="monolog.logger.request"/>
@@ -8969,9 +9023,9 @@
     <service id=".service_locator.dbzJJNj" alias=".service_locator.Qw6utIN"/>
     <service id=".service_locator.EhIXrCS" alias=".service_locator.sUM6vBH"/>
     <service id=".service_locator.2AheOfr" alias=".service_locator.cELnjUu"/>
-    <service id=".service_locator.mhM16_Y" alias=".service_locator.N1NtVFB"/>
+    <service id=".service_locator.NPxejdU" alias=".service_locator.yDpvj8H"/>
     <service id=".service_locator.sZJMMrU" alias=".service_locator.pSux3IH"/>
-    <service id=".service_locator.aAKE8Xn" alias=".service_locator.9PPfHmt"/>
+    <service id=".service_locator.Fov_dGo" alias=".service_locator.iLuL88V"/>
     <service id=".service_locator.XW18Svm" alias=".service_locator.TcKhdzh"/>
     <service id=".service_locator.O24_MAy" alias=".service_locator.yY.p4P7"/>
     <service id=".service_locator.VZoQk0z" alias=".service_locator.CshazM0"/>
@@ -9027,6 +9081,7 @@
     <service id=".service_locator.6k5RJBU" alias=".service_locator.V71r_w4"/>
     <service id=".service_locator.dR92X1z" alias=".service_locator.Qw6utIN"/>
     <service id=".service_locator.q8kBOyX" alias=".service_locator.sUM6vBH"/>
+    <service id=".service_locator.qUQQWJY" alias=".service_locator..kw35iE"/>
     <service id=".service_locator.7NIAq8D" alias=".service_locator.rSTd.nA"/>
     <service id=".service_locator.WSlAhED" alias=".service_locator.otSeFVa"/>
     <service id=".service_locator.QfGTkjT" alias=".service_locator.cELnjUu"/>

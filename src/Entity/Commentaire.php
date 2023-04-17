@@ -38,10 +38,6 @@ class Commentaire
     }
 
 
-    #[ORM\ManyToOne(inversedBy: 'commentaires')]
-    #[ORM\JoinColumn(nullable: false)]
-    private ?Client $clients = null;
-
     public function getId(): ?int
     {
         return $this->id;

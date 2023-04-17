@@ -16,7 +16,7 @@ class KarserRecaptcha3Config implements \Symfony\Component\Config\Builder\Config
     private $host;
     private $enabled;
     private $_usedProperties = [];
-
+    
     /**
      * @default null
      * @param ParamConfigurator|mixed $value
@@ -26,10 +26,10 @@ class KarserRecaptcha3Config implements \Symfony\Component\Config\Builder\Config
     {
         $this->_usedProperties['siteKey'] = true;
         $this->siteKey = $value;
-
+    
         return $this;
     }
-
+    
     /**
      * @default null
      * @param ParamConfigurator|mixed $value
@@ -39,10 +39,10 @@ class KarserRecaptcha3Config implements \Symfony\Component\Config\Builder\Config
     {
         $this->_usedProperties['secretKey'] = true;
         $this->secretKey = $value;
-
+    
         return $this;
     }
-
+    
     /**
      * @default 0.5
      * @param ParamConfigurator|float $value
@@ -52,10 +52,10 @@ class KarserRecaptcha3Config implements \Symfony\Component\Config\Builder\Config
     {
         $this->_usedProperties['scoreThreshold'] = true;
         $this->scoreThreshold = $value;
-
+    
         return $this;
     }
-
+    
     /**
      * Default host is "www.google.com", if it is not reachable then use "www.recaptcha.net" instead.
      * @default 'www.google.com'
@@ -66,10 +66,10 @@ class KarserRecaptcha3Config implements \Symfony\Component\Config\Builder\Config
     {
         $this->_usedProperties['host'] = true;
         $this->host = $value;
-
+    
         return $this;
     }
-
+    
     /**
      * @default true
      * @param ParamConfigurator|bool $value
@@ -79,15 +79,15 @@ class KarserRecaptcha3Config implements \Symfony\Component\Config\Builder\Config
     {
         $this->_usedProperties['enabled'] = true;
         $this->enabled = $value;
-
+    
         return $this;
     }
-
+    
     public function getExtensionAlias(): string
     {
         return 'karser_recaptcha3';
     }
-
+    
     public function __construct(array $value = [])
     {
         if (array_key_exists('site_key', $value)) {
@@ -95,36 +95,36 @@ class KarserRecaptcha3Config implements \Symfony\Component\Config\Builder\Config
             $this->siteKey = $value['site_key'];
             unset($value['site_key']);
         }
-
+    
         if (array_key_exists('secret_key', $value)) {
             $this->_usedProperties['secretKey'] = true;
             $this->secretKey = $value['secret_key'];
             unset($value['secret_key']);
         }
-
+    
         if (array_key_exists('score_threshold', $value)) {
             $this->_usedProperties['scoreThreshold'] = true;
             $this->scoreThreshold = $value['score_threshold'];
             unset($value['score_threshold']);
         }
-
+    
         if (array_key_exists('host', $value)) {
             $this->_usedProperties['host'] = true;
             $this->host = $value['host'];
             unset($value['host']);
         }
-
+    
         if (array_key_exists('enabled', $value)) {
             $this->_usedProperties['enabled'] = true;
             $this->enabled = $value['enabled'];
             unset($value['enabled']);
         }
-
+    
         if ([] !== $value) {
             throw new InvalidConfigurationException(sprintf('The following keys are not supported by "%s": ', __CLASS__).implode(', ', array_keys($value)));
         }
     }
-
+    
     public function toArray(): array
     {
         $output = [];
@@ -143,7 +143,7 @@ class KarserRecaptcha3Config implements \Symfony\Component\Config\Builder\Config
         if (isset($this->_usedProperties['enabled'])) {
             $output['enabled'] = $this->enabled;
         }
-
+    
         return $output;
     }
 

@@ -49,6 +49,30 @@ class FilmRepository extends ServiceEntityRepository
             ;
     }
 
+    public function findByFilters(array $data): array
+    {
+        $qb = $this->createQueryBuilder('f');
+
+        if (!empty($data['realisateur'])) {
+            $qb->andWhere('f.realisateur = :realisateur')
+                ->setParameter('realisateur', $data['realisateur']);
+        }
+
+        if (!empty($data['date'])) {
+            $qb->andWhere('f.date = :date')
+                ->setParameter('date', $data['date']);
+        }
+
+        if (!empty($data['genre'])) {
+            $qb->andWhere('f.genre = :genre')
+                ->setParameter('genre', $data['genre']);
+        }
+
+        return $qb->getQuery()->getResult();
+    }
+
+
+
 //    /**
 //     * @return Film[] Returns an array of Film objects
 //     */

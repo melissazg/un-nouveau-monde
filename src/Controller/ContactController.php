@@ -18,7 +18,7 @@ class ContactController extends AbstractController {
     /**
      * @throws TransportExceptionInterface
      */
-    #[Route('/contact', 'app_contact', methods: ['GET', 'POST'])]
+    #[Route('/utilisateur/contact', 'app_contact', methods: ['GET', 'POST'])]
     public function contact(Request $request, ContactFormHandler $contactFormHandler, MailerInterface $mailer) : Response
     {
         $contact = new Contact();
@@ -30,15 +30,15 @@ class ContactController extends AbstractController {
         $form->handleRequest($request);
         if ($form->isSubmitted() && $form->isValid()) {
             $contactFormHandler->handleForm($contact);
-            $email = (new TemplatedEmail())
-                ->from($contact->getEmail())
-                ->to('noreply@un-nouveau-monde.fr')
-                ->subject($contact->getSubject())
-                ->htmlTemplate('contact.html.twig')
+            //$email = (new TemplatedEmail())
+                //->from($contact->getEmail())
+                //->to('noreply@un-nouveau-monde.fr')
+                //->subject($contact->getSubject())
+                /*->htmlTemplate('contact.html.twig')
                 ->context([
                     'contact' => $contact
                 ]);
-            $mailer->send($email);
+            $mailer->send($email);*/
             $this->addFlash('success', 'Votre demande a été envoyée avec succès.');
             return $this->redirectToRoute('app_contact');
         }

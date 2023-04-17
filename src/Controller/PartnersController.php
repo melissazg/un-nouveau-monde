@@ -8,7 +8,7 @@ use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Component\HttpFoundation\Response;
 
 class PartnersController extends AbstractController {
-    #[Route('/partners', 'app_partners', methods: ['GET'])]
+    #[Route('/utilisateur/partners', 'app_partners', methods: ['GET'])]
     public function index() : Response {
         return $this->render('partners.html.twig');
     }

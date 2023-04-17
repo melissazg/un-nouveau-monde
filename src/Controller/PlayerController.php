@@ -19,7 +19,7 @@ class PlayerController extends AbstractController
     public function __construct(public EntityManagerInterface $entityManager)
     {
     }
-    #[Route('/player/{id}', name: 'app_player', methods: ['GET', 'POST'])]
+    #[Route('/utilisateur/player/{id}', name: 'app_player', methods: ['GET', 'POST'])]
     public function index(Film $film,CommentaireRepository $commentaireRepository, UserRepository $userRepository, Request $request): Response
     {
 

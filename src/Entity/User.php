@@ -155,9 +155,10 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
         return strtoupper($this->lastName);
     }
 
-    public function setLastName(string $lastName): void
+    public function setLastName(string $lastName): self
     {
         $this->lastName = $lastName;
+        return $this;
     }
 
     public function getFullName(): ?string

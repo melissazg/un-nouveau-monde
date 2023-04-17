@@ -14,15 +14,16 @@ return [
         '/_profiler/phpinfo' => [[['_route' => '_profiler_phpinfo', '_controller' => 'web_profiler.controller.profiler::phpinfoAction'], null, null, null, false, false, null]],
         '/_profiler/xdebug' => [[['_route' => '_profiler_xdebug', '_controller' => 'web_profiler.controller.profiler::xdebugAction'], null, null, null, false, false, null]],
         '/_profiler/open' => [[['_route' => '_profiler_open_file', '_controller' => 'web_profiler.controller.profiler::openAction'], null, null, null, false, false, null]],
-        '/about' => [[['_route' => 'app_about', '_controller' => 'App\\Controller\\AboutController::index'], null, ['GET' => 0], null, false, false, null]],
-        '/contact' => [[['_route' => 'app_contact', '_controller' => 'App\\Controller\\ContactController::contact'], null, ['GET' => 0, 'POST' => 1], null, false, false, null]],
-        '/home' => [[['_route' => 'home.index', '_controller' => 'App\\Controller\\HomeController::index'], null, ['GET' => 0], null, false, false, null]],
-        '/inscription' => [[['_route' => 'inscription.index', '_controller' => 'App\\Controller\\InscriptionController::create'], null, ['GET' => 0, 'POST' => 1], null, false, false, null]],
+        '/utilisateur/about' => [[['_route' => 'app_about', '_controller' => 'App\\Controller\\AboutController::index'], null, ['GET' => 0], null, false, false, null]],
+        '/utilisateur/contact' => [[['_route' => 'app_contact', '_controller' => 'App\\Controller\\ContactController::contact'], null, ['GET' => 0, 'POST' => 1], null, false, false, null]],
+        '/utilisateur/home' => [[['_route' => 'home.index', '_controller' => 'App\\Controller\\HomeController::index'], null, ['GET' => 0], null, false, false, null]],
+        '/utilisateur/inscription' => [[['_route' => 'inscription.index', '_controller' => 'App\\Controller\\InscriptionController::create'], null, ['GET' => 0, 'POST' => 1], null, false, false, null]],
         '/manager' => [[['_route' => 'app_manager', '_controller' => 'App\\Controller\\ManagerController::index'], null, ['GET' => 0], null, false, false, null]],
         '/manager/nouveau' => [[['_route' => 'film.new', '_controller' => 'App\\Controller\\ManagerController::new'], null, ['GET' => 0, 'POST' => 1], null, false, false, null]],
-        '/partners' => [[['_route' => 'app_partners', '_controller' => 'App\\Controller\\PartnersController::index'], null, ['GET' => 0], null, false, false, null]],
+        '/utilisateur/partners' => [[['_route' => 'app_partners', '_controller' => 'App\\Controller\\PartnersController::index'], null, ['GET' => 0], null, false, false, null]],
         '/' => [[['_route' => 'app_pre_login', '_controller' => 'App\\Controller\\PreLoginController::index'], null, ['GET' => 0, 'POST' => 1], null, false, false, null]],
-        '/connexion' => [[['_route' => 'app_login', '_controller' => 'App\\Controller\\SecurityController::login'], null, ['GET' => 0, 'POST' => 1], null, false, false, null]],
+        '/catalogue' => [[['_route' => 'app_catalogue', '_controller' => 'App\\Controller\\SearchController::index'], null, ['GET' => 0, 'POST' => 1], null, false, false, null]],
+        '/utilisateur/connexion' => [[['_route' => 'app_login', '_controller' => 'App\\Controller\\SecurityController::login'], null, ['GET' => 0, 'POST' => 1], null, false, false, null]],
         '/logout' => [[['_route' => 'app_logout', '_controller' => 'App\\Controller\\SecurityController::logout'], null, null, null, false, false, null]],
         '/utilisateur/profil' => [[['_route' => 'app_user_profile', '_controller' => 'App\\Controller\\UserController::index'], null, ['GET' => 0, 'POST' => 1], null, false, false, null]],
     ],
@@ -48,10 +49,12 @@ return [
                     .'|edition/([^/]++)(*:220)'
                     .'|supprimer/([^/]++)(*:246)'
                 .')'
-                .'|/player/([^/]++)(*:271)'
-                .'|/utilisateur/edition(?'
-                    .'|/([^/]++)(*:311)'
-                    .'|\\-mot\\-de\\-passe/([^/]++)(*:344)'
+                .'|/utilisateur/(?'
+                    .'|player/([^/]++)(*:286)'
+                    .'|edition(?'
+                        .'|/([^/]++)(*:313)'
+                        .'|\\-mot\\-de\\-passe/([^/]++)(*:346)'
+                    .')'
                 .')'
             .')/?$}sDu',
     ],
@@ -66,9 +69,9 @@ return [
         184 => [[['_route' => 'verify_user', '_controller' => 'App\\Controller\\InscriptionController::verifyUser'], ['token'], null, null, false, true, null]],
         220 => [[['_route' => 'film.edit', '_controller' => 'App\\Controller\\ManagerController::edit'], ['id'], ['GET' => 0, 'POST' => 1], null, false, true, null]],
         246 => [[['_route' => 'film.delete', '_controller' => 'App\\Controller\\ManagerController::delete'], ['id'], ['GET' => 0], null, false, true, null]],
-        271 => [[['_route' => 'app_player', '_controller' => 'App\\Controller\\PlayerController::index'], ['id'], ['GET' => 0, 'POST' => 1], null, false, true, null]],
-        311 => [[['_route' => 'app_user_edit', '_controller' => 'App\\Controller\\UserController::edit'], ['id'], ['GET' => 0, 'POST' => 1], null, false, true, null]],
-        344 => [
+        286 => [[['_route' => 'app_player', '_controller' => 'App\\Controller\\PlayerController::index'], ['id'], ['GET' => 0, 'POST' => 1], null, false, true, null]],
+        313 => [[['_route' => 'app_user_edit', '_controller' => 'App\\Controller\\UserController::edit'], ['id'], ['GET' => 0, 'POST' => 1], null, false, true, null]],
+        346 => [
             [['_route' => 'app_user_edit_password', '_controller' => 'App\\Controller\\UserController::editPassword'], ['id'], ['GET' => 0, 'POST' => 1], null, false, true, null],
             [null, null, null, null, false, false, 0],
         ],

@@ -13,7 +13,7 @@ class AppFixtures extends Fixture
         $faker = Factory::create('fr_FR');
 
 
-        for ($i = 0; $i < 50; $i++){
+        for ($i = 0; $i < 5; $i++){
             $film = new Film();
             $film ->setName($faker -> word());
             $film -> setGenre($faker -> word());

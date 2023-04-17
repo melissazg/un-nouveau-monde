@@ -12,7 +12,7 @@ use Twig\Sandbox\SecurityNotAllowedFunctionError;
 use Twig\Source;
 use Twig\Template;
 
-/* _header.html.twig */
+/* _header.html.Twig */
 class __TwigTemplate_0679be544d477e85cdf7acaff20e91d0 extends Template
 {
     private $source;
@@ -34,10 +34,10 @@ class __TwigTemplate_0679be544d477e85cdf7acaff20e91d0 extends Template
     {
         $macros = $this->macros;
         $__internal_5a27a8ba21ca79b61932376b2fa922d2 = $this->extensions["Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension"];
-        $__internal_5a27a8ba21ca79b61932376b2fa922d2->enter($__internal_5a27a8ba21ca79b61932376b2fa922d2_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "template", "_header.html.twig"));
+        $__internal_5a27a8ba21ca79b61932376b2fa922d2->enter($__internal_5a27a8ba21ca79b61932376b2fa922d2_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "template", "_header.html.Twig"));
 
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
-        $__internal_6f47bbe9983af81f1e7450e9a3e3768f->enter($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "template", "_header.html.twig"));
+        $__internal_6f47bbe9983af81f1e7450e9a3e3768f->enter($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "template", "_header.html.Twig"));
 
         // line 1
         echo "<nav class=\"navbar navbar-expand-lg navbar-dark bg-dark\">
@@ -58,7 +58,10 @@ class __TwigTemplate_0679be544d477e85cdf7acaff20e91d0 extends Template
         echo "\">Accueil<span class=\"visually-hidden\">(current)</span></a>
                 </li>
                 <li class=\"nav-item\">
-                    <a class=\"nav-link\" href=\"#\">Nos films</a>
+                    <a class=\"nav-link\" href=\"";
+        // line 13
+        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_catalogue");
+        echo "\"\">Nos films</a>
                 </li>
                 <li class=\"nav-item\">
                     <a class=\"nav-link\" href=\"";
@@ -105,7 +108,7 @@ class __TwigTemplate_0679be544d477e85cdf7acaff20e91d0 extends Template
 
     public function getTemplateName()
     {
-        return "_header.html.twig";
+        return "_header.html.Twig";
     }
 
     public function isTraitable()
@@ -115,7 +118,7 @@ class __TwigTemplate_0679be544d477e85cdf7acaff20e91d0 extends Template
 
     public function getDebugInfo()
     {
-        return array (  89 => 27,  84 => 25,  78 => 22,  72 => 19,  66 => 16,  57 => 10,  47 => 3,  43 => 1,);
+        return array (  92 => 27,  87 => 25,  81 => 22,  75 => 19,  69 => 16,  63 => 13,  57 => 10,  47 => 3,  43 => 1,);
     }
 
     public function getSourceContext()
@@ -132,7 +135,7 @@ class __TwigTemplate_0679be544d477e85cdf7acaff20e91d0 extends Template
                     <a class=\"nav-link active\" href=\"{{ path('home.index') }}\">Accueil<span class=\"visually-hidden\">(current)</span></a>
                 </li>
                 <li class=\"nav-item\">
-                    <a class=\"nav-link\" href=\"#\">Nos films</a>
+                    <a class=\"nav-link\" href=\"{{ path('app_catalogue') }}\"\">Nos films</a>
                 </li>
                 <li class=\"nav-item\">
                     <a class=\"nav-link\" href=\"{{ path('app_about') }}\">À propos</a>
@@ -153,6 +156,6 @@ class __TwigTemplate_0679be544d477e85cdf7acaff20e91d0 extends Template
             </form>
         </div>
     </div>
-</nav>", "_header.html.twig", "C:\\Users\\ULTRABOOK DELL\\OneDrive - UPEC\\Bureau\\Snowaddict-symfony\\Un_Nouveau_Monde\\templates\\_header.html.Twig");
+</nav>", "_header.html.Twig", "C:\\Users\\ULTRABOOK DELL\\OneDrive - UPEC\\Bureau\\Snowaddict-symfony\\Un_Nouveau_Monde\\templates\\_header.html.Twig");
     }
 }
