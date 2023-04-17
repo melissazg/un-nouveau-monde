@@ -37,7 +37,6 @@ class Commentaire
         $this->date = new \DateTimeImmutable();
     }
 
-
     public function getId(): ?int
     {
         return $this->id;

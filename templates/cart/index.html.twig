@@ -1,0 +1,65 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Votre Panier{% endblock %}
+
+{% block body %}
+    <style>
+        .example-wrapper { margin: 1em auto; max-width: 800px; width: 95%; font: 18px/1.5 sans-serif; }
+        .example-wrapper code { background: #F5F5F5; padding: 2px 6px; }
+    </style>
+
+    <div class="example-wrapper">
+        <section>
+            <h1>Votre panier</h1>
+        </section>
+
+        <table class="table">
+            <thead>
+            <tr>
+                <th>Film</th>
+                <th>Prix</th>
+                <th>Quantité</th>
+                <th>Total</th>
+                <th class="text-left">Actions</th>
+
+            </tr>
+            </thead>
+            <tbody>
+            {% for element in dataPanier %}
+                <tr>
+                    <td>{{ element.film.name }}</td>
+                    <td>{{ element.film.prix }} €</td>
+                    <td>{{ element.quantite }}</td>
+                    <td class="text-end">{{ element.quantite * element.film.prix }} €</td>
+                    <td>
+                        <a href="{{path("cart_add", {id: element.film.id})}}" class="btn" style="background: linear-gradient(to bottom right, #4c84ff, #a45bff); color: #fff; border: none; border-radius: 5px; padding: 10px 20px; text-align: center; text-decoration: none; display: inline-block; font-size: 16px; cursor: pointer; transition: background 0.3s;">
+                            <i class="bi bi-cart-plus"></i>
+                        </a>
+                        <a href="{{ path("cart_remove", {id: element.film.id})}}" class="btn" style="background: linear-gradient(to bottom right, #FFC107, #9C27B0); color: #fff; border: none; border-radius: 5px; padding: 10px 20px; text-align: center; text-decoration: none; display: inline-block; font-size: 16px; cursor: pointer; transition: background 0.3s;">
+                            <i class="bi bi-cart-dash"></i>
+                        </a>
+                        <a href="{{ path("cart_delete", {id: element.film.id})}}" class="btn" style="background: linear-gradient(to bottom right, #dc3545, #ff7b84); color: #fff; border: none; border-radius: 5px; padding: 10px 20px; text-align: center; text-decoration: none; display: inline-block; font-size: 16px; cursor: pointer; transition: background 0.3s;">
+                            <i class="bi bi-cart-x"></i>
+                        </a>
+                    </td>
+                </tr>
+            {% else %}
+                <tr>
+                    <td colspan="5" class="text-center">Votre panier est vide</td>
+                </tr>
+            {% endfor %}
+
+            </tbody>
+            <tfoot>
+            <tr>
+                <td colspan="3">Total</td>
+                <td class="text-end">{{ total }} €</td>
+                <td>
+                    <a href="{{path("cart_deleteAll")}}" class="btn btn-danger">
+                        <i class="bi bi-cart-x"></i>
+                    </a>
+                </td>
+            </tr>
+        </table>
+    </div>
+{% endblock %}

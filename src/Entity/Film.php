@@ -54,6 +54,9 @@ class Film
     #[ORM\Column(nullable: true)]
     private ?int $nbNotes = null;
 
+    #[ORM\Column]
+    private ?int $prix = null;
+
 
     public function __construct()
     {
@@ -238,6 +241,18 @@ class Film
     public function addNote(int $note){
         $this->setNotes($note);
         $this->setNbNotes();
+    }
+
+    public function getPrix(): ?int
+    {
+        return $this->prix;
+    }
+
+    public function setPrix(int $prix): self
+    {
+        $this->prix = $prix;
+
+        return $this;
     }
 
 }
