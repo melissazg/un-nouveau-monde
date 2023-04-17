@@ -12,10 +12,12 @@ use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
+use Symfony\Component\Security\Http\Attribute\IsGranted;
 
 class ManagerController extends AbstractController
 {
     #[Route('/manager', name: 'app_manager', methods: ['GET'])]
+    #[IsGranted('ROLE_ADMIN')]
     public function index(FilmRepository $repository, PaginatorInterface $paginator, Request $request): Response
     {
         $films = $paginator->paginate(
@@ -30,6 +32,7 @@ class ManagerController extends AbstractController
     }
 
     #[Route('/manager/nouveau', 'film.new', methods: ['GET', 'POST'])]
+    #[IsGranted('ROLE_ADMIN')]
     public function new(Request $request,
     EntityManagerInterface $manager
     ): Response
@@ -55,6 +58,7 @@ class ManagerController extends AbstractController
     }
 
     #[Route('/manager/edition/{id}', 'film.edit', methods: ['GET', 'POST'])]
+    #[IsGranted('ROLE_ADMIN')]
     public function edit(Film $film, Request $request, EntityManagerInterface $manager) : Response{
         $form = $this->createForm(FilmType::class, $film);
 
@@ -77,6 +81,7 @@ class ManagerController extends AbstractController
     }
 
     #[Route('/manager/supprimer/{id}', 'film.delete', methods: ['GET'])]
+    #[IsGranted('ROLE_ADMIN')]
     public function delete(EntityManagerInterface $manager, Film $film) : Response {
         if (!$film) {
             $this->addFlash(
