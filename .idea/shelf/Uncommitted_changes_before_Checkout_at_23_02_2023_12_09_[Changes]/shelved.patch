@@ -1,0 +1,390 @@
+Index: src/Controller/InscriptionController.php
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?php\r\nnamespace App\\Controller;\r\n\r\n\r\nuse App\\Entity\\User;\r\nuse App\\Form\\FormHandler\\InscriptionFormHandler;\r\nuse App\\Form\\InscriptionType;\r\nuse App\\Security\\AppAuthenticator;\r\nuse Symfony\\Bundle\\FrameworkBundle\\Controller\\AbstractController;\r\nuse Symfony\\Bundle\\SecurityBundle\\Security\\UserAuthenticator;\r\nuse Symfony\\Component\\HttpFoundation\\Request;\r\nuse Symfony\\Component\\PasswordHasher\\Hasher\\UserPasswordHasherInterface;\r\nuse Symfony\\Component\\Routing\\Annotation\\Route;\r\nuse Symfony\\Component\\HttpFoundation\\Response;\r\nuse Symfony\\Component\\Security\\Http\\Authentication\\UserAuthenticatorInterface;\r\n\r\nclass InscriptionController extends AbstractController{\r\n\r\n    #[Route('/inscription', name:'inscription.index', methods: ['GET','POST'])]\r\n    public function create(Request $request, InscriptionFormHandler $inscriptionFormHandler,UserPasswordHasherInterface $passwordHasher, UserAuthenticatorInterface $userAuthenticator, AppAuthenticator $authenticator) : Response {\r\n        $user = new User();\r\n        $user->setRoles(['ROLE_USER']);\r\n\r\n        $form = $this->createForm(InscriptionType::class, $user);\r\n        $form->handleRequest($request);\r\n        if ($form->isSubmitted() && $form->isValid()) {\r\n\r\n            $hashedPassword = $passwordHasher->hashPassword(\r\n                $user,\r\n                $user->getPlainPassword()\r\n            );\r\n            $user->setPassword($hashedPassword);\r\n\r\n            $this->addFlash('success', 'Votre compte a bien été créé');\r\n\r\n            $inscriptionFormHandler ->handleForm($user);\r\n\r\n            return $userAuthenticator->authenticateUser(\r\n                $user,\r\n                $authenticator,\r\n                $request\r\n            );\r\n        }\r\n        return $this->render('inscription.html.twig', [\r\n            'form' => $form->createView(),\r\n        ]);\r\n    }\r\n\r\n}
+===================================================================
+diff --git a/src/Controller/InscriptionController.php b/src/Controller/InscriptionController.php
+--- a/src/Controller/InscriptionController.php	
++++ b/src/Controller/InscriptionController.php	
+@@ -5,7 +5,11 @@
+ use App\Entity\User;
+ use App\Form\FormHandler\InscriptionFormHandler;
+ use App\Form\InscriptionType;
++use App\Repository\UserRepository;
+ use App\Security\AppAuthenticator;
++use App\Service\JWTService;
++use App\Service\SendMailService;
++use Doctrine\ORM\EntityManagerInterface;
+ use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
+ use Symfony\Bundle\SecurityBundle\Security\UserAuthenticator;
+ use Symfony\Component\HttpFoundation\Request;
+@@ -17,7 +21,7 @@
+ class InscriptionController extends AbstractController{
+ 
+     #[Route('/inscription', name:'inscription.index', methods: ['GET','POST'])]
+-    public function create(Request $request, InscriptionFormHandler $inscriptionFormHandler,UserPasswordHasherInterface $passwordHasher, UserAuthenticatorInterface $userAuthenticator, AppAuthenticator $authenticator) : Response {
++    public function create(Request $request, InscriptionFormHandler $inscriptionFormHandler,UserPasswordHasherInterface $passwordHasher, UserAuthenticatorInterface $userAuthenticator, AppAuthenticator $authenticator,SendMailService $mail,JWTService $jwt) : Response {
+         $user = new User();
+         $user->setRoles(['ROLE_USER']);
+ 
+@@ -35,6 +39,29 @@
+ 
+             $inscriptionFormHandler ->handleForm($user);
+ 
++            // On génère le JWT de l'utilisateur
++            // On crée le Header
++            $header = [
++                'typ' => 'JWT',
++                'alg' => 'HS256'
++            ];
++
++            // On crée le Payload
++            $payload = [
++                'user_id' => $user->getId()
++            ];
++
++            // On génère le token
++            $token = $jwt->generate($header, $payload, $this->getParameter('app.jwtsecret'));
++
++            // On envoie un mail
++            $mail->send(
++                'no-reply@monsite.net',
++                $user->getEmail(),
++                'Activation de votre compte sur le site e-commerce',
++                'register',
++                compact('user', 'token')
++            );
+             return $userAuthenticator->authenticateUser(
+                 $user,
+                 $authenticator,
+@@ -46,4 +73,27 @@
+         ]);
+     }
+ 
++    #[Route('/verife/{token}', name: 'verify_user')]
++    public function verifyUser($token, JWTService $jwt, UserRepository $usersRepository, EntityManagerInterface $em): Response
++    {
++        //On vérifie si le token est valide, n'a pas expiré et n'a pas été modifié
++        if($jwt->isValid($token) && !$jwt->isExpired($token) && $jwt->check($token, $this->getParameter('app.jwtsecret'))){
++            // On récupère le payload
++            $payload = $jwt->getPayload($token);
++
++            // On récupère le user du token
++            $user = $usersRepository->find($payload['user_id']);
++
++            //On vérifie que l'utilisateur existe et n'a pas encore activé son compte
++            if($user && !$user->getIsVerified()){
++                $user->setIsVerified(true);
++                $em->flush($user);
++                $this->addFlash('success', 'Utilisateur activé');
++                return $this->redirectToRoute('app_user_profile');
++            }
++        }
++        // Ici un problème se pose dans le token
++        $this->addFlash('danger', 'Le token est invalide ou a expiré');
++        return $this->redirectToRoute('app_login');
++    }
+ }
+\ No newline at end of file
+Index: src/Service/JWTService.php
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?php\r\n\r\nnamespace App\\Service;\r\n\r\nclass JWTService\r\n{\r\n\r\n}
+===================================================================
+diff --git a/src/Service/JWTService.php b/src/Service/JWTService.php
+--- a/src/Service/JWTService.php	
++++ b/src/Service/JWTService.php	
+@@ -2,7 +2,107 @@
+ 
+ namespace App\Service;
+ 
++use DateTimeImmutable;
++
+ class JWTService
+ {
++    // On génère le token
++
++    /**
++     * Génération du JWT
++     * @param array $header
++     * @param array $payload
++     * @param string $secret
++     * @param int $validity
++     * @return string
++     */
++    public function generate(array $header, array $payload, string $secret, int $validity = 10800): string
++    {
++        if($validity > 0){
++            $now = new DateTimeImmutable();
++            $exp = $now->getTimestamp() + $validity;
++
++            $payload['iat'] = $now->getTimestamp();
++            $payload['exp'] = $exp;
++        }
++
++        // On encode en base64
++        $base64Header = base64_encode(json_encode($header));
++        $base64Payload = base64_encode(json_encode($payload));
++
++        // On "nettoie" les valeurs encodées (retrait des +, / et =)
++        $base64Header = str_replace(['+', '/', '='], ['-', '_', ''], $base64Header);
++        $base64Payload = str_replace(['+', '/', '='], ['-', '_', ''], $base64Payload);
++
++        // On génère la signature
++        $secret = base64_encode($secret);
++
++        $signature = hash_hmac('sha256', $base64Header . '.' . $base64Payload, $secret, true);
++
++        $base64Signature = base64_encode($signature);
++
++        $base64Signature = str_replace(['+', '/', '='], ['-', '_', ''], $base64Signature);
++
++        // On crée le token
++        $jwt = $base64Header . '.' . $base64Payload . '.' . $base64Signature;
++
++        return $jwt;
++    }
+ 
++    //On vérifie que le token est valide (correctement formé)
++
++    public function isValid(string $token): bool
++    {
++        return preg_match(
++                '/^[a-zA-Z0-9\-\_\=]+\.[a-zA-Z0-9\-\_\=]+\.[a-zA-Z0-9\-\_\=]+$/',
++                $token
++            ) === 1;
++    }
++
++    // On récupère le Payload
++    public function getPayload(string $token): array
++    {
++        // On démonte le token
++        $array = explode('.', $token);
++
++        // On décode le Payload
++        $payload = json_decode(base64_decode($array[1]), true);
++
++        return $payload;
++    }
++
++    // On récupère le Header
++    public function getHeader(string $token): array
++    {
++        // On démonte le token
++        $array = explode('.', $token);
++
++        // On décode le Header
++        $header = json_decode(base64_decode($array[0]), true);
++
++        return $header;
++    }
++
++    // On vérifie si le token a expiré
++    public function isExpired(string $token): bool
++    {
++        $payload = $this->getPayload($token);
++
++        $now = new DateTimeImmutable();
++
++        return $payload['exp'] < $now->getTimestamp();
++    }
++
++    // On vérifie la signature du Token
++    public function check(string $token, string $secret)
++    {
++        // On récupère le header et le payload
++        $header = $this->getHeader($token);
++        $payload = $this->getPayload($token);
++
++        // On régénère un token
++        $verifToken = $this->generate($header, $payload, $secret, 0);
++
++        return $token === $verifToken;
++    }
+ }
+\ No newline at end of file
+Index: templates/email/register.html.twig
+===================================================================
+diff --git a/templates/email/register.html.twig b/templates/email/register.html.twig
+--- a/templates/email/register.html.twig	
++++ b/templates/email/register.html.twig	
+@@ -1,0 +1,5 @@
++<h1>Activez votre compte</h1>
++<p>Bonjour {{ app.user.firstname }},</p>
++<p>Votre inscription sur le site e-commerce est à valider en cliquant sur le lien ci-dessous :</p>
++<p><a href="{{ absolute_url(path('verify_user', {token: token})) }}">{{ absolute_url(path('verify_user', {token: token})) }}</a></p>
++<p>Ce lien expirera dans 3 heures</p>
+\ No newline at end of file
+Index: src/Service/SendMailService.php
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?php\r\n\r\nnamespace App\\Service;\r\n\r\nclass SendMailService\r\n{\r\n\r\n}
+===================================================================
+diff --git a/src/Service/SendMailService.php b/src/Service/SendMailService.php
+--- a/src/Service/SendMailService.php	
++++ b/src/Service/SendMailService.php	
+@@ -2,7 +2,35 @@
+ 
+ namespace App\Service;
+ 
++use Symfony\Bridge\Twig\Mime\TemplatedEmail;
++use Symfony\Component\Mailer\MailerInterface;
++
+ class SendMailService
+ {
++    private $mailer;
++
++    public function __construct(MailerInterface $mailer)
++    {
++        $this->mailer = $mailer;
++    }
+ 
++    public function send(
++        string $from,
++        string $to,
++        string $subject,
++        string $template,
++        array $context
++    ): void
++    {
++        //On crée le mail
++        $email = (new TemplatedEmail())
++            ->from($from)
++            ->to($to)
++            ->subject($subject)
++            ->htmlTemplate("emails/$template.html.twig")
++            ->context($context);
++
++        // On envoie le mail
++        $this->mailer->send($email);
++    }
+ }
+\ No newline at end of file
+Index: src/DataFixtures/UsersFixtures.php
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?php\r\n\r\nnamespace App\\DataFixtures;\r\n\r\nclass UsersFixtures\r\n{\r\n\r\n}
+===================================================================
+diff --git a/src/DataFixtures/UsersFixtures.php b/src/DataFixtures/UsersFixtures.php
+--- a/src/DataFixtures/UsersFixtures.php	
++++ b/src/DataFixtures/UsersFixtures.php	
+@@ -2,7 +2,54 @@
+ 
+ namespace App\DataFixtures;
+ 
+-class UsersFixtures
++use App\Entity\User;
++use Doctrine\Bundle\FixturesBundle\Fixture;
++use Doctrine\Persistence\ObjectManager;
++use Faker\Factory;
++
++use Faker\Generator;
++use Symfony\Component\PasswordHasher\Hasher\UserPasswordHasherInterface;
++
++class UsersFixtures extends Fixture
+ {
++    private Generator $faker;
++    public function __construct(private UserPasswordHasherInterface $passwordEncoder){
++        $this->faker = Factory::create('fr_FR');
++    }
++
++    public function load(ObjectManager $manager): void
++    {
++        $admin = new User();
++        $admin->setEmail('admin@demo.fr');
++        $admin->setLastname('Desole');
++        $admin->setFirstname('Nicolas');
++        $admin->setAddress('1 rue du paris');
++        $admin->setTelephoneNumber('0666666666');
++        $admin->setHighschool('Paris');
++        $admin->setPassword(
++            $this->passwordEncoder->hashPassword($admin, 'admin')
++        );
++        $admin->setRoles(['ROLE_ADMIN']);
++
++        $manager->persist($admin);
++
++
+ 
++        for($usr = 1; $usr <= 5; $usr++){
++            $user = new User();
++            $user->setEmail($this->faker->email());
++            $user->setLastname($this->faker->lastName);
++            $user->setFirstname($this->faker->firstName);
++            $user->setAddress($this->faker->streetAddress);
++            $user->setTelephoneNumber($this->faker->numerify('0#########'));
++            $user->setHighschool($this->faker->city);
++            $user->setRoles(['ROLE_USER']);
++            $user->setPassword(
++                $this->passwordEncoder->hashPassword($user, 'secret')
++            );
++            $manager->persist($user);
++        }
++
++        $manager->flush();
++    }
+ }
+\ No newline at end of file
+Index: src/Entity/User.php
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?php\r\n\r\nnamespace App\\Entity;\r\n\r\nuse App\\Repository\\UserRepository;\r\nuse Doctrine\\Common\\Collections\\ArrayCollection;\r\nuse Doctrine\\Common\\Collections\\Collection;\r\nuse Doctrine\\DBAL\\Types\\Types;\r\nuse Doctrine\\ORM\\Mapping as ORM;\r\nuse Symfony\\Bridge\\Doctrine\\Validator\\Constraints\\UniqueEntity;\r\nuse Symfony\\Component\\Security\\Core\\User\\PasswordAuthenticatedUserInterface;\r\nuse Symfony\\Component\\Security\\Core\\User\\UserInterface;\r\n#[UniqueEntity('email')]\r\n#[ORM\\Entity(repositoryClass: UserRepository::class)]\r\nclass User implements UserInterface, PasswordAuthenticatedUserInterface\r\n{\r\n    #[ORM\\Id]\r\n    #[ORM\\GeneratedValue]\r\n    #[ORM\\Column]\r\n    private ?int $id = null;\r\n\r\n    #[ORM\\Column(length: 180, unique: true)]\r\n    private ?string $email = null;\r\n\r\n    #[ORM\\Column]\r\n    private array $roles = [];\r\n    private ?String $plainPassword = '';\r\n\r\n    /**\r\n     * @var string The hashed password\r\n     */\r\n    #[ORM\\Column]\r\n    private ?string $password = null;\r\n\r\n    #[ORM\\Column(length: 255)]\r\n    private ?string $firstName = null;\r\n\r\n    #[ORM\\Column(length: 255)]\r\n    private ?string $lastName = null;\r\n\r\n    #[ORM\\Column(type: Types::TEXT)]\r\n    private ?string $address = null;\r\n\r\n    #[ORM\\Column(length: 255)]\r\n    private ?string $telephoneNumber = null;\r\n\r\n    #[ORM\\Column(length: 255)]\r\n    private ?string $highschool = null;\r\n\r\n    #[ORM\\OneToMany(mappedBy: 'user', targetEntity: Commentaire::class)]\r\n    private Collection $commentaires;\r\n\r\n    #[ORM\\OneToMany(mappedBy: 'user', targetEntity: Note::class)]\r\n    private Collection $Notes;\r\n\r\n    public function __construct()\r\n    {\r\n        $this->commentaires = new ArrayCollection();\r\n        $this->Notes = new ArrayCollection();\r\n    }\r\n\r\n    public function getId(): ?int\r\n    {\r\n        return $this ->id;\r\n    }\r\n\r\n    public function getEmail(): ?string\r\n    {\r\n        return $this->email;\r\n    }\r\n\r\n    public function setEmail(string $email): self\r\n    {\r\n        $this->email = $email;\r\n\r\n        return $this;\r\n    }\r\n\r\n    /**\r\n     * A visual identifier that represents this user.\r\n     *\r\n     * @see UserInterface\r\n     */\r\n    public function getUserIdentifier(): string\r\n    {\r\n        return (string) $this->email;\r\n    }\r\n\r\n    /**\r\n     * @see UserInterface\r\n     */\r\n    public function getRoles(): array\r\n    {\r\n        $roles = $this->roles;\r\n        // guarantee every user at least has ROLE_USER\r\n        $roles[] = 'ROLE_USER';\r\n\r\n\r\n        return array_unique($roles);\r\n    }\r\n\r\n    public function setRoles(array $roles): self\r\n    {\r\n        $this->roles = $roles;\r\n\r\n        return $this;\r\n    }\r\n\r\n    /**\r\n     * @see PasswordAuthenticatedUserInterface\r\n     */\r\n    public function getPassword(): string\r\n    {\r\n        return $this->password;\r\n    }\r\n\r\n    public function setPassword(string $password): self\r\n    {\r\n        $this->password = $password;\r\n\r\n        return $this;\r\n    }\r\n\r\n    /**\r\n     * @see UserInterface\r\n     */\r\n    public function eraseCredentials()\r\n    {\r\n        // If you store any temporary, sensitive data on the user, clear it here\r\n        // $this->plainPassword = null;\r\n    }\r\n\r\n    public function getFirstName(): ?string\r\n    {\r\n        return $this->firstName;\r\n    }\r\n\r\n    public function setFirstName(string $firstName): self\r\n    {\r\n        $this->firstName = $firstName;\r\n\r\n        return $this;\r\n    }\r\n\r\n    public function getLastName(): ?string\r\n    {\r\n        return $this->lastName;\r\n    }\r\n\r\n    public function setLastName(string $lastName): self\r\n    {\r\n        $this->lastName = $lastName;\r\n\r\n        return $this;\r\n    }\r\n\r\n    public function getAddress(): ?string\r\n    {\r\n        return $this->address;\r\n    }\r\n\r\n    public function setAddress(string $address): self\r\n    {\r\n        $this->address = $address;\r\n\r\n        return $this;\r\n    }\r\n\r\n    public function getTelephoneNumber(): ?string\r\n    {\r\n        return $this->telephoneNumber;\r\n    }\r\n\r\n    public function setTelephoneNumber(string $telephoneNumber): self\r\n    {\r\n        $this->telephoneNumber = $telephoneNumber;\r\n\r\n        return $this;\r\n    }\r\n\r\n    public function getHighschool(): ?string\r\n    {\r\n        return $this->highschool;\r\n    }\r\n\r\n    public function setHighschool(string $highschool): self\r\n    {\r\n        $this->highschool = $highschool;\r\n\r\n        return $this;\r\n    }\r\n\r\n    /**\r\n     * @return Collection<int, Commentaire>\r\n     */\r\n    public function getCommentaires(): Collection\r\n    {\r\n        return $this->commentaires;\r\n    }\r\n\r\n    public function addCommentaire(Commentaire $commentaire): self\r\n    {\r\n        if (!$this->commentaires->contains($commentaire)) {\r\n            $this->commentaires->add($commentaire);\r\n            $commentaire->setUser($this);\r\n        }\r\n\r\n        return $this;\r\n    }\r\n\r\n    public function removeCommentaire(Commentaire $commentaire): self\r\n    {\r\n        if ($this->commentaires->removeElement($commentaire)) {\r\n            // set the owning side to null (unless already changed)\r\n            if ($commentaire->getUser() === $this) {\r\n                $commentaire->setUser(null);\r\n            }\r\n        }\r\n\r\n        return $this;\r\n    }\r\n\r\n    /**\r\n     * @return Collection<int, Note>\r\n     */\r\n    public function getNotes(): Collection\r\n    {\r\n        return $this->Notes;\r\n    }\r\n\r\n    public function addNote(Note $note): self\r\n    {\r\n        if (!$this->Notes->contains($note)) {\r\n            $this->Notes->add($note);\r\n            $note->setUser($this);\r\n        }\r\n\r\n        return $this;\r\n    }\r\n\r\n    public function removeNote(Note $note): self\r\n    {\r\n        if ($this->Notes->removeElement($note)) {\r\n            // set the owning side to null (unless already changed)\r\n            if ($note->getUser() === $this) {\r\n                $note->setUser(null);\r\n            }\r\n        }\r\n\r\n        return $this;\r\n    }\r\n\r\n    /**\r\n     * @return mixed\r\n     */\r\n    public function getPlainPassword()\r\n    {\r\n        return $this->plainPassword;\r\n    }\r\n\r\n    /**\r\n     * @param mixed $plainPassword\r\n     */\r\n    public function setPlainPassword($plainPassword): void\r\n    {\r\n        $this->plainPassword = $plainPassword;\r\n    }\r\n}\r\n
+===================================================================
+diff --git a/src/Entity/User.php b/src/Entity/User.php
+--- a/src/Entity/User.php	
++++ b/src/Entity/User.php	
+@@ -47,6 +47,25 @@
+     #[ORM\Column(length: 255)]
+     private ?string $highschool = null;
+ 
++    #[ORM\Column(type: 'boolean')]
++    private bool $is_verified = false;
++
++    /**
++     * @return bool
++     */
++    public function isIsVerified(): bool
++    {
++        return $this->is_verified;
++    }
++
++    /**
++     * @param bool $is_verified
++     */
++    public function setIsVerified(bool $is_verified): void
++    {
++        $this->is_verified = $is_verified;
++    }
++
+     #[ORM\OneToMany(mappedBy: 'user', targetEntity: Commentaire::class)]
+     private Collection $commentaires;
+ 
+@@ -190,6 +209,11 @@
+         return $this;
+     }
+ 
++    public function getIsVerified(): ?bool
++    {
++        return $this->is_verified;
++    }
++
+     /**
+      * @return Collection<int, Commentaire>
+      */
+Index: templates/flash.html.twig
+===================================================================
+diff --git a/templates/flash.html.twig b/templates/flash.html.twig
+--- a/templates/flash.html.twig	
++++ b/templates/flash.html.twig	
+@@ -1,0 +1,10 @@
++{% for label, messages in app.flashes %}
++    {% for message in messages %}
++        <div class="alert alert-{{ label }} alert-dismissible" role="alert">
++            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
++            <div class="alert-message">
++                {{ message|raw }}
++            </div>
++        </div>
++    {% endfor %}
++{% endfor %}
+\ No newline at end of file

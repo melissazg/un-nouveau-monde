@@ -1,0 +1,62 @@
+{% extends 'base.html.twig' %}
+
+{% block title %} Un nouveau monde {% endblock %}
+
+
+
+{% block body %}
+    <div class="container mt-4">
+        {% if not films.items is same as([]) %}
+        <h1>Liste de films</h1>
+            <a href="{{ path('film.new') }}" class="btn btn-primary">
+                Ajouter un film
+            </a>
+        <div class="count mt-4">
+            <h4>
+            Il y a {{ films.getTotalItemCount }} films au total actuellement
+            </h4>
+        </div>
+
+        <table class="table table-hover mt-4">
+            <thead>
+            <tr>
+                <th scope="col">ID</th>
+                <th scope="col">Nom</th>
+                <th scope="col">Réalisateur</th>
+                <th scope="col">Description</th>
+                <th scope="col">Durée</th>
+                <th scope="col">Genre</th>
+                <th scope="col">Date</th>
+                <th scope="col">Acteurs principaux</th>
+                <th scope="col">Mixdrop link</th>
+                <th scope="col">Edition</th>
+                <th scole="col">Suppression</th>
+            </tr>
+            </thead>
+            <tbody>
+            {% for film in films %}
+            <tr class="table-info">
+                <th scope="row">{{ film.id }}</th>
+                <td>{{ film.name }}</td>
+                <td>{{ film.realisateur }}</td>
+                <td>{{ film.description }}</td>
+                <td>{{ film.duree | date('H:i:s') }}</td>
+                <td>{{ film.genre }}</td>
+                <td>{{ film.date | date('d-m-Y') }}</td>
+                <td>{{ film.acteursPrincipaux }}</td>
+                <td>{{ film.iframePath }}</td>
+                <td><a href="{{ path('film.edit', {id: film.id}) }}" class="btn btn-info"> Modifier</a></td>
+                <td><a href="{{ path('film.delete', {id: film.id}) }}" class="btn btn-warning"> Supprimer</a></td>
+
+            </tr>
+            {% endfor %}
+            </tbody>
+        </table>
+        <div class="navigation d-flex justify-content-center mt-4">
+            {{ knp_pagination_render(films) }}
+        </div>
+        {% else %}
+        <h4>Il n'y a pas de films</h4>
+        {% endif %}
+    </div>
+{% endblock %}

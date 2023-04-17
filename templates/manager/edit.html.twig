@@ -1,0 +1,34 @@
+{% extends 'base.html.twig' %}
+{% form_theme form 'bootstrap_5_horizontal_layout.html.twig' %}
+
+{% block title %} Un Nouveau Monde {% endblock %}
+
+{% block body %}
+    <div class="container">
+        <h1 class="mt-4"></h1>
+        <div class="container py-8 h-100">
+            <div class="row d-flex justify-content-center align-items-center h-100">
+                <div class="col-18 col-md-15 col-lg-10 col-xl-10">
+                    <div class="card bg-dark text-white" style="border-radius: 1rem;">
+                        <div class="card-body p-8 text-center">
+                            <h1 class="mt-4">Modification d'un film</h1>
+                            {{ form(form) }}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    {{ form_start(form) }}
+
+
+    {{ form_end(form) }}
+{% endblock %}
+
+
+
+
+
+
+
+

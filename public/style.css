@@ -1,0 +1,8 @@
+.comment{
+    overflow:hidden ;
+    word-break: break-all;
+}
+
+.content{
+    width: 900px;
+}
