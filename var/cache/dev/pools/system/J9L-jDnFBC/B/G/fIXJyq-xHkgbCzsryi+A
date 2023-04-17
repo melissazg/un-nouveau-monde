@@ -1,3 +1,0 @@
-<?php //DateTimeInterface%2523getTimestamp
-
-return [PHP_INT_MAX, []];

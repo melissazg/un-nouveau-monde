@@ -1,3 +1,0 @@
-<?php //DateTimeInterface
-
-return [PHP_INT_MAX, []];
