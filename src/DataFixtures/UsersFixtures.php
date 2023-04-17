@@ -20,7 +20,7 @@ class UsersFixtures extends Fixture
         $admin->setFirstName('Nicolas')
             ->setLastName('Desole')
             ->setAddress('1 rue de Paris')
-            ->setTelephoneNumber('O666666666')
+            ->setTelephoneNumber('0666666666')
             ->setEmail('admin@demo.fr')
             ->setHighschool('HIV')
             ->setRoles(['ROLE_ADMIN'])
