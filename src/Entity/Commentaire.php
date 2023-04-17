@@ -21,40 +21,30 @@ class Commentaire
 
     #[ORM\JoinColumn(nullable: false)]
     private ?User $user = null;
-
     #[ORM\ManyToOne(inversedBy: 'commentaires')]
     private ?Film $film = null;
-
-
     #[ORM\Column(nullable: false)]
     private ?string $content = null;
-
     #[ORM\Column(nullable: true)]
     private ?int $note = null;
-
     public function __construct()
     {
         $this->date = new \DateTimeImmutable();
     }
-
     public function getId(): ?int
     {
         return $this->id;
     }
-
     public function getDate(): ?\DateTimeImmutable
     {
         return $this->date;
     }
-
     public function setDate(\DateTimeImmutable $date): self
     {
         $this->date = $date;
 
         return $this;
     }
-
-
     public function getUser(): ?User
     {
         return $this->user;

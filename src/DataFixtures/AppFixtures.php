@@ -19,6 +19,7 @@ class AppFixtures extends Fixture
             $film -> setDescription($faker->text());
             $film -> setDate($faker -> dateTime);
             $film -> setDuree($faker->dateTime);
+            $film -> setPrix($faker->randomNumber());
             $film -> setActeursPrincipaux($faker->text());
             $film -> setIframePath('https://mixdrp.to/e/qlxl7zn3fwjk64');
             $manager ->persist($film);
