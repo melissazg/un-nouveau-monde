@@ -21,6 +21,11 @@ class FilmRepository extends ServiceEntityRepository
         parent::__construct($registry, Film::class);
     }
 
+    /**
+     * @param Film $entity
+     * @param bool $flush
+     * @return void
+     */
     public function save(Film $entity, bool $flush = false): void
     {
         $this->getEntityManager()->persist($entity);
@@ -30,6 +35,11 @@ class FilmRepository extends ServiceEntityRepository
         }
     }
 
+    /**
+     * @param Film $entity
+     * @param bool $flush
+     * @return void
+     */
     public function remove(Film $entity, bool $flush = false): void
     {
         $this->getEntityManager()->remove($entity);
@@ -39,6 +49,11 @@ class FilmRepository extends ServiceEntityRepository
         }
     }
 
+    /**
+     * @param $title
+     * @return float|int|mixed|string|null
+     * @throws \Doctrine\ORM\NonUniqueResultException
+     */
     public function getIframeByName($title){
         return $this->createQueryBuilder('f')
             ->andWhere('f.name =:title')
@@ -49,6 +64,11 @@ class FilmRepository extends ServiceEntityRepository
             ;
     }
 
+    /**
+     * La méthode findByFilters retourne un tableau de films en fonction des données d'entrée.
+     * @param array $data
+     * @return array
+     */
     public function findByFilters(array $data): array
     {
         $qb = $this->createQueryBuilder('f');

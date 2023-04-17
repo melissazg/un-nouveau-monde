@@ -12,7 +12,8 @@ class UsersFixtures extends Fixture
 {
     public function __construct(
     private UserPasswordHasherInterface $passwordEncoder)
-{}
+{
+}
     public function load(ObjectManager $manager): void
     {
         $admin = new User();
@@ -28,7 +29,6 @@ class UsersFixtures extends Fixture
         $manager->persist($admin);
 
         $faker = Factory::create('fr_FR');
-
         for ($i = 0; $i < 50; $i++){
                 $user = new User();
                 $user->setFirstName($faker->firstName())
@@ -40,11 +40,8 @@ class UsersFixtures extends Fixture
                     ->setRoles(['ROLE_USER'])
                     ->setPassword($this->passwordEncoder->hashPassword($user, 'secret')
                     );
-
             $manager->persist($user);
         }
-
         $manager->flush();
     }
-
 }

@@ -24,25 +24,17 @@ class SearchController extends AbstractController
         $filterForm = $this->createForm(FilterType::class);
         $filterForm->handleRequest($request);
 
-
-
         $searchResults = [];
 
         if ($searchForm->isSubmitted() && $searchForm->isValid()) {
             $query = $searchForm->getData()['query'];
-
             $searchResults = $SearchRepository->getSearchResults($query);
         } elseif ($filterForm->isSubmitted() && $filterForm->isValid()) {
             $data = $filterForm->getData();
-
-
             $searchResults = $filmRepository->findByFilters($data);
-        }
-
-        else{
+        } else{
             $searchResults = $SearchRepository->getFilm();
         }
-
         return $this->render('catalogue/index.html.twig', [
             'searchForm' => $searchForm->createView(),
             'filterForm' => $filterForm->createView(),

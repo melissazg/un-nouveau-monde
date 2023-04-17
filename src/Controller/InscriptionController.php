@@ -95,5 +95,4 @@ class InscriptionController extends AbstractController{
         $this->addFlash('danger', 'Le token est invalide ou a expiré');
         return $this->redirectToRoute('app_login');
     }
-
 }

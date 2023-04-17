@@ -13,6 +13,10 @@ class SearchMusiqueRepository extends ServiceEntityRepository
         parent::__construct($registry, Musique::class);
     }
 
+    /**
+     * @param string $query
+     * @return array
+     */
     public function getSearchResults(string $query): array
     {
         return $this->createQueryBuilder('musique')
@@ -22,6 +26,9 @@ class SearchMusiqueRepository extends ServiceEntityRepository
             ->getResult();
     }
 
+    /**
+     * @return array
+     */
     public function getFilm(): array
     {
         return $this->createQueryBuilder('musique')

@@ -13,8 +13,6 @@ use Symfony\Component\PasswordHasher\Hasher\UserPasswordHasherInterface;
 use Symfony\Component\Routing\Annotation\Route;
 
 class UserController extends AbstractController
-
-
 {
     #[Route('/utilisateur/profil', name: 'app_user_profile',methods: ['GET','POST'])]
     public function  index (){
@@ -26,11 +24,9 @@ class UserController extends AbstractController
         if (!$this->getUser()){
             return $this->redirectToRoute('login');
         }
-
         if ($this->getUser() !== $user){
             return $this->redirectToRoute('home.index');
         }
-
         $form= $this->createForm(UserType::class, $user);
         $form->handleRequest($request);
         if ($form->isSubmitted() && $form->isValid()){
@@ -45,14 +41,11 @@ class UserController extends AbstractController
             } else {
                 $this->addFlash('warning', 'Le mot de passe renseigné est incorrect.');
             }
-
         }
-
         return $this->render('user/edit.html.twig', [
             'form' => $form->createView(),
         ]);
     }
-
 
     #[Route('/utilisateur/edition-mot-de-passe/{id}', name: 'app_user_edit_password',methods: ['GET','POST'])]
     public function editPassword(User $user, Request $request, UserPasswordHasherInterface $hasher, EntityManagerInterface $entityManager) : Response
@@ -68,16 +61,13 @@ class UserController extends AbstractController
                 $entityManager->persist($user);
                 $entityManager->flush();
                 return $this->redirectToRoute('home.index');
-            }
-            else {
+            } else {
                 $this->addFlash('warning', 'Le mot de passe renseigné est incorrect ');
             }
 
         }
-
         return $this->render('user/editPassword.html.twig', [
             'form' => $form->createView()
         ]);
-
     }
 }

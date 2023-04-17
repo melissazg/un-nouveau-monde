@@ -11,8 +11,6 @@ class AppFixtures extends Fixture
     public function load(ObjectManager $manager): void
     {
         $faker = Factory::create('fr_FR');
-
-
         for ($i = 0; $i < 5; $i++){
             $film = new Film();
             $film ->setName($faker -> word());
@@ -23,11 +21,8 @@ class AppFixtures extends Fixture
             $film -> setDuree($faker->dateTime);
             $film -> setActeursPrincipaux($faker->text());
             $film -> setIframePath('https://mixdrp.to/e/qlxl7zn3fwjk64');
-
-
             $manager ->persist($film);
         }
-
         $manager->flush();
     }
 }

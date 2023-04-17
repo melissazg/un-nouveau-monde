@@ -11,8 +11,6 @@ class MusicFixtures extends Fixture
     public function load(ObjectManager $manager): void
     {
         $faker = Factory::create('fr_FR');
-
-
         for ($i = 0; $i < 10; $i++){
             $film = new Musique();
             $film -> setName($faker -> word());
@@ -26,10 +24,8 @@ class MusicFixtures extends Fixture
             $film -> setIframePath('https://mixdrp.to/e/qlxl7zn3fwjk64');
             $film -> setInitNbNotes(0);
             $film -> setInitNotes(0);
-
             $manager ->persist($film);
         }
-
         $manager->flush();
     }
 }

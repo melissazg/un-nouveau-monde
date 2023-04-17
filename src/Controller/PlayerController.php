@@ -22,7 +22,6 @@ class PlayerController extends AbstractController
     #[Route('/utilisateur/player/{id}', name: 'app_player', methods: ['GET', 'POST'])]
     public function index(Film $film,CommentaireRepository $commentaireRepository, UserRepository $userRepository, Request $request): Response
     {
-
         # appel de l'utilisateur connecté
         $mail = $this->getUser()->getUserIdentifier();
 
@@ -34,14 +33,12 @@ class PlayerController extends AbstractController
         $comment->setUser($user);
         $comment->setFilm($film);
 
-        #
         $form = $this->createForm(CommentType::class, $comment);
 
         # le formulaire saisit la requête
         $form->handleRequest($request);
 
         if ($form->isSubmitted() && $form->isValid()) {
-
 
             $content = $form->get('content')->getData();
             $note = $form->get('note')->getData();
@@ -53,7 +50,6 @@ class PlayerController extends AbstractController
             $this->entityManager->persist($comment);
             $this->entityManager->persist($film);
             $this->entityManager->flush();
-
         }
 
         #calcul de la note moyenne

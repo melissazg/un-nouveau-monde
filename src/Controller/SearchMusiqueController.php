@@ -22,13 +22,10 @@ class SearchMusiqueController extends AbstractController
 
         if ($form->isSubmitted() && $form->isValid()) {
             $query = $form->getData()['query'];
-
             $searchResults = $SearchRepository->getSearchResults($query);
-        }
-        else{
+        } else{
             $searchResults = $SearchRepository->getFilm();
         }
-
         return $this->render('catalogue_musique/index.html.twig', [
             'form' => $form->createView(),
             'musiques' => $searchResults,

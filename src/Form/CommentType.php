@@ -14,8 +14,10 @@ class CommentType extends AbstractType
     public function buildForm(FormBuilderInterface $builder, array $options): void
     {
         $builder
-            ->add('content',TextareaType::class, ['required' => true, 'label' => 'Donnez votre avis'
+            ->add('content',TextareaType::class, [
+                'required' => true, 'label' => 'Donnez votre avis'
                 ])
+
             ->add('note',
                 ChoiceType::class, [
                     'choices'  => [
@@ -27,12 +29,7 @@ class CommentType extends AbstractType
                         '5' => 5
                     ],
                     'label'=>'Notez le film sur 5'
-                ])
-
-
-        ;
-
-        ;
+                ]);
     }
 
     public function configureOptions(OptionsResolver $resolver): void

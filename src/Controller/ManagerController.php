@@ -16,6 +16,13 @@ use Symfony\Component\Security\Http\Attribute\IsGranted;
 
 class ManagerController extends AbstractController
 {
+    /**
+     * Permet à l'admin d'avoir accès à toute la liste de film
+     * @param FilmRepository $repository
+     * @param PaginatorInterface $paginator
+     * @param Request $request
+     * @return Response
+     */
     #[Route('/manager', name: 'app_manager', methods: ['GET'])]
     #[IsGranted('ROLE_ADMIN')]
     public function index(FilmRepository $repository, PaginatorInterface $paginator, Request $request): Response
@@ -25,12 +32,18 @@ class ManagerController extends AbstractController
             $request->query->getInt('page', 1),
             10
         );
-
         return $this->render('manager/index.html.twig', [
             'films' => $films
         ]);
     }
 
+    /**
+     * Permet à l'admin d'ajouter des films à la liste de film
+     * @param Film $film
+     * @param Request $request
+     * @param EntityManagerInterface $manager
+     * @return Response
+     */
     #[Route('/manager/nouveau', 'film.new', methods: ['GET', 'POST'])]
     #[IsGranted('ROLE_ADMIN')]
     public function new(Request $request,
@@ -39,47 +52,54 @@ class ManagerController extends AbstractController
     {
         $film = new Film();
         $form = $this->createForm(FilmType::class, $film);
-
         $form -> handleRequest($request);
         if($form->isSubmitted() && $form->isValid()){
             $film = $form->getData();
-
             $manager -> persist($film);
             $manager -> flush();
-
             $this->addFlash(
                 'success',
                 'Le film a été ajouté !'
             );
         }
-    return $this->render('manager/new.html.twig',[
+    return $this->render('manager/new.html.twig', [
         'form' => $form -> createView()
     ]);
     }
 
+    /**
+     * Permet à l'admin de modifier la liste de film
+     * @param Film $film
+     * @param Request $request
+     * @param EntityManagerInterface $manager
+     * @return Response
+     */
     #[Route('/manager/edition/{id}', 'film.edit', methods: ['GET', 'POST'])]
     #[IsGranted('ROLE_ADMIN')]
     public function edit(Film $film, Request $request, EntityManagerInterface $manager) : Response{
         $form = $this->createForm(FilmType::class, $film);
-
         $form -> handleRequest($request);
         if($form->isSubmitted() && $form->isValid()){
             $film = $form->getData();
-
             $manager -> persist($film);
             $manager -> flush();
-
             $this->addFlash(
                 'success',
                 'Le film a été modifié !'
             );
         }
-
         return $this->render('manager/edit.html.twig', [
             'form' => $form->createView()
         ]);
     }
 
+    /**
+     * Permet à l'admin de supprimer des films de la liste de film
+     * @param Film $film
+     * @param Request $request
+     * @param EntityManagerInterface $manager
+     * @return Response
+     */
     #[Route('/manager/supprimer/{id}', 'film.delete', methods: ['GET'])]
     #[IsGranted('ROLE_ADMIN')]
     public function delete(EntityManagerInterface $manager, Film $film) : Response {
@@ -90,16 +110,12 @@ class ManagerController extends AbstractController
             );
             return $this->redirectToRoute('app_manager');
         }
-
         $manager->remove($film);
         $manager->flush();
-
         $this->addFlash(
             'success',
             'Le film a été supprimé !'
         );
-
         return $this->redirectToRoute('app_manager');
     }
-
 }

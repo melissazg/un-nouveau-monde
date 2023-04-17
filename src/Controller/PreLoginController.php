@@ -12,7 +12,6 @@ class PreLoginController extends AbstractController
     public function index(): Response
     {
         return $this->render('pre_login/preLogin.html.twig', [
-
         ]);
     }
 }

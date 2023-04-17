@@ -12,5 +12,4 @@ class PartnersController extends AbstractController {
     public function index() : Response {
         return $this->render('partners.html.twig');
     }
-
 }

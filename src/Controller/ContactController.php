@@ -15,7 +15,13 @@ use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Mailer\MailerInterface;
 
 class ContactController extends AbstractController {
+
     /**
+     * Permet à un utilisateur d'envoyer un message à une adresse spécifique.
+     * @param Request $request
+     * @param ContactFormHandler $contactFormHandler
+     * @param MailerInterface $mailer
+     * @return Response
      * @throws TransportExceptionInterface
      */
     #[Route('/utilisateur/contact', 'app_contact', methods: ['GET', 'POST'])]
@@ -30,15 +36,16 @@ class ContactController extends AbstractController {
         $form->handleRequest($request);
         if ($form->isSubmitted() && $form->isValid()) {
             $contactFormHandler->handleForm($contact);
-            //$email = (new TemplatedEmail())
-                //->from($contact->getEmail())
-                //->to('noreply@un-nouveau-monde.fr')
-                //->subject($contact->getSubject())
-                /*->htmlTemplate('contact.html.twig')
+            // envoi de mail
+            $email = (new TemplatedEmail())
+                ->from($contact->getEmail())
+                ->to('noreply@un-nouveau-monde.fr')
+                ->subject($contact->getSubject())
+                ->htmlTemplate('contact.html.twig')
                 ->context([
                     'contact' => $contact
                 ]);
-            $mailer->send($email);*/
+            $mailer->send($email);
             $this->addFlash('success', 'Votre demande a été envoyée avec succès.');
             return $this->redirectToRoute('app_contact');
         }
